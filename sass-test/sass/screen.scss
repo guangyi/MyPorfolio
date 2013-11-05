@@ -1,0 +1,32 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+$menuHiehgt:3em;
+#header{
+	width:100%;
+	background: #fff;
+	text-align: center;
+	padding: 1em 0;
+	color: white;
+	position: fixed;
+	z-index: 2;
+	height: $menuHiehgt;
+}
+.main{
+	padding:1em 3em;
+	text-align: center;
+	background: pink;
+	height: 45em;
+	border-bottom: 1px solid gray;
+}
+.row{
+	margin:0px;
+}
+.content{
+	width: 100%;
+	position: relative;
+	top:$menuHiehgt;
+}

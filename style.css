@@ -1,0 +1,22 @@
+#header{
+	width:100%;
+	background: gray;
+	text-align: center;
+	padding: 1em 0;
+	color: white;
+}
+.main{
+	width: 100%;
+	padding:1em 3em;
+	text-align: center;
+	background: yellow;
+	height: 30em;
+	border-bottom: 1px solid gray;
+}
+.row{
+	margin:0 auto;
+}
+.content{
+	width: 100%
+
+}

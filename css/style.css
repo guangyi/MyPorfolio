@@ -1,0 +1,25 @@
+#header{
+	width:100%;
+	background: gray;
+	text-align: center;
+	padding: 1em 0;
+	color: white;
+	position: fixed;
+	z-index: 2;
+}
+.main{
+	width: 100%;
+	padding:1em 3em;
+	text-align: center;
+	background: pink;
+	height: 45em;
+	border-bottom: 1px solid gray;
+}
+.row{
+	margin:0 auto;
+}
+.content{
+	width: 100%;
+	position: relative;
+	top:48px;
+}

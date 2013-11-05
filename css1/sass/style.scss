@@ -1,0 +1,52 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+$menuFontSize: 1em;
+$menuHeight: 3;
+$contentTop: $menuFontSize * $menuHeight;
+#header{
+	width:10%;
+	background: rgba(0,0,0,0.6);
+	text-align: center;
+	padding: 1em 0;
+	color: #fff;
+	position: fixed;
+	z-index: 2;
+	font-size:$menuFontSize;
+	float:left;	
+	@include box-sizing(border-box);
+	a{
+		color: #fff;
+	}
+	a:active{
+		color: #359;
+	}
+}
+#nav{
+	a{
+		display:block;
+		width:100%;
+		margin:1em 0em;
+	}
+	a:hover{
+		background:#745;
+	}
+} 
+.main{
+	padding:1em 3em;
+	text-align: center;
+	background: pink;
+	border-bottom: 1px solid gray;
+	@include box-sizing(border-box);
+}
+.row{
+	margin:0px;
+}
+.content{
+	width: 100%;
+	position: relative;
+}
