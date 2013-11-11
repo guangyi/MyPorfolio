@@ -5,35 +5,36 @@
 
 @import "compass/reset";
 @import "compass/css3/box-sizing";
-$menuFontSize: 1em;
-$menuHeight: 3;
+$menuFontSize: 1.5em;
+$menuItemHeight: 1.5em;
+$menuHeight: $menuItemHeight * 4;
 $contentTop: $menuFontSize * $menuHeight;
 #header{
-	width:10%;
-	background: rgba(0,0,0,0.6);
+	width:7%;
 	text-align: center;
-	padding: 1em 0;
 	color: #fff;
 	position: fixed;
 	z-index: 2;
 	font-size:$menuFontSize;
 	float:left;	
+	background:rgba(10,10,10,0.7);
+	:hover{
+		background:rgba(120,120,210,1);
+	}
 	@include box-sizing(border-box);
-	a{
-		color: #fff;
-	}
-	a:active{
-		color: #359;
-	}
 }
 #nav{
+
 	a{
+		opacity: 0.7;
 		display:block;
 		width:100%;
-		margin:1em 0em;
+		height: 2em;
+		color: #fff;
 	}
 	a:hover{
-		background:#745;
+		background:rgba(24,64,105,1);
+		opacity: 1;
 	}
 } 
 .main{

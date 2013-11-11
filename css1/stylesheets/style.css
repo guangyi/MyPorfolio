@@ -67,42 +67,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 11, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 #header {
-  width: 10%;
-  background: rgba(0, 0, 0, 0.6);
+  width: 7%;
   text-align: center;
-  padding: 1em 0;
   color: #fff;
   position: fixed;
   z-index: 2;
-  font-size: 1em;
+  font-size: 1.5em;
   float: left;
+  background: rgba(10, 10, 10, 0.7);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 22, ../sass/style.scss */
-#header a {
-  color: #fff;
-}
-/* line 25, ../sass/style.scss */
-#header a:active {
-  color: #359;
+/* line 21, ../sass/style.scss */
+#header :hover {
+  background: #7878d2;
 }
 
-/* line 30, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 #nav a {
+  opacity: 0.7;
   display: block;
   width: 100%;
-  margin: 1em 0em;
+  height: 2em;
+  color: #fff;
 }
 /* line 35, ../sass/style.scss */
 #nav a:hover {
-  background: #745;
+  background: #184069;
+  opacity: 1;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 .main {
   padding: 1em 3em;
   text-align: center;
@@ -113,12 +111,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-sizing: border-box;
 }
 
-/* line 46, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 .row {
   margin: 0px;
 }
 
-/* line 49, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 .content {
   width: 100%;
   position: relative;

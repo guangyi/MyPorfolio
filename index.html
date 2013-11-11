@@ -11,23 +11,13 @@
 	<script type="text/javascript" src="js/animation.js"></script>
 	<script type="text/javascript" src="js/portfolio.js"></script>
 </head>
-<body>
+<body ng-controller="frameworkCtrl">
 	<header id="header">
-		<nav id="nav">
-			<a my-scroll-to href="#about">About</a>
-			<a my-scroll-to href="#projects">Project Showcase</a>
-			<a my-scroll-to href="#contact">Contact</a>
-		</nav>
+		<a href='#{{nav}}' ng-repeat="nav in navNames" ng-class="{active:isActive('/{{nav}}')}">{{nav}}</a>
 	</header>
-	<div class="content"  ng-controller="testCrtl">
-		<section mouse-wheel class="main" id="about" style="height: {{screenHeight}}px">
-			<div class="row"><h1>About</h1></div>
-		</section>
-		<section class="main" id="projects" style="height: {{screenHeight}}px">
-			<div class="row"><h1>Projects Showcase</h1></div> 
-		</section>
-		<section class="main" id="contact" style="height: {{screenHeight}}px">
-			<div class="row"><h1>Contact</h1></div> 
+	<div class="content"  ng-controller="contentCtrl">
+		<section class="main" ng-repeat="item in navNames" id="{{item}}" style="height: {{screenHeight}}px">
+			<div class="row"><h1>{{item}}</h1></div>
 		</section>
 	</div>
 </body>

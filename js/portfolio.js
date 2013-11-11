@@ -1,5 +1,33 @@
 var portfolio = angular.module('portfolio',[]);
 
+
+portfolio.controller('frameworkCtrl',['$scope','$location', function($scope, $location){
+	$scope.navNames = ['Welcome','About','Projects','Contact'];
+	$scope.isActive = function(viewLocation){
+		var active = (viewLocation === $location.path());
+		return active;
+	}
+}]);
+
+portfolio.controller();
+portfolio.controller( 'contentCtrl',['$scope','$location', function($scope,$location){
+	$scope.screenHeight = screen.availHeight;
+	$scope.$watch(function(){
+			return $location.path();
+			}, function(value){
+				// replace the '/' in the URL with '#''
+				if(value){
+					var idToScroll = value.replace('/','#');
+					console.log(idToScroll);
+					// make sure call the effect after generate the DOM element.
+					if($(idToScroll).length != 0){
+						$('body').animate({
+							scrollTop: $(idToScroll).offset().top
+						},"slow");
+					}
+				}
+		});	
+}]);
 portfolio.directive('myScrollTo', function(){
 	return{
 		restrict:'A',
@@ -10,10 +38,26 @@ portfolio.directive('myScrollTo', function(){
 				$('body').animate({
 					scrollTop: $(idToScroll).offset().top
 				},"slow");
+				element.addClass('active');
 			})
 		}
 	}
+})
+.directive('myMenuItem', function(){
+	return{
+		restrict:'A',
+		link: function(scope, element, attrs){
+			var idToScroll = attrs.href;
+			element.on('click', function() {
+				$('body').animate({
+					scrollTop: $(idToScroll).offset().top
+				},"slow");
+			})
+		}
+	};
 });
+
+
 portfolio.directive('mouseWheel', ['$scope', function($scope){
 	// Runs during compile
 	return {
@@ -48,7 +92,4 @@ portfolio.directive('mouseWheel', ['$scope', function($scope){
 			
 		}
 	};
-}]);
-portfolio.controller('testCrtl', ['$scope', '$window',function($scope){
-	$scope.screenHeight = screen.availHeight;
 }]);
