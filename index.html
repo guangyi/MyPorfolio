@@ -13,10 +13,25 @@
 </head>
 <body ng-controller="frameworkCtrl">
 	<header id="header">
-		<a href='#{{nav}}' ng-repeat="nav in navNames" ng-class="{active:isActive('/{{nav}}')}">{{nav}}</a>
+		<nav id="nav">
+			<a href='#{{nav}}' ng-repeat="nav in navNames" ng-class="{active:isActive('/{{nav}}')}">{{nav}}</a>
+		</nav>
 	</header>
 	<div class="content"  ng-controller="contentCtrl">
-		<section class="main" ng-repeat="item in navNames" id="{{item}}" style="height: {{screenHeight}}px">
+		<section class="main" id="Welcome" style="height: {{screenHeight}}px">
+			<div class="row">
+				<h1>Dream . Hope . Passion</h1>
+				<p>Hey, my name is Guangyi. </p>
+			    <p>I'm a Recent Grads who would like to see herself as a Front-End Engineer.</p>
+			</div>
+		</section>
+		<section class="main" id="About" style="height: {{screenHeight}}px">
+			<div class="row"><h1>{{item}}</h1></div>
+		</section>
+		<section class="main" id="Projects" style="height: {{screenHeight}}px">
+			<div class="row"><h1>{{item}}</h1></div>
+		</section>
+		<section class="main" id="Contact" style="height: {{screenHeight}}px">
 			<div class="row"><h1>{{item}}</h1></div>
 		</section>
 	</div>

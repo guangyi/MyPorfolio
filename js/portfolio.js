@@ -18,7 +18,6 @@ portfolio.controller( 'contentCtrl',['$scope','$location', function($scope,$loca
 				// replace the '/' in the URL with '#''
 				if(value){
 					var idToScroll = value.replace('/','#');
-					console.log(idToScroll);
 					// make sure call the effect after generate the DOM element.
 					if($(idToScroll).length != 0){
 						$('body').animate({
