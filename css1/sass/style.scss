@@ -3,16 +3,52 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+$bg_About: #e68e8e;//rgba(204,100,100,1);//#000;
+$speech_bubble_border:#fff;//rgba(204,100,100,1);
+$bg_Projects:#B32121;//url('images/profile.JPG');//rgba(252,200,200,1);
+$bg_Contact:#fff;//#e68e8e;//rgba(204,100,100,1);
+$bg_like:#aa35f2;
+$bg_intro:#fff;
+$bg_Blog:#7fd0d0;
+$smileBorder:3px solid #000;//rgba(222, 99,99,1);
+$smielFace: #e9b03d;//rgba(222, 99,99,1);
+$Cloud:#7fd0d0;
+
 @import "compass/reset";
+@import "compass";
 @import "compass/css3/box-sizing";
+@import "animation";
+//@import "compass/css3/background";
+@mixin border-radius($radius){
+	-webkit-border-radius:$radius;
+	   -moz-border-radius:$radius;
+	    -ms-border-radius:$radius;
+	     -o-border-radius:$radius;
+	        border-radius:$radius;
+}
+@mixin border-radius-part($part, $radius){
+	//border-radius-mixin for part of the box
+	// it could be: bottom-left, top-right...
+	-webkit-border-#{$part}-radius:$radius;
+	   -moz-border-#{$part}-radius:$radius;
+	    -ms-border-#{$part}-radius:$radius;
+	     -o-border-#{$part}-radius:$radius;
+	        border-#{$part}-radius:$radius;
+}
+/********************************************** Framework ****************************************/
 body{
 font-family: "proxima nova light","Helvetica Neue",Helvetica,Arial,Sans-serif;
+height:100%;
+}
+.conatiner{
+	width:100%;
+	height:100%;
 }
 #header{
 	width:7%;
-	text-align: center;
+	/*text-align: center;*/
 	color: #fff;
-	position: fixed;
+	//position: fixed;
 	z-index: 2;
 	float:left;	
 	background:#70161D;//#600;//#924032;
@@ -20,10 +56,10 @@ font-family: "proxima nova light","Helvetica Neue",Helvetica,Arial,Sans-serif;
 	font-family:'Roboto Slab', serif;
 	overflow:hidden;
 	@include box-sizing(border-box);
-	&:hover{
+	/*&:hover{
 		width:7%;
-		background:rgba(220,220,220,1);
-	}
+		background:rgba(22,22,22,1);
+	}*/
 	#nav{
 		a{
 			font-family: "proxima nova light","Helvetica Neue",Helvetica,Arial,Sans-serif;
@@ -33,43 +69,740 @@ font-family: "proxima nova light","Helvetica Neue",Helvetica,Arial,Sans-serif;
 			color: #FDE7EF;
 			text-decoration:none;
 			&:hover{
-				background:rgba(209,70,98,1);
+				background:#924032;
 				opacity: 1;
 				color:#fff;
+			}
+			&.active{
+				background: #924032;
 			}
 		}
 	} 
 }
 
 .content{
-	float:right;
 	width: 93%;
-	.main{
-		font-size:1.5em;
-		padding:1em 5.381%;//3em = 3 * 1.5 * 16 = 72px; 72px/1338px = 5.38%
-		text-align: center;
-		background: #600;//#EFFF96;//#FFF8EA;//#FFFD7F; //#F2E0E1;
-		border-top: 1px solid gray;
-		@include box-sizing(border-box);
-		.row{	
-			position:relative;
+	overflow:scroll;
+	.scroll{
+		overflow: hidden;
+		.main{
+			font-size:1.5em;
+			//1em = 1 * 1.5 * 16 = 24px; 2424px/1338px = 5.38%
+			/*text-align: center;*/
+			//background: #600;//#EFFF96;//#FFF8EA;//#FFFD7F; //#F2E0E1;
+			border-bottom: 1px solid gray;
+			@include box-sizing(border-box);
+			.row{	
+				position:relative;
+				height:100%;
+				.rotate{
+					-webkit-transform-origin: center;
+					-moz-transform-origin:center;
+				}
+				.content_wrap{
+					height:100%;
+					width:100%;
+					padding:0;
+					position:relative;
+					//text-align: center;
+				}
+			}
 		}
-}
-	#Welcome{
-		background:#924032;//#600;//#EFFF96;//#FFF8EA;//#FFFD7F; //#F2E0E1;
-		text-align:left;
+	#About{
+		background:$bg_About;//#924032;//#600;//#EFFF96;//#FFF8EA;//#FFFD7F; //#F2E0E1;
+		text-align:center;
 		h1{
-			font-size:2.5em;
-			color:#F2F2F2;
-			margin-bottom: 0.33em;
+			font-size:4em;
+			color:$speech_bubble_border;//#F2F2F2;
+			//margin-bottom: 0.5em;
 		}
 		p{
-			font-size:0.8em;
+			font-size:1em;
 			color:#F2F2F2;
 			margin:0.5em 0em;
 		}
 	}
+	#Intro{
+		background:$bg_intro;
+		h1{
+			font-size:2.5em;
+			margin-bottom: 0.5em;
+		}
+	}
+	#MoreAboutMe{
+		background:$bg_like;
+		h1{
+			font-size:2.5em;
+			margin-bottom: 0.5em;
+			color: #fff;
+		}
+		h2{
+			font-size: 1.5em;
+			color: #fff;
+		}
+	}
+	#Projects{
+		background:$bg_Projects;
+		h1{
+			font-size:2.5em;
+			margin-bottom: 0.5em;
+			color:#fff;
+		}
+	}
+	#Blog{
+		background:$bg_Blog;
+		h1{
+			font-size:2.5em;
+			margin-bottom: 0.5em;
+			color:#fff;
+		}
+		h2{
+			font-size:1.5em;
+		}
+	}
+	#Contact{
+		background:$bg_Contact;
+		h1{
+			font-size:2.5em;
+			color:#F2F2F2;
+			margin-bottom: 0.5em;
+		}
+	}
+	}
+	
 }
+/****************************************************** About *******************************************/
+#profile{
+	position:relative;
+	margin-right:auto;
+	margin-left:auto;
+	width:30%;
+	//padding-bottom = width, can make circle responsive
+	padding-bottom:30%;
+	background: url('images/profile.JPG') no-repeat 38% 50%;
+	@include border-radius(50%);
+	box-shadow: 0px 0px 20px 0px #fff;
+	&:after{
+		// this is the white shadow around the picture
+		position: absolute;
+		content: '';
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		@include border-radius(50%);
+		// gradient but don't know where to import...
+		@include background-image(radial-gradient(50% 50%, rgba(255,255,255,0) 85%, rgba(255,255,255,1) 100%));
+	}
+}
+#speech_bubble{
+	// use before and after to create
+	// those arror on the left
+	// center an element: margin-left and margin-right both be auto;
+	margin-left: auto;
+	margin-right:auto;
+	position:relative;
+	width:70%;
+	height: 6em;
+	top: 2em;
+	border:5px solid $speech_bubble_border;
+	padding:1em;
+	@include box-sizing(border-box);
+	@include border-radius(0.8em);// 20px / 1.5 * 16 = 5 / 6
+	z-index:2;
+	&:before, &:after{
+		content: '';
+		position:absolute;
+		left:-46px;//-5.25%;
+		top:1.5em;
+		width:1.5em;
+		border-bottom-left-radius: 100%;
+		border-left: 5px solid $speech_bubble_border;
+		border-bottom:5px solid $speech_bubble_border;
+		background: transparent;
+		/* no rotate version
+		transform-origin: 0 0;
+		transform: rotate(-45deg);*/
+	}
+	&:before{
+		border-right:5px solid $speech_bubble_border;
+		height:1em;
+		z-index:3;
+	}
+	&:after{
+		// the bigger curve.
+		border-right:5px solid $bg_About;
+		height:2em;
+		z-index: 1;
+	}
+}
+#speech_bubble_arrowup{
+	// use before and after to create
+	// those arror on the left
+	// center an element: margin-left and margin-right both be auto;
+	margin-left: auto;
+	margin-right:auto;
+	position:relative;
+	width:70%;
+	height: 6em;
+	top: 4em;
+	border:5px solid $speech_bubble_border;
+	padding:1em;
+	@include box-sizing(border-box);
+	@include border-radius(0.8em);// 20px / 1.5 * 16 = 5 / 6
+	z-index:1;
+	&:before, &:after{
+		content: '';
+		position:absolute;
+		top:-10px;
+		width:0px;
+		height:0px;
+	}
+	&:before{
+		top:-31px;
+		left:434px;
+		border-left: 31px solid transparent;
+		border-right:31px solid transparent;
+		border-bottom: 31px solid $bg_About;
+		z-index: 3;
+	}
+	&:after{
+		top:-40px;
+		left:425px;
+		border-left: 40px solid transparent;
+		border-right:40px solid transparent;
+		border-bottom:40px solid $speech_bubble_border;
+		z-index:2;
+	}
+}
+/*************************************************** Intro *****************************************/
+.about_rectangle{
+	position:relative;
+	text-align:center;
+	@include box-sizing(border-box);
+	overflow:hidden;
+	color:white;
+	height:100%;
+	.filter{
+		background:$bg_About;
+		z-index: 5;
+		position: absolute;
+		width:100%;
+		height:100%;
+		display: table-cell;
+		vertical-align:middle;
+		line-height:100%;
+		//@include filter(blur(5px));
+		//filter: blur(10px);
+		//@include border-radius(inherit);
+		//@include animation('test 4s');
+		// create a ghost element so one line words can be centered
+		&:before{
+			content: '';
+			height:100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		h1, h2, h3{
+			z-index: 6;
+			display:inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+.topLeft{
+	//width and height follow the "golden ratio"
+	float:left;
+	width:61%;
+	height:37%;
+	background:#f4c76d;
+	position:relative;
+	.icon{
+		overflow: hidden;
+		height:100%;
+		background:#e9b03d;
+		border-left:10px solid #fff;
+		border-right:10px solid #fff;
+	}
+	.about_rectangle{
+		width:75%;
+		float:left;
+	}
+	
+}
+.topRight{
+	//topLeft's float, topright do not set float, but set overflow:hidden!
+	// then topRight's width is auto depends on the left one
+	// topRight's width = the rest width within container
+	height:37%;
+	overflow:hidden;
+	background:#c3df8a;
+	//float:right;
+}
+.btmLeft{
+	position:relative;
+	float:left;
+	height:61%;
+	width:46%;//if
+	margin-top:1%;
+	background:#7fd0d0;
+}
+.center{
+	height:61%;
+	background:#ffb2b2;
+	margin-top:1%;
+	margin-left:1%;
+	overflow:hidden;
+	.icon{
+		float:left;
+		width:25%;
+		height:100%;
+		background:#e68e8e;
+		border-right:10px solid #fff;
+		border-left:10px solid #fff;
+	}
+}
+#graduated{
+	background:#2fa0a0;
+}
+#front_end{
+	background:#e9b03d;//#f1b63d;
+}
+#believe{
+	background:#9fbf5e;
+}
+#hope{
+	background:#e68e8e;
+}
+.in_top{
+	@include transform-origin(50%, 0, 0 );
+	@include animation('in_top 1s forwards');
 
+}
+.in_right{
+	@include transform-origin(100%, 50%, 0 );
+	@include animation('in_right 1s forwards');
+}
+.in_bottom{
+	@include animation('in_bottom 1s forwards');
+}
+.in_left{
+	@include transform-origin(0, 50%, 0 );
+	@include animation('in_left 1s forwards');
+}
+.out_top{
+	@include animation('out_top 1s forwards');
+}
+.out_bottom{
+	@include animation('out_bottom 1s forwards');
+}
+.out_left{
+	@include animation('out_left 1s forwards');
+}
+.out_right{
+	@include animation('out_right 1s forwards');
+}
+/********************************************** Like or dislike ***************************************/
+.likeContainer{
+	height:100%;
+	width:auto;
+	background:inherit;
+	padding-top:2%;
+	@include box-sizing(border-box);
+	.options_wrap{
+		height:70%;
+		opacity: 0.5;
+		@include perspective(500px);
+		.options{
+			float:left;
+			width:50%;
+			height:100%;
+			text-align: center;
+			//@include transform(rotateX(35deg));
+			overflow: scroll;
+			.like, .dislike{
+				float:left;
+				margin: 5%;
+			}
+		}
+	}
+}
+.faces{
+		z-index: 2;
+		width: 100%;
+		height: 20%;
+		background:inherit;
+		position: relative;
+		//text-align:center;
+}
+#faces3{
+	//background:#ffb2b2;
+	.smile{
+		float:right;
+		background:#c3df8a;
+	}
+	//float:right;
+}
+.smile, .upset{
+	//absolute doesn't take position in the container
+	// static and relative does. so the 'top' and 'left' are 
+	// relative to the first element that is position static.
+	z-index:10;
+	position:relative;
+	float:left;
+	margin-left: auto;
+	margin-right: auto;
+	//width:30%;
+	background:$smielFace;//#7fd0d0;
+	//use border to have the shape of face;
+	border: #{$smileBorder};
+	@include border-radius(50%);
+	@include box-sizing(border-box);
+	//@include border-radius-part(top-left, 50%);
+	//@include border-radius-part(bottom-right, 50%);
+}
+.eye{
+	// half circle: width = 2 * height and border-radius = width
+	position:absolute;//doesn't take palces
+	width:12%;
+	// height and border-radius are set in setting.js 
+	// use border to get the shape of eye
+	border: #{$smileBorder};
+	border-bottom:0px;
+	top:15%;
+	background:transparent;
+}
+.left{
+	left:28%;
+}
+.right{
+	left:55%;
+}
+.mouth{
+	
+	width:51%;
+	margin:auto;
+	//if don't want to ruin the size of a container, use position absolute for
+	// it's child element cause in that case they don't take any place;
+	position:relative;
+	
+	//background:#e9b03d;
+	border: #{$smileBorder};
+	//@include box-sizing(border-box);
+	overflow:hidden;
+	.teeth{
+		position:relative;
+		width:100%;
+		height:100%;
+		left:-6%;
+	}
+	.teeth li:nth-child(-n + 5){
+		height: 100%;
+		width:16%;
+		float:left;
+		list-style: none;
+		border-right:#{$smileBorder};
+		//border-bottom:#{$smileBorder}; // teeth or not
+	}
+}
+.smile{
+	.mouth{
+		top:55%;
+		@include transform( rotateZ(180deg) );
+	}
+}
+/*
+seems like not usefull
+.upset{
+	.eye{
+		width:10%;
+		border-radius:0;
+		top: 10%;
+		@include transform(rotateX(180deg));
+	}
+	.mouth{
+		top:80%;
+		left:50%;
+		border-bottom:30px;
+		width:20%;
+		@include transform( rotateZ( 5deg ));
+	}
+	.left{
+		left:27%;
+	}
+	.right{
+		left:50%;
+	}
+}*/
+/* smile face and upset face roatetion animation
+but I sitll couldn't figure it out why reverse doesn't work
+example: @include animation('upsetEye 5s reverse forwards');-- not working
+*/
+.upsetEye{
+	@include animation('upsetEye 1s forwards');
+	@include transform-origin(50% 50% 0);
+}
+.upsetEye_right{
+	@include animation('upsetEye_right 1s 0.2s forwards');
+}
+.upsetMouth{
+	@include animation('upsetMouth 1s 1.6s forwards');
+	@include transform-origin(50% 50% 0);
+}
+.smileEye{
+	
+	@include animation('smileEye 1s forwards');
+	@include transform-origin(50% 50% 0);
+}
+.smileEye_right{
+	@include animation('smileEye_right 1s forwards');
+	@include transform-origin(50% 50% 0);
+}
+.smileMouth{
+	@include animation('smileMouth 1s forwards');
+	@include transform-origin(50% 50% 0);
+}
+.changeFace{
+	@include animation('changeFace 3s forwards');
+	@include transform-origin(center center 0);
+}
+/***********************************************  Projects ****************************************/
+.wrapper{
+	width:95%;
+	margin:auto;
+	height:100%;
+}
+.projects{
+	float:left;
+	width:21%;
+	margin:3% 0 0 3%;
+	padding:2px 0 2px 0;
+	//overflow: hidden;
+	.description{
+		box-shadow: 1px #f2f2f2;
+		position:relative;
+		width:100%;
+		background-size: 100%;
+		//background-position: 5% 5%;
+		//overflow: hidden;
+		@include perspective(800px);
+		//perspective:150px;
+		// set the perspective on the parent element
+		// so its child element can have different perspective on 3d transform animation!
+		.proShelter{
+			// if use position relative, .proShelter will take place,
+			// so the description will be below the proShelter, not under it and covered by it.
+			position:absolute;
+			width:100%;
+			height:50%;
+			background-position: 5% 5%; // sequence: left top
+			z-index:2;
+			//max-width: 100%;
+			//max-height: 100%;
+			overflow: hidden;
+			& img{
+				max-width: 100%;
+				max-width: 100%;
+			}
+		}
+		.descrpt{
+			//If you are trying to hide absolute positioned elements 
+			//make sure the container of those absolute positioned elements 
+			//is relatively positioned.
+			// it also work the opposite way--container: absolute, child: relative
+			position:absolute;
+			overflow: hidden;
+			height:50%;
+			width:91%;
+			background:#fff;//$bg_Projects;
+			color:$bg_Projects;
+			// add padding but the "top" attribute for the down descrpt is still 100%;
+			// do not use box-sizing(border-box) here. it will affect the effect we want
+			opacity: 0.8;
+			padding:5% 5% 0 4%;
+			text-align: center;
+			//@include box-sizing(border-box);
+			& h3{
+				margin: auto;
+				font-size: 0.9em;
+			}
+		}
+		.down{
+			top:50%;
+			& img{
+				position:relative;
+				top:-100%;
+			}
+			& h3{
+				position:relative;
+				top:-100%;
+			}
+		}
+		.rotate{
+			position:absolute;
+			z-index: 1;
+		}
+		.in_top, .in_right{
+			z-index: 4;
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('pro_in_top 0.5s forwards');
+		}
+		
+		.in_bottom, .in_left{
+			z-index: 3;
+			@include transform-origin(50%, 0, 0 );
+			@include animation('pro_in_bottom 0.5s forwards');
+		}
+		/*
+		.in_right{
+			@include transform-origin(100%, 50%, 0 );
+			@include animation('pro_in_right 2s forwards');
+		}
+		.in_left{
+			@include transform-origin(0, 50%, 0 );
+			@include animation('pro_in_left 0.5s forwards');
+		}*/
 
-
+		.out_top, .out_right{
+			@include transform(rotateX(90deg));
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('pro_out_top 0.5s 0.3s forwards');
+		}
+		.out_bottom, .out_left{
+			@include transform(rotateX(90deg));
+			@include transform-origin(50%,0, 0 );
+			@include animation('pro_out_bottom 0.5s 0.3s forwards');
+		}/*
+		.out_left{
+			@include animation('pro_out_left 0.5s forwards');
+		}
+		.out_right{
+			@include animation('pro_out_right 0.5s forwards');
+		}*/
+		.rotate_in_bottom, .rotate_in_left{
+			@include transform(rotateX(-90deg));
+			z-index: 3;
+			opacity: 0;
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('rotate_in_bottom 0.5s 0.3s forwards');
+		}
+		.rotate_in_top, .rotate_in_right{
+			z-index: 3;
+			opacity: 0;
+			@include transform-origin(50%, 0, 0 );
+			@include transform(rotateX(90deg));
+			@include animation('rotate_in_top 0.5s 0.3s forwards');
+		}
+		.rotate_out_top, .rotate_out_right{
+			z-index: 3;
+			@include transform-origin(50%, 0, 0 );
+			@include animation('rotate_out_top 0.5s forwards');
+		}
+		.rotate_out_bottom, .rotate_out_left{
+			z-index: 3;
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('rotate_out_bottom 0.5s  forwards');
+		}
+	}
+	.caption{
+			@include box-sizing(border-box);
+			padding:5% 3% 0 3%;
+			width:100%;
+			background:#fff;
+			& h3{
+				font-size: 0.7em;
+			}
+			& p{
+				font-size:0.6em;
+			}
+	}
+}
+/***************************************************** Blog **********************************/
+#Blog{
+	.row{
+		background-image: url('./images/bg_projects.jpg');
+	}
+	.content_wrap{
+		position:absolute;
+		background-size:100%;
+		background-position:5% 5%;
+		height:0;
+		width:40%;
+		border-style:solid;
+		border-bottom-color:$bg_Blog;
+		border-right: 800px solid transparent;
+		.link{
+			//a "<a>" around the text, set up the <a>'s color and text-decoration
+			// also set up the words' color inside <a>
+			// then the text-decoration color is the color of <a>, not the word inside <a>
+			color:#fff;
+			position:relative;
+			float:right;
+			top: 75%;
+			left:65%;
+			text-decoration: underline;
+			& h2{
+				// require space after &
+				color:#fff;
+			}
+			//border-bottom: 2px solid #fff;
+		}
+	}
+}
+.dialogBox{
+	margin:10% 0 5% 15%;
+	width:100%;
+	height:auto;
+	background:#fff;
+	@include border-radius(3%);
+	@include box-sizing(border-box);
+	padding:5% 8% 5% 8%;
+	opacity:0.7;
+	z-index:2;
+	line-height:150%;
+	position:absolute;
+}
+.line{
+	width:1200px;
+	height:10px;
+	position:absolute;
+	left:40%;
+	background:white;
+	@include transform(rotateZ(44.2deg));
+	z-index:5;
+	@include transform-origin(0 0 0);
+}
+/************************************************* Blog ********************************************/
+.clouds{
+	overflow:hidden;
+	float:left;
+	width:100%;
+	height:20%;
+	background:inherit;
+	.cloud{
+		margin-left:5%;
+		position:relative;
+		top:55%;
+		width:18%;
+		min-width: 100px;
+		height:45%;
+		//@include border-radius(50%);
+		background:$Cloud;
+		.cloudPart1, .cloudPart2{
+			@include border-radius(100%);
+			background:inherit;
+			position: absolute;
+			
+		}
+		.cloudPart1{
+			top:-70%;
+			width:35%;
+			left:13%;
+		}
+		.cloudPart2{
+			top:-100%;
+			width:55%;
+			left:32%;
+		}
+	}
+}

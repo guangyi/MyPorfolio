@@ -1,32 +1,94 @@
 var portfolio = angular.module('portfolio',[]);
-
+function getWinHeight(){
+		return window.innerHeight;
+	}
+function handleResize(){
+		return getWinHeight();
+	}
 
 portfolio.controller('frameworkCtrl',['$scope','$location', function($scope, $location){
-	$scope.navNames = ['Welcome','About','Projects','Contact'];
+	$scope.navNames = ['About','Intro', 'Projects','Blog','MoreAboutMe','Contact'];
+	//isActive is to verify the link is activated or not.
 	$scope.isActive = function(viewLocation){
 		var active = (viewLocation === $location.path());
 		return active;
 	}
 }]);
 
-portfolio.controller();
-portfolio.controller( 'contentCtrl',['$scope','$location', function($scope,$location){
-	$scope.screenHeight = screen.availHeight;
+portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($scope,$location, $window){
+	$scope.screenHeight = getWinHeight();//$(window).height(); //screen.availHeight;
+	$window.onresize = function(){ handleResize();}
+	// watch the change in URL?
+	// first elementget current URL
 	$scope.$watch(function(){
-			return $location.path();
-			}, function(value){
-				// replace the '/' in the URL with '#''
+		return $location.path();
+		}, function(value){
+			// when the document is ready, call function below
+			angular.element(document).ready(function(){
 				if(value){
+					// replace the '/' in the URL with '#''
 					var idToScroll = value.replace('/','#');
-					// make sure call the effect after generate the DOM element.
-					if($(idToScroll).length != 0){
-						$('body').animate({
-							scrollTop: $(idToScroll).offset().top
+					// How to calculate how much to scroll in a scroll area
+					// Here the offset is changing.
+						var offset = $(idToScroll).offset().top;
+						var contentScroll = $('.content').scrollTop();
+						var upToTop = contentScroll + offset;
+						$('.content').animate({
+							scrollTop: upToTop
 						},"slow");
-					}
+					//}
 				}
-		});	
+			});	
+	});
 }]);
+portfolio.controller('projectsCtrl',['$scope',function($scope){
+	$scope.projects = {
+					// currently input here in JS file, later when more projets presented,
+					//will get them from DB and can "lord more" to build single page application
+						'car':
+							{'caption':     'My dream car',
+							 'tag':         'css3',
+							 'description': 'This is the dream car I created by CSSssssss3,This is the dream car I created by CSSsssss3,This is the dream car I created by CSSssssss3',
+							 'img_url':     './css1/stylesheets/images/car.JPG'
+							},
+						'bouncing_ball_Y':{
+							'caption':     'Bouncing Ball on Y axis',
+							'tag':         'Canvas',
+							'description': 'This is the practice on Html5 Canvas. A bouncing ball on Y axis,This is the practice on Html5 Canvas. A bouncing ball on Y axis',
+							 'img_url':     './css1/stylesheets/images/bouncing_ball_Y.JPG'
+							},
+						'bouncing_ball_XY':{
+							'caption':     'Bouncing Ball on X and Y axis',
+							'tag':         'Canvas',
+							'description': 'This is the practice on Html5 Canvas. A bouncing ball on X and Y axis,This is the practice on Html5 Canvas. A bouncing ball on X and Y axis',
+							 'img_url':     './css1/stylesheets/images/bouncing_ball_XY.JPG'
+							},
+						'image_slider':{
+							'caption':     'Image slider with pagers',
+							'tag':         'Javascript',
+							'description': 'Image slider with no plugin, only Javascript,Image slider with no plugin, only Javascript,Image slider with no plugin, only Javascript',
+							'img_url':     './css1/stylesheets/images/image_slider.JPG'
+						}
+					};
+}]);
+portfolio.controller('contactCtrl',['$scope', function($scope){
+	$scope.icons = {
+		'facebook':{
+			'img_url':'./css1/stylesheets/images/facebook.JPG',
+			'link'   :'https://www.facebook.com/guangyi.zhou.1'
+		},
+		'linkedin':{
+			'img_url':'./css1/stylesheets/images/linkedin.JPG',
+			'link'   :'http://www.linkedin.com/profile/view?id=142806547&trk=nav_responsive_tab_profile_pic'
+		}
+		'github':{
+			'img_url':'./css1/stylesheets/images/github.JPG',
+			'link'   :'https://github.com/guangyi'
+		}
+	}
+}]);
+/*
+//How to srcoll page with angular directive
 portfolio.directive('myScrollTo', function(){
 	return{
 		restrict:'A',
@@ -42,53 +104,4 @@ portfolio.directive('myScrollTo', function(){
 		}
 	}
 })
-.directive('myMenuItem', function(){
-	return{
-		restrict:'A',
-		link: function(scope, element, attrs){
-			var idToScroll = attrs.href;
-			element.on('click', function() {
-				$('body').animate({
-					scrollTop: $(idToScroll).offset().top
-				},"slow");
-			})
-		}
-	};
-});
-
-
-portfolio.directive('mouseWheel', ['$scope', function($scope){
-	// Runs during compile
-	return {
-		// name: '',
-		// priority: 1,
-		// terminal: true,
-		// scope: {}, // {} = isolate, true = child, false/undefined = no change
-		// cont­rol­ler: function($scope, $element, $attrs, $transclue) {},
-		// require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
-		restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
-		// template: '',
-		// templateUrl: '',
-		// replace: true,
-		// transclude: true,
-		// compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
-		link: function($scope, element, attrs) {
-			if (element.addEventListener){
-				element.addEventListener('mousewheel', function(){
-					alert(attrs.id);
-				});
-			//FireFox
-				element.addEventListener('DOMMouseScroll', function(){
-
-				});
-			}
-			//IE9, Chrome, Safari, Opera
-			else{
-				element.attachEvent('onmousewheel',function(){
-
-			});
-			}
-			
-		}
-	};
-}]);
+*/

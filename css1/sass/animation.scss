@@ -1,0 +1,158 @@
+@import "compass/css3/transform";
+
+@mixin animation($animaetionName){
+	-webkit-animation: #{$animaetionName};
+		 -o-animation: #{$animaetionName};
+	   -moz-animation: #{$animaetionName};
+	   		animation: #{$animaetionName};
+}
+
+@mixin keyframes($animaetionName){
+	@-webkit-keyframes $animaetionName{
+		@content;
+	}
+	@-moz-keyframes $animaetionName{
+		@content;
+	}
+	@keyframes $animaetionName{
+		@content;
+	}
+}
+@include keyframes(upsetEye){
+	0%   { @include transform( rotateZ(0deg) );}
+	100% { @include transform( rotateZ(180deg) );}
+}
+@include keyframes(upsetEye_right){
+	0%   { @include transform( rotateZ(0deg) );}
+	100% { @include transform( rotateZ(-180deg) );}
+}
+@include keyframes(upsetMouth){
+	0%   { @include transform( rotateX(180deg) );
+			border-bottom: 0px solid #fff;}
+	100% { @include transform( rotateX(0deg) );
+			border-bottom: 0px solid #fff;}
+}
+@include keyframes(smileEye){
+	0%   { @include transform( rotateX(180deg) );}
+	100% { @include transform( rotateX(0deg) ); }
+}
+@include keyframes(smileEye_right){
+	0%   { @include transform( rotateX(180deg) );}
+	100% { @include transform( rotateX(0deg) ); }
+}
+@include keyframes(smileMouth){
+	0%   { @include transform( rotateX(0deg) );}
+		   //border-bottom:0px solid #fff; }
+	//40%  { border-bottom:0px solid #fff;}
+	100% { @include transform( rotateX(180deg) );}
+		   //border-bottom: 10px solid #fff;}
+}
+@include keyframes(changeFace){
+	0%   { @include transform( rotateY(0deg) );}
+	100% { @include transform( rotateY(180deg) ); }
+}
+// Define "IN-rotate" animation
+@include keyframes(in_top){
+	0%   { @include transform( rotateX(0deg) );}
+	100% { @include transform( rotateX(90deg) );}
+}
+@include keyframes(in_right){
+	0%   { @include transform( rotateY(0deg) );}
+	100% { @include transform( rotateY(90deg) );}
+}
+@include keyframes(in_bottom){
+	0%   { top:0px;}
+	100% { top: -100%;}
+}
+@include keyframes(in_left){
+	0%   { @include transform( rotateY(0deg) );}
+	100% { @include transform( rotateY(90deg) );}
+}
+
+@include keyframes(out_top){
+	0%   { @include transform( rotateX(0deg) );}
+	100% { @include transform( rotateX(90deg) );}
+}
+//Define IN-sliding animation
+@include keyframes(in_top){
+	0%   { top: 0px;}
+	100% { top: 100%;}
+}
+@include keyframes(in_bottom){
+	0%   { top: 0px;}
+	100% { top: -100%;}
+}
+@include keyframes(in_left){
+	0%   { left: 0;}
+	100% { left: 100%;}
+}
+@include keyframes(in_right){
+	0%   { left: 0;}
+	100% { left: -100%;}
+}
+//Define out-sliding animation
+@include keyframes(out_top){
+	0%   { top: 100%;}
+	100% { top: 0;}
+}
+@include keyframes(out_bottom){
+	0%   { top: -100%;}
+	100% { top: 0px;}
+}
+@include keyframes(out_left){
+	0%   { left: 100%;}
+	100% { left: 0px;}
+}
+@include keyframes(out_right){
+	0%   { left: -100%;}
+	100% { left: 0px;}
+}
+/******************************* Define in-rotating animation for projects **************************/
+// animations for mouse enter --projects page
+@include keyframes(pro_in_top){
+	0%   { @include transform(rotateX(0deg));  }
+	40%  { opacity:1;}
+	100% { @include transform(rotateX(-90deg));
+		   opacity:0;}
+}
+@include keyframes(pro_in_bottom){
+	0%   { @include transform(rotateX(0deg));  }
+	40%  { opacity:1;}
+	100% { @include transform(rotateX(90deg));
+		   opacity:0;}
+}
+// these tow are for description
+@include keyframes(rotate_in_bottom){
+	0%   { @include transform(rotateX(-90deg)); opacity:0;}
+	//25%   { @include transform(rotateX(-90deg)); }
+	100% { @include transform(rotateX(0deg));  opacity: 0.8; }
+}
+@include keyframes(rotate_in_top){
+	0%   { @include transform(rotateX(90deg)); opacity:0;}
+	100% { @include transform(rotateX(0deg));  opacity: 0.8; }
+}
+// animation for mouse leave --projects page
+@include keyframes(rotate_out_bottom){
+	0%   { @include transform(rotateX(0deg));  }
+	40%  { opacity:1;}
+	100% { @include transform(rotateX(-90deg)); 
+		   opacity:0;}
+}
+@include keyframes(rotate_out_top){
+	0%   { @include transform(rotateX(0deg)); }
+	40%  { opacity:1;}
+	100% { @include transform(rotateX(90deg)); 
+		   opacity:0;}
+}
+@include keyframes(pro_out_top){
+	0%   { @include transform(rotateX(-90deg));}
+	100% { @include transform(rotateX(0deg)); }
+}
+@include keyframes(pro_out_bottom){
+	0%   { @include transform(rotateX(90deg));}
+	100% { @include transform(rotateX(0deg)); }
+}
+
+
+
+

@@ -1,0 +1,1554 @@
+@-webkit-keyframes upsetEye {
+  /* line 22, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+
+  /* line 23, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+}
+
+@-moz-keyframes upsetEye {
+  /* line 22, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+
+  /* line 23, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+}
+
+@keyframes upsetEye {
+  /* line 22, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+
+  /* line 23, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+}
+
+@-webkit-keyframes upsetEye_right {
+  /* line 26, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+
+  /* line 27, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(-180deg);
+    -moz-transform: rotateZ(-180deg);
+    -ms-transform: rotateZ(-180deg);
+    -o-transform: rotateZ(-180deg);
+    transform: rotateZ(-180deg);
+  }
+}
+
+@-moz-keyframes upsetEye_right {
+  /* line 26, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+
+  /* line 27, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(-180deg);
+    -moz-transform: rotateZ(-180deg);
+    -ms-transform: rotateZ(-180deg);
+    -o-transform: rotateZ(-180deg);
+    transform: rotateZ(-180deg);
+  }
+}
+
+@keyframes upsetEye_right {
+  /* line 26, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+
+  /* line 27, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(-180deg);
+    -moz-transform: rotateZ(-180deg);
+    -ms-transform: rotateZ(-180deg);
+    -o-transform: rotateZ(-180deg);
+    transform: rotateZ(-180deg);
+  }
+}
+
+@-webkit-keyframes upsetMouth {
+  /* line 30, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    border-bottom: 0px solid #fff;
+  }
+
+  /* line 32, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    border-bottom: 0px solid #fff;
+  }
+}
+
+@-moz-keyframes upsetMouth {
+  /* line 30, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    border-bottom: 0px solid #fff;
+  }
+
+  /* line 32, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    border-bottom: 0px solid #fff;
+  }
+}
+
+@keyframes upsetMouth {
+  /* line 30, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    border-bottom: 0px solid #fff;
+  }
+
+  /* line 32, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    border-bottom: 0px solid #fff;
+  }
+}
+
+@-webkit-keyframes smileEye {
+  /* line 36, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
+  /* line 37, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-moz-keyframes smileEye {
+  /* line 36, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
+  /* line 37, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes smileEye {
+  /* line 36, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
+  /* line 37, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-webkit-keyframes smileEye_right {
+  /* line 40, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
+  /* line 41, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-moz-keyframes smileEye_right {
+  /* line 40, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
+  /* line 41, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes smileEye_right {
+  /* line 40, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
+  /* line 41, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-webkit-keyframes smileMouth {
+  /* line 44, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 47, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+}
+
+@-moz-keyframes smileMouth {
+  /* line 44, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 47, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes smileMouth {
+  /* line 44, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 47, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+}
+
+@-webkit-keyframes changeFace {
+  /* line 51, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 52, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+
+@-moz-keyframes changeFace {
+  /* line 51, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 52, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes changeFace {
+  /* line 51, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 52, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes in_top {
+  /* line 56, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 57, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@-moz-keyframes in_top {
+  /* line 56, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 57, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes in_top {
+  /* line 56, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 57, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@-webkit-keyframes in_right {
+  /* line 60, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 61, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@-moz-keyframes in_right {
+  /* line 60, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 61, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes in_right {
+  /* line 60, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 61, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@-webkit-keyframes in_bottom {
+  /* line 64, ../sass/animation.scss */
+  0% {
+    top: 0px;
+  }
+
+  /* line 65, ../sass/animation.scss */
+  100% {
+    top: -100%;
+  }
+}
+
+@-moz-keyframes in_bottom {
+  /* line 64, ../sass/animation.scss */
+  0% {
+    top: 0px;
+  }
+
+  /* line 65, ../sass/animation.scss */
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes in_bottom {
+  /* line 64, ../sass/animation.scss */
+  0% {
+    top: 0px;
+  }
+
+  /* line 65, ../sass/animation.scss */
+  100% {
+    top: -100%;
+  }
+}
+
+@-webkit-keyframes in_left {
+  /* line 68, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 69, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@-moz-keyframes in_left {
+  /* line 68, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 69, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes in_left {
+  /* line 68, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  /* line 69, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@-webkit-keyframes out_top {
+  /* line 73, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 74, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@-moz-keyframes out_top {
+  /* line 73, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 74, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes out_top {
+  /* line 73, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 74, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@-webkit-keyframes in_top {
+  /* line 78, ../sass/animation.scss */
+  0% {
+    top: 0px;
+  }
+
+  /* line 79, ../sass/animation.scss */
+  100% {
+    top: 100%;
+  }
+}
+
+@-moz-keyframes in_top {
+  /* line 78, ../sass/animation.scss */
+  0% {
+    top: 0px;
+  }
+
+  /* line 79, ../sass/animation.scss */
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes in_top {
+  /* line 78, ../sass/animation.scss */
+  0% {
+    top: 0px;
+  }
+
+  /* line 79, ../sass/animation.scss */
+  100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes in_bottom {
+  /* line 82, ../sass/animation.scss */
+  0% {
+    top: 0px;
+  }
+
+  /* line 83, ../sass/animation.scss */
+  100% {
+    top: -100%;
+  }
+}
+
+@-moz-keyframes in_bottom {
+  /* line 82, ../sass/animation.scss */
+  0% {
+    top: 0px;
+  }
+
+  /* line 83, ../sass/animation.scss */
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes in_bottom {
+  /* line 82, ../sass/animation.scss */
+  0% {
+    top: 0px;
+  }
+
+  /* line 83, ../sass/animation.scss */
+  100% {
+    top: -100%;
+  }
+}
+
+@-webkit-keyframes in_left {
+  /* line 86, ../sass/animation.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 87, ../sass/animation.scss */
+  100% {
+    left: 100%;
+  }
+}
+
+@-moz-keyframes in_left {
+  /* line 86, ../sass/animation.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 87, ../sass/animation.scss */
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes in_left {
+  /* line 86, ../sass/animation.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 87, ../sass/animation.scss */
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes in_right {
+  /* line 90, ../sass/animation.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 91, ../sass/animation.scss */
+  100% {
+    left: -100%;
+  }
+}
+
+@-moz-keyframes in_right {
+  /* line 90, ../sass/animation.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 91, ../sass/animation.scss */
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes in_right {
+  /* line 90, ../sass/animation.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 91, ../sass/animation.scss */
+  100% {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes out_top {
+  /* line 95, ../sass/animation.scss */
+  0% {
+    top: 100%;
+  }
+
+  /* line 96, ../sass/animation.scss */
+  100% {
+    top: 0;
+  }
+}
+
+@-moz-keyframes out_top {
+  /* line 95, ../sass/animation.scss */
+  0% {
+    top: 100%;
+  }
+
+  /* line 96, ../sass/animation.scss */
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes out_top {
+  /* line 95, ../sass/animation.scss */
+  0% {
+    top: 100%;
+  }
+
+  /* line 96, ../sass/animation.scss */
+  100% {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes out_bottom {
+  /* line 99, ../sass/animation.scss */
+  0% {
+    top: -100%;
+  }
+
+  /* line 100, ../sass/animation.scss */
+  100% {
+    top: 0px;
+  }
+}
+
+@-moz-keyframes out_bottom {
+  /* line 99, ../sass/animation.scss */
+  0% {
+    top: -100%;
+  }
+
+  /* line 100, ../sass/animation.scss */
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes out_bottom {
+  /* line 99, ../sass/animation.scss */
+  0% {
+    top: -100%;
+  }
+
+  /* line 100, ../sass/animation.scss */
+  100% {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes out_left {
+  /* line 103, ../sass/animation.scss */
+  0% {
+    left: 100%;
+  }
+
+  /* line 104, ../sass/animation.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@-moz-keyframes out_left {
+  /* line 103, ../sass/animation.scss */
+  0% {
+    left: 100%;
+  }
+
+  /* line 104, ../sass/animation.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes out_left {
+  /* line 103, ../sass/animation.scss */
+  0% {
+    left: 100%;
+  }
+
+  /* line 104, ../sass/animation.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes out_right {
+  /* line 107, ../sass/animation.scss */
+  0% {
+    left: -100%;
+  }
+
+  /* line 108, ../sass/animation.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@-moz-keyframes out_right {
+  /* line 107, ../sass/animation.scss */
+  0% {
+    left: -100%;
+  }
+
+  /* line 108, ../sass/animation.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes out_right {
+  /* line 107, ../sass/animation.scss */
+  0% {
+    left: -100%;
+  }
+
+  /* line 108, ../sass/animation.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+/******************************* Define in-rotating animation for projects **************************/
+@-webkit-keyframes pro_in_top {
+  /* line 113, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 114, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 115, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes pro_in_top {
+  /* line 113, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 114, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 115, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pro_in_top {
+  /* line 113, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 114, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 115, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pro_in_bottom {
+  /* line 119, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 120, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 121, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes pro_in_bottom {
+  /* line 119, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 120, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 121, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pro_in_bottom {
+  /* line 119, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 120, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 121, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotate_in_bottom {
+  /* line 126, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+
+  /* line 128, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes rotate_in_bottom {
+  /* line 126, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+
+  /* line 128, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes rotate_in_bottom {
+  /* line 126, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+
+  /* line 128, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes rotate_in_top {
+  /* line 131, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 132, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes rotate_in_top {
+  /* line 131, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 132, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes rotate_in_top {
+  /* line 131, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 132, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes rotate_out_bottom {
+  /* line 136, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 137, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 138, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotate_out_bottom {
+  /* line 136, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 137, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 138, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate_out_bottom {
+  /* line 136, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 137, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 138, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotate_out_top {
+  /* line 142, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 143, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 144, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotate_out_top {
+  /* line 142, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 143, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 144, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate_out_top {
+  /* line 142, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 143, ../sass/animation.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 144, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pro_out_top {
+  /* line 148, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+
+  /* line 149, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-moz-keyframes pro_out_top {
+  /* line 148, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+
+  /* line 149, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes pro_out_top {
+  /* line 148, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+
+  /* line 149, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-webkit-keyframes pro_out_bottom {
+  /* line 152, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+  /* line 153, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-moz-keyframes pro_out_bottom {
+  /* line 152, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+  /* line 153, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes pro_out_bottom {
+  /* line 152, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+  /* line 153, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
