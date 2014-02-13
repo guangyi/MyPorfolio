@@ -133,7 +133,7 @@ var initialFaces = function(faceNumber){
 	}*/
 
 	var eachFaceWidth = $('.faces').width() / number;
-	//setup outerWidth, so each face's width is 
+	//setup outerWidth, so each face's width is correct??
 	$('.smile').outerWidth(eachFaceWidth);
 	setHightByWidth($('.smile') , 1);
 	// select one smile element, otherwise, $('.smile').length will be 2,4,8...
@@ -149,10 +149,21 @@ var initialFaces = function(faceNumber){
 	});
 }
 var setRadiusByHeight =  function(obj, ratio){
-	var height = obj.height();
-	var radius = height * ratio;
-	cssSetting(obj, 'border-radius', parseInt(radius));
+	obj.each(function(){
+		var height = $(this).height();
+		var radius = height * ratio;
+		cssSetting($(this), 'border-radius', parseInt(radius));
+	})
+	
 
+}
+var setWidthByHeight = function(obj, ratio){
+	obj.each(function(){
+		var height = $(this).height();
+		var width = height * ratio;
+		$(this).outerWidth(width+'px');
+	});
+	
 }
 /******************************************** projects settings *******************************/
 // setHightByWidth second parameter is the ratio: hight = ratio * width

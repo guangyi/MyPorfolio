@@ -3,28 +3,30 @@
 <head>
 	<meta charset="uft-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
-	<link href="css1/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="lib/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="lib/angular/angular.js"></script>
-	<script type="text/javascript" src="lib/angular/angular-animate.js"></script>
-	<script type="text/javascript" src="js/animation.js"></script>
-	<script type="text/javascript" src="js/portfolio.js"></script>
-	<script type="text/javascript" src="js/onScroll.js"></script>
-	<script type="text/javascript" src="js/directionAware.js"></script>
-	<script type="text/javascript" src="js/setting.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/reset.css" media="screen">
+	<link href="{{STATIC_URL}}css1/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="{{STATIC_URL}}lib/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular-animate.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular-cookies.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/animation.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/portfolio.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/service.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/onScroll.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/directionAware.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/setting.js"></script>
 
 </head>
 <body ng-controller="frameworkCtrl">
 	<div class="container">
 		<header id="header">
 			<nav id="nav">
-				<a href='#{{nav}}' ng-repeat="nav in navNames" ng-class="{active:isActive('/{{nav}}')}">{{nav}}</a>
+				<a href='#{$nav$}' ng-repeat="nav in navNames" ng-class="{active:isActive('/{$nav$}')}">{{nav}}</a>
 			</nav>
 		</header>
-		<div class="content"  ng-controller="contentCtrl" style="height: {{screenHeight}}px">
+		<div class="content"  ng-controller="contentCtrl" style="height: {$screenHeight$}px">
 			<div class="scroll" >
-				<section class="main" id="About" style="height: {{screenHeight}}px">
+				<section class="main" id="About" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
 						<div class="content_wrap">
 							<div id="profile"></div>
@@ -34,7 +36,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="main" id="Intro" style="height: {{screenHeight}}px">
+				<section class="main" id="Intro" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
 						<div class="content_wrap">
 							<section class="topLeft">
@@ -83,45 +85,44 @@
 					</div>
 				</section>
 				
-				<section class="main" id="Projects" style="height: {{screenHeight}}px" ng-controller="projectsCtrl">
+				<section class="main" id="Projects" style="height: {$screenHeight$}px" ng-controller="projectsCtrl">
 					<div class="row effOnScroll">
 						<h1>Projects</h1>
 						<div class="wrapper">
 							<div ng-repeat="project in projects" class='projects'>
-								<div class="description" style="background-image:url({{project.img_url}})">
-									<div class="proShelter top"><img src="{{project.img_url}}"></div>
-									<div class="proShelter down"><img src="{{project.img_url}}"></div>
-									<div class="descrpt top"><h3>{{project.description}}</h3></div>
-									<div class="descrpt down"><h3>{{project.description}}</h3></div>
+								<div class="description"> <!--style="background-image:url({$ project.img_url $})"-->
+									<div class="proShelter top"><img src="{$ project.img_url $}"></div>
+									<div class="proShelter down"><img src="{$ project.img_url $}"></div>
+									<div class="descrpt top"><h3>{$project.description$}</h3></div>
+									<div class="descrpt down"><h3>{$project.description$}</h3></div>
 								</div>
 								<div class="caption">
-									<h3>{{project.caption}}</h3>
-									<p>Tag:{{project.tag}}</p>
+									<h3>{$project.caption$}</h3>
+									<p>Tag:{$project.tag$}</p>
 								</div>
 							</div>
 						</div>						
 					</div>
 				</section>
-				<section class="main" id="Blog" style="height: {{screenHeight}}px">
+				<section class="main" id="Blog" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
 						<!--<div class="line"></div>-->
-						<div class="content_wrap" style="border-bottom-width: {{screenHeight}}px">
+						<div class="content_wrap" style="border-bottom-width: {$screenHeight$}px">
 							<h1>My Blog</h1>
-						<div class="dialogBox">
-							<h3>My blog is my first side project. While building this project,
-								I used AngularJS as the front-end framework and Django/REST framwork
-								as the back-end. For the database, it's noSQL--MongoDB. Also, like
-								this portfolio, I use SASS for styling. The reason why I use these things
-								is I want to learn new things, new knowledge and new skills. As you know,
-								fron-end is a fast going field, self-learning is a must-have quality
-								for front-end software engineer. So I chose those stuffs to nail this blog.
-							</h3>  
-						</div>
+							<div class="dialogBox">
+								<h3>My blog is my first side project. While building this project,
+									I used AngularJS as the front-end framework and Django/REST framwork
+									as the back-end. For the database, it's noSQL--MongoDB. Also, like
+									this portfolio, I use SASS for styling. The reason why I use these things
+									is I want to learn new things, new knowledge and new skills. As you know,
+									fron-end is a fast going field, self-learning is a must-have quality
+									for front-end software engineer. So I chose those stuffs to nail this blog.
+								</h3>  
+							</div>
 						<a class="link"><h2>Take a look ></h2></a>
-
 					</div>
 				</section>
-				<section class="main" id="MoreAboutMe" style="height: {{screenHeight}}px">
+				<section class="main" id="MoreAboutMe" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
 						<section class="likeContainer">
 								<h1>More About Me</h1>
@@ -178,20 +179,46 @@
 						</section>
 					</div>
 				</section>
-				<section class="main" id="Contact" style="height: {{screenHeight}}px" ng-controller="contactCtrl">
+				<section class="main" id="Contact" style="height: {$screenHeight$}px" ng-controller="contactCtrl">
 					<div class="row effOnScroll">
 						<div class="content_wrap">
-							<h1>Contact Me</h1>
+							<div ><h1>Contact Me</h1></div>
 							<div class="clouds">
 								<div class="cloud">
 									<div class="cloudPart1"></div>
 									<div class="cloudPart2"></div>
 								</div>
 							</div><!--end of clouds-->
-							<div class="icons">
-								<div class="icon" ng-repeat="icon in icons">
-									<a href="icon.link"><img src="icon.img_url" ></a>
-								</div> 
+							<!--<div class="icons">
+								<a ng-repeat="icon in icons" href="{$icon.link$}">
+									<img src="{$icon.img_url$}" ></a>
+								</a> 
+							</div>-->
+							<div class="dialog">
+									<h3> Send me an email, tell me what you think, let me know how can I do better.I'm looking forward to hearing from you.</h3>
+								</div>
+							<div class="form">
+								
+								<!--Angular Form with its way of validation-->
+								<form id="contactForm" name="contactForm" novalidation>
+									<div class="input">
+										<label>Your Name:</label><br><span class="error" ng-show="contactForm.name.$error.required && clicked">Your name is Required!</span><br>
+										<input type="text" name="name" autocomplete="on" autofocus required ng-model="emailData.name">
+										<div class="second">
+											<label>Your Email:</label><br> 
+											<span class="error" ng-show="contactForm.email.$invalid && clicked">Your email is invalid!</span><br>
+											<input type="email" name="email" autocomplete="on" required ng-model="emailData.email"><br>
+										</div>
+									</div>
+									<div class="message">
+										<label>Your Message: </label><br>
+										<span class="error" ng-show="contactForm.message.$error.required && clicked">Your Message are Required!</span><br>
+										<textarea rows="8em" cols="170" required ng-model="emailData.message" name="message"></textarea>
+										<input id="mailButton" type="button" value="Send your Email" ng-click="sendEmail()" >
+									</div>
+									
+								</form>
+							</div>
 						</div>
 					</div>
 				</section>
