@@ -171,6 +171,9 @@ height:100%;
 			color:#FFF;//#3F6399;//#629D30;
 			margin-bottom: 0.5em;
 		}
+		h2{
+			font-size:1.5em;
+		}
 	}
 	}
 	
@@ -853,23 +856,24 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 	padding-right:3%;
 }
 .form{
-	padding-top:5%;
-	padding-bottom:5%;
+	@include box-sizing(border-box);
+	padding:2% 2% 5% 2%;
 	background:#fff;
 	width:90%;
 	margin-left:auto;
 	margin-right:auto;
 	position:relative;
 	margin-top:5%;
-	color:#78A632;//#707070;
+	color:#558c00;//#707070;
 
 }
 #contactForm{
 	width:90%;
 	margin:auto;
-	margin-top:2%;
+	margin-top:3%;
 	position:relative;
 	background:#fff;
+	color:#78A632;
 }
 .input{
 	width:45%;
@@ -884,6 +888,9 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 		width:100%;
 		font-size: 0.9em;
 		color:$formText;
+	}
+	& input:focus, & input:invalid {
+    	box-shadow:none !important;
 	}
 	.second{
 		margin-top:8%;
@@ -903,7 +910,9 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 		resize:vertical;
 		color:$formText;
 	}
-
+	& textarea:focus, & textarea:invalid {
+    	box-shadow:none !important;
+	}
 }
 .error{
 	@include border-radius(3px);
@@ -914,7 +923,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 }
 #mailButton{
 	float:right;
-	width:40%;
+	width:43%;
 	font-size:1em;
 	color:#fff;
 	background:$Button;
