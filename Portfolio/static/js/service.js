@@ -9,7 +9,9 @@ portfolio.factory('emailService',function($http, $q){
 				method:'POST',
 				data:emailEntity
 			}).success(function(status, data, header,config){
-				defer.resolve(data);
+				// what you resolve here, it will be return to the defer.promise
+				// get 'success' in defer.promise.then(function(data){ //data == 'success' })
+				defer.resolve('success');
 			}).error(function(status, data, header,config){
 				defer.reject(status);
 			});

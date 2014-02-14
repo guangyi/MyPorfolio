@@ -48,9 +48,9 @@ function flyin(){
 	})*/
 }
 $(document).ready(function(){
-	flyin();
+	//flyin();
 	$('.content').scroll(function(){
-		flyin();
+		//flyin();
 		//console.log($("#hi").offset().top);
 	});
 });

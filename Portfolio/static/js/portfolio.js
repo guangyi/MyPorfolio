@@ -99,7 +99,12 @@ portfolio.controller('contactCtrl',['$scope','emailService', function($scope, em
 		}
 	};
 	$scope.emailData = {};
+	// $scope.clicked used to detect wether the submit button has been cliked or not
+	// if it's not clicked, than the validation message of input and textare won't show up
 	$scope.clicked = false;
+	$scope.alert = false;
+	$scope.alertMsg = '';
+	$scope.base = false;// base layer show up after click submit button and form is valid
 	//console.log(contactForm);
 	// reference angular form in JS, use $scope.formName
 	//$scope.errorName = contactForm.name.error.required && !contactForm.name.$pristine;
@@ -108,9 +113,22 @@ portfolio.controller('contactCtrl',['$scope','emailService', function($scope, em
 	$scope.sendEmail = function(){
 		$scope.clicked = true;
 		if ($scope.contactForm.$valid){
+			$scope.base = true;
 			//console.log($scope.emailData.name);
-			emailService.sendEmail($scope.emailData);
+			var result = emailService.sendEmail($scope.emailData);
+			result.then(function(data){
+				// data == what emailService resolve will show up here.
+				switch(data){
+					case 'success': $scope.alertMsg = 'Thank you ' + $scope.emailData.name + '! Your message has been sent successfully!'; break;
+					default : $scope.alertMsg = 'Oops! Something is wrong! Error code: ' + data + 'Try again later!';break;
+				}
+				//when get returned result, msg box show up.
+				$scope.alert = true;
+			}).then(function(){
+				$scope.emailData = {};
+			});
 			$scope.clicked = false;
+			
 		}
 	};
 }]);
