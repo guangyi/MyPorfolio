@@ -37,24 +37,16 @@ function flyin(){
 			
 	});
 		});
-		
-	
-	//console.log(eleOffsetTop);
-	
-	
-	/*var unit = $('#Porjects');
-	unit.children().each(function(){
-		$(this).offset().top
-	})*/
 }
-$(document).ready(function(){
-	//flyin();
-	$('.content').scroll(function(){
-		//flyin();
-		//console.log($("#hi").offset().top);
+var projectLoad = function(){
+	var projects = $('.projects');//select all the project unit on the page
+	var i = 0;
+	projects.first().show('fast',function showNext(){
+		// can name the complete function like this
+		// so if can be called sometime
+		$(this).next().show('fast', showNext);//.next() calles the next sibling of matched element if no selector
 	});
-});
-
+}
 function has3D(){
 	//this function is to detect weather the browser has 3d effect or not
 	//Copied from stackoverflow. need to study it later.
@@ -67,7 +59,6 @@ function has3D(){
         'MozTransform':'-moz-transform',
         'transform':'transform'
     };
- 
     // Add it to the body to get the computed style
     document.body.insertBefore(el, null);
  
@@ -77,8 +68,18 @@ function has3D(){
             has3d = window.getComputedStyle(el).getPropertyValue(transforms[t]);
         }
     }
- 
     document.body.removeChild(el);
- 
     return (has3d !== undefined && has3d.length > 0 && has3d !== "none");
+}
+var animtOnScroll = function(){
+	$('.content').scroll(function(){
+		/******************************** Projects Page loading Animation **************/
+		var firstTimePrj = true;
+		if($('#Projects').offset().top <= $(window).height() * 0.7 && firstTimePrj){
+			fristTimePrj = false;
+			projectLoad();
+		};
+		cloudMove();// defined in cloudMove.js
+		//flyin();
+	});
 }

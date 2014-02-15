@@ -12,10 +12,12 @@
 	<script type="text/javascript" src="{{STATIC_URL}}js/animation.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/portfolio.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/service.js"></script>
-	<script type="text/javascript" src="{{STATIC_URL}}js/onScroll.js"></script>
-	<script type="text/javascript" src="{{STATIC_URL}}js/directionAware.js"></script>
+	
 	<script type="text/javascript" src="{{STATIC_URL}}js/setting.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/cloudMove.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/onScroll.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/directionAware.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/main.js"></script>
 
 </head>
 <body ng-controller="frameworkCtrl">
@@ -91,7 +93,7 @@
 						<h1>Projects</h1>
 						<div class="wrapper">
 							<div ng-repeat="project in projects" class='projects'>
-								<div class="description"> <!--style="background-image:url({$ project.img_url $})"-->
+								<div class="description" style="background-image:url({$ project.img_url $})">
 									<div class="proShelter top"><img src="{$ project.img_url $}"></div>
 									<div class="proShelter down"><img src="{$ project.img_url $}"></div>
 									<div class="descrpt top"><h3>{$project.description$}</h3></div>

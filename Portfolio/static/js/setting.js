@@ -165,14 +165,16 @@ var setWidthByHeight = function(obj, ratio){
 	});
 	
 }
-/******************************************** projects settings *******************************/
-// setHightByWidth second parameter is the ratio: hight = ratio * width
-$(document).ready(function(){
+var settings = function(){
+	/******************************************** projects settings settings.js *******************************/
 	setHightByWidth($('.projects'), 1.3);
 	setHightByWidth($('.description'), 1);
-	setHightByWidth($('.caption'),0.3);
+	setHightByWidth($('.caption'),0.25);
+	/*******************************************  Contact settings settings.js ********************************/
 	setHightByWidth($('.dialogBox'), 1);
 	setRadiusByHeight($('.cloud'), 0.5);
 	setHightByWidth($('.cloudPart1'), 1);
 	setHightByWidth($('.cloudPart2'), 1);
-})
+
+}
+
