@@ -11,12 +11,10 @@ var cloudMove = function(){
 		// the top property always gets lower-- maybe because the callback function is the current animation
 		// so its previous point is +10px after the first animation. but end point is the very origin point of cloud top
 		//$('.cloud').stop(true, true);// stop at end point
-		console.log('case1');
-		console.log('thisIntervalID'+intervalID[0]);
 		clearInterval(intervalID[0]);
 		clearInterval(intervalID[1]);
-		$('.cloud').stop('vertical',true, true);
-		$('.cloud').stop('horizontal',true, true);
+		$('.cloud').stop(true, true);
+		$('.cloud').css('left','0');
 		firstTime = true;
 	};
 	if($('#Contact').offset().top < $(window).height() * startPoint  && firstTime){
@@ -45,11 +43,9 @@ var cloudMove = function(){
 		// can use immediately execute function or 
 		// can call back current function when animation is done, like the day I do it here
 		// setInterval will execute the function again and again, setTimeout only execute once
-			//upDown( $('.cloud') );
-			//forwardBack( $('.cloud'), endPoint);
+			upDown( $('.cloud') );
+			forwardBack( $('.cloud'), endPoint);
 			intervalID[0] = setInterval(function(){
-				console.log('called from intetval');
-				console.log(intervalID[0]);
 				upDown( $('.cloud'));
 			},2000);
 				
@@ -84,7 +80,6 @@ var forwardBack = function(obj, endPoint){
 };
 var upDown = function(obj){
 	// cloud move up and down
-	console.log('case-updown');
 	obj.animate({
 		'top': '+=20'
 	}, 

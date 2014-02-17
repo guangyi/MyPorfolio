@@ -90,8 +90,10 @@
 				<section class="main" id="Projects" style="height: {$screenHeight$}px" ng-controller="projectsCtrl">
 					<div class="row effOnScroll">
 						<h1>Projects</h1>
+						
 						<div class="wrapper">
 							<div ng-repeat="project in projects" class='projects'>
+								<div class="tape"></div>
 								<div class="description" style="background-image:url('{$ project.img_url $}')">
 									<div class="proShelter top"><img src="{$ project.img_url $}"></div>
 									<div class="proShelter down"><img src="{$ project.img_url $}"></div>
@@ -103,11 +105,12 @@
 									<p>Tag:{$project.tag$}</p>
 								</div>
 							</div><!--end of each project unit-->
-							
 						</div><!--end of projects wrapper-->
 						<div class="buttonWrap">
-							<button class="loadButton" ng-click="loadMore()">Load More Projects</button>
+							<button class="loadButton btnRotateY" ng-click="loadMore()">Load More Projects</button>
 						</div>
+						<div class="dialog"><p>These are small projects I did as practice and for fun. Each project helps me know better about different front-end knowledge
+							and skills. But actually this portfolio you are looking at, and my Blog your will find out later,are my biggest projects so far. I'm looking forward to getting my hands on more complecated ones.</p></div>
 					</div>
 				</section>
 				<section class="main" id="Blog" style="height: {$screenHeight$}px">

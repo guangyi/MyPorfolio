@@ -5,7 +5,7 @@
 
 $bg_About: #e68e8e;//rgba(204,100,100,1);//#000;
 $speech_bubble_border:#fff;//rgba(204,100,100,1);
-$bg_Projects:#ffd200;//#FFBF00;//url('images/profile.JPG');//rgba(252,200,200,1);
+$bg_Projects:#ffec5d;//#FFBF00;//url('images/profile.JPG');//rgba(252,200,200,1);
 $bg_Contact:#9EE0FF;//#b2e6ff;//#73d1ff;//;//#BAE8E8;//#e68e8e;//rgba(204,100,100,1);
 $bg_like:#aa35f2;
 $bg_intro:#fff;
@@ -149,7 +149,6 @@ height:100%;
 		background:$bg_Projects;
 		h1{
 			font-size:2.5em;
-			margin-bottom: 0.5em;
 			color:#fff;
 		}
 	}
@@ -578,10 +577,13 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 	@include transform-origin(center center 0);
 }
 /***********************************************  Projects ****************************************/
-$captionTag: #7d7d7d;
-$captionTitle:#666666;
 $description:#696969;
-$loadButton:#ff7100;
+$loadButton:#f13c76;
+$buttonBorder:#F16c97;
+$captionTag:$buttonBorder;
+$captionTitle:$loadButton;
+$buttonBottemBdr:#8f0e37;
+$proBrdRds:0.3em;
 #Projects{
 	.row{
 		margin:auto;
@@ -593,21 +595,47 @@ $loadButton:#ff7100;
 	height:70%;
 	text-align:center;
 }
+.tape{
+	z-index:2;
+	position:relative;
+	background:$buttonBorder;
+	top:-0.8em;
+	left:-1em;
+	&:before{
+		content:"";
+		position:absolute;
+		width:2.7em;
+		height:1.3em;
+		background:inherit;
+		opacity:0.6;
+		@include border-radius-part(top-right, 0.2em);
+		@include border-radius-part(bottom-right, 0.2em);
+		@include transform(rotate(-9deg));
+		@include box-shadow(2px 2px 2px #666666);
+		border-top:2px solid rgba(255,255,255, 0.8);
+		border-left:2px solid rgba(255,255,255, 0.8);
+	}
+}
 .projects{
 	float:left;
 	width:21%;
-	margin:3% 0 0 3%;
+	margin:10% 0 0 3%;
 	//padding:14px 0 2px 0;
+	&:nth-child(2n){
+			margin-top:0;
+	}
 	.description{
 		box-shadow: 1px #f2f2f2;
 		position:relative;
 		width:100%;
 		background-size: 100%;
 		@include perspective(800px);
-		@include border-radius-part(top-left, 0.3em);
-		@include border-radius-part(top-right, 0.3em);
+		@include border-radius-part(top-left, $proBrdRds);
+		@include border-radius-part(top-right, $proBrdRds);
+		@include box-sizing(border-box);
 		// set the perspective on the parent element
 		// so its child element can have different perspective on 3d transform animation!
+
 		.proShelter{
 			// if use position relative, .proShelter will take place,
 			// so the description will be below the proShelter, not under it and covered by it.
@@ -615,7 +643,7 @@ $loadButton:#ff7100;
 			width:100%;
 			height:50%;
 			background-position: 5% 5%; // sequence: left top
-			z-index:2;
+			z-index:1;
 			//max-width: 100%;
 			//max-height: 100%;
 			overflow: hidden;
@@ -631,7 +659,7 @@ $loadButton:#ff7100;
 			// it also work the opposite way--container: absolute, child: relative
 			position:absolute;
 			overflow: hidden;
-			height:40%;
+			height:50%;
 			width:100%;
 			background:#fff;//$bg_Projects;
 			color:$description;
@@ -639,41 +667,42 @@ $loadButton:#ff7100;
 			// do not use box-sizing(border-box) here. it will affect the effect we want
 			opacity: 0.9;
 			text-align: center;
-			top:10%;
 			//@include box-sizing(border-box);
 			& h3{
-				margin: auto;
+				margin-left:0.5em;
+				margin-right: 0.5em;
+				margin-top: 2em;
 				line-height:1.2em;
 				font-size: 0.9em;
 			}
+
 		}	
-		.top , .top img{
-			@include border-radius-part(top-left, 0.5em);
-			@include border-radius-part(top-right, 0.5em); 
+
+		.top, .top img{
+			@include border-radius-part(top-left, $proBrdRds);
+			@include border-radius-part(top-right, $proBrdRds); 
 		}
 		.down{
 			top:50%;
+			@include border-radius-part(bottom-left, $proBrdRds);
+			@include border-radius-part(bottom-right, $proBrdRds); 
 			& img{
 				position:relative;
 				top:-100%;
+				@include border-radius-part(bottom-left, $proBrdRds);
+				@include border-radius-part(bottom-right, $proBrdRds); 
 			}
 			& h3{
 				position:relative;
 				top:-100%;
 			}
 		}
-		.rotate{
-			position:absolute;
-			z-index: 1;
-		}
 		.in_top, .in_right{
-			z-index: 4;
 			@include transform-origin(50%, 100%, 0 );
 			@include animation('pro_in_top 0.5s forwards');
 		}
 		
 		.in_bottom, .in_left{
-			z-index: 3;
 			@include transform-origin(50%, 0, 0 );
 			@include animation('pro_in_bottom 0.5s forwards');
 		}
@@ -689,25 +718,25 @@ $loadButton:#ff7100;
 		}
 		.rotate_in_bottom, .rotate_in_left{
 			@include transform(rotateX(-90deg));
-			z-index: 3;
+			z-index: 1;
 			opacity: 0;
 			@include transform-origin(50%, 100%, 0 );
 			@include animation('rotate_in_bottom 0.5s 0.3s forwards');
 		}
 		.rotate_in_top, .rotate_in_right{
-			z-index: 3;
+			z-index: 1;
 			opacity: 0;
 			@include transform-origin(50%, 0, 0 );
 			@include transform(rotateX(90deg));
 			@include animation('rotate_in_top 0.5s 0.3s forwards');
 		}
 		.rotate_out_top, .rotate_out_right{
-			z-index: 3;
+			z-index: 1;
 			@include transform-origin(50%, 0, 0 );
 			@include animation('rotate_out_top 0.5s forwards');
 		}
 		.rotate_out_bottom, .rotate_out_left{
-			z-index: 3;
+			z-index: 1;
 			@include transform-origin(50%, 100%, 0 );
 			@include animation('rotate_out_bottom 0.5s  forwards');
 		}
@@ -722,8 +751,8 @@ $loadButton:#ff7100;
 			text-align: center;
 			& h3{
 				color: $captionTitle;
-				font-size: 0.7em;
-				margin-bottom: 0.2em;
+				font-size: 0.75em;
+				line-height: 2em;
 			}
 			& p{
 				color:$captionTag;
@@ -735,26 +764,42 @@ $loadButton:#ff7100;
 .rotateY{
 		@include transform-origin(50%,50%,0);
 		@include animation('rotateY 1.5s forwards');
-	}
+}
+.dialog{
+	position:relative;
+	color:#666;
+	width:65%;
+	margin:auto;
+	margin-top:1em;
+	font-size:0.75em;
+	padding:1%;
+	border:1px dotted $buttonBorder;//$buttonBorder;
+}
+.btnRotateY{
+	@include transform-origin(50%,0,0);
+		@include animation('btnRotateY 1.5s 0.5s forwards');
+}
 .buttonWrap{
 	margin:auto; 
-	margin-top:3%;
+	//margin-top:3%;
 	position:relative;
 	width:20%;
+	@include perspective(400px);
 }
 .loadButton{
 	//button and input are not block element, so they can't be centered by margin-auto;
 	margin:auto;
+	//margin-top:1em;
 	position:relative;
 	width:100%;
 	font-size:1.1em;
 	background:$loadButton;
 	color:#fff;
-	@include border-radius(2em);
-	border: 3px solid #ffad40;
-	border-bottom-color:#fff;
+	@include border-radius(0.8em);
+	border: 3px dotted $buttonBorder;
+	border-bottom-color:$buttonBottemBdr;
 	&:hover{
-		border-color:#fff;
+		border-color:$buttonBottemBdr;
 	}
 	&:before{
 		content:'';
@@ -832,7 +877,7 @@ $inputLable:#78A632;
 	.cloud{
 		margin-left:5%;
 		position:relative;
-		top:55%;
+		top:68%;
 		width:17%;
 		min-width: 100px;
 		height:45%;
@@ -966,7 +1011,7 @@ $inputLable:#78A632;
 	background:$Button;
 	border:3px solid #88b542;
 	border-bottom-color:#486c10;//#78A632;//#629D30;almost like the btn bg
-	@include border-radius(1.25em);//20px / 16px = 1.25
+	@include border-radius(1em);//20px / 16px = 1.25
 	margin-top:13%;
 	margin-right:10%;
 	//box-shadow:

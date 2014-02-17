@@ -24,9 +24,9 @@ portfolio.run(function($http, $cookies, $rootScope, $location){
 			if (0 <= top && top <= $(window).height() * 0.3){
 				var id  = $(this).attr('id');
 				$rootScope.$apply(function(){
+					//location.path doesn't update immediately
+					// call $
 					$location.path('/' + id);
-					//console.log(window.location);
-					//console.log($location.path());
 				});
 			};
 		});
@@ -46,7 +46,7 @@ portfolio.controller('frameworkCtrl',['$scope','$location', function($scope, $lo
 portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($scope,$location, $window){
 	$scope.screenHeight = getWinHeight();//$(window).height(); //screen.availHeight;
 	$scope.navNames = ['About','Intro', 'Projects','Blog','MoreAboutMe','Contact'];
-	$scope.menuClicked = false;
+	$scope.menuClicked = true;
 	$scope.menuClick = function(href){
 		console.log(href);
 		$scope.menuClicked = true;

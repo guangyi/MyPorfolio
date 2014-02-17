@@ -6,6 +6,9 @@ Created on Feb 11, 2014
 from django.http import HttpResponse
 from django.core.mail import EmailMessage
 import json
+from rest_framework import generics
+from models import Projects
+
 def sendEmail(request):
     #calling ajax recieves encoded json string in request body
     # need to decode it using python's json module to get python dict:
@@ -20,3 +23,7 @@ def sendEmail(request):
     email.send()
     email2.send()
     return HttpResponse('success')
+
+class loadProjects(generics.ListAPIView):
+    model = Projects
+   # serializer = projectSerializer

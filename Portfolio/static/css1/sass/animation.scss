@@ -139,7 +139,7 @@
 		   opacity:0;}
 }
 @include keyframes(rotate_out_top){
-	0%   { @include transform(rotateX(0deg)); }
+		0%   { @include transform(rotateX(0deg)); }
 	40%  { opacity:1;}
 	100% { @include transform(rotateX(90deg)); 
 		   opacity:0;}
@@ -155,9 +155,16 @@
 
 /////*** Projects ***////
 @include keyframes(rotateY){
-	0%   { @include transform(rotateZ(-20deg));}
-	50%  { @include transform(rotateZ(20deg));}
-	100% { @include transform(rotateZ(-35deg)); }
+	0%   { @include transform(rotate(-10deg));}
+	25%  { @include transform(rotate(10deg));}
+	55%  { @include transform(rotate(-10deg));}
+	100% { @include transform(rotate(0deg)); }
+}
+@include keyframes(btnRotateY){
+	0%   { @include transform(rotateY(-20deg));}
+	25%  { @include transform(rotateY(20deg));}
+	55%  { @include transform(rotateY(-20deg));}
+	100% { @include transform(rotateY(0deg)); }
 }
 
 
