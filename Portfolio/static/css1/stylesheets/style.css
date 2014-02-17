@@ -1622,6 +1622,93 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
+@-webkit-keyframes rotateY {
+  /* line 158, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(-20deg);
+    -moz-transform: rotateZ(-20deg);
+    -ms-transform: rotateZ(-20deg);
+    -o-transform: rotateZ(-20deg);
+    transform: rotateZ(-20deg);
+  }
+
+  /* line 159, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotateZ(20deg);
+    -moz-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    -o-transform: rotateZ(20deg);
+    transform: rotateZ(20deg);
+  }
+
+  /* line 160, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(-35deg);
+    -moz-transform: rotateZ(-35deg);
+    -ms-transform: rotateZ(-35deg);
+    -o-transform: rotateZ(-35deg);
+    transform: rotateZ(-35deg);
+  }
+}
+
+@-moz-keyframes rotateY {
+  /* line 158, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(-20deg);
+    -moz-transform: rotateZ(-20deg);
+    -ms-transform: rotateZ(-20deg);
+    -o-transform: rotateZ(-20deg);
+    transform: rotateZ(-20deg);
+  }
+
+  /* line 159, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotateZ(20deg);
+    -moz-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    -o-transform: rotateZ(20deg);
+    transform: rotateZ(20deg);
+  }
+
+  /* line 160, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(-35deg);
+    -moz-transform: rotateZ(-35deg);
+    -ms-transform: rotateZ(-35deg);
+    -o-transform: rotateZ(-35deg);
+    transform: rotateZ(-35deg);
+  }
+}
+
+@keyframes rotateY {
+  /* line 158, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(-20deg);
+    -moz-transform: rotateZ(-20deg);
+    -ms-transform: rotateZ(-20deg);
+    -o-transform: rotateZ(-20deg);
+    transform: rotateZ(-20deg);
+  }
+
+  /* line 159, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotateZ(20deg);
+    -moz-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    -o-transform: rotateZ(20deg);
+    transform: rotateZ(20deg);
+  }
+
+  /* line 160, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(-35deg);
+    -moz-transform: rotateZ(-35deg);
+    -ms-transform: rotateZ(-35deg);
+    -o-transform: rotateZ(-35deg);
+    transform: rotateZ(-35deg);
+  }
+}
+
 /********************************************** Framework ****************************************/
 /* line 42, ../sass/style.scss */
 body {
@@ -1751,7 +1838,7 @@ body {
 }
 /* line 148, ../sass/style.scss */
 .content .scroll #Projects {
-  background: #ffbf00;
+  background: #ffd200;
 }
 /* line 150, ../sass/style.scss */
 .content .scroll #Projects h1 {
@@ -2354,20 +2441,26 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 }
 
 /***********************************************  Projects ****************************************/
-/* line 583, ../sass/style.scss */
+/* line 586, ../sass/style.scss */
+#Projects .row {
+  margin: auto;
+}
+
+/* line 590, ../sass/style.scss */
 .wrapper {
   width: 95%;
   margin: auto;
-  height: 100%;
+  height: 70%;
+  text-align: center;
 }
 
-/* line 588, ../sass/style.scss */
+/* line 596, ../sass/style.scss */
 .projects {
   float: left;
   width: 21%;
   margin: 3% 0 0 3%;
 }
-/* line 593, ../sass/style.scss */
+/* line 601, ../sass/style.scss */
 .projects .description {
   box-shadow: 1px #f2f2f2;
   position: relative;
@@ -2389,7 +2482,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -o-border-top-right-radius: 0.3em;
   border-top-right-radius: 0.3em;
 }
-/* line 603, ../sass/style.scss */
+/* line 611, ../sass/style.scss */
 .projects .description .proShelter {
   position: absolute;
   width: 100%;
@@ -2398,12 +2491,12 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   z-index: 2;
   overflow: hidden;
 }
-/* line 614, ../sass/style.scss */
+/* line 622, ../sass/style.scss */
 .projects .description .proShelter img {
   max-width: 100%;
   max-width: 100%;
 }
-/* line 619, ../sass/style.scss */
+/* line 627, ../sass/style.scss */
 .projects .description .descrpt {
   position: absolute;
   overflow: hidden;
@@ -2411,17 +2504,17 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   width: 100%;
   background: #fff;
   color: dimgrey;
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: center;
   top: 10%;
 }
-/* line 636, ../sass/style.scss */
+/* line 644, ../sass/style.scss */
 .projects .description .descrpt h3 {
   margin: auto;
   line-height: 1.2em;
   font-size: 0.9em;
 }
-/* line 642, ../sass/style.scss */
+/* line 650, ../sass/style.scss */
 .projects .description .top, .projects .description .top img {
   -webkit-border-top-left-radius: 0.5em;
   -moz-border-top-left-radius: 0.5em;
@@ -2434,26 +2527,26 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -o-border-top-right-radius: 0.5em;
   border-top-right-radius: 0.5em;
 }
-/* line 646, ../sass/style.scss */
+/* line 654, ../sass/style.scss */
 .projects .description .down {
   top: 50%;
 }
-/* line 648, ../sass/style.scss */
+/* line 656, ../sass/style.scss */
 .projects .description .down img {
   position: relative;
   top: -100%;
 }
-/* line 652, ../sass/style.scss */
+/* line 660, ../sass/style.scss */
 .projects .description .down h3 {
   position: relative;
   top: -100%;
 }
-/* line 657, ../sass/style.scss */
+/* line 665, ../sass/style.scss */
 .projects .description .rotate {
   position: absolute;
   z-index: 1;
 }
-/* line 661, ../sass/style.scss */
+/* line 669, ../sass/style.scss */
 .projects .description .in_top, .projects .description .in_right {
   z-index: 4;
   -webkit-transform-origin: 50% 100% 0;
@@ -2466,7 +2559,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-animation: pro_in_top 0.5s forwards;
   animation: pro_in_top 0.5s forwards;
 }
-/* line 667, ../sass/style.scss */
+/* line 675, ../sass/style.scss */
 .projects .description .in_bottom, .projects .description .in_left {
   z-index: 3;
   -webkit-transform-origin: 50% 0 0;
@@ -2479,7 +2572,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-animation: pro_in_bottom 0.5s forwards;
   animation: pro_in_bottom 0.5s forwards;
 }
-/* line 672, ../sass/style.scss */
+/* line 680, ../sass/style.scss */
 .projects .description .out_top, .projects .description .out_right {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -2496,7 +2589,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-animation: pro_out_top 0.5s 0.3s forwards;
   animation: pro_out_top 0.5s 0.3s forwards;
 }
-/* line 677, ../sass/style.scss */
+/* line 685, ../sass/style.scss */
 .projects .description .out_bottom, .projects .description .out_left {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -2513,7 +2606,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-animation: pro_out_bottom 0.5s 0.3s forwards;
   animation: pro_out_bottom 0.5s 0.3s forwards;
 }
-/* line 682, ../sass/style.scss */
+/* line 690, ../sass/style.scss */
 .projects .description .rotate_in_bottom, .projects .description .rotate_in_left {
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
@@ -2532,7 +2625,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-animation: rotate_in_bottom 0.5s 0.3s forwards;
   animation: rotate_in_bottom 0.5s 0.3s forwards;
 }
-/* line 689, ../sass/style.scss */
+/* line 697, ../sass/style.scss */
 .projects .description .rotate_in_top, .projects .description .rotate_in_right {
   z-index: 3;
   opacity: 0;
@@ -2551,7 +2644,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-animation: rotate_in_top 0.5s 0.3s forwards;
   animation: rotate_in_top 0.5s 0.3s forwards;
 }
-/* line 696, ../sass/style.scss */
+/* line 704, ../sass/style.scss */
 .projects .description .rotate_out_top, .projects .description .rotate_out_right {
   z-index: 3;
   -webkit-transform-origin: 50% 0 0;
@@ -2564,7 +2657,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-animation: rotate_out_top 0.5s forwards;
   animation: rotate_out_top 0.5s forwards;
 }
-/* line 701, ../sass/style.scss */
+/* line 709, ../sass/style.scss */
 .projects .description .rotate_out_bottom, .projects .description .rotate_out_left {
   z-index: 3;
   -webkit-transform-origin: 50% 100% 0;
@@ -2577,7 +2670,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-animation: rotate_out_bottom 0.5s  forwards;
   animation: rotate_out_bottom 0.5s  forwards;
 }
-/* line 707, ../sass/style.scss */
+/* line 715, ../sass/style.scss */
 .projects .caption {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2595,25 +2688,73 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   padding: 5% 3% 0 3%;
   width: 100%;
   background: #fff;
-  color: #7d7d7d;
   text-align: center;
 }
-/* line 716, ../sass/style.scss */
+/* line 723, ../sass/style.scss */
 .projects .caption h3 {
+  color: #666666;
   font-size: 0.7em;
   margin-bottom: 0.2em;
 }
-/* line 720, ../sass/style.scss */
+/* line 728, ../sass/style.scss */
 .projects .caption p {
+  color: #7d7d7d;
   font-size: 0.6em;
 }
 
+/* line 735, ../sass/style.scss */
+.rotateY {
+  -webkit-transform-origin: 50% 50% 0;
+  -moz-transform-origin: 50% 50% 0;
+  -ms-transform-origin: 50% 50% 0;
+  -o-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
+  -webkit-animation: rotateY 1.5s forwards;
+  -o-animation: rotateY 1.5s forwards;
+  -moz-animation: rotateY 1.5s forwards;
+  animation: rotateY 1.5s forwards;
+}
+
+/* line 739, ../sass/style.scss */
+.buttonWrap {
+  margin: auto;
+  margin-top: 3%;
+  position: relative;
+  width: 20%;
+}
+
+/* line 745, ../sass/style.scss */
+.loadButton {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  font-size: 1.1em;
+  background: #ff7100;
+  color: #fff;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+  border-radius: 2em;
+  border: 3px solid #ffad40;
+  border-bottom-color: #fff;
+}
+/* line 756, ../sass/style.scss */
+.loadButton:hover {
+  border-color: #fff;
+}
+/* line 759, ../sass/style.scss */
+.loadButton:before {
+  content: '';
+  position: absolute;
+}
+
 /***************************************************** Blog **********************************/
-/* line 727, ../sass/style.scss */
+/* line 766, ../sass/style.scss */
 #Blog .row {
   background: url("static/images/bg_projects.jpg");
 }
-/* line 730, ../sass/style.scss */
+/* line 769, ../sass/style.scss */
 #Blog .content_wrap {
   position: absolute;
   background-size: 100%;
@@ -2624,21 +2765,21 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   border-bottom-color: #7fd0d0;
   border-right: 800px solid transparent;
 }
-/* line 739, ../sass/style.scss */
+/* line 778, ../sass/style.scss */
 #Blog .content_wrap .link {
   color: #fff;
   position: relative;
   float: right;
   top: 75%;
   left: 65%;
-  text-decoration: underline;
+  text-decoration: none;
 }
-/* line 749, ../sass/style.scss */
+/* line 788, ../sass/style.scss */
 #Blog .content_wrap .link h2 {
   color: #fff;
 }
 
-/* line 757, ../sass/style.scss */
+/* line 796, ../sass/style.scss */
 .dialogBox {
   margin: 10% 0 5% 15%;
   width: 100%;
@@ -2659,7 +2800,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   position: absolute;
 }
 
-/* line 770, ../sass/style.scss */
+/* line 809, ../sass/style.scss */
 .line {
   width: 1200px;
   height: 10px;
@@ -2680,11 +2821,11 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 }
 
 /************************************************* Contact ********************************************/
-/* line 784, ../sass/style.scss */
+/* line 823, ../sass/style.scss */
 #Contact h1 {
   float: left;
 }
-/* line 787, ../sass/style.scss */
+/* line 826, ../sass/style.scss */
 #Contact .clouds {
   overflow: hidden;
   height: 14%;
@@ -2692,7 +2833,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   position: relative;
   padding-bottom: 2%;
 }
-/* line 793, ../sass/style.scss */
+/* line 832, ../sass/style.scss */
 #Contact .clouds .cloud {
   margin-left: 5%;
   position: relative;
@@ -2705,7 +2846,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-box-shadow: 0px 5px 25px 0px lightgrey;
   box-shadow: 0px 5px 25px 0px lightgrey;
 }
-/* line 803, ../sass/style.scss */
+/* line 842, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1, #Contact .clouds .cloud .cloudPart2 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -2715,19 +2856,19 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   background: inherit;
   position: absolute;
 }
-/* line 808, ../sass/style.scss */
+/* line 847, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1 {
   top: -70%;
   width: 35%;
   left: 13%;
 }
-/* line 813, ../sass/style.scss */
+/* line 852, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart2 {
   top: -103%;
   width: 50%;
   left: 37%;
 }
-/* line 821, ../sass/style.scss */
+/* line 860, ../sass/style.scss */
 #Contact .icons {
   width: 30%;
   height: auto;
@@ -2735,21 +2876,21 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   position: relative;
   margin: auto;
 }
-/* line 827, ../sass/style.scss */
+/* line 866, ../sass/style.scss */
 #Contact .icons a {
   position: relative;
   height: auto;
   overflow: hidden;
 }
-/* line 833, ../sass/style.scss */
+/* line 872, ../sass/style.scss */
 #Contact .icons a:nth-child(1) {
   margin-right: 35%;
 }
-/* line 836, ../sass/style.scss */
+/* line 875, ../sass/style.scss */
 #Contact .icons a:nth-child(3) {
   float: right;
 }
-/* line 840, ../sass/style.scss */
+/* line 879, ../sass/style.scss */
 #Contact .dialog {
   top: 0px;
   right: 0px;
@@ -2763,7 +2904,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   padding-top: 3%;
   padding-right: 3%;
 }
-/* line 853, ../sass/style.scss */
+/* line 892, ../sass/style.scss */
 #Contact .form {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2782,7 +2923,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   margin-top: 5%;
   color: #558c00;
 }
-/* line 866, ../sass/style.scss */
+/* line 905, ../sass/style.scss */
 #Contact #contactForm {
   width: 90%;
   margin: auto;
@@ -2791,14 +2932,14 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   background: #fff;
   color: #78a632;
 }
-/* line 874, ../sass/style.scss */
+/* line 913, ../sass/style.scss */
 #Contact .input {
   width: 45%;
   float: left;
   overflow: hidden;
   margin-right: 7%;
 }
-/* line 879, ../sass/style.scss */
+/* line 918, ../sass/style.scss */
 #Contact .input input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2814,20 +2955,20 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   font-size: 0.9em;
   color: #666666;
 }
-/* line 888, ../sass/style.scss */
+/* line 927, ../sass/style.scss */
 #Contact .input input:focus, #Contact .input input:invalid {
   box-shadow: none !important;
 }
-/* line 892, ../sass/style.scss */
+/* line 931, ../sass/style.scss */
 #Contact .input .second {
   margin-top: 8%;
 }
-/* line 897, ../sass/style.scss */
+/* line 936, ../sass/style.scss */
 #Contact .message {
   overflow: hidden;
   float: 50%;
 }
-/* line 901, ../sass/style.scss */
+/* line 940, ../sass/style.scss */
 #Contact .message textarea {
   font-size: 0.9em;
   width: 98%;
@@ -2843,11 +2984,11 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   resize: vertical;
   color: #666666;
 }
-/* line 911, ../sass/style.scss */
+/* line 950, ../sass/style.scss */
 #Contact .message textarea:focus, #Contact .message textarea:invalid {
   box-shadow: none !important;
 }
-/* line 916, ../sass/style.scss */
+/* line 955, ../sass/style.scss */
 #Contact .error {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2856,7 +2997,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   font-size: 0.6em;
   font-weight: light;
 }
-/* line 922, ../sass/style.scss */
+/* line 961, ../sass/style.scss */
 #Contact .contactButton {
   float: right;
   width: 43%;
@@ -2873,11 +3014,11 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   margin-top: 13%;
   margin-right: 10%;
 }
-/* line 935, ../sass/style.scss */
+/* line 974, ../sass/style.scss */
 #Contact .contactButton:hover {
-  border-color: #629D30;
+  border-color: #486c10;
 }
-/* line 940, ../sass/style.scss */
+/* line 979, ../sass/style.scss */
 #Contact .alertBox {
   position: absolute;
   top: 0;
@@ -2886,7 +3027,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   height: 100%;
   background: rgba(255, 225, 255, 0.5);
 }
-/* line 947, ../sass/style.scss */
+/* line 986, ../sass/style.scss */
 #Contact .alertBox div {
   color: #78A632;
   opacity: 1;
@@ -2907,7 +3048,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   box-sizing: border-box;
   text-align: center;
 }
-/* line 961, ../sass/style.scss */
+/* line 1000, ../sass/style.scss */
 #Contact .alertBox .contactButton {
   width: 15%;
 }

@@ -1,23 +1,30 @@
 //#1
 var moveDuration = 20000;
-var firstTime = true;	
+var firstTime = true;
+var intervalID=[];	
 var cloudMove = function(){
-	var intervalID=[];
+	
 	var startPoint = 0.7;// start when contact page possess 30% of the window height
-	if($('#Contact').offset().top >= $(window).height() * 0.96){
+	if($('#Contact').offset().top >= $(window).height() * 0.96 && !firstTime){
 		// clearInterval when user is not on the contact page
 		// stop the current animtion, go back to the end. otherwise I don't know why
 		// the top property always gets lower-- maybe because the callback function is the current animation
 		// so its previous point is +10px after the first animation. but end point is the very origin point of cloud top
+		//$('.cloud').stop(true, true);// stop at end point
+		console.log('case1');
+		console.log('thisIntervalID'+intervalID[0]);
 		clearInterval(intervalID[0]);
 		clearInterval(intervalID[1]);
-		$('.cloud').stop(true, true);// stop at end point
+		$('.cloud').stop('vertical',true, true);
+		$('.cloud').stop('horizontal',true, true);
 		firstTime = true;
 	};
 	if($('#Contact').offset().top < $(window).height() * startPoint  && firstTime){
 		// when scroll to the contact page for the firstTime
 		// has the slide effect
 		//$('.cloud').stop();
+		console.log('case2');
+		$('.cloud').stop(true, true);
 		var pageHight = $(window).innerHeight() * startPoint;
 		var vertical = $('#Contact').offset().top;
 		var ratio =  Math.abs(1 - vertical / pageHight);
@@ -33,13 +40,16 @@ var cloudMove = function(){
 		// the first time scroll to contact page, the cloud effect begins
 		// if go back to this page, the effect is on, but it never stops
 			firstTime = false;
+			console.log('case3');
 		// if use setTimeout(), then there is a waiting time at the first time it runs
 		// can use immediately execute function or 
 		// can call back current function when animation is done, like the day I do it here
 		// setInterval will execute the function again and again, setTimeout only execute once
-			upDown( $('.cloud') );
-			forwardBack( $('.cloud'), endPoint);
+			//upDown( $('.cloud') );
+			//forwardBack( $('.cloud'), endPoint);
 			intervalID[0] = setInterval(function(){
+				console.log('called from intetval');
+				console.log(intervalID[0]);
 				upDown( $('.cloud'));
 			},2000);
 				
@@ -74,22 +84,22 @@ var forwardBack = function(obj, endPoint){
 };
 var upDown = function(obj){
 	// cloud move up and down
+	console.log('case-updown');
 	obj.animate({
 		'top': '+=20'
 	}, 
 	{
-		//queue:'vertical',
+		queue:'vertical',
 		duration:1000,
 		complete:function(){
 			$(this).animate({
 				'top': '-=20'
 			}, 
-			{	//queue:'vertical'
+			{	queue:'vertical',
 				duration:1000
-				
 			});
 		}
-	});//.dequeue('vertical');
+	}).dequeue('vertical');
 };
 
 

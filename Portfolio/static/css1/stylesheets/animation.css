@@ -1552,3 +1552,90 @@
     transform: rotateX(0deg);
   }
 }
+
+@-webkit-keyframes rotateY {
+  /* line 158, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(-20deg);
+    -moz-transform: rotateZ(-20deg);
+    -ms-transform: rotateZ(-20deg);
+    -o-transform: rotateZ(-20deg);
+    transform: rotateZ(-20deg);
+  }
+
+  /* line 159, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotateZ(20deg);
+    -moz-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    -o-transform: rotateZ(20deg);
+    transform: rotateZ(20deg);
+  }
+
+  /* line 160, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(-35deg);
+    -moz-transform: rotateZ(-35deg);
+    -ms-transform: rotateZ(-35deg);
+    -o-transform: rotateZ(-35deg);
+    transform: rotateZ(-35deg);
+  }
+}
+
+@-moz-keyframes rotateY {
+  /* line 158, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(-20deg);
+    -moz-transform: rotateZ(-20deg);
+    -ms-transform: rotateZ(-20deg);
+    -o-transform: rotateZ(-20deg);
+    transform: rotateZ(-20deg);
+  }
+
+  /* line 159, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotateZ(20deg);
+    -moz-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    -o-transform: rotateZ(20deg);
+    transform: rotateZ(20deg);
+  }
+
+  /* line 160, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(-35deg);
+    -moz-transform: rotateZ(-35deg);
+    -ms-transform: rotateZ(-35deg);
+    -o-transform: rotateZ(-35deg);
+    transform: rotateZ(-35deg);
+  }
+}
+
+@keyframes rotateY {
+  /* line 158, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotateZ(-20deg);
+    -moz-transform: rotateZ(-20deg);
+    -ms-transform: rotateZ(-20deg);
+    -o-transform: rotateZ(-20deg);
+    transform: rotateZ(-20deg);
+  }
+
+  /* line 159, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotateZ(20deg);
+    -moz-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    -o-transform: rotateZ(20deg);
+    transform: rotateZ(20deg);
+  }
+
+  /* line 160, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotateZ(-35deg);
+    -moz-transform: rotateZ(-35deg);
+    -ms-transform: rotateZ(-35deg);
+    -o-transform: rotateZ(-35deg);
+    transform: rotateZ(-35deg);
+  }
+}

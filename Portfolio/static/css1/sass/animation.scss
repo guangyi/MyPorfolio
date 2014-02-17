@@ -153,6 +153,11 @@
 	100% { @include transform(rotateX(0deg)); }
 }
 
-
+/////*** Projects ***////
+@include keyframes(rotateY){
+	0%   { @include transform(rotateZ(-20deg));}
+	50%  { @include transform(rotateZ(20deg));}
+	100% { @include transform(rotateZ(-35deg)); }
+}
 
 

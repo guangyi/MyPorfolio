@@ -6,39 +6,69 @@ var portfolio = angular.module("portfolio",["ngCookies"], function($interpolateP
 	$interpolateProvider.startSymbol("{$");
 	$interpolateProvider.endSymbol("$}");
 });
-
+var scroll = function(){
+		//var section = $('.scroll > section');
+		
+	};
 function getWinHeight(){
 		return window.innerHeight;
 	}
 function handleResize(){
 		return getWinHeight();
 	}
-portfolio.run(function($http, $cookies){
+portfolio.run(function($http, $cookies, $rootScope, $location){
 	$http.defaults.headers.common['X-CSRFToken'] = $cookies['csrftoken'];
+	$('.content').scroll(function(){
+		$('.scroll > section').each(function(){
+			var top = $(this).offset().top;
+			if (0 <= top && top <= $(window).height() * 0.3){
+				var id  = $(this).attr('id');
+				$rootScope.$apply(function(){
+					$location.path('/' + id);
+					//console.log(window.location);
+					//console.log($location.path());
+				});
+			};
+		});
+	});
 });
-
+/*
 portfolio.controller('frameworkCtrl',['$scope','$location', function($scope, $location){
 	$scope.navNames = ['About','Intro', 'Projects','Blog','MoreAboutMe','Contact'];
 	//isActive is to verify the link is activated or not.
 	$scope.isActive = function(viewLocation){
 		var active = (viewLocation === $location.path());
 		return active;
-	}
+	};
 }]);
-
+*/
 
 portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($scope,$location, $window){
 	$scope.screenHeight = getWinHeight();//$(window).height(); //screen.availHeight;
+	$scope.navNames = ['About','Intro', 'Projects','Blog','MoreAboutMe','Contact'];
+	$scope.menuClicked = false;
+	$scope.menuClick = function(href){
+		console.log(href);
+		$scope.menuClicked = true;
+		$location.path('/' + href);
+	}
+	$scope.isActive = function(viewLocation){
+		var active = (viewLocation === $location.path());
+		return active;
+	};
 	$window.onresize = function(){ handleResize();}
 	// watch the change in URL?
-	// first elementget current URL
+	// first element --value is current URL
 	$scope.$watch(function(){
+		// when the current url path changes, call the function below.
+		// also
 		return $location.path();
 		}, function(value){
-			// when the document is ready, call function below
 			angular.element(document).ready(function(){
-				if(value){
-					// replace the '/' in the URL with '#''
+			// when the document is ready, call function below
+				if(value && $scope.menuClicked){
+					console.log($scope.menuClicked);
+					// replace the '/' in the URL with '#' so it become the 'ID' of each page
 					var idToScroll = value.replace('/','#');
 					// How to calculate how much to scroll in a scroll area
 					// Here the offset is changing.
@@ -48,10 +78,11 @@ portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($s
 						$('.content').animate({
 							scrollTop: upToTop
 						},"slow");
-					//}
+					$scope.menuClicked = false;
 				}
-			});	
-	});
+			});
+		}
+	);	
 }]);
 portfolio.controller('projectsCtrl',['$scope',function($scope){
 	$scope.projects = {

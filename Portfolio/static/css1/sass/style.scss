@@ -5,7 +5,7 @@
 
 $bg_About: #e68e8e;//rgba(204,100,100,1);//#000;
 $speech_bubble_border:#fff;//rgba(204,100,100,1);
-$bg_Projects:#FFBF00;//url('images/profile.JPG');//rgba(252,200,200,1);
+$bg_Projects:#ffd200;//#FFBF00;//url('images/profile.JPG');//rgba(252,200,200,1);
 $bg_Contact:#9EE0FF;//#b2e6ff;//#73d1ff;//;//#BAE8E8;//#e68e8e;//rgba(204,100,100,1);
 $bg_like:#aa35f2;
 $bg_intro:#fff;
@@ -578,12 +578,20 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 	@include transform-origin(center center 0);
 }
 /***********************************************  Projects ****************************************/
-$caption: #7d7d7d;
+$captionTag: #7d7d7d;
+$captionTitle:#666666;
 $description:#696969;
+$loadButton:#ff7100;
+#Projects{
+	.row{
+		margin:auto;
+	}
+}
 .wrapper{
 	width:95%;
 	margin:auto;
-	height:100%;
+	height:70%;
+	text-align:center;
 }
 .projects{
 	float:left;
@@ -629,7 +637,7 @@ $description:#696969;
 			color:$description;
 			// add padding but the "top" attribute for the down descrpt is still 100%;
 			// do not use box-sizing(border-box) here. it will affect the effect we want
-			opacity: 0.8;
+			opacity: 0.9;
 			text-align: center;
 			top:10%;
 			//@include box-sizing(border-box);
@@ -711,15 +719,46 @@ $description:#696969;
 			padding:5% 3% 0 3%;
 			width:100%;
 			background:#fff;
-			color:$caption;
 			text-align: center;
 			& h3{
+				color: $captionTitle;
 				font-size: 0.7em;
 				margin-bottom: 0.2em;
 			}
 			& p{
+				color:$captionTag;
 				font-size:0.6em;
 			}
+	}
+	
+}
+.rotateY{
+		@include transform-origin(50%,50%,0);
+		@include animation('rotateY 1.5s forwards');
+	}
+.buttonWrap{
+	margin:auto; 
+	margin-top:3%;
+	position:relative;
+	width:20%;
+}
+.loadButton{
+	//button and input are not block element, so they can't be centered by margin-auto;
+	margin:auto;
+	position:relative;
+	width:100%;
+	font-size:1.1em;
+	background:$loadButton;
+	color:#fff;
+	@include border-radius(2em);
+	border: 3px solid #ffad40;
+	border-bottom-color:#fff;
+	&:hover{
+		border-color:#fff;
+	}
+	&:before{
+		content:'';
+		position: absolute;
 	}
 }
 /***************************************************** Blog **********************************/
@@ -745,7 +784,7 @@ $description:#696969;
 			float:right;
 			top: 75%;
 			left:65%;
-			text-decoration: underline;
+			text-decoration: none;
 			& h2{
 				// require space after &
 				color:#fff;
@@ -933,7 +972,7 @@ $inputLable:#78A632;
 	//box-shadow:
 	//@include box-shadow(4px 2px 3px 3px lightgray);
 	&:hover{
-		border-color:#629D30;
+		border-color:#486c10;
 		//border-bottom-color:#A4E8E8
 	}
 }

@@ -41,10 +41,10 @@ function flyin(){
 var projectLoad = function(){
 	var projects = $('.projects');//select all the project unit on the page
 	var i = 0;
-	projects.first().show('fast',function showNext(){
+	projects.first().addClass('rotateY').show('fast',function showNext(){
 		// can name the complete function like this
 		// so if can be called sometime
-		$(this).next().show('fast', showNext);//.next() calles the next sibling of matched element if no selector
+		$(this).next().addClass('rotateY').show('fast', showNext);//.next() calles the next sibling of matched element if no selector
 	});
 }
 function has3D(){
