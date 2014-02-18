@@ -3,7 +3,6 @@ var moveDuration = 20000;
 var firstTime = true;
 var intervalID=[];	
 var cloudMove = function(){
-	
 	var startPoint = 0.7;// start when contact page possess 30% of the window height
 	if($('#Contact').offset().top >= $(window).height() * 0.96 && !firstTime){
 		// clearInterval when user is not on the contact page

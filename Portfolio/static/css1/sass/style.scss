@@ -5,11 +5,11 @@
 
 $bg_About: #e68e8e;//rgba(204,100,100,1);//#000;
 $speech_bubble_border:#fff;//rgba(204,100,100,1);
-$bg_Projects:#ffec5d;//#FFBF00;//url('images/profile.JPG');//rgba(252,200,200,1);
+$bg_Projects:#ffe440;//dfdc1e;//ffec5d;//#FFBF00;//url('images/profile.JPG');//rgba(252,200,200,1);
 $bg_Contact:#9EE0FF;//#b2e6ff;//#73d1ff;//;//#BAE8E8;//#e68e8e;//rgba(204,100,100,1);
-$bg_like:#aa35f2;
+$bg_like:#F16c97;
 $bg_intro:#fff;
-$bg_Blog:#7fd0d0;
+$bg_Blog:#99d11c;//#8cdb00;//#82cc00;//#99d11c;this one is ok;//bef13c;//#7fd0d0;
 $smileBorder:3px solid #000;//rgba(222, 99,99,1);
 $smielFace: #e9b03d;//rgba(222, 99,99,1);
 $Cloud:#fff;//#7fd0d0;//#00acFF;//#40C1FF;
@@ -598,20 +598,19 @@ $proBrdRds:0.3em;
 .tape{
 	z-index:2;
 	position:relative;
-	background:$buttonBorder;
+	background:transparent; //inherit;//$loadButton;
 	top:-0.8em;
-	left:-1em;
 	&:before{
 		content:"";
 		position:absolute;
 		width:2.7em;
 		height:1.3em;
 		background:inherit;
-		opacity:0.6;
+		opacity:0.9;
 		@include border-radius-part(top-right, 0.2em);
 		@include border-radius-part(bottom-right, 0.2em);
-		@include transform(rotate(-9deg));
-		@include box-shadow(2px 2px 2px #666666);
+		@include transform(rotate(-40deg));
+		@include box-shadow(3px 3px 3px #666666);
 		border-top:2px solid rgba(255,255,255, 0.8);
 		border-left:2px solid rgba(255,255,255, 0.8);
 	}
@@ -768,12 +767,14 @@ $proBrdRds:0.3em;
 .dialog{
 	position:relative;
 	color:#666;
-	width:65%;
+	width:42%;
 	margin:auto;
 	margin-top:1em;
 	font-size:0.75em;
 	padding:1%;
 	border:1px dotted $buttonBorder;//$buttonBorder;
+	border-bottom:none;
+	line-height:1.1em;
 }
 .btnRotateY{
 	@include transform-origin(50%,0,0);
@@ -796,7 +797,7 @@ $proBrdRds:0.3em;
 	background:$loadButton;
 	color:#fff;
 	@include border-radius(0.8em);
-	border: 3px dotted $buttonBorder;
+	border: 3px solid $buttonBorder;
 	border-bottom-color:$buttonBottemBdr;
 	&:hover{
 		border-color:$buttonBottemBdr;
@@ -809,26 +810,24 @@ $proBrdRds:0.3em;
 /***************************************************** Blog **********************************/
 #Blog{
 	.row{
-		background: url('static/images/bg_projects.jpg');
+		background-image: url('static/images/bg_projects.JPG');
 	}
 	.content_wrap{
-		position:absolute;
+		//background-image: url('static/images/bg_projects.JPG');
+		position:relative;
 		background-size:100%;
 		background-position:5% 5%;
-		height:0;
+		height:100%;
 		width:40%;
 		border-style:solid;
-		border-bottom-color:$bg_Blog;
-		border-right: 800px solid transparent;
+		//border-bottom-color:$bg_Blog;
+		//border-right: 800px solid transparent;
 		.link{
 			//a "<a>" around the text, set up the <a>'s color and text-decoration
 			// also set up the words' color inside <a>
 			// then the text-decoration color is the color of <a>, not the word inside <a>
 			color:#fff;
 			position:relative;
-			float:right;
-			top: 75%;
-			left:65%;
 			text-decoration: none;
 			& h2{
 				// require space after &
@@ -839,9 +838,11 @@ $proBrdRds:0.3em;
 	}
 }
 .dialogBox{
+	position:relative;
 	margin:10% 0 5% 15%;
 	width:100%;
-	height:auto;
+	height:80%;
+	overflow:scroll;
 	background:#fff;
 	@include border-radius(3%);
 	@include box-sizing(border-box);
@@ -849,17 +850,6 @@ $proBrdRds:0.3em;
 	opacity:0.7;
 	z-index:2;
 	line-height:150%;
-	position:absolute;
-}
-.line{
-	width:1200px;
-	height:10px;
-	position:absolute;
-	left:40%;
-	background:white;
-	@include transform(rotateZ(44.2deg));
-	z-index:5;
-	@include transform-origin(0 0 0);
 }
 /************************************************* Contact ********************************************/
 $inputLable:#78A632;
@@ -933,6 +923,7 @@ $inputLable:#78A632;
 	z-index:1;
 	padding-top:3%;
 	padding-right:3%;
+	border:none;
 }
 .form{
 	@include box-sizing(border-box);

@@ -171,7 +171,7 @@ var settings = function(){
 	setHightByWidth($('.description'), 1);
 	setHightByWidth($('.caption'),0.25);
 	/*******************************************  Contact settings settings.js ********************************/
-	setHightByWidth($('.dialogBox'), 1);
+	//setHightByWidth($('.dialogBox'), 1);
 	setRadiusByHeight($('.cloud'), 0.5);
 	setHightByWidth($('.cloudPart1'), 1);
 	setHightByWidth($('.cloudPart2'), 1);
