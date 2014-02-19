@@ -163,13 +163,19 @@ var setWidthByHeight = function(obj, ratio){
 		var width = height * ratio;
 		$(this).outerWidth(width+'px');
 	});
-	
+}
+var setHeightByReference = function(obj, referenObj, parentObj){
+	var totalHeight = parentObj.height();
+	var referHeight = referenObj.outerHeight(true);
+	obj.height((totalHeight - referHeight) + 'px');
 }
 var settings = function(){
 	/******************************************** projects settings settings.js *******************************/
 	setHightByWidth($('.projects'), 1.3);
 	setHightByWidth($('.description'), 1);
 	setHightByWidth($('.caption'),0.25);
+	/******************************************* Blog Settings settings.js*************************************/
+	setHeightByReference( $('#slicesWrapper'), $('#Blog >.row > .contentWrap > h1'), $(window));
 	/*******************************************  Contact settings settings.js ********************************/
 	//setHightByWidth($('.dialogBox'), 1);
 	setRadiusByHeight($('.cloud'), 0.5);

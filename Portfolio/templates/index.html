@@ -6,16 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/reset.css" media="screen">
 	<link href="{{STATIC_URL}}css1/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="{{STATIC_URL}}lib/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular1-0-8.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular-animate.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular-cookies.js"></script>
-	<script type="text/javascript" src="{{STATIC_URL}}js/animation.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/portfolio.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/service.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/setting.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/cloudMove.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/onScroll.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/directionAware.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/BlogAnimation.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/main.js"></script>
 
 </head>
@@ -23,14 +23,14 @@
 	<div class="container">
 		<header id="header">
 			<nav id="nav">
-				<a ng-repeat="nav in navNames" ng-class="{active:isActive('/{$nav$}')}" ng-click="menuClick('{$nav$}')">{$ nav $}</a>
+				<a ng-repeat="nav in navNames" ng-class="{active:isActive( '/' + nav )}" ng-click="menuClick( nav )">{$ nav $}</a>
 			</nav>
 		</header>
 		<div class="content"  ng-controller="contentCtrl" style="height: {$screenHeight$}px">
 			<div class="scroll" >
 				<section class="main" id="About" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
-						<div class="content_wrap">
+						<div class="contentWrap">
 							<div id="profile"></div>
 							<div id="speech_bubble_arrowup">
 								<h1>Hey! I'm Guangyi</h1>
@@ -40,10 +40,10 @@
 				</section>
 				<section class="main" id="Intro" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
-						<div class="content_wrap">
+						<div class="contentWrap">
 							<section class="topLeft">
 								
-								<div class="about_rectangle">
+								<div class="aboutRectangle">
 									<div class="filter" id="front_end">
 										<h1>Front-End-Engineer</h1>
 									</div>
@@ -53,7 +53,7 @@
 								<div class="icon"></div>
 							</section>
 							<section class="topRight">
-								<div class="about_rectangle">
+								<div class="aboutRectangle">
 									<div class="filter" id="believe">
 										<h1>Believe in...</h1>
 									</div>
@@ -63,7 +63,7 @@
 								</div>
 							</section>
 							<section class="btmLeft">
-								<div class="about_rectangle">
+								<div class="aboutRectangle">
 									<div class="filter" id="graduated">
 										<h1>Graduated</h1>
 									</div>
@@ -72,7 +72,7 @@
 							</section>
 							<section class="center">
 								<div class="icon"></div>
-								<div class="about_rectangle">
+								<div class="aboutRectangle">
 									<div class="filter" id="hope">
 										<h1>Hope to...<h1>
 									</div>
@@ -93,7 +93,7 @@
 						
 						<div class="wrapper">
 							<div ng-repeat="project in projects" class='projects'>
-								<div class="tape"></div>
+								<div class="clip"></div>
 								<div class="description" style="background-image:url('{$ project.img_url $}')">
 									<div class="proShelter top"><img src="{$ project.img_url $}"></div>
 									<div class="proShelter down"><img src="{$ project.img_url $}"></div>
@@ -116,22 +116,38 @@
 				<section class="main" id="Blog" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
 						<!--<div class="line"></div>-->
-						<div class="content_wrap">
+						<div class="contentWrap">
 							<h1>My Blog</h1>
-
-							<div class="dialogBox">
-								<div class="tape"></div>
-								<h3>My blog is my first side project. While building this project,
-									I used AngularJS as the front-end framework and Django/REST framwork
-									as the back-end. For the database, it's noSQL--MongoDB. Also, like
-									this portfolio, I use SASS for styling. The reason why I use these things
-									is I want to learn new things, new knowledge and new skills. As you know,
-									fron-end is a fast going field, self-learning is a must-have quality
-									for front-end software engineer. So I chose those stuffs to nail this blog.
-								</h3>  
-							</div>
-						<a class="link"><h2>>> Take a look >></h2></a>
-					</div>
+							<div id="slicesWrapper">
+								<div class="slice left">
+									<div class="dialogBox">
+										<h3>My blog is my first side project. While building this project,
+											I used AngularJS as the front-end framework and Django/REST framwork
+											as the back-end. For the database, it's noSQL--MongoDB. Also, like
+											this portfolio, I use SASS for styling. The reason why I use these things
+											is I want to learn new things, new knowledge and new skills. As you know,
+											fron-end is a fast going field, self-learning is a must-have quality
+											for front-end software engineer. So I chose those stuffs to nail this blog.
+										</h3> 	
+									</div> <!--end of dialogBox-->
+									
+								</div><!-- end of slice-left>-->
+								<div class="slice right">
+									<div class="dialogBox">
+										<h3>My blog is my first side project. While building this project,
+											I used AngularJS as the front-end framework and Django/REST framwork
+											as the back-end. For the database, it's noSQL--MongoDB. Also, like
+											this portfolio, I use SASS for styling. The reason why I use these things
+											is I want to learn new things, new knowledge and new skills. As you know,
+											fron-end is a fast going field, self-learning is a must-have quality
+											for front-end software engineer. So I chose those stuffs to nail this blog.
+										</h3> 
+									</div> <!--end of dialogBox-->
+								</div><!-- end of slice-right>-->
+								<input type="button" value="Screen Shots" id="blogShots">
+							</div><!-- end of slicesWrapper-->
+						</div><!-- end of contentWrap-->
+					</div><!-- end of row effOnScroll-->
 				</section>
 				<section class="main" id="MoreAboutMe" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
@@ -193,7 +209,7 @@
 				</section>
 				<section class="main" id="Contact" style="height: {$screenHeight$}px" ng-controller="contactCtrl">
 					<div class="row effOnScroll">
-						<div class="content_wrap">
+						<div class="contentWrap">
 							
 							<div ><h1>Contact Me</h1></div>
 							<div class="clouds">
@@ -240,7 +256,7 @@
 									<button class="contactButton" ng-click='alert=false; base=false'>Ok</button>
 								</div>
 							</div>
-						</div><!-- end of content_wrap-->
+						</div><!-- end of contentWrap-->
 					</div>
 				</section>
 			</div>

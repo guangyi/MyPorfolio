@@ -43,15 +43,10 @@ portfolio.controller('frameworkCtrl',['$scope','$location', function($scope, $lo
 }]);
 */
 
-portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($scope,$location, $window){
+portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($scope, $location, $window){
 	$scope.screenHeight = getWinHeight();//$(window).height(); //screen.availHeight;
 	$scope.navNames = ['About','Intro', 'Projects','Blog','MoreAboutMe','Contact'];
 	$scope.menuClicked = true;
-	$scope.menuClick = function(href){
-		console.log(href);
-		$scope.menuClicked = true;
-		$location.path('/' + href);
-	}
 	$scope.isActive = function(viewLocation){
 		var active = (viewLocation === $location.path());
 		return active;
@@ -59,6 +54,11 @@ portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($s
 	$window.onresize = function(){ handleResize();}
 	// watch the change in URL?
 	// first element --value is current URL
+	$scope.menuClick = function(href){
+		console.log(href);
+		$scope.menuClicked = true;
+		$location.path('/' + href);
+	}
 	$scope.$watch(function(){
 		// when the current url path changes, call the function below.
 		// also
@@ -67,7 +67,7 @@ portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($s
 			angular.element(document).ready(function(){
 			// when the document is ready, call function below
 				if(value && $scope.menuClicked){
-					console.log($scope.menuClicked);
+					//console.log($scope.menuClicked);
 					// replace the '/' in the URL with '#' so it become the 'ID' of each page
 					var idToScroll = value.replace('/','#');
 					// How to calculate how much to scroll in a scroll area
