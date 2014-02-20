@@ -2875,13 +2875,13 @@ body {
 }
 /* line 751, ../sass/style.scss */
 .projects .caption h3 {
-  color: #f13c76;
+  color: #558c00;
   font-size: 0.75em;
   line-height: 2em;
 }
 /* line 756, ../sass/style.scss */
 .projects .caption p {
-  color: #f16c97;
+  color: #78a632;
   font-size: 0.6em;
 }
 
@@ -2907,7 +2907,7 @@ body {
   margin-top: 1em;
   font-size: 0.75em;
   padding: 1%;
-  border: 1px dotted #f16c97;
+  border: 1px dotted #bae847;
   border-bottom: none;
   line-height: 1.1em;
 }
@@ -2943,19 +2943,19 @@ body {
   position: relative;
   width: 100%;
   font-size: 1.1em;
-  background: #f13c76;
+  background: #99d11c;
   color: #fff;
   -webkit-border-radius: 0.8em;
   -moz-border-radius: 0.8em;
   -ms-border-radius: 0.8em;
   -o-border-radius: 0.8em;
   border-radius: 0.8em;
-  border: 3px solid #f16c97;
-  border-bottom-color: #8f0e37;
+  border: 3px solid #bae847;
+  border-bottom-color: #537d00;
 }
 /* line 802, ../sass/style.scss */
 .loadButton:hover {
-  border-color: #8f0e37;
+  border-color: #537d00;
 }
 /* line 805, ../sass/style.scss */
 .loadButton:before {
@@ -2964,11 +2964,11 @@ body {
 }
 
 /***************************************************** Blog **********************************/
-/* line 813, ../sass/style.scss */
+/* line 814, ../sass/style.scss */
 #Blog .row .contentWrap {
   position: relative;
 }
-/* line 817, ../sass/style.scss */
+/* line 818, ../sass/style.scss */
 #Blog #slicesWrapper {
   background-image: url("/static/images/bg_projects.JPG");
   position: relative;
@@ -2976,7 +2976,7 @@ body {
   overflow: hidden;
   margin: auto;
 }
-/* line 825, ../sass/style.scss */
+/* line 826, ../sass/style.scss */
 #Blog #slicesWrapper .slice {
   position: relative;
   background: #99d11c;
@@ -2985,18 +2985,19 @@ body {
   float: left;
   overflow: hidden;
 }
-/* line 832, ../sass/style.scss */
+/* line 833, ../sass/style.scss */
 #Blog #slicesWrapper .slice .dialogBox {
+  border: 2px solid #666;
   position: relative;
   width: 100%;
   height: 100%;
   overflow: scroll;
   background: #fff;
-  -webkit-border-radius: 3%;
-  -moz-border-radius: 3%;
-  -ms-border-radius: 3%;
-  -o-border-radius: 3%;
-  border-radius: 3%;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3004,32 +3005,94 @@ body {
   opacity: 0.7;
   line-height: 150%;
 }
-/* line 846, ../sass/style.scss */
+/* line 848, ../sass/style.scss */
 #Blog #slicesWrapper .left .dialogBox {
   left: 50%;
 }
-/* line 851, ../sass/style.scss */
+/* line 853, ../sass/style.scss */
 #Blog #slicesWrapper .right .dialogBox {
   left: -50%;
 }
-
 /* line 859, ../sass/style.scss */
-#blogShots {
+#Blog .wrapper {
   position: absolute;
-  z-index: 5;
-  top: 88%;
-  left: 35%;
-  height: 10%;
-  width: 10%;
+  top: 80%;
+  left: 27.4%;
+  width: 44.6%;
+  height: 100px;
+}
+
+/* line 867, ../sass/style.scss */
+#blogShots {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
   font-size: 1em;
+  color: #fff;
+  background: #f13c76;
+}
+/* line 876, ../sass/style.scss */
+#blogShots:after {
+  content: "Show Me";
+  position: absolute;
+  font-size: 0.7em;
+  color: #696969;
+  top: -1em;
+  left: 0;
+}
+/* line 884, ../sass/style.scss */
+#blogShots:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border: 0.7em solid transparent;
+  border-top-color: #9d133f;
+  top: 103%;
+  left: 1px;
+  border-right-color: #9d133f;
+}
+
+/* line 896, ../sass/style.scss */
+#BlogLink {
+  z-index: 2;
+  position: absolute;
+  top: 48%;
+  right: 0;
+  font-size: 1em;
+  color: #fff;
+  background: #929292;
+}
+/* line 904, ../sass/style.scss */
+#BlogLink:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0.5em solid transparent;
+  bottom: -2px;
+  right: 0;
+  top: 100%;
+  border-left-color: #6d6d6d;
+  border-top-color: #6d6d6d;
+}
+/* line 916, ../sass/style.scss */
+#BlogLink:after {
+  content: "In a new tab";
+  position: absolute;
+  font-size: 0.7em;
+  color: #696969;
+  top: -1em;
+  right: 0;
 }
 
 /************************************************* Contact ********************************************/
-/* line 873, ../sass/style.scss */
+/* line 930, ../sass/style.scss */
 #Contact h1 {
   float: left;
 }
-/* line 876, ../sass/style.scss */
+/* line 933, ../sass/style.scss */
 #Contact .clouds {
   overflow: hidden;
   height: 14%;
@@ -3037,7 +3100,7 @@ body {
   position: relative;
   padding-bottom: 2%;
 }
-/* line 882, ../sass/style.scss */
+/* line 939, ../sass/style.scss */
 #Contact .clouds .cloud {
   margin-left: 5%;
   position: relative;
@@ -3050,7 +3113,7 @@ body {
   -moz-box-shadow: 0px 5px 25px 0px lightgrey;
   box-shadow: 0px 5px 25px 0px lightgrey;
 }
-/* line 892, ../sass/style.scss */
+/* line 949, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1, #Contact .clouds .cloud .cloudPart2 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -3060,19 +3123,19 @@ body {
   background: inherit;
   position: absolute;
 }
-/* line 897, ../sass/style.scss */
+/* line 954, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1 {
   top: -70%;
   width: 35%;
   left: 13%;
 }
-/* line 902, ../sass/style.scss */
+/* line 959, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart2 {
   top: -103%;
   width: 50%;
   left: 37%;
 }
-/* line 910, ../sass/style.scss */
+/* line 967, ../sass/style.scss */
 #Contact .icons {
   width: 30%;
   height: auto;
@@ -3080,21 +3143,21 @@ body {
   position: relative;
   margin: auto;
 }
-/* line 916, ../sass/style.scss */
+/* line 973, ../sass/style.scss */
 #Contact .icons a {
   position: relative;
   height: auto;
   overflow: hidden;
 }
-/* line 922, ../sass/style.scss */
+/* line 979, ../sass/style.scss */
 #Contact .icons a:nth-child(1) {
   margin-right: 35%;
 }
-/* line 925, ../sass/style.scss */
+/* line 982, ../sass/style.scss */
 #Contact .icons a:nth-child(3) {
   float: right;
 }
-/* line 929, ../sass/style.scss */
+/* line 986, ../sass/style.scss */
 #Contact .dialog {
   top: 0px;
   right: 0px;
@@ -3109,7 +3172,7 @@ body {
   padding-right: 3%;
   border: none;
 }
-/* line 943, ../sass/style.scss */
+/* line 1000, ../sass/style.scss */
 #Contact .form {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3128,7 +3191,7 @@ body {
   margin-top: 5%;
   color: #558c00;
 }
-/* line 956, ../sass/style.scss */
+/* line 1013, ../sass/style.scss */
 #Contact #contactForm {
   width: 90%;
   margin: auto;
@@ -3137,14 +3200,14 @@ body {
   background: #fff;
   color: #78a632;
 }
-/* line 964, ../sass/style.scss */
+/* line 1021, ../sass/style.scss */
 #Contact .input {
   width: 45%;
   float: left;
   overflow: hidden;
   margin-right: 7%;
 }
-/* line 969, ../sass/style.scss */
+/* line 1026, ../sass/style.scss */
 #Contact .input input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3160,20 +3223,20 @@ body {
   font-size: 0.9em;
   color: #666666;
 }
-/* line 978, ../sass/style.scss */
+/* line 1035, ../sass/style.scss */
 #Contact .input input:focus, #Contact .input input:invalid {
   box-shadow: none !important;
 }
-/* line 982, ../sass/style.scss */
+/* line 1039, ../sass/style.scss */
 #Contact .input .second {
   margin-top: 8%;
 }
-/* line 987, ../sass/style.scss */
+/* line 1044, ../sass/style.scss */
 #Contact .message {
   overflow: hidden;
   float: 50%;
 }
-/* line 991, ../sass/style.scss */
+/* line 1048, ../sass/style.scss */
 #Contact .message textarea {
   font-size: 0.9em;
   width: 98%;
@@ -3189,11 +3252,11 @@ body {
   resize: vertical;
   color: #666666;
 }
-/* line 1001, ../sass/style.scss */
+/* line 1058, ../sass/style.scss */
 #Contact .message textarea:focus, #Contact .message textarea:invalid {
   box-shadow: none !important;
 }
-/* line 1006, ../sass/style.scss */
+/* line 1063, ../sass/style.scss */
 #Contact .error {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3202,7 +3265,7 @@ body {
   font-size: 0.6em;
   font-weight: light;
 }
-/* line 1012, ../sass/style.scss */
+/* line 1069, ../sass/style.scss */
 #Contact .contactButton {
   float: right;
   width: 43%;
@@ -3219,11 +3282,11 @@ body {
   margin-top: 13%;
   margin-right: 10%;
 }
-/* line 1025, ../sass/style.scss */
+/* line 1082, ../sass/style.scss */
 #Contact .contactButton:hover {
   border-color: #486c10;
 }
-/* line 1030, ../sass/style.scss */
+/* line 1087, ../sass/style.scss */
 #Contact .alertBox {
   position: absolute;
   top: 0;
@@ -3232,7 +3295,7 @@ body {
   height: 100%;
   background: rgba(255, 225, 255, 0.5);
 }
-/* line 1037, ../sass/style.scss */
+/* line 1094, ../sass/style.scss */
 #Contact .alertBox div {
   color: #78A632;
   opacity: 1;
@@ -3253,7 +3316,7 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-/* line 1051, ../sass/style.scss */
+/* line 1108, ../sass/style.scss */
 #Contact .alertBox .contactButton {
   width: 15%;
 }

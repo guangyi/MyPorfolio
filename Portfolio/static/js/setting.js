@@ -166,8 +166,14 @@ var setWidthByHeight = function(obj, ratio){
 }
 var setHeightByReference = function(obj, referenObj, parentObj){
 	var totalHeight = parentObj.height();
-	var referHeight = referenObj.outerHeight(true);
+	var referHeight = referenObj.outerHeight(true);// true: include maring
 	obj.height((totalHeight - referHeight) + 'px');
+};
+var setTopByReference = function(obj, referenObj){
+	var totalHeight = $(window).height();
+	var referTop = referenObj.offset().top;
+	var referHeight = referenObj.height();
+	obj.css('top', referTop + referHeight);
 }
 var settings = function(){
 	/******************************************** projects settings settings.js *******************************/
@@ -176,6 +182,7 @@ var settings = function(){
 	setHightByWidth($('.caption'),0.25);
 	/******************************************* Blog Settings settings.js*************************************/
 	setHeightByReference( $('#slicesWrapper'), $('#Blog >.row > .contentWrap > h1'), $(window));
+	//setTopByReference($('.fold'), $('#blogShots'));
 	/*******************************************  Contact settings settings.js ********************************/
 	//setHightByWidth($('.dialogBox'), 1);
 	setRadiusByHeight($('.cloud'), 0.5);

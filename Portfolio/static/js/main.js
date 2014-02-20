@@ -4,6 +4,6 @@ $(document).ready(function(){
 	settings();
 	$('.projects').hide();
 	animtOnScroll();
-	$('#Blog >.row >.contentWrap > h1').one('click', firstClick);
+	$('#blogShots').one('click', firstClick);
 	
 });
