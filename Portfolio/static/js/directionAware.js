@@ -51,7 +51,7 @@ $(document).ready(function(){
 		removeClasses($(this));
 		addClasses(d, $(this), 'in');
 	});
-	$('.about_rectangle').mouseleave(function(event){
+	$('.aboutRectangle').mouseleave(function(event){
 		var d = getDirection(event, $(this));
 		removeClasses($(this).children('.filter'));
 		addClasses(d, $(this).children('.filter'), 'out');

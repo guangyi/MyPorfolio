@@ -4,7 +4,6 @@
 	var firstClick = function(){
 		var wrapperLeft = $('#slicesWrapper').offset().left;
 		var wrapperRight = $(window).width() - $('#slicesWrapper').offset().left- $('#slicesWrapper').width();
-		console.log('wa' + wrapperRight);
 		$('.slice.left').stop().animate({
 			//No space between 2 class name!
 			// left are relative to its containing element.so 50% is enough
@@ -22,26 +21,25 @@
 				}).dequeue('right');
 
 		$(this).stop().animate({
-			left:'-100%'
+			left:'-50%'
 		},{
-			duration:2200,
+			duration:2700,
 			queue:'btnleft',
 			step:function(now, fx){
-				if ($(this).offset().left <= wrapperLeft - 24 * 1.1){
-					$(this).stop('btnleft');
+				if ($(this).offset().left <= wrapperLeft - 24 * 1){
+					$(this).stop();
 				}
 			}
 		}).dequeue('btnleft');
 
-		$('#BlogLink').stop().animate({
-			right:'-100%'
+		$('.wrapper.bloglink').stop().animate({
+			right:'-50%'
 		},{
-			duration:2200,
+			duration:2700,
 			queue:'btnright',
 			step:function(now, fx){
 				var right = $(window).width() - $(this).offset().left - $(this).width()
-				console.log('right' + right);
-				if(right <= wrapperRight + 3){
+				if(right <= wrapperRight - 0.5 * 16){
 					$(this).stop();
 				}
 			}
@@ -63,14 +61,15 @@
 					duration:2000,
 					queue:'right1'
 				}).dequeue('right1');
+
 		$(this).stop().delay(800).animate({
-			left:'0'
+			left:'27%'
 		},{
 			duration:1030,
 		});
 
-		$('#BlogLink').stop().delay(800).animate({
-			right:'0'
+		$('.wrapper.bloglink').stop().delay(800).animate({
+			right:'28%'
 		},{
 			duration:1050,
 		})

@@ -4,6 +4,14 @@ $(document).ready(function(){
 	settings();
 	$('.projects').hide();
 	animtOnScroll();
-	$('#blogShots').one('click', firstClick);
+	var blogShotsOriLet = $('.wrapper.blogshots').css('left');
+	console.log(blogShotsOriLet);
+	$('.wrapper.blogshots').one('click', firstClick);
+	$('.topLeft').click(function(){
+		$(this).animate({
+			width:'100%',
+			height:'100%'
+		},1000);
+	})
 	
 });
