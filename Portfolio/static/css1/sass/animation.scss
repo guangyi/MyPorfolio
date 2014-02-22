@@ -166,5 +166,8 @@
 	55%  { @include transform(rotateY(-20deg));}
 	100% { @include transform(rotateY(0deg)); }
 }
-
+@include keyframes(spin){
+	from { @include transform(rotateY(0)); }
+	to { @include transform(rotateY(360deg)); }
+}
 

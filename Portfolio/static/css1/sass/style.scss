@@ -9,7 +9,7 @@ $bg_Projects:#ffe440;//dfdc1e;//ffec5d;//#FFBF00;//url('images/profile.JPG');//r
 $bg_Contact:#9EE0FF;//#b2e6ff;//#73d1ff;//;//#BAE8E8;//#e68e8e;//rgba(204,100,100,1);
 $bg_like:#F16c97;
 $bg_Blog:#99d11c;//#8cdb00;//#82cc00;//#99d11c;this one is ok;//bef13c;//#7fd0d0;
-$bg_intro:#ccc;
+$bg_intro:#fff;
 $smileBorder:3px solid #000;//rgba(222, 99,99,1);
 $smielFace: #e9b03d;//rgba(222, 99,99,1);
 $Cloud:#fff;//#7fd0d0;//#00acFF;//#40C1FF;
@@ -339,6 +339,235 @@ $bg_Blog:#99d11c;
 	height:50%;
 	margin:auto;
 }
+.rotateWrapper{
+	position:relative;
+	width:90%;
+	height:45%;
+	margin:auto;
+	//@include transform(translateX(100px));
+	//@include perspective-origin(50% -100px);
+	//@include perspective(1300px);
+}
+.perspective{
+	position:relative;
+	float:left;
+	width:25%;
+	height:100%;
+	&.gra{
+		@include perspective-origin(50% -70px);
+		@include perspective(800px);
+		//@include transform(rotateY(90deg));
+	}
+	&.free{
+		@include perspective-origin(50% -70px);
+		@include perspective(800px);
+	}
+	&.bel{
+		@include perspective-origin(50% -70px);
+		@include perspective(800px);
+	}
+	&.hope{
+		@include perspective-origin(50% -70px);
+		@include perspective(800px);
+	}
+}
+
+.cube {
+	@include animation(spin 10s infinite linear);
+}
+.cube{
+	position:relative;
+	float:left;
+	height:220px;
+	width:220px;//ifchange width, change translateZ of cubeFront too!
+	text-align:center;
+	color:#fff;
+	margin-left:3%;
+	@include box-shadow(0px 3px 2px 0px #666);
+	@include transform-style(preserve-3d);
+	
+	& div{
+		width:100%;
+		height:100%;
+		position:absolute;
+	}
+	
+	.cubeFront{
+		//@include transform(scaleZ(150%));
+		@include transform(translateZ(110px));// should be half width,but percentage doesn't work on translateZ 
+	}
+	.cubeTop{
+		@include transform(rotateX(-90deg) translateY(-50%));// percentage related to width
+		//@include translateY(-100px);
+		@include transform-origin(top center 0 );
+	}
+	.cubeRight{
+		@include transform(rotateY(-270deg) translateX(50%));
+		//@include translateX(100px);
+		@include transform-origin(top right 0 );
+	}
+	.cubeLeft{
+		@include transform(rotateY(270deg) translateX(-50%));
+		@include transform-origin(center left 0 );
+	}
+	.cubeBottom{
+		@include transform(rotateX(90deg) translateY(50%));
+		@include transform-origin(bottom center 0);
+	}
+	.cubeBack{
+		@include transform(translateZ(-110px) rotateY(180deg));
+	}
+}
+.graduated{
+	.cubeFront{
+		background:$bg_Contact;
+	}
+	.cubeTop{
+		background:#3380a6;
+	}
+	.cubeRight{
+		background:$bg_Projects; //#3380a6;
+	}
+	.cubeLeft{
+		background:$bg_like;
+	}
+	.cubeBack{
+		background:$bg_Blog;
+	}
+	.cubeBottom{
+		background:blue;
+	}
+}
+.frontEnd{
+	//@include transform(translateZ(18px));
+	.cubeFront{
+		background:$bg_Projects;
+	}
+	.cubeTop{
+		background:#917c00;
+	}
+	.cubeRight{
+		background:$bg_Blog;//#917c00;
+	}
+	.cubeLeft{
+		background:$bg_Contact;
+	}
+	.cubeBack{
+		background:$bg_like;
+	}
+	.cubeBottom{
+		background:yellow;
+	}
+}
+.believe{
+	//@include transform(translateZ(18px));
+	z-index:10;
+	.cubeFront{
+		background:$bg_Blog;
+	}
+	.cubeTop{
+		background:#124f02;
+	}
+	.cubeRight{
+		background:$bg_like;//#9d234a;
+	}
+	.cubeLeft{
+		background:$bg_Projects;//#660b28;
+	}
+	.cubeBack{
+		background:$bg_Contact;//#9d234a;
+	}
+	.cubeBottom{
+		background:#9d234a;
+	}
+}
+.hope{
+	//@include transform(rotateY(-8deg));
+	//margin-left:4%;
+	.cubeFront{
+		background:$bg_like;
+	}
+	.cubeTop{
+		background:#660b28;//#124f02;
+	}
+	.cubeRight{
+		background:$bg_Contact;
+	}
+	.cubeLeft{
+		background:$bg_Blog;//#124f02;
+	}
+	.cubeBack{
+		background:$bg_Projects;
+	}
+	.cubeBottom{
+		background:green;
+	}
+}
+.graduTop{
+	top:-24%;
+	left:4.5em;
+	position:absolute;
+	display:table-cell;
+	width:100%;
+	height:27%;
+	background:gray;
+	@include transform(skewX(-75deg) rotateX(25deg));
+	@include transform-origin(center, center, 0);
+}
+.graduRight{
+	position:absolute;
+	left:100%;
+	width:100%;
+	height:100%;
+	@include transform(skewY(-45deg));
+	background:red;
+}
+.tag{
+	position:relative;
+	float:left;
+	height:100%;
+	width:100%;//if
+	text-align:center;
+	color:#fff;
+	@include box-shadow(0px 3px 2px 0px #666);
+	//@include transform-style(perserve-3d);
+	//@include perspective(500px);
+	/*&:before{
+			content: '';
+			height:100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		h1, h2, h3{
+			z-index: 6;
+			display:inline-block;
+			vertical-align: middle;
+		}
+	
+	&:nth-child(3n+1){
+		height:95%;
+	}
+	/*&.graduated{
+		background:$bg_Contact;
+		@include transform(rotateY(-10deg));
+		@include transform-origin(center,center, 0);
+		@include box-shadow(3px 3px 2px 4px #666);
+		display:table-cell;
+	}
+	&.front_end{
+		background:$bg_Projects;
+	}
+	&.believe{
+		background:$bg_like;
+	}
+	&.hope{
+		background:$bg_Blog;
+		@include transform(rotateY(10deg));
+		@include transform-origin(center,center, 0);
+		margin-right:0;
+	}*/
+}
+
 #front_end{
 	background:$bg_Projects;//#f1b63d;
 }
@@ -351,46 +580,8 @@ $bg_Blog:#99d11c;
 #hope{
 	background:$bg_Blog;
 }
-.tag{
-	position:relative;
-	float:left;
-	height:99%;
-	width:22%;//if
-	@include box-shadow(0px 3px 2px 0px #666);
-	@include transform-style(perserve-3d);
-	@include perspective(500px);
-	@include transform-origin(50%, 50%, 0);
-	/*&:before{
-			content: '';
-			height:100%;
-			display: inline-block;
-			vertical-align: middle;
-		}*/
-		h1, h2, h3{
-			z-index: 6;
-			display:inline-block;
-			vertical-align: middle;
-		}
-	&.graduated{
-		background:$bg_Contact;
-		@include transform(rotateY(12deg));
-	}
-	&.front_end{
-		background:$bg_Projects;
-		@include transform(rotateY(-12deg));
-	}
-	&.believe{
-		background:$bg_like;
-		@include transform(rotateY(12deg));
-	}
-	&.hope{
-		background:$bg_Blog;
-		@include transform(rotateY(-12deg));
-	}
-.noRotate{
-	@include transform(rotateY(-12deg));
-}	
-}/*
+
+
 .btmLeft{
 	position:relative;
 	float:left;
@@ -438,7 +629,7 @@ $bg_Blog:#99d11c;
 	float:left;
 	@include transform(rotateY(-12deg));
 	@include box-shadow(0px 3px 2px 0px #666);
-}*/
+}
 
 .in_top{
 	@include transform-origin(50%, 0, 0 );

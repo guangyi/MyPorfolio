@@ -74,4 +74,21 @@
 			duration:1050,
 		})
 		$(this).one('click', firstClick);// !!!change back to secondClick function after first Click. Make it a circle
-	};	
+	};
+	var mouseHover = function(){
+		$('.tag').mouseenter(function(event){
+				console.log(event.target);
+				$(this).animate({
+					top:'-=25'
+				},300);
+			}).mouseleave(function(){
+				$(this).animate({
+					top:'+=25'
+				},300);
+			});/*
+		$('.tag').on('mouseenter', '.tag', function(){
+			console.log(event.target);
+			$(this).animate({
+				top:'-=25'
+			},300);*/
+	};
