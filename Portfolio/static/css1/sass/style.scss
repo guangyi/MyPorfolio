@@ -149,14 +149,14 @@ height:100%;
 		}
 	}
 	#Projects{
-		background:$bg_Projects;
+		background:#ffeb70;//$bg_Projects;
 		h1{
 			font-size:2.5em;
 			color:#fff;
 		}
 	}
 	#Blog{
-		background:$bg_Blog;
+		background:#234f32;//$bg_Blog;
 		h1{
 			font-size:2.5em;
 			margin-bottom: 0.5em;
@@ -295,7 +295,7 @@ $bg_like:#F16c97;
 $bg_Blog:#99d11c;
 #Intro{
 	.contentWrap{
-		@include perspective(500px);
+		@include perspective(800px);
 	}
 }
 .aboutRectangle{
@@ -333,41 +333,71 @@ $bg_Blog:#99d11c;
 		}
 	}
 }
-.centerIntro{
-	position:relative;
-	width:90%;
-	height:50%;
-	margin:auto;
+.left{
+	float:left;
+	display:inline-block;
+	width:23%;
+	height:100%;
 }
-.rotateWrapper{
-	position:relative;
-	width:90%;
-	height:45%;
-	margin:auto;
-	//@include transform(translateX(100px));
-	//@include perspective-origin(50% -100px);
-	//@include perspective(1300px);
+.middle{
+	font-size:0.85em;
+	padding:8% 5% 0 5%;
+	text-align:center;
+	width:53.4%;
+	height:100%;
+	display:inline-block;
+	line-height:1.7em;
+	color:#666;//#558c00;
+	@include box-sizing(border-box);
+	//border: 2px solid #558c00;
+	@include background-image(linear($bg_Contact, $bg_Projects));
+	border-top:2px solid #666;
+	border-bottom:2px solid #666;
+}
+.right{
+	float:right;
+	width:23%;
+	height:100%;
+	display:inline-block;
 }
 .perspective{
 	position:relative;
-	float:left;
-	width:25%;
-	height:100%;
+	width:100%;
+	height:50%;
+	text-align:center;
+	color:#fff;
+	.carve{
+		padding-top:5%;
+	}
 	&.gra{
-		@include perspective-origin(50% -70px);
+		@include box-shadow(4px 4px 2px 2px #666);
+		display:inline-block;
+		background:$bg_Contact;
+		@include perspective-origin(0% 380px);
 		@include perspective(800px);
 		//@include transform(rotateY(90deg));
 	}
 	&.free{
-		@include perspective-origin(50% -70px);
+		@include box-shadow(-4px 4px 2px 2px #666);
+		display:inline-block;
+		float:right;
+		background:$bg_Projects;
+		@include perspective-origin(100% 380px);
 		@include perspective(800px);
 	}
 	&.bel{
-		@include perspective-origin(50% -70px);
+		@include box-shadow(4px -4px 2px 2px #666);
+		//display:inline-block;
+		background:$bg_Projects;
+		@include perspective-origin(0% 340px);
 		@include perspective(800px);
 	}
 	&.hope{
-		@include perspective-origin(50% -70px);
+		@include box-shadow(-4px -4px 2px 2px #666);
+		display:inline-block;
+		float:right;
+		background:$bg_Contact;
+		@include perspective-origin(100% 340px);
 		@include perspective(800px);
 	}
 }
@@ -375,17 +405,19 @@ $bg_Blog:#99d11c;
 .cube {
 	@include animation(spin 10s infinite linear);
 }
+$cubeWidth:130px;
 .cube{
+	font-size:0.7em;
+	margin-left:33%;
+	margin-top:20%;
 	position:relative;
 	float:left;
-	height:220px;
-	width:220px;//ifchange width, change translateZ of cubeFront too!
+	height:$cubeWidth;
+	width:$cubeWidth;//ifchange width, change translateZ of cubeFront too!
 	text-align:center;
-	color:#fff;
-	margin-left:3%;
-	@include box-shadow(0px 3px 2px 0px #666);
+	color:#555;
+	//@include box-shadow(0px 3px 2px 0px #666);
 	@include transform-style(preserve-3d);
-	
 	& div{
 		width:100%;
 		height:100%;
@@ -394,113 +426,114 @@ $bg_Blog:#99d11c;
 	
 	.cubeFront{
 		//@include transform(scaleZ(150%));
-		@include transform(translateZ(110px));// should be half width,but percentage doesn't work on translateZ 
+		@include transform(translateZ(0.5 * $cubeWidth));// should be half width,but percentage doesn't work on translateZ 
 	}
 	.cubeTop{
-		@include transform(rotateX(-90deg) translateY(-50%));// percentage related to width
+		@include transform(rotateX(-90deg) translateY(-0.5 * $cubeWidth));// percentage related to width
 		//@include translateY(-100px);
 		@include transform-origin(top center 0 );
 	}
 	.cubeRight{
-		@include transform(rotateY(-270deg) translateX(50%));
+		@include transform(rotateY(-270deg) translateX(0.5 * $cubeWidth));
 		//@include translateX(100px);
 		@include transform-origin(top right 0 );
 	}
 	.cubeLeft{
-		@include transform(rotateY(270deg) translateX(-50%));
+		@include transform(rotateY(270deg)  translateX(-0.5 * $cubeWidth));
 		@include transform-origin(center left 0 );
 	}
 	.cubeBottom{
-		@include transform(rotateX(90deg) translateY(50%));
+		@include transform(rotateX(90deg) translateY(0.5 * $cubeWidth));
 		@include transform-origin(bottom center 0);
 	}
 	.cubeBack{
-		@include transform(translateZ(-110px) rotateY(180deg));
+		@include transform( translateZ(-0.5 * $cubeWidth) rotateY(180deg) );
 	}
 }
 .graduated{
+	//@include transform(translateX(100%));// doesn't work when it has animation
 	.cubeFront{
-		background:$bg_Contact;
+		background:$bg_Projects;
 	}
 	.cubeTop{
-		background:#3380a6;
+		background:#a69115;//$bg_Projects;
 	}
 	.cubeRight{
-		background:$bg_Projects; //#3380a6;
+		background:#a69115; //#3380a6;
 	}
 	.cubeLeft{
-		background:$bg_like;
+		background:#a69115;//$bg_Projects;
 	}
 	.cubeBack{
-		background:$bg_Blog;
+		background:$bg_Projects;
 	}
 	.cubeBottom{
-		background:blue;
+		background:#a69115;//$bg_Projects;
 	}
 }
 .frontEnd{
 	//@include transform(translateZ(18px));
 	.cubeFront{
-		background:$bg_Projects;
-	}
-	.cubeTop{
-		background:#917c00;
-	}
-	.cubeRight{
-		background:$bg_Blog;//#917c00;
-	}
-	.cubeLeft{
 		background:$bg_Contact;
 	}
+	.cubeTop{
+		background:$bg_Contact;
+	}
+	.cubeRight{
+		background:#3380a6;//$bg_Contact;//#917c00;
+	}
+	.cubeLeft{
+		background:#3380a6;
+	}
 	.cubeBack{
-		background:$bg_like;
+		background:$bg_Contact;
 	}
 	.cubeBottom{
-		background:yellow;
+		background:#3380a6;
 	}
 }
 .believe{
 	//@include transform(translateZ(18px));
 	z-index:10;
 	.cubeFront{
-		background:$bg_Blog;
+		background:$bg_Contact;
 	}
 	.cubeTop{
-		background:#124f02;
+		background:$bg_Contact;
 	}
 	.cubeRight{
-		background:$bg_like;//#9d234a;
+		background:#3380a6;//$bg_Contact;//#9d234a;
 	}
 	.cubeLeft{
-		background:$bg_Projects;//#660b28;
+		background:#3380a6;//$bg_Contact;//#660b28;
 	}
 	.cubeBack{
 		background:$bg_Contact;//#9d234a;
 	}
 	.cubeBottom{
-		background:#9d234a;
+		background:#3380a6;//$bg_Contact;
 	}
 }
 .hope{
 	//@include transform(rotateY(-8deg));
 	//margin-left:4%;
 	.cubeFront{
-		background:$bg_like;
+		background:$bg_Projects;
 	}
 	.cubeTop{
-		background:#660b28;//#124f02;
+		background:$bg_Projects;//#124f02;
 	}
 	.cubeRight{
-		background:$bg_Contact;
+		background:#a69115;//#ffdb00;////$bg_Projects;
 	}
 	.cubeLeft{
-		background:$bg_Blog;//#124f02;
+		background:#a69115;//$bg_Projects;//#124f02;
 	}
 	.cubeBack{
 		background:$bg_Projects;
 	}
 	.cubeBottom{
-		background:green;
+		background:#a69115;
 	}
 }
 .graduTop{
