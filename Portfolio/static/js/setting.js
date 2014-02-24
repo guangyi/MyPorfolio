@@ -182,12 +182,55 @@ var settings = function(){
 	setHightByWidth($('.caption'),0.25);
 	/******************************************* Blog Settings settings.js*************************************/
 	setHeightByReference( $('#slicesWrapper'), $('#Blog >.row > .contentWrap > h1'), $(window));
+	setHeightByReference( $('#sliderRight'), $('#Blog >.row > .contentWrap > h1'), $(window));
+	setHeightByReference( $('#sliderLeft'), $('#Blog >.row > .contentWrap > h1'), $(window));
 	//setTopByReference($('.fold'), $('#blogShots'));
 	/*******************************************  Contact settings settings.js ********************************/
 	//setHightByWidth($('.dialogBox'), 1);
 	setRadiusByHeight($('.cloud'), 0.5);
 	setHightByWidth($('.cloudPart1'), 1);
 	setHightByWidth($('.cloudPart2'), 1);
+	$('#sliderLeft > ul > li').width($('#sliderLeft').width());
+	$('#sliderRight > ul > li').width($('#sliderRight').outerWidth());
+	$('#slicesWrapper > ul > li').outerWidth($('#slicesWrapper').outerWidth());
+	//console.log($('#slicesWrapper').outerWidth(true));
+	var w = $('#slicesWrapper > ul > li').first().outerWidth();
+	//console.log(w);
+	$('#sliderLeft > ul').outerWidth(w * 3);
+	$('#sliderRight > ul').outerWidth(w * 3);
+	$('#slicesWrapper > ul').outerWidth(w * 3);
+	var id = setInterval(function(){
+		console.log('waaaa'+$('#slicesWrapper > ul ').css('left'));
+		if (parseInt($('#slicesWrapper > ul ').css('left'), 10) >= (-2) * w ){
+			$('#slicesWrapper > ul ').animate({
+				left:'-=' + w
+			}, 3000);
+		}
+		else{
+			$('#slicesWrapper > ul ').stop();
+			clearInterval(id);
+		};
+
+		if(parseInt($('#sliderLeft > ul ').css('left'), 10) >= (-2) * w ){
+			$('#sliderLeft > ul ').animate({
+				left:'-=' + w
+			},3000);
+		}
+		else{
+			$('#sliderLeft > ul ').stop();
+			clearInterval(id);
+		};
+		
+		if(parseInt($('#sliderRight > ul ').css('left'), 10) >= (-2) * w ){
+			$('#sliderRight > ul ').animate({
+				left:'-=' + w
+			},3000);
+		}
+		else{
+			$('#sliderRight > ul ').stop();
+			clearInterval(id);
+		}
+	}, 6000);
 
 }
 

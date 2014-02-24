@@ -135,11 +135,10 @@
 					</div>
 				</section>
 				
-				<section class="main" id="Projects" style="height: {$screenHeight$}px" ng-controller="projectsCtrl">
+				<section class="main" id="Experiments" style="height: {$screenHeight$}px" ng-controller="projectsCtrl">
 					<div class="row effOnScroll">
-						<h1>Projects</h1>
-						
-						<div class="wrapper">
+						<h1>Experiments</h1>
+						<div class="projectWrapper">
 							<div ng-repeat="project in projects" class='projects'>
 								<div class="clip"></div>
 								<div class="description" style="background-image:url('{$ project.img_url $}')">
@@ -154,33 +153,81 @@
 								</div>
 							</div><!--end of each project unit-->
 						</div><!--end of projects wrapper-->
+						<div class="projectFoot">
+							<div class="dialog"><p>These are small projects I did as practice and for fun. Each project helps me know better about different front-end knowledge and skills. But actually this portfolio you are looking at, and my Blog your will find out later,are my biggest projects so far. I'm looking forward to getting my hands on more complecated ones.</p>
+							</div>
+						</div><!-- end of projectFoot -->
 						<div class="buttonWrap">
-							<button class="loadButton btnRotateY" ng-click="loadMore()">Load More Projects</button>
-						</div>
-						<div class="dialog"><p>These are small projects I did as practice and for fun. Each project helps me know better about different front-end knowledge
-							and skills. But actually this portfolio you are looking at, and my Blog your will find out later,are my biggest projects so far. I'm looking forward to getting my hands on more complecated ones.</p></div>
+								<button class="loadButton btnRotateY" ng-click="loadMore()">Load More Projects</button>
+							</div>
+
 					</div>
 				</section>
 				<section class="main" id="Blog" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
 						<!--<div class="line"></div>-->
 						<div class="contentWrap ">
+							<!--
 							<div class="wrapper blogshots">
 								<div class="ribbon"></div>
-								<!--<div class="leftFold" id="left"></div>-->
+								<div class="leftFold" id="left"></div>
 								<button id="blogShots">< Blog Screen Shots</button>
 								<!--there are issues about <button> in IE6 but don't need thosefunction that will trigger those problems-->
 								<!--<div class="rightFold"></div>-->
 								<!-- end of ribbon -->
-							</div>
+							<!--</div>
 							<div class="wrapper bloglink">
 								<div class="ribbon link"></div>
 								<button  id="BlogLink">Check My Blog > </button>
 							<!--use button & its pseudo element<input> & <img> doesn't has pseudo element.-->
-							</div>
+							<!--</div>-->
 							<h1>My Blog</h1>
+							<div id="sliderLeft">
+								<ul>
+									<li><img src="/static/images/profile.JPG" style="float:right;"></li>
+									<li><h3>My blog is my first side project. While building this project,
+											I used AngularJS as the front-end framework and Django/REST framwork
+											as the back-end. For the database, it's noSQL--MongoDB. Also, like
+											this portfolio, I use SASS for styling. The reason why I use these things
+											is I want to learn new things, new knowledge and new skills. As you know,
+											fron-end is a fast going field, self-learning is a must-have quality
+											for front-end software engineer. So I chose those stuffs to nail this blog.
+										</h3>
+									</li>
+									<li><img src="/static/images/car.JPG"></li>
+								</ul>
+							</div>
 							<div id="slicesWrapper">
-								<div class="slice left">
+								<ul>
+									<li><h3>My blog is my first side project. While building this project,
+											I used AngularJS as the front-end framework and Django/REST framwork
+											as the back-end. For the database, it's noSQL--MongoDB. Also, like
+											this portfolio, I use SASS for styling. The reason why I use these things
+											is I want to learn new things, new knowledge and new skills. As you know,
+											fron-end is a fast going field, self-learning is a must-have quality
+											for front-end software engineer. So I chose those stuffs to nail this blog.
+										</h3>
+									</li>
+									<li><img src="/static/images/car.JPG"></li>
+									<li><img src="/static/images/profile.JPG"></li>	
+								</ul>
+							</div>
+							<div id="sliderRight">
+								<ul>
+									<li><img src="/static/images/car.JPG"></li>
+									<li><img src="/static/images/profile.JPG"></li>	
+									<li><h3>My blog is my first side project. While building this project,
+											I used AngularJS as the front-end framework and Django/REST framwork
+											as the back-end. For the database, it's noSQL--MongoDB. Also, like
+											this portfolio, I use SASS for styling. The reason why I use these things
+											is I want to learn new things, new knowledge and new skills. As you know,
+											fron-end is a fast going field, self-learning is a must-have quality
+											for front-end software engineer. So I chose those stuffs to nail this blog.
+										</h3>
+									</li>
+								</ul>
+							</div>
+								<!--<div class="slice left">
 									<div class="dialogBox">
 										<h3>My blog is my first side project. While building this project,
 											I used AngularJS as the front-end framework and Django/REST framwork
@@ -191,8 +238,8 @@
 											for front-end software engineer. So I chose those stuffs to nail this blog.
 										</h3> 	
 									</div> <!--end of dialogBox-->
-									
-								</div><!-- end of slice-left>-->
+								<!--	
+								</div><!-- end of slice-left>
 								<div class="slice right">
 									<div class="dialogBox">
 										<h3>My blog is my first side project. While building this project,
@@ -204,9 +251,9 @@
 											for front-end software engineer. So I chose those stuffs to nail this blog.
 										</h3> 
 									</div> <!--end of dialogBox-->
-								</div><!-- end of slice-right>-->
+								<!--</div><!-- end of slice-right>-->
 								
-							</div><!-- end of slicesWrapper-->
+							<!-- end of slicesWrapper-->
 
 						</div><!-- end of contentWrap-->
 					</div><!-- end of row effOnScroll-->

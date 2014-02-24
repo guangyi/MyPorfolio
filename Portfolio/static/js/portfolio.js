@@ -45,7 +45,7 @@ portfolio.controller('frameworkCtrl',['$scope','$location', function($scope, $lo
 
 portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($scope, $location, $window){
 	$scope.screenHeight = getWinHeight();//$(window).height(); //screen.availHeight;
-	$scope.navNames = ['About','Intro', 'Projects','Blog','MoreAboutMe','Contact'];
+	$scope.navNames = ['About','Intro', 'Experiments','Blog','MoreAboutMe','Contact'];
 	$scope.menuClicked = true;
 	$scope.isActive = function(viewLocation){
 		var active = (viewLocation === $location.path());

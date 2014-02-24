@@ -75,7 +75,7 @@ var animtOnScroll = function(){
 	$('.content').scroll(function(){
 		/******************************** Projects Page loading Animation **************/
 		var firstTimePrj = true;
-		if($('#Projects').offset().top <= $(window).height() * 0.7 && firstTimePrj){
+		if($('#Experiments').offset().top <= $(window).height() * 0.7 && firstTimePrj){
 			fristTimePrj = false;
 			projectLoad();
 		};
