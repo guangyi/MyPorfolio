@@ -6,13 +6,15 @@ $(document).ready(function(){
 	animtOnScroll();
 	var blogShotsOriLet = $('.wrapper.blogshots').css('left');
 	console.log(blogShotsOriLet);
-	$('.wrapper.blogshots').one('click', firstClick);
+	//$('.wrapper.blogshots').one('click', firstClick);
 	$('.topLeft').click(function(){
 		$(this).animate({
 			width:'100%',
 			height:'100%'
 		},1000);
 	});
+	blog();
+	//blogAnimation();
 	//mouseHover();
 	
 });

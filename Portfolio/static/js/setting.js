@@ -181,39 +181,140 @@ var settings = function(){
 	setHightByWidth($('.description'), 1);
 	setHightByWidth($('.caption'),0.25);
 	/******************************************* Blog Settings settings.js*************************************/
-	setHeightByReference( $('#slicesWrapper'), $('#Blog >.row > .contentWrap > h1'), $(window));
-	setHeightByReference( $('#sliderRight'), $('#Blog >.row > .contentWrap > h1'), $(window));
-	setHeightByReference( $('#sliderLeft'), $('#Blog >.row > .contentWrap > h1'), $(window));
+	setHeightByReference( $('.slider'), $('#Blog >.row > .contentWrap > h1'), $(window));// set slider's height by h1's height
+	$('.slider > ul > li').width( $('.slider').width());
+	var len = $('#sliderLeft > ul > li').length;
+	//var width = $('.slider').width();
+	//$('.slider > ul').width( width * len);
+	//setHeightByReference( $('#sliderRight'), $('#Blog >.row > .contentWrap > h1'), $(window));
+	//setHeightByReference( $('#sliderLeft'), $('#Blog >.row > .contentWrap > h1'), $(window));
 	//setTopByReference($('.fold'), $('#blogShots'));
 	/*******************************************  Contact settings settings.js ********************************/
 	//setHightByWidth($('.dialogBox'), 1);
 	setRadiusByHeight($('.cloud'), 0.5);
 	setHightByWidth($('.cloudPart1'), 1);
 	setHightByWidth($('.cloudPart2'), 1);
-	$('#sliderLeft > ul > li').width($('#sliderLeft').width());
-	$('#sliderRight > ul > li').width($('#sliderRight').outerWidth());
-	$('#slicesWrapper > ul > li').outerWidth($('#slicesWrapper').outerWidth());
+	
+	//$('#sliderLeft > ul > li').width($('#sliderLeft').width());
+	//$('#sliderRight > ul > li').width($('#sliderRight').outerWidth());
+	//$('#slicesWrapper > ul > li').outerWidth($('#slicesWrapper').outerWidth());
 	//console.log($('#slicesWrapper').outerWidth(true));
-	var w = $('#slicesWrapper > ul > li').first().outerWidth();
+	//var w = $('#slicesWrapper > ul > li').first().outerWidth();
 	//console.log(w);
-	$('#sliderLeft > ul').outerWidth(w * 3);
-	$('#sliderRight > ul').outerWidth(w * 3);
-	$('#slicesWrapper > ul').outerWidth(w * 3);
+	//$('#sliderLeft > ul').outerWidth(w * 3);
+	//$('#sliderRight > ul').outerWidth(w * 3);
+	//$('#slicesWrapper > ul').outerWidth(w * 3);
+	/*function blogSlider(){
+	};
+	blogSlider.prototype.liWidth = $('.slider > ul > li').first().width();
+	blogSlider.prototype.len = $('#sliderLeft > ul > li').length;
+	blogSlider.prototype.current = 1;// current item displaying
+	blogSlider.prototype.slider = $('.slider > ul');
+	blogSlider.prototype.id = '';
+	blogSlider.prototype.init = function(){
+		var liWidth = this.liWidth;
+		var len = this.len;
+		this.slider.each( function(){
+			// add first and last element as clone element, so the slider could be a loop
+			var first = $(this).children('li:first');
+			var last =  $(this).children('li:last');
+			// user before: prepend() will append element as the first child element of matched elements.
+			first.before(last.clone(true));// ; clone(true) clone data 
+			last.after(first.clone(true));
+			$(this).width(liWidth * (len + 2));
+			$(this).css('left', -1 * liWidth);
+		});
+	};
+	blogSlider.prototype.autoSlide = function(){
+		var blogSliderThis = this;
+		this.id = setInterval( function slide(){
+			var direction = -1 ;
+			blogSliderThis.animation(direction);
+		}, 4000);
+	};
+	blogSlider.prototype.animation = function(direction){
+		var that = this;
+		console.log("wahahahaha");
+		if ( 0 < this.current && this.current <= this.len){
+			that.move(direction);
+			that.current += direction * -1;
+			console.log(that.current);
+		}
+		else if( this.current === 0  || this.current > this.len){
+			that.toEnd();
+			that.animation(direction);
+		}
+	}
+	blogSlider.prototype.move = function(direction){
+		var that = this;
+		this.slider.each(function(){
+			$(this).animate({
+				left:'+=' + direction * that.liWidth
+			}, 3000);
+		});
+	};
+	blogSlider.prototype.toEnd = function(){
+		this.current = (this.current === 0)? this.len:1;
+		var distance = -1 * this.liWidth * this.current;
+		this.slider.each(function(){
+			$(this).css('left', distance );
+		});
+	};
+	blogSlider.prototype.btnContrl = function(event){
+		var that = this;
+		that.slider.stop(true, true);
+		clearInterval(that.id);
+		var direction = (event.target.id === 'prev')? 1: -1;
+		this.animation(direction);
+		//this.autoSlide();
+		/*while(this.slider.is(':not(:animated)')){
+			that.slider.stop(true, true);
+			clearInterval(that.id);
+			var direction = (event.target.id === 'prev')? 1: -1;
+		this.animation(direction);
+		this.autoSlide();
+		}*/
+	/*	
+		
+	}
+	var bs = new blogSlider();
+	bs.init();
+	bs.autoSlide();
+	$('.btnCtrl').click(function(event){
+		bs.btnContrl(event);
+	});*/
+
+	/*
+	var autoSlide = function(){
+
+	}
 	var id = setInterval(function(){
 		console.log('waaaa'+$('#slicesWrapper > ul ').css('left'));
-		if (parseInt($('#slicesWrapper > ul ').css('left'), 10) >= (-2) * w ){
+
+		if (current )
+
+		$.each($('.slider > ul'), function(){
+			if (parseInt( $(this).css('left'), 10) >)
+		} )
+
+		if (parseInt($('.slider > ul'),10).each(function(){
+			$(this).css('left')
+		}).css)
+		if (parseInt($('#slicesWrapper > ul ').css('left'), 10) >= (-2) * width ){
 			$('#slicesWrapper > ul ').animate({
-				left:'-=' + w
+				left:'-=' + width
 			}, 3000);
 		}
 		else{
-			$('#slicesWrapper > ul ').stop();
+			$('#slicesWrapper > ul ').animate({
+				
+			});
 			clearInterval(id);
 		};
 
-		if(parseInt($('#sliderLeft > ul ').css('left'), 10) >= (-2) * w ){
+		if(parseInt($('#sliderLeft > ul ').css('left'), 10) >= (-2) * width ){
 			$('#sliderLeft > ul ').animate({
-				left:'-=' + w
+				left:'-=' + width
 			},3000);
 		}
 		else{
@@ -221,16 +322,16 @@ var settings = function(){
 			clearInterval(id);
 		};
 		
-		if(parseInt($('#sliderRight > ul ').css('left'), 10) >= (-2) * w ){
+		if(parseInt($('#sliderRight > ul ').css('left'), 10) >= (-2) * width ){
 			$('#sliderRight > ul ').animate({
-				left:'-=' + w
+				left:'-=' + width
 			},3000);
 		}
 		else{
 			$('#sliderRight > ul ').stop();
 			clearInterval(id);
 		}
-	}, 6000);
+	}, 6000);*/
 
 }
 

@@ -995,8 +995,17 @@ $btnBlogLink:#666;//#fcadc6;
 		}
 
 	}
-	#sliderLeft, #sliderRight, #slicesWrapper{
+	.btnCtrl{
+		height:2em;
+		background:red;
+		position:relative;
+	}
+	.slider{
+		overflow: hidden;
 		background: #fff;
+		width:82%;
+		line-height:2em;
+		position:absolute;
 		& ul{
 			left:0;
 			position:relative;
@@ -1013,37 +1022,15 @@ $btnBlogLink:#666;//#fcadc6;
 		}
 	}
 	#sliderLeft{
-		overflow: hidden;
-		//background:;
-		position:absolute;
-		@include transform(translateX(-82%) rotateY(45deg) scale(0.8) translateY(12%));
+		@include transform(translateX(-80.8%) rotateY(45deg) scale(0.8) translateY(12%));
 		@include transform-origin(top right 0);
-		//background-image:url('/static/images/bg_projects.JPG');
-		width:80%;
-		line-height:2em;
 	}
 	#sliderRight{
-		overflow: hidden;
-		position:absolute;
-		display:inline-block;
-		@include transform(translateX(101%) rotateY(-35deg) scale(0.8) translateY(12%));
+		@include transform(translateX(100%) rotateY(-35deg) scale(0.8) translateY(12%));
 		@include transform-origin(top left 0);
-		//background-image:url('/static/images/bg_projects.JPG');
-		line-height:2em;
-		width:80%
 	}
-	
 	#slicesWrapper{
-		@include transform(scale(0.8) translateX(10%));
-		//display:inline-block;
-		//background-image:url('/static/images/bg_projects.JPG');
-		position:absolute;
-		//height:80%;
-		width:82%;
-		//background:red;
-		overflow:hidden;
-		line-height:2em;
-		//margin: auto;
+		@include transform(scale(0.8) translateX(12%));
 		.slice{
 			position:relative;
 			background:$bg_Blog;

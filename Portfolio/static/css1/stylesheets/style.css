@@ -3367,74 +3367,71 @@ body {
   overflow: hidden;
 }
 /* line 998, ../sass/style.scss */
-#Blog #sliderLeft, #Blog #sliderRight, #Blog #slicesWrapper {
-  background: #fff;
+#Blog .btnCtrl {
+  height: 2em;
+  background: red;
+  position: relative;
 }
-/* line 1000, ../sass/style.scss */
-#Blog #sliderLeft ul, #Blog #sliderRight ul, #Blog #slicesWrapper ul {
+/* line 1003, ../sass/style.scss */
+#Blog .slider {
+  overflow: hidden;
+  background: #fff;
+  width: 82%;
+  line-height: 2em;
+  position: absolute;
+}
+/* line 1009, ../sass/style.scss */
+#Blog .slider ul {
   left: 0;
   position: relative;
   height: 100%;
 }
-/* line 1004, ../sass/style.scss */
-#Blog #sliderLeft ul li, #Blog #sliderRight ul li, #Blog #slicesWrapper ul li {
+/* line 1013, ../sass/style.scss */
+#Blog .slider ul li {
   height: 100%;
   position: relative;
   float: left;
 }
-/* line 1008, ../sass/style.scss */
-#Blog #sliderLeft ul li img, #Blog #sliderRight ul li img, #Blog #slicesWrapper ul li img {
+/* line 1017, ../sass/style.scss */
+#Blog .slider ul li img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 1015, ../sass/style.scss */
+/* line 1024, ../sass/style.scss */
 #Blog #sliderLeft {
-  overflow: hidden;
-  position: absolute;
-  -webkit-transform: translateX(-82%) rotateY(45deg) scale(0.8) translateY(12%);
-  -moz-transform: translateX(-82%) rotateY(45deg) scale(0.8) translateY(12%);
-  -ms-transform: translateX(-82%) rotateY(45deg) scale(0.8) translateY(12%);
-  -o-transform: translateX(-82%) rotateY(45deg) scale(0.8) translateY(12%);
-  transform: translateX(-82%) rotateY(45deg) scale(0.8) translateY(12%);
+  -webkit-transform: translateX(-80.8%) rotateY(45deg) scale(0.8) translateY(12%);
+  -moz-transform: translateX(-80.8%) rotateY(45deg) scale(0.8) translateY(12%);
+  -ms-transform: translateX(-80.8%) rotateY(45deg) scale(0.8) translateY(12%);
+  -o-transform: translateX(-80.8%) rotateY(45deg) scale(0.8) translateY(12%);
+  transform: translateX(-80.8%) rotateY(45deg) scale(0.8) translateY(12%);
   -webkit-transform-origin: top right 0 50%;
   -moz-transform-origin: top right 0 50%;
   -ms-transform-origin: top right 0 50%;
   -o-transform-origin: top right 0 50%;
   transform-origin: top right 0 50%;
-  width: 80%;
-  line-height: 2em;
 }
-/* line 1025, ../sass/style.scss */
+/* line 1028, ../sass/style.scss */
 #Blog #sliderRight {
-  overflow: hidden;
-  position: absolute;
-  display: inline-block;
-  -webkit-transform: translateX(101%) rotateY(-35deg) scale(0.8) translateY(12%);
-  -moz-transform: translateX(101%) rotateY(-35deg) scale(0.8) translateY(12%);
-  -ms-transform: translateX(101%) rotateY(-35deg) scale(0.8) translateY(12%);
-  -o-transform: translateX(101%) rotateY(-35deg) scale(0.8) translateY(12%);
-  transform: translateX(101%) rotateY(-35deg) scale(0.8) translateY(12%);
+  -webkit-transform: translateX(100%) rotateY(-35deg) scale(0.8) translateY(12%);
+  -moz-transform: translateX(100%) rotateY(-35deg) scale(0.8) translateY(12%);
+  -ms-transform: translateX(100%) rotateY(-35deg) scale(0.8) translateY(12%);
+  -o-transform: translateX(100%) rotateY(-35deg) scale(0.8) translateY(12%);
+  transform: translateX(100%) rotateY(-35deg) scale(0.8) translateY(12%);
   -webkit-transform-origin: top left 0 50%;
   -moz-transform-origin: top left 0 50%;
   -ms-transform-origin: top left 0 50%;
   -o-transform-origin: top left 0 50%;
   transform-origin: top left 0 50%;
-  line-height: 2em;
-  width: 80%;
 }
-/* line 1036, ../sass/style.scss */
+/* line 1032, ../sass/style.scss */
 #Blog #slicesWrapper {
-  -webkit-transform: scale(0.8) translateX(10%);
-  -moz-transform: scale(0.8) translateX(10%);
-  -ms-transform: scale(0.8) translateX(10%);
-  -o-transform: scale(0.8) translateX(10%);
-  transform: scale(0.8) translateX(10%);
-  position: absolute;
-  width: 82%;
-  overflow: hidden;
-  line-height: 2em;
+  -webkit-transform: scale(0.8) translateX(12%);
+  -moz-transform: scale(0.8) translateX(12%);
+  -ms-transform: scale(0.8) translateX(12%);
+  -o-transform: scale(0.8) translateX(12%);
+  transform: scale(0.8) translateX(12%);
 }
-/* line 1047, ../sass/style.scss */
+/* line 1034, ../sass/style.scss */
 #Blog #slicesWrapper .slice {
   position: relative;
   background: #99d11c;
@@ -3443,7 +3440,7 @@ body {
   float: left;
   overflow: hidden;
 }
-/* line 1054, ../sass/style.scss */
+/* line 1041, ../sass/style.scss */
 #Blog #slicesWrapper .slice .dialogBox {
   position: relative;
   width: 100%;
@@ -3462,31 +3459,31 @@ body {
   opacity: 0.7;
   line-height: 150%;
 }
-/* line 1069, ../sass/style.scss */
+/* line 1056, ../sass/style.scss */
 #Blog #slicesWrapper .left .dialogBox {
   left: 50%;
 }
-/* line 1074, ../sass/style.scss */
+/* line 1061, ../sass/style.scss */
 #Blog #slicesWrapper .right .dialogBox {
   left: -50%;
 }
-/* line 1079, ../sass/style.scss */
+/* line 1066, ../sass/style.scss */
 #Blog .wrapper {
   position: absolute;
   width: 25%;
   height: 10%;
 }
-/* line 1083, ../sass/style.scss */
+/* line 1070, ../sass/style.scss */
 #Blog .wrapper.blogshots {
   top: 80%;
   left: 27%;
 }
-/* line 1087, ../sass/style.scss */
+/* line 1074, ../sass/style.scss */
 #Blog .wrapper.bloglink {
   top: 85%;
   right: 28%;
 }
-/* line 1091, ../sass/style.scss */
+/* line 1078, ../sass/style.scss */
 #Blog .wrapper .ribbon {
   position: relative;
   width: 1.5em;
@@ -3498,7 +3495,7 @@ body {
   left: -0.9em;
   z-index: 1;
 }
-/* line 1101, ../sass/style.scss */
+/* line 1088, ../sass/style.scss */
 #Blog .wrapper .ribbon.link {
   width: 1em;
   top: 0.6em;
@@ -3506,7 +3503,7 @@ body {
   border-color: #666666 transparent #666666 #666666;
 }
 
-/* line 1110, ../sass/style.scss */
+/* line 1097, ../sass/style.scss */
 #blogShots {
   z-index: 2;
   position: absolute;
@@ -3516,7 +3513,7 @@ body {
   color: #fff;
   background: #f86c99;
 }
-/* line 1119, ../sass/style.scss */
+/* line 1106, ../sass/style.scss */
 #blogShots:before {
   content: "Show Me";
   position: absolute;
@@ -3525,7 +3522,7 @@ body {
   color: #696969;
   top: -1em;
 }
-/* line 1128, ../sass/style.scss */
+/* line 1115, ../sass/style.scss */
 #blogShots:after {
   content: "";
   width: 0;
@@ -3538,7 +3535,7 @@ body {
   left: 1px;
 }
 
-/* line 1140, ../sass/style.scss */
+/* line 1127, ../sass/style.scss */
 #BlogLink {
   z-index: 2;
   position: absolute;
@@ -3548,7 +3545,7 @@ body {
   color: #fff;
   background: #666666;
 }
-/* line 1148, ../sass/style.scss */
+/* line 1135, ../sass/style.scss */
 #BlogLink:before {
   content: "";
   position: absolute;
@@ -3561,7 +3558,7 @@ body {
   top: 105%;
   border-style: solid;
 }
-/* line 1160, ../sass/style.scss */
+/* line 1147, ../sass/style.scss */
 #BlogLink:after {
   content: "In a new tab";
   position: absolute;
@@ -3572,11 +3569,11 @@ body {
 }
 
 /************************************************* Contact ********************************************/
-/* line 1174, ../sass/style.scss */
+/* line 1161, ../sass/style.scss */
 #Contact h1 {
   float: left;
 }
-/* line 1177, ../sass/style.scss */
+/* line 1164, ../sass/style.scss */
 #Contact .clouds {
   overflow: hidden;
   height: 14%;
@@ -3584,7 +3581,7 @@ body {
   position: relative;
   padding-bottom: 2%;
 }
-/* line 1183, ../sass/style.scss */
+/* line 1170, ../sass/style.scss */
 #Contact .clouds .cloud {
   margin-left: 5%;
   position: relative;
@@ -3597,7 +3594,7 @@ body {
   -moz-box-shadow: 0px 5px 25px 0px lightgrey;
   box-shadow: 0px 5px 25px 0px lightgrey;
 }
-/* line 1193, ../sass/style.scss */
+/* line 1180, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1, #Contact .clouds .cloud .cloudPart2 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -3607,19 +3604,19 @@ body {
   background: inherit;
   position: absolute;
 }
-/* line 1198, ../sass/style.scss */
+/* line 1185, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1 {
   top: -70%;
   width: 35%;
   left: 13%;
 }
-/* line 1203, ../sass/style.scss */
+/* line 1190, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart2 {
   top: -103%;
   width: 50%;
   left: 37%;
 }
-/* line 1211, ../sass/style.scss */
+/* line 1198, ../sass/style.scss */
 #Contact .icons {
   width: 30%;
   height: auto;
@@ -3627,21 +3624,21 @@ body {
   position: relative;
   margin: auto;
 }
-/* line 1217, ../sass/style.scss */
+/* line 1204, ../sass/style.scss */
 #Contact .icons a {
   position: relative;
   height: auto;
   overflow: hidden;
 }
-/* line 1223, ../sass/style.scss */
+/* line 1210, ../sass/style.scss */
 #Contact .icons a:nth-child(1) {
   margin-right: 35%;
 }
-/* line 1226, ../sass/style.scss */
+/* line 1213, ../sass/style.scss */
 #Contact .icons a:nth-child(3) {
   float: right;
 }
-/* line 1230, ../sass/style.scss */
+/* line 1217, ../sass/style.scss */
 #Contact .dialog {
   top: 0px;
   right: 0px;
@@ -3656,7 +3653,7 @@ body {
   padding-right: 3%;
   border: none;
 }
-/* line 1244, ../sass/style.scss */
+/* line 1231, ../sass/style.scss */
 #Contact .form {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3675,7 +3672,7 @@ body {
   margin-top: 5%;
   color: #558c00;
 }
-/* line 1257, ../sass/style.scss */
+/* line 1244, ../sass/style.scss */
 #Contact #contactForm {
   width: 90%;
   margin: auto;
@@ -3684,14 +3681,14 @@ body {
   background: #fff;
   color: #78a632;
 }
-/* line 1265, ../sass/style.scss */
+/* line 1252, ../sass/style.scss */
 #Contact .input {
   width: 45%;
   float: left;
   overflow: hidden;
   margin-right: 7%;
 }
-/* line 1270, ../sass/style.scss */
+/* line 1257, ../sass/style.scss */
 #Contact .input input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3707,20 +3704,20 @@ body {
   font-size: 0.9em;
   color: #666666;
 }
-/* line 1279, ../sass/style.scss */
+/* line 1266, ../sass/style.scss */
 #Contact .input input:focus, #Contact .input input:invalid {
   box-shadow: none !important;
 }
-/* line 1283, ../sass/style.scss */
+/* line 1270, ../sass/style.scss */
 #Contact .input .second {
   margin-top: 8%;
 }
-/* line 1288, ../sass/style.scss */
+/* line 1275, ../sass/style.scss */
 #Contact .message {
   overflow: hidden;
   float: 50%;
 }
-/* line 1292, ../sass/style.scss */
+/* line 1279, ../sass/style.scss */
 #Contact .message textarea {
   font-size: 0.9em;
   width: 98%;
@@ -3736,11 +3733,11 @@ body {
   resize: vertical;
   color: #666666;
 }
-/* line 1302, ../sass/style.scss */
+/* line 1289, ../sass/style.scss */
 #Contact .message textarea:focus, #Contact .message textarea:invalid {
   box-shadow: none !important;
 }
-/* line 1307, ../sass/style.scss */
+/* line 1294, ../sass/style.scss */
 #Contact .error {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3749,7 +3746,7 @@ body {
   font-size: 0.6em;
   font-weight: light;
 }
-/* line 1313, ../sass/style.scss */
+/* line 1300, ../sass/style.scss */
 #Contact .contactButton {
   float: right;
   width: 43%;
@@ -3766,11 +3763,11 @@ body {
   margin-top: 13%;
   margin-right: 10%;
 }
-/* line 1326, ../sass/style.scss */
+/* line 1313, ../sass/style.scss */
 #Contact .contactButton:hover {
   border-color: #486c10;
 }
-/* line 1331, ../sass/style.scss */
+/* line 1318, ../sass/style.scss */
 #Contact .alertBox {
   position: absolute;
   top: 0;
@@ -3779,7 +3776,7 @@ body {
   height: 100%;
   background: rgba(255, 225, 255, 0.5);
 }
-/* line 1338, ../sass/style.scss */
+/* line 1325, ../sass/style.scss */
 #Contact .alertBox div {
   color: #78A632;
   opacity: 1;
@@ -3800,7 +3797,7 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-/* line 1352, ../sass/style.scss */
+/* line 1339, ../sass/style.scss */
 #Contact .alertBox .contactButton {
   width: 15%;
 }

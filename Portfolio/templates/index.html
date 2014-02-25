@@ -165,7 +165,8 @@
 				</section>
 				<section class="main" id="Blog" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
-						<!--<div class="line"></div>-->
+						<button class="btnCtrl" id="prev">Prev</button>
+						<button class="btnCtrl" id="next">Next</button>
 						<div class="contentWrap ">
 							<!--
 							<div class="wrapper blogshots">
@@ -182,7 +183,7 @@
 							<!--use button & its pseudo element<input> & <img> doesn't has pseudo element.-->
 							<!--</div>-->
 							<h1>My Blog</h1>
-							<div id="sliderLeft">
+							<div class="slider" id="sliderLeft">
 								<ul>
 									<li><img src="/static/images/profile.JPG" style="float:right;"></li>
 									<li><h3>My blog is my first side project. While building this project,
@@ -197,7 +198,7 @@
 									<li><img src="/static/images/car.JPG"></li>
 								</ul>
 							</div>
-							<div id="slicesWrapper">
+							<div class="slider" id="slicesWrapper">
 								<ul>
 									<li><h3>My blog is my first side project. While building this project,
 											I used AngularJS as the front-end framework and Django/REST framwork
@@ -212,7 +213,7 @@
 									<li><img src="/static/images/profile.JPG"></li>	
 								</ul>
 							</div>
-							<div id="sliderRight">
+							<div class="slider" id="sliderRight">
 								<ul>
 									<li><img src="/static/images/car.JPG"></li>
 									<li><img src="/static/images/profile.JPG"></li>	
@@ -256,6 +257,7 @@
 							<!-- end of slicesWrapper-->
 
 						</div><!-- end of contentWrap-->
+						
 					</div><!-- end of row effOnScroll-->
 				</section>
 				<section class="main" id="MoreAboutMe" style="height: {$screenHeight$}px">
