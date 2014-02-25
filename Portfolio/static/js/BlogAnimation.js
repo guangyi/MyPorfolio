@@ -270,18 +270,17 @@ var blog = function(){
 	};
 	blogSlider.prototype.btnContrl = function(event){
 		var that = this;
-		that.slider.stop(true, true);
-		clearInterval(that.id);
 		var direction = (event.target.id === 'prev')? 1: -1;
-		this.animation(direction);
-		//this.autoSlide();
-		/*while(this.slider.is(':not(:animated)')){
+		if(this.slider.is(':not(:animated)')){
+			clearInterval(that.id);
+			this.animation(direction);
+			this.autoSlide();
+		}
+		else{
 			that.slider.stop(true, true);
 			clearInterval(that.id);
-			var direction = (event.target.id === 'prev')? 1: -1;
-		this.animation(direction);
-		this.autoSlide();
-		}*/
+			this.autoSlide();
+		}
 	};
 
 	
