@@ -46,15 +46,16 @@ $(document).ready(function(){
 	// Both these two style works!!!
 	// mouseleave and mouseenter is different with mousehover and mouseout
 	// mouserleave and mouseenter won't affect the child of the animated element.
-	$('.filter').mouseenter(function(event){
+	$('.perspective').mouseenter(function(event){
+		var d = getDirection(event, $(this));
+		removeClasses($(this).children('.introShlter'));
+		addClasses(d, $(this).children('.introShlter'), 'in');
+	});
+	$('.introShlter').mouseleave(function(event){
+		//event.stopPropagation()
 		var d = getDirection(event, $(this));
 		removeClasses($(this));
-		addClasses(d, $(this), 'in');
-	});
-	$('.aboutRectangle').mouseleave(function(event){
-		var d = getDirection(event, $(this));
-		removeClasses($(this).children('.filter'));
-		addClasses(d, $(this).children('.filter'), 'out');
+		addClasses(d, $(this), 'out');
 	});
 	$('.description').mouseenter(function(event){
 		var d = getDirection(event, $(this));

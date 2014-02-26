@@ -74,38 +74,38 @@
 	100% { @include transform( rotateX(90deg) );}
 }
 //Define IN-sliding animation
-@include keyframes(in_top){
-	0%   { top: 0px;}
-	100% { top: 100%;}
+@include keyframes(intro_in_top){
+	0%   { top: -100%; left:0px}
+	100% { top: 0; left:0;}
 }
-@include keyframes(in_bottom){
-	0%   { top: 0px;}
+@include keyframes(intro_in_bottom){
+	0%   { top: 100%; left:0px}
+	100% { top: 0; left:0px;}
+}
+@include keyframes(intro_in_left){
+	0%   { left: -100%;}
+	100% { left: 0;}
+}
+@include keyframes(intro_in_right){
+	0%   { left: 100%;}
+	100% { left: 0;}
+}
+//Define out-sliding animation
+@include keyframes(intro_out_top){
+	0%   { top: 0;}
 	100% { top: -100%;}
 }
-@include keyframes(in_left){
-	0%   { left: 0;}
-	100% { left: 100%;}
+@include keyframes(intro_out_bottom){
+	0%   { top: 0px; left:0}
+	100% { top: 100%; left:0}
 }
-@include keyframes(in_right){
+@include keyframes(intro_out_left){
 	0%   { left: 0;}
 	100% { left: -100%;}
 }
-//Define out-sliding animation
-@include keyframes(out_top){
-	0%   { top: 100%;}
-	100% { top: 0;}
-}
-@include keyframes(out_bottom){
-	0%   { top: -100%;}
-	100% { top: 0px;}
-}
-@include keyframes(out_left){
-	0%   { left: 100%;}
-	100% { left: 0px;}
-}
-@include keyframes(out_right){
-	0%   { left: -100%;}
-	100% { left: 0px;}
+@include keyframes(intro_out_right){
+	0%   { left: 0;}
+	100% { left: 100%;}
 }
 /******************************* Define in-rotating animation for projects **************************/
 // animations for mouse enter --projects page
@@ -167,7 +167,14 @@
 	100% { @include transform(rotateY(0deg)); }
 }
 @include keyframes(spin){
-	from { @include transform(rotateY(0)); }
-	to { @include transform(rotateY(360deg)); }
+	0 { @include transform(rotateY(0deg)); }
+	23% { @include transform(rotateY(0deg)); }
+	25% { @include transform(rotateY(90deg)); }
+	48% { @include transform(rotateY(90deg)); }
+	50% { @include transform(rotateY(180deg)); }
+	73%{ @include transform(rotateY(180deg)); }
+	75% { @include transform(rotateY(270deg)); }
+	98% { @include transform(rotateY(270deg)); }
+	100%{ @include transform(rotateY(360deg)); }
 }
 
