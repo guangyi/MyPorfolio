@@ -860,11 +860,13 @@
   /* line 95, ../sass/animation.scss */
   0% {
     top: 0;
+    left: 0;
   }
 
   /* line 96, ../sass/animation.scss */
   100% {
     top: -100%;
+    left: 0;
   }
 }
 
@@ -872,11 +874,13 @@
   /* line 95, ../sass/animation.scss */
   0% {
     top: 0;
+    left: 0;
   }
 
   /* line 96, ../sass/animation.scss */
   100% {
     top: -100%;
+    left: 0;
   }
 }
 
@@ -884,11 +888,13 @@
   /* line 95, ../sass/animation.scss */
   0% {
     top: 0;
+    left: 0;
   }
 
   /* line 96, ../sass/animation.scss */
   100% {
     top: -100%;
+    left: 0;
   }
 }
 

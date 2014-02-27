@@ -45,17 +45,17 @@ var removeClasses = function(obj){
 $(document).ready(function(){
 	// Both these two style works!!!
 	// mouseleave and mouseenter is different with mousehover and mouseout
-	// mouserleave and mouseenter won't affect the child of the animated element.
-	$('.perspective').mouseenter(function(event){
+	// mouseleave and mouseenter won't affect the child of the animated element.
+	$('.perspective').on('mouseenter', function(event){
+			console.log('entering' + event.target);
+			var d = getDirection(event, $(this));
+			removeClasses($(this).children('.introShlter'));
+			addClasses(d, $(this).children('.introShlter'), 'in');
+		});
+	$('.perspective').mouseleave(function(event){
 		var d = getDirection(event, $(this));
 		removeClasses($(this).children('.introShlter'));
-		addClasses(d, $(this).children('.introShlter'), 'in');
-	});
-	$('.introShlter').mouseleave(function(event){
-		//event.stopPropagation()
-		var d = getDirection(event, $(this));
-		removeClasses($(this));
-		addClasses(d, $(this), 'out');
+		addClasses(d, $(this).children('.introShlter'), 'out');
 	});
 	$('.description').mouseenter(function(event){
 		var d = getDirection(event, $(this));
@@ -82,7 +82,8 @@ $(document).ready(function(){
 	});
 	$('.description').mouseleave(function(event){
 		var d = getDirection(event, $(this));
-		switch(d){
+		
+			switch(d){
 			case 0:
 			case 1:
 				var shelter = $(this).children( '.proShelter.top' );
@@ -100,6 +101,7 @@ $(document).ready(function(){
 				addClasses( d, descrpt, 'rotate_out' );
 				break;	
 		}
+		
 		//$(this).siblings('.descpt.top').css('z-index','3');
 	});/*
 	$('.description').mouseleave(function(event){

@@ -238,7 +238,7 @@ var blog = function(){
 		this.id = setInterval( function slide(){
 			var direction = -1 ;
 			blogSliderThis.animation(direction);
-		}, 4000);
+		}, 6000);
 	};
 	blogSlider.prototype.animation = function(direction){
 		var that = this;

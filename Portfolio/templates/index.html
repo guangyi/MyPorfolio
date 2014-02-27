@@ -42,6 +42,7 @@
 						<div class="contentWrap">
 							<div class="left">
 								<div class="perspective gra">
+									<div class="introShlter"><h2>TEST!!!</h2></div>
 									<div class="carve"><h3> I'm a student </h3></div>
 									<div class="cube graduated">	
 										<!--<div class="tag front_end"></div>-->
@@ -58,6 +59,7 @@
 									</div>
 								</div>
 								<div class="perspective bel">
+									<div class="introShlter"><h2>TEST!!!</h2></div>
 									<div class="carve"><h3>I believe in.. </h3></div>
 									<div class="cube believe">	
 										<!--<div class="tag front_end"></div>-->
@@ -104,6 +106,7 @@
 									</div>
 								</div>
 								<div class="perspective Hope">
+									<div class="introShlter"><h2>TEST!!!</h2></div>
 									<div class="carve"><h3> I hope to </h3></div>
 									<div class="cube hope">	
 										<!--<div class="tag front_end"></div>-->
@@ -139,8 +142,14 @@
 					<div class="row effOnScroll">
 						<h1>Experiments</h1>
 						<div class="projectWrapper">
+							<div class="projectFoot">
+									<div class="dialog">
+								<!--<div class="clip"></div>-->
+									<p>!These are small projects I did as practice and for fun. Each project helps me know better about different front-end knowledge and skills. But actually this portfolio you are looking at, and my Blog your will find out later,are my biggest projects so far. I'm looking forward to getting my hands on more complecated ones.</p>
+								</div>
+								</div>
 							<div ng-repeat="project in projects" class='projects'>
-								<div class="clip"></div>
+								<!--<-->
 								<div class="description" style="background-image:url('{$ project.img_url $}')">
 									<div class="proShelter top"><img src="{$ project.img_url $}"></div>
 									<div class="proShelter down"><img src="{$ project.img_url $}"></div>
@@ -152,21 +161,22 @@
 									<p>Tag:{$project.tag$}</p>
 								</div>
 							</div><!--end of each project unit-->
+							<!-- end of projectFoot -->
+							
+							<div class="buttonWrap">
+								
+								<!--<button class="loadButton btnRotateY" ng-click="loadMore()">Load More Projects</button>-->
+								<div><p>Load More Expreiments</p></div>
+							</div>
 						</div><!--end of projects wrapper-->
-						<div class="projectFoot">
-							<div class="dialog"><p>These are small projects I did as practice and for fun. Each project helps me know better about different front-end knowledge and skills. But actually this portfolio you are looking at, and my Blog your will find out later,are my biggest projects so far. I'm looking forward to getting my hands on more complecated ones.</p>
-							</div>
-						</div><!-- end of projectFoot -->
-						<div class="buttonWrap">
-								<button class="loadButton btnRotateY" ng-click="loadMore()">Load More Projects</button>
-							</div>
+						
+
 
 					</div>
 				</section>
 				<section class="main" id="Blog" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
-						<button class="btnCtrl" id="prev">Prev</button>
-						<button class="btnCtrl" id="next">Next</button>
+						
 						<div class="contentWrap ">
 							<!--
 							<div class="wrapper blogshots">
@@ -212,6 +222,8 @@
 									<li><img src="/static/images/car.JPG"></li>
 									<li><img src="/static/images/profile.JPG"></li>	
 								</ul>
+								<button class="btnCtrl" id="prev"></button>
+								<button class="btnCtrl" id="next"></button>
 							</div>
 							<div class="slider" id="sliderRight">
 								<ul>

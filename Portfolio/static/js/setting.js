@@ -180,6 +180,7 @@ var settings = function(){
 	setHightByWidth($('.projects'), 1.3);
 	setHightByWidth($('.description'), 1);
 	setHightByWidth($('.caption'),0.25);
+	setHeightByReference($('.projectWrapper'), $('#Experiments >.row > h1'), $(window));
 	/******************************************* Blog Settings settings.js*************************************/
 	setHeightByReference( $('.slider'), $('#Blog >.row > .contentWrap > h1'), $(window));// set slider's height by h1's height
 	$('.slider > ul > li').width( $('.slider').width());

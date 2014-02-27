@@ -158,14 +158,17 @@ height:100%;
 		}
 	}
 	#Experiments{
-		background:#a69115;//$bg_Projects;
+		//@include background-image(linear-gradient(top left,$bg_like,$bg_Projects, $bg_Contact));//$bg_Projects;
+		@include background-image(linear-gradient(top left,$bg_Projects,$bg_Contact, $bg_like));//$bg_Projects;
 		h1{
 			font-size:2.5em;
 			color:#fff;
+			margin-bottom:3%;
 		}
 	}
 	#Blog{
-		background:#234f32;//$bg_Blog;
+		//@include background-image(linear-gradient(top, #011e35, #ccc 35%, $bg_Contact 85%, #011e35));//#234f32;//$bg_Blog;
+		@include background-image(linear-gradient(top,  #009b95, #e1004c 17%, $bg_Projects 89%, $bg_Contact));
 		h1{
 			font-size:2.5em;
 			margin-bottom: 0.5em;
@@ -307,8 +310,8 @@ $cubeDark1:#406c00;
 $cubeDark2:#bb2e5b;//#9d234a;//#e3e300;//#ab0164;//780046;//pink
 $cubeBottom1:#2a4600;
 $cubeBottom2:#780046;//#cfcf00;//#4e002e;//darkpink
+$shelter:#fdd1e0;
 @mixin cubeColor($light, $dark, $bottom, $color){
-
 	.cubeFront{
 		color:$color;
 		background:$light;
@@ -381,15 +384,16 @@ $cubeBottom2:#780046;//#cfcf00;//#4e002e;//darkpink
 		width:100%;
 		left:-100%;
 		top:0px;
-		background:red;
+		background:$shelter;
 		z-index:100;
+		opacity:1;
 	}
 	.carve{
 		padding-top:10%;
 		margin-bottom:10%;
 	}
 	&.gra{
-		@include box-shadow(4px 4px 2px 2px #666);
+		@include box-shadow(14px 4px 2px 2px #666);
 		display:inline-block;
 		//background:$bg_Projects;
 		@include background-image(linear-gradient(left top, $bg_Contact , $bg_Projects) );
@@ -447,12 +451,6 @@ $cubeWidth:160px;
 		//opacity:0.9;
 		@include box-sizing(border-box); 
 		@include border-radius(0.2em);
-	}
-	&:hover{
-		// when hover on one cube, all animation stops.
-		.graduated, &.hope, &.frontEnd, &.believe{
-			@include animation-play-state(paused);
-		}
 	}
 	.cubeFront{
 		//@include transform(scaleZ(150%));
@@ -519,19 +517,15 @@ $cubeWidth:160px;
 }
 .introShlter{
 	&.in_top{
-		@include transform-origin(50%, 0, 0 );
 		@include animation('intro_in_top 1s forwards');
-
 	}
 	&.in_right{
-		@include transform-origin(100%, 50%, 0 );
 		@include animation('intro_in_right 1s forwards');
 	}
 	&.in_bottom{
 		@include animation('intro_in_bottom 1s forwards');
 	}
 	&.in_left{
-		@include transform-origin(0, 50%, 0 );
 		@include animation('intro_in_left 1s forwards');
 	}
 	&.out_top{
@@ -726,26 +720,43 @@ $proBrdRds:0.3em;
 	}
 }
 .projectWrapper{
-	background:$bg_Projects;
-	width:88%;
-	//margin:auto;
-	height:70%;
-	margin-top:3%;
+	@include background-image(linear-gradient(top left,$bg_Projects,$bg_Contact, $bg_like));//rgba(255,255,255,0.2);
+	width:90%;
+	margin:auto;
+	//margin-top:3%;
 	text-align:center;
 	@include box-shadow(3px -3px 3px 3px #666);
 }
 .projectFoot{
-	background:$bg_Projects;
-	width:88%;
+	position:absolute;
+	background:transparent;
+	//@include background-image(linear-gradient(top left,$bg_Contact,$bg_Projects, $bg_like));//$bg_Projects;
+	width:40%;
 	display:inline-block;
 	height:15%;
+	right:7em;
 	@include box-shadow(3px 0px -3px -3px #666);
+	.dialog{
+		position:relative;
+		color:#666;
+		width:100%;
+		margin-top:2em;
+		margin-left:2em;
+		font-size:0.75em;
+		padding:1%;
+		line-height:1.1em;
+		display:inline-block;
+		background:#fdd1e0;//rgba(255,228,64, 0.5);
+		@include box-shadow(2px -2px 3px 1px #666);
+		//border-left:2px solid #ddd;
+		//border-bottom:2px solid #ddd;
+	}
 }
 .clip{
 	z-index:2;
 	position:relative;
 	background:transparent; //inherit;//$loadButton;
-	//left:50%;
+	top:-1.4em;
 	&:before{
 		content:"";
 		position:absolute;
@@ -753,15 +764,16 @@ $proBrdRds:0.3em;
 		height:1em;
 		background:inherit;
 		opacity:0.9;
+		@include transform(rotate(-5deg));
 		@include border-radius-part(top-right, 0.2em);
 		@include border-radius-part(bottom-right, 0.2em);
-		@include transform(rotate(-35deg));
 		@include box-shadow(3px 3px 3px #666);
 		border-top:2px solid rgba(255,255,255, 0.8);
 		border-left:2px solid rgba(255,255,255, 0.8);
-		top:-0.3em;
 	}
+	/*
 	&:after{
+		//the dot on the 
 		content:"";
 		position:absolute;
 		width:6px;
@@ -771,23 +783,55 @@ $proBrdRds:0.3em;
 		top:-0.3em;
 		left:65%;
 
+	}*/
+}
+.buttonWrap{
+	position:absolute;
+	left:0;
+	bottom:1em;
+	display:inline-block;
+	//margin-top:3%;
+	width:100%;
+	@include perspective(400px);
+	float:right;
+	& div{
+		width:50%;
+		margin:auto;
+		color:#fff;
 	}
-	&:nth-child(2n){
-		&:before{
-			@include transform(rotate(-135deg));
-		}
+}
+.loadButton{
+	//button and input are not block element, so they can't be centered by margin-auto;
+	margin:auto;
+	display:inline-block;
+	//margin-top:1em;
+	position:relative;
+	width:30%;
+	font-size:1.1em;
+	background:$loadButton;
+	color:#fff;
+	@include border-radius(0.8em);
+	border: 3px solid $buttonBorder;
+	border-bottom-color:$buttonBottemBdr;
+	&:hover{
+		border-color:$buttonBottemBdr;
+	}
+	&:before{
+		content:'';
+		position: absolute;
 	}
 }
 .projects{
 	float:left;
 	width:21%;
-	margin:5% 0 0 3%;
+	margin:2% 0 0 3%;
 	//padding:14px 0 2px 0;
 	&:nth-child(1){
 			margin-left:5%;
 	}
-	&:nth-child(2n){
-		margin-top: 15%;
+	
+	&:nth-last-child(-n+3){
+		margin-top:15%;
 	}
 	.description{
 		box-shadow: 1px #f2f2f2;
@@ -930,69 +974,15 @@ $proBrdRds:0.3em;
 		@include transform-origin(50%,50%,0);
 		@include animation('rotateY 1.5s forwards');
 }
-.dialog{
-	float:left;
-	color:#666;
-	width:90%;
-	margin:auto;
-	margin-top:1em;
-	font-size:0.75em;
-	padding:1%;
-	border:1px dotted $buttonBorder;//$buttonBorder;
-	border-bottom:none;
-	line-height:1.1em;
-	display:inline-block;
-}
+
 .btnRotateY{
 	@include transform-origin(50%,0,0);
 		@include animation('btnRotateY 1.5s 0.5s forwards');
 }
-.buttonWrap{
-	display:inline-block;
-	//margin-top:3%;
-	width:10%;
-	@include perspective(400px);
-	float:right;
-}
-.loadButton{
-	//button and input are not block element, so they can't be centered by margin-auto;
-	margin:auto;
-	//margin-top:1em;
-	position:relative;
-	width:100%;
-	font-size:1.1em;
-	background:$loadButton;
-	color:#fff;
-	@include border-radius(0.8em);
-	border: 3px solid $buttonBorder;
-	border-bottom-color:$buttonBottemBdr;
-	&:hover{
-		border-color:$buttonBottemBdr;
-	}
-	&:before{
-		content:'';
-		position: absolute;
-	}
-}
+
 /***************************************************** Blog **********************************/
 $btnBlogShots:#f86c99;
 $btnBlogLink:#666;//#fcadc6;
-.cubeFront{
-		//@include transform(scaleZ(150%));
-		@include transform(translateZ(0.5 * $cubeWidth));/*should be half width,but percentage doesn't work on translateZ */
-	}
-	.cubeRight{
-		@include transform(rotateY(-270deg) translateX(0.5 * $cubeWidth));
-		//@include translateX(100px);
-		@include transform-origin(top right 0 );
-	}
-	.cubeLeft{
-		@include transform(rotateY(270deg)  translateX(-0.5 * $cubeWidth));
-		@include transform-origin(center left 0 );
-	}
-	.cubeBack{
-		@include transform( translateZ(-0.5 * $cubeWidth) rotateY(180deg) );
-	}
 #Blog{
 	.row{
 		.contentWrap{
@@ -1002,11 +992,7 @@ $btnBlogLink:#666;//#fcadc6;
 		}
 
 	}
-	.btnCtrl{
-		height:2em;
-		background:red;
-		position:relative;
-	}
+
 	.slider{
 		overflow: hidden;
 		background: #fff;
@@ -1027,17 +1013,43 @@ $btnBlogLink:#666;//#fcadc6;
 				}
 			}
 		}
+		.btnCtrl{
+			background:transparent;
+			position:absolute;
+			top:50%;
+			height:4.4%;
+			width:3%;
+			overflow: hidden;
+			border:none;
+			
+		}
+		#prev{
+				background:url('/static/images/gray_prev.png') no-repeat;
+				background-position:0 100%;
+				left:0;
+				&:hover{
+					background-position:0 0;
+				}
+		}
+			#next{
+				background:url('/static/images/gray_next.png') no-repeat;
+				right: 0;
+				background-position:0 100%;
+				&:hover{
+					background-position:0 0;
+				}
+			}
 	}
 	#sliderLeft{
-		@include transform(translateX(-80.8%) rotateY(45deg) scale(0.8) translateY(12%));
+		@include transform(translateX(-80.5%) rotateY(45deg) scale(0.8) translateY(7.8%));
 		@include transform-origin(top right 0);
 	}
 	#sliderRight{
-		@include transform(translateX(100%) rotateY(-35deg) scale(0.8) translateY(12%));
+		@include transform(translateX(99.7%) rotateY(-35deg) scale(0.8) translateY(7.8%));
 		@include transform-origin(top left 0);
 	}
 	#slicesWrapper{
-		@include transform(scale(0.8) translateX(12%));
+		@include transform(scale(0.8) translateX(12%) translateY(-4.97%));
 		.slice{
 			position:relative;
 			background:$bg_Blog;
