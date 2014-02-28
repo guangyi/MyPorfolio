@@ -144,15 +144,15 @@
 						<div class="projectWrapper">
 							<div class="projectFoot">
 									<div class="dialog">
-								<!--<div class="clip"></div>-->
-									<p>!These are small projects I did as practice and for fun. Each project helps me know better about different front-end knowledge and skills. But actually this portfolio you are looking at, and my Blog your will find out later,are my biggest projects so far. I'm looking forward to getting my hands on more complecated ones.</p>
+								<!--<div class="clip"></div> -->
+									<p>!These are small projects I did as practice and for fun. Each project helps me know better about different front-end knowledge and skills. I'm looking forward to getting my hands on more complecated ones.</p>
 								</div>
-								</div>
+							</div>
 							<div ng-repeat="project in projects" class='projects'>
 								<!--<-->
-								<div class="description" style="background-image:url('{$ project.img_url $}')">
-									<div class="proShelter top"><img src="{$ project.img_url $}"></div>
-									<div class="proShelter down"><img src="{$ project.img_url $}"></div>
+								<div class="description" style="background-image:url({$ project.img_url $})">
+									<div class="proShelter top"><img ng-src='{$ project.img_url $}'></div>
+									<div class="proShelter down"><img ng-src="{$ project.img_url $}"></div>
 									<div class="descrpt top"><h3>{$project.description$}</h3></div>
 									<div class="descrpt down"><h3>{$project.description$}</h3></div>
 								</div>
@@ -162,11 +162,15 @@
 								</div>
 							</div><!--end of each project unit-->
 							<!-- end of projectFoot -->
-							
+							<div class="projectFoot" style="top:68%; left:5%">
+									<div class="dialog">
+								<!--<div class="clip"></div> -->
+									<p>!These are small projects I did as practice and for fun. Each project helps me know better about different front-end knowledge and skills. I'm looking forward to getting my hands on more complecated ones.</p>
+								</div>
+							</div>
 							<div class="buttonWrap">
-								
 								<!--<button class="loadButton btnRotateY" ng-click="loadMore()">Load More Projects</button>-->
-								<div><p>Load More Expreiments</p></div>
+								<div class="load"><p>Load More Expreiments</p></div>
 							</div>
 						</div><!--end of projects wrapper-->
 						
@@ -240,63 +244,38 @@
 									</li>
 								</ul>
 							</div>
-								<!--<div class="slice left">
-									<div class="dialogBox">
-										<h3>My blog is my first side project. While building this project,
-											I used AngularJS as the front-end framework and Django/REST framwork
-											as the back-end. For the database, it's noSQL--MongoDB. Also, like
-											this portfolio, I use SASS for styling. The reason why I use these things
-											is I want to learn new things, new knowledge and new skills. As you know,
-											fron-end is a fast going field, self-learning is a must-have quality
-											for front-end software engineer. So I chose those stuffs to nail this blog.
-										</h3> 	
-									</div> <!--end of dialogBox-->
-								<!--	
-								</div><!-- end of slice-left>
-								<div class="slice right">
-									<div class="dialogBox">
-										<h3>My blog is my first side project. While building this project,
-											I used AngularJS as the front-end framework and Django/REST framwork
-											as the back-end. For the database, it's noSQL--MongoDB. Also, like
-											this portfolio, I use SASS for styling. The reason why I use these things
-											is I want to learn new things, new knowledge and new skills. As you know,
-											fron-end is a fast going field, self-learning is a must-have quality
-											for front-end software engineer. So I chose those stuffs to nail this blog.
-										</h3> 
-									</div> <!--end of dialogBox-->
-								<!--</div><!-- end of slice-right>-->
-								
-							<!-- end of slicesWrapper-->
-
 						</div><!-- end of contentWrap-->
-						
 					</div><!-- end of row effOnScroll-->
 				</section>
 				<section class="main" id="MoreAboutMe" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
 						<section class="likeContainer">
 								<h1>More About Me</h1>
-								<div class="options_wrap">
+								<div class="optionsWrap">
 									<div class="options">
-										<h2 class="like">PINK!</h2>
-										<h2 class="like"> Black coffee and Tea</h2>
-										<h2 class="dislike">Winter in Boston</h2>
-										<h2 class="like">Book "Lean in"</h2>
-										<h2 class="dislike">Comlicate relationship</h2>
-										<h2 class="like">Sunshine in California</h2>
-										<h2 class="like">San Francisco</h2>
-									</div><!--options end-->
-									<div class="options">
-										<h2 class="dislike">Messy code, Messy architecture</h2>
-										<h2 class="like">Book "head first--OODA"</h2>
-										<h2 class="like">Front-end filed technology</h2>
-										<h2 class="like">Learning new knowledge and skills</h2>
-										<h2 class="dislike"> Being judged</h2>
-										<h2 class="like">David Garrett</h2>
-										<h2 class="like">Piano and Violin</h2>
-										<h2 class="dislike">
-									</div><!--options end-->
-								</div><!--options_wrap end-->
+										<div class="heart"></div>
+										<h3 class="like">PINK!</h3>
+										<h3 class="like"> Black coffee and Tea</h3>
+										<h3 class="dislike">Winter in Boston</h3>
+										<h3 class="like">Book "Lean in"</h3>
+										<h3 class="dislike">Comlicate relationship</h3>
+										<h3 class="like">Sunshine in California</h3>
+										<h3 class="like">San Francisco</h3>
+										<h3 class="dislike">Messy code, Messy architecture</h3>
+										<h3 class="like">Book "head first--OODA"</h3>
+										<h3 class="like">Front-end filed technology</h3>
+										<h3 class="like">Learning new knowledge and skills</h3>
+										<h3 class="dislike"> Being judged</h3>
+										<h3 class="like">David Garrett</h3>
+										<h3 class="like">Piano and Violin</h3>
+										<h3 class="dislike">
+										<div class="face"></div>
+									</div><!--options end-->	
+								</div><!--end of optionsWrap-->
+								<div class="optionLst">
+									<div class="likeList"></div>
+									<div class="dislikeLst"></div>
+								</div><!-- end of optionList -->
 								<!--<div class="faces" id="faces1"></div>-->
 								<div class="faces" id="faces3">
 									<div class="smile changeFace">

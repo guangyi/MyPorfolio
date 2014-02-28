@@ -168,7 +168,7 @@ height:100%;
 	}
 	#Blog{
 		//@include background-image(linear-gradient(top, #011e35, #ccc 35%, $bg_Contact 85%, #011e35));//#234f32;//$bg_Blog;
-		@include background-image(linear-gradient(top,  #009b95, #e1004c 17%, $bg_Projects 89%, $bg_Contact));
+		@include background-image(linear-gradient(top,  #009b95, #a69700 17%,#a69700 89%, $bg_Projects 91%, #009b95));
 		h1{
 			font-size:2.5em;
 			margin-bottom: 0.5em;
@@ -549,22 +549,32 @@ $cubeWidth:160px;
 	background:inherit;
 	padding-top:2%;
 	@include box-sizing(border-box);
-	.options_wrap{
-		height:65%;
-		opacity: 0.5;
+	.optionsWrap{
+		width:66%;
+		padding:5%;
 		@include perspective(500px);
+
 		.options{
 			float:left;
-			width:50%;
+			width:90%;
 			height:100%;
 			text-align: center;
 			//@include transform(rotateX(35deg));
-			overflow: scroll;
+			overflow:scroll;
+			.heart{
+				width:10%;
+				background:red;
+				display:inline-block;
+				float:left;
+			}
+			
 			.like, .dislike{
 				float:left;
-				margin: 5%;
 			}
 		}
+	}
+	.optionList{
+		overflow: hidden;
 	}
 .faces{
 		z-index: 2;
@@ -725,26 +735,28 @@ $proBrdRds:0.3em;
 	margin:auto;
 	//margin-top:3%;
 	text-align:center;
-	@include box-shadow(3px -3px 3px 3px #666);
+	//@include box-shadow(3px -3px 3px 3px #666);
 }
 .projectFoot{
 	position:absolute;
 	background:transparent;
 	//@include background-image(linear-gradient(top left,$bg_Contact,$bg_Projects, $bg_like));//$bg_Projects;
-	width:40%;
+	width:38%;
 	display:inline-block;
 	height:15%;
-	right:7em;
+	right:14%;
+	//margin-top:3%;
+	top:18%;
 	@include box-shadow(3px 0px -3px -3px #666);
 	.dialog{
 		position:relative;
 		color:#666;
 		width:100%;
-		margin-top:2em;
+		height:100%;
 		margin-left:2em;
 		font-size:0.75em;
 		padding:1%;
-		line-height:1.1em;
+		line-height:1.5em;
 		display:inline-block;
 		background:#fdd1e0;//rgba(255,228,64, 0.5);
 		@include box-shadow(2px -2px 3px 1px #666);
@@ -794,11 +806,18 @@ $proBrdRds:0.3em;
 	width:100%;
 	@include perspective(400px);
 	float:right;
-	& div{
+	& .load{
 		width:50%;
 		margin:auto;
 		color:#fff;
 	}
+	& .test{
+		position:relative;
+		width:40%;
+		left:5em;
+		background:#fff;
+	}
+
 }
 .loadButton{
 	//button and input are not block element, so they can't be centered by margin-auto;
@@ -821,6 +840,9 @@ $proBrdRds:0.3em;
 		position: absolute;
 	}
 }
+.projectWrapper .projects:nth-last-of-type(-n+4){
+	margin-top:15%;
+}
 .projects{
 	float:left;
 	width:21%;
@@ -828,10 +850,6 @@ $proBrdRds:0.3em;
 	//padding:14px 0 2px 0;
 	&:nth-child(1){
 			margin-left:5%;
-	}
-	
-	&:nth-last-child(-n+3){
-		margin-top:15%;
 	}
 	.description{
 		box-shadow: 1px #f2f2f2;

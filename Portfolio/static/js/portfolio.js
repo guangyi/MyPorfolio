@@ -92,25 +92,25 @@ portfolio.controller('projectsCtrl',['$scope',function($scope){
 							{'caption':     'My dream car',
 							 'tag':         'css3',
 							 'description': 'This is the dream car I created by CSSssssss3,This is the dream car I created by CSSsssss3,This is the dream car I created by CSSssssss3',
-							 'img_url':     'static/images/car.JPG'
+							 'img_url':     '/static/images/car.JPG'
 							},
 						'bouncing_ball_Y':{
 							'caption':     'Bouncing Ball on Y axis',
 							'tag':         'Canvas',
 							'description': 'This is the practice on Html5 Canvas. A bouncing ball on Y axis,This is the practice on Html5 Canvas. A bouncing ball on Y axis',
-							 'img_url':     'static/images/bouncing_ball_Y.JPG'
+							 'img_url':     '/static/images/bouncing_ball_Y.JPG'
 							},
 						'bouncing_ball_XY':{
 							'caption':     'Bouncing Ball on X and Y axis',
 							'tag':         'Canvas',
 							'description': 'This is the practice on Html5 Canvas. A bouncing ball on X and Y axis,This is the practice on Html5 Canvas. A bouncing ball on X and Y axis',
-							 'img_url':     'static/images/bouncing_ball_XY.JPG'
+							 'img_url':     '/static/images/bouncing_ball_XY.JPG'
 							},
 						'image_slider':{
 							'caption':     'Image slider with pagers',
 							'tag':         'Javascript',
 							'description': 'Image slider with no plugin, only Javascript,Image slider with no plugin, only Javascript,Image slider with no plugin, only Javascript',
-							'img_url':     'static/images/image_slider.JPG'
+							'img_url':     '/static/images/image_slider.JPG'
 						}
 					};
 }]);
