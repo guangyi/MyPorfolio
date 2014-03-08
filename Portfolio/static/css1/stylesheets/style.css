@@ -1649,11 +1649,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @-webkit-keyframes rotateY {
   /* line 158, ../sass/animation.scss */
   0% {
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
 
   /* line 159, ../sass/animation.scss */
@@ -1687,11 +1687,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @-moz-keyframes rotateY {
   /* line 158, ../sass/animation.scss */
   0% {
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
 
   /* line 159, ../sass/animation.scss */
@@ -1725,11 +1725,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @keyframes rotateY {
   /* line 158, ../sass/animation.scss */
   0% {
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
 
   /* line 159, ../sass/animation.scss */
@@ -2123,20 +2123,680 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
+@-webkit-keyframes tada {
+  /* This is the "jump" effect for like/agree */
+  /* line 185, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 186, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 187, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 188, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 189, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 190, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 191, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 192, ../sass/animation.scss */
+  84% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 193, ../sass/animation.scss */
+  92% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 194, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    font-size: 1.1em;
+  }
+
+  /* Tada effect
+  10% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  25% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  32% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  39% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  46% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  53% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  60% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  67% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  74% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  81% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  88% {@include transform(rotate(0deg)  scale(1));   font-size:$startFont;}
+  100%{@include transform(rotate(0deg) scale(1));    font-size:$endFont;}*/
+}
+
+@-moz-keyframes tada {
+  /* This is the "jump" effect for like/agree */
+  /* line 185, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 186, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 187, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 188, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 189, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 190, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 191, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 192, ../sass/animation.scss */
+  84% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 193, ../sass/animation.scss */
+  92% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 194, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    font-size: 1.1em;
+  }
+
+  /* Tada effect
+  10% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  25% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  32% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  39% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  46% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  53% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  60% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  67% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  74% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  81% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  88% {@include transform(rotate(0deg)  scale(1));   font-size:$startFont;}
+  100%{@include transform(rotate(0deg) scale(1));    font-size:$endFont;}*/
+}
+
+@keyframes tada {
+  /* This is the "jump" effect for like/agree */
+  /* line 185, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 186, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 187, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 188, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 189, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 190, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 191, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 192, ../sass/animation.scss */
+  84% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 193, ../sass/animation.scss */
+  92% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 194, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    font-size: 1.1em;
+  }
+
+  /* Tada effect
+  10% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  25% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  32% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  39% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  46% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  53% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  60% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  67% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  74% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  81% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  88% {@include transform(rotate(0deg)  scale(1));   font-size:$startFont;}
+  100%{@include transform(rotate(0deg) scale(1));    font-size:$endFont;}*/
+}
+
+@-webkit-keyframes shake {
+  /* line 210, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 211, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 212, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 213, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 214, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 215, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 216, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 217, ../sass/animation.scss */
+  82% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 218, ../sass/animation.scss */
+  90% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+  }
+
+  /* line 219, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+    color: gray;
+  }
+}
+
+@-moz-keyframes shake {
+  /* line 210, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 211, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 212, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 213, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 214, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 215, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 216, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 217, ../sass/animation.scss */
+  82% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 218, ../sass/animation.scss */
+  90% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+  }
+
+  /* line 219, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+    color: gray;
+  }
+}
+
+@keyframes shake {
+  /* line 210, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 211, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 212, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 213, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 214, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 215, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 216, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 217, ../sass/animation.scss */
+  82% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 218, ../sass/animation.scss */
+  90% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+  }
+
+  /* line 219, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+    color: gray;
+  }
+}
+
 /********************************************** Framework ****************************************/
-/* line 48, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 body {
   font-family: "proxima nova light","Helvetica Neue",Helvetica,Arial,Sans-serif;
   height: 100%;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 .conatiner {
   width: 100%;
   height: 100%;
 }
 
-/* line 56, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 #header {
   width: 7%;
   /*text-align: center;*/
@@ -2155,7 +2815,7 @@ body {
   	background:rgba(22,22,22,1);
   }*/
 }
-/* line 73, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 #header #nav a {
   font-family: "proxima nova light","Helvetica Neue",Helvetica,Arial,Sans-serif;
   display: block;
@@ -2164,27 +2824,27 @@ body {
   color: #FDE7EF;
   text-decoration: none;
 }
-/* line 80, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 #header #nav a:hover {
   background: #924032;
   opacity: 1;
   color: #fff;
 }
-/* line 85, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 #header #nav a.active {
   background: #924032;
 }
 
-/* line 92, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .content {
   width: 93%;
   overflow: scroll;
 }
-/* line 95, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 .content .scroll {
   overflow: hidden;
 }
-/* line 97, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 .content .scroll .main {
   font-size: 1.5em;
   /*text-align: center;*/
@@ -2193,71 +2853,74 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 104, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 .content .scroll .main .row {
   position: relative;
   height: 100%;
 }
-/* line 107, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 .content .scroll .main .row .rotate {
   -webkit-transform-origin: center;
   -moz-transform-origin: center;
 }
-/* line 111, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .content .scroll .main .row .contentWrap {
   height: 100%;
   width: 100%;
   padding: 0;
   position: relative;
 }
-/* line 121, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .content .scroll #About {
   background: #a60026;
   text-align: center;
 }
-/* line 124, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .content .scroll #About h1 {
   font-size: 4em;
   color: white;
 }
-/* line 129, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 .content .scroll #About p {
   font-size: 1em;
   color: #F2F2F2;
   margin: 0.5em 0em;
 }
-/* line 135, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .content .scroll #Intro {
   background: white;
 }
-/* line 137, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 .content .scroll #Intro h1 {
   font-size: 2.5em;
 }
-/* line 141, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .content .scroll #Intro h2 {
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
-/* line 144, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 .content .scroll #Intro h3 {
   font-size: 1em;
 }
-/* line 148, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .content .scroll #MoreAboutMe {
   background: #f16c97;
 }
-/* line 150, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 .content .scroll #MoreAboutMe h1 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
   color: #fff;
 }
-/* line 155, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 .content .scroll #MoreAboutMe h2 {
   font-size: 1.5em;
-  color: #fff;
 }
-/* line 160, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
+.content .scroll #MoreAboutMe h3 {
+  font-size: 1.1em;
+}
+/* line 161, ../sass/style.scss */
 .content .scroll #Experiments {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffe440), color-stop(50%, #9ee0ff), color-stop(100%, #f16c97));
   background-image: -webkit-linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
@@ -2265,13 +2928,13 @@ body {
   background-image: -o-linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
   background-image: linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
 }
-/* line 163, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 .content .scroll #Experiments h1 {
   font-size: 2.5em;
   color: #fff;
   margin-bottom: 3%;
 }
-/* line 169, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 .content .scroll #Blog {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #009b95), color-stop(17%, #a69700), color-stop(89%, #a69700), color-stop(91%, #ffe440), color-stop(100%, #009b95));
   background-image: -webkit-linear-gradient(top, #009b95, #a69700 17%, #a69700 89%, #ffe440 91%, #009b95);
@@ -2279,37 +2942,37 @@ body {
   background-image: -o-linear-gradient(top, #009b95, #a69700 17%, #a69700 89%, #ffe440 91%, #009b95);
   background-image: linear-gradient(top, #009b95, #a69700 17%, #a69700 89%, #ffe440 91%, #009b95);
 }
-/* line 172, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 .content .scroll #Blog h1 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
   color: #fff;
 }
-/* line 177, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 .content .scroll #Blog h2 {
   font-size: 1.5em;
 }
-/* line 181, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 .content .scroll #Contact {
   background: #9ee0ff;
 }
-/* line 183, ../sass/style.scss */
+/* line 184, ../sass/style.scss */
 .content .scroll #Contact h1 {
   font-size: 2.5em;
   color: #FFF;
   margin-bottom: 0.5em;
 }
-/* line 188, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 .content .scroll #Contact h2 {
   font-size: 1.3em;
 }
-/* line 191, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .content .scroll #Contact h3 {
   font-size: 1em;
 }
 
 /****************************************************** About *******************************************/
-/* line 199, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 #profile {
   position: relative;
   margin-right: auto;
@@ -2325,7 +2988,7 @@ body {
   border-radius: 50%;
   box-shadow: 0px 0px 20px 0px #fff;
 }
-/* line 210, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 #profile:after {
   position: absolute;
   content: '';
@@ -2345,7 +3008,7 @@ body {
   background-image: radial-gradient(50% 50%, rgba(255, 255, 255, 0) 85%, #ffffff 100%);
 }
 
-/* line 223, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
 #speech_bubble {
   margin-left: auto;
   margin-right: auto;
@@ -2365,7 +3028,7 @@ body {
   border-radius: 0.8em;
   z-index: 2;
 }
-/* line 238, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 #speech_bubble:before, #speech_bubble:after {
   content: '';
   position: absolute;
@@ -2380,20 +3043,20 @@ body {
   transform-origin: 0 0;
   transform: rotate(-45deg);*/
 }
-/* line 252, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 #speech_bubble:before {
   border-right: 5px solid white;
   height: 1em;
   z-index: 3;
 }
-/* line 257, ../sass/style.scss */
+/* line 258, ../sass/style.scss */
 #speech_bubble:after {
   border-right: 5px solid #a60026;
   height: 2em;
   z-index: 1;
 }
 
-/* line 264, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 #speech_bubble_arrowup {
   margin-left: auto;
   margin-right: auto;
@@ -2413,7 +3076,7 @@ body {
   border-radius: 0.8em;
   z-index: 1;
 }
-/* line 279, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 #speech_bubble_arrowup:before, #speech_bubble_arrowup:after {
   content: '';
   position: absolute;
@@ -2421,7 +3084,7 @@ body {
   width: 0px;
   height: 0px;
 }
-/* line 286, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 #speech_bubble_arrowup:before {
   top: -31px;
   left: 434px;
@@ -2430,7 +3093,7 @@ body {
   border-bottom: 31px solid #a60026;
   z-index: 3;
 }
-/* line 294, ../sass/style.scss */
+/* line 295, ../sass/style.scss */
 #speech_bubble_arrowup:after {
   top: -40px;
   left: 425px;
@@ -2441,7 +3104,7 @@ body {
 }
 
 /*************************************************** Intro *****************************************/
-/* line 337, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 #Intro .contentWrap {
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
@@ -2449,12 +3112,12 @@ body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 339, ../sass/style.scss */
+/* line 340, ../sass/style.scss */
 #Intro .contentWrap h1 {
   color: #f16c97;
 }
 
-/* line 344, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 .left {
   float: left;
   display: inline-block;
@@ -2462,8 +3125,9 @@ body {
   height: 100%;
 }
 
-/* line 350, ../sass/style.scss */
+/* line 351, ../sass/style.scss */
 .middle {
+  float: left;
   position: relative;
   font-size: 0.9em;
   padding: 5% 5% 0 5%;
@@ -2481,7 +3145,7 @@ body {
   border-bottom: 2px solid #666;
 }
 
-/* line 368, ../sass/style.scss */
+/* line 370, ../sass/style.scss */
 .right {
   float: right;
   width: 23%;
@@ -2489,7 +3153,7 @@ body {
   display: inline-block;
 }
 
-/* line 374, ../sass/style.scss */
+/* line 376, ../sass/style.scss */
 .perspective {
   position: relative;
   width: 100%;
@@ -2498,7 +3162,7 @@ body {
   color: #444;
   overflow: hidden;
 }
-/* line 381, ../sass/style.scss */
+/* line 383, ../sass/style.scss */
 .perspective .introShlter {
   position: absolute;
   height: 100%;
@@ -2509,12 +3173,12 @@ body {
   z-index: 100;
   opacity: 1;
 }
-/* line 391, ../sass/style.scss */
+/* line 393, ../sass/style.scss */
 .perspective .carve {
   padding-top: 10%;
   margin-bottom: 10%;
 }
-/* line 395, ../sass/style.scss */
+/* line 397, ../sass/style.scss */
 .perspective.gra {
   -webkit-box-shadow: 14px 4px 2px 2px #666666;
   -moz-box-shadow: 14px 4px 2px 2px #666666;
@@ -2536,7 +3200,7 @@ body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 404, ../sass/style.scss */
+/* line 406, ../sass/style.scss */
 .perspective.free {
   -webkit-box-shadow: -4px 4px 2px 2px #666666;
   -moz-box-shadow: -4px 4px 2px 2px #666666;
@@ -2558,7 +3222,7 @@ body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 412, ../sass/style.scss */
+/* line 414, ../sass/style.scss */
 .perspective.bel {
   -webkit-box-shadow: 4px -4px 2px 2px #666666;
   -moz-box-shadow: 4px -4px 2px 2px #666666;
@@ -2579,7 +3243,7 @@ body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 419, ../sass/style.scss */
+/* line 421, ../sass/style.scss */
 .perspective.Hope {
   -webkit-box-shadow: -4px -4px 2px 2px #666666;
   -moz-box-shadow: -4px -4px 2px 2px #666666;
@@ -2607,7 +3271,7 @@ body {
 .cube {
 	@include animation(spin 8s infinite linear);
 }*/
-/* line 433, ../sass/style.scss */
+/* line 435, ../sass/style.scss */
 .cube {
   font-size: 0.7em;
   margin-left: 20%;
@@ -2623,7 +3287,7 @@ body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 444, ../sass/style.scss */
+/* line 446, ../sass/style.scss */
 .cube div {
   color: #fff;
   line-height: 1.8em;
@@ -2640,7 +3304,7 @@ body {
   -o-border-radius: 0.2em;
   border-radius: 0.2em;
 }
-/* line 455, ../sass/style.scss */
+/* line 457, ../sass/style.scss */
 .cube .cubeFront {
   -webkit-transform: translateZ(80px);
   -moz-transform: translateZ(80px);
@@ -2649,7 +3313,7 @@ body {
   transform: translateZ(80px);
   /* should be half width,but percentage doesn't work on translateZ */
 }
-/* line 459, ../sass/style.scss */
+/* line 461, ../sass/style.scss */
 .cube .cubeTop {
   -webkit-transform: rotateX(-90deg) translateY(-80px);
   -moz-transform: rotateX(-90deg) translateY(-80px);
@@ -2662,7 +3326,7 @@ body {
   -o-transform-origin: top center 0 50%;
   transform-origin: top center 0 50%;
 }
-/* line 464, ../sass/style.scss */
+/* line 466, ../sass/style.scss */
 .cube .cubeRight {
   -webkit-transform: rotateY(-270deg) translateX(80px);
   -moz-transform: rotateY(-270deg) translateX(80px);
@@ -2675,7 +3339,7 @@ body {
   -o-transform-origin: top right 0 50%;
   transform-origin: top right 0 50%;
 }
-/* line 469, ../sass/style.scss */
+/* line 471, ../sass/style.scss */
 .cube .cubeLeft {
   -webkit-transform: rotateY(270deg) translateX(-80px);
   -moz-transform: rotateY(270deg) translateX(-80px);
@@ -2688,7 +3352,7 @@ body {
   -o-transform-origin: center left 0 50%;
   transform-origin: center left 0 50%;
 }
-/* line 473, ../sass/style.scss */
+/* line 475, ../sass/style.scss */
 .cube .cubeBottom {
   -webkit-transform: rotateX(90deg) translateY(80px);
   -moz-transform: rotateX(90deg) translateY(80px);
@@ -2701,7 +3365,7 @@ body {
   -o-transform-origin: bottom center 0 50%;
   transform-origin: bottom center 0 50%;
 }
-/* line 477, ../sass/style.scss */
+/* line 479, ../sass/style.scss */
 .cube .cubeBack {
   -webkit-transform: translateZ(-80px) rotateY(180deg);
   -moz-transform: translateZ(-80px) rotateY(180deg);
@@ -2709,44 +3373,44 @@ body {
   -o-transform: translateZ(-80px) rotateY(180deg);
   transform: translateZ(-80px) rotateY(180deg);
 }
-/* line 480, ../sass/style.scss */
+/* line 482, ../sass/style.scss */
 .cube.graduated {
   -webkit-animation: spin 40s infinite linear;
   -o-animation: spin 40s infinite linear;
   -moz-animation: spin 40s infinite linear;
   animation: spin 40s infinite linear;
 }
-/* line 482, ../sass/style.scss */
+/* line 484, ../sass/style.scss */
 .cube.graduated div {
   padding-top: 25%;
 }
-/* line 315, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .cube.graduated .cubeFront {
   color: white;
   background: #f16c97;
 }
-/* line 319, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 .cube.graduated .cubeTop {
   background: #bb2e5b;
 }
-/* line 322, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .cube.graduated .cubeRight {
   background: #bb2e5b;
 }
-/* line 325, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 .cube.graduated .cubeLeft {
   background: #bb2e5b;
 }
-/* line 328, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .cube.graduated .cubeBack {
   color: white;
   background: #f16c97;
 }
-/* line 332, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .cube.graduated .cubeBottom {
   background: #780046;
 }
-/* line 489, ../sass/style.scss */
+/* line 491, ../sass/style.scss */
 .cube.frontEnd {
   margin-left: 30%;
   -webkit-animation: spin 40s 2s infinite linear;
@@ -2754,74 +3418,74 @@ body {
   -moz-animation: spin 40s 2s infinite linear;
   animation: spin 40s 2s infinite linear;
 }
-/* line 491, ../sass/style.scss */
+/* line 493, ../sass/style.scss */
 .cube.frontEnd div {
   padding-top: 20%;
 }
-/* line 315, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .cube.frontEnd .cubeFront {
   color: white;
   background: #f16c97;
 }
-/* line 319, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 .cube.frontEnd .cubeTop {
   background: #bb2e5b;
 }
-/* line 322, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .cube.frontEnd .cubeRight {
   background: #bb2e5b;
 }
-/* line 325, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 .cube.frontEnd .cubeLeft {
   background: #bb2e5b;
 }
-/* line 328, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .cube.frontEnd .cubeBack {
   color: white;
   background: #f16c97;
 }
-/* line 332, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .cube.frontEnd .cubeBottom {
   background: #780046;
 }
-/* line 498, ../sass/style.scss */
+/* line 500, ../sass/style.scss */
 .cube.believe {
   -webkit-animation: spin 40s 4s infinite linear;
   -o-animation: spin 40s 4s infinite linear;
   -moz-animation: spin 40s 4s infinite linear;
   animation: spin 40s 4s infinite linear;
 }
-/* line 500, ../sass/style.scss */
+/* line 502, ../sass/style.scss */
 .cube.believe div {
   padding-top: 40%;
 }
-/* line 315, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .cube.believe .cubeFront {
   color: white;
   background: #f16c97;
 }
-/* line 319, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 .cube.believe .cubeTop {
   background: #bb2e5b;
 }
-/* line 322, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .cube.believe .cubeRight {
   background: #bb2e5b;
 }
-/* line 325, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 .cube.believe .cubeLeft {
   background: #bb2e5b;
 }
-/* line 328, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .cube.believe .cubeBack {
   color: white;
   background: #f16c97;
 }
-/* line 332, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .cube.believe .cubeBottom {
   background: #780046;
 }
-/* line 507, ../sass/style.scss */
+/* line 509, ../sass/style.scss */
 .cube.hope {
   margin-left: 30%;
   -webkit-animation: spin 40s 6s infinite linear;
@@ -2829,87 +3493,87 @@ body {
   -moz-animation: spin 40s 6s infinite linear;
   animation: spin 40s 6s infinite linear;
 }
-/* line 509, ../sass/style.scss */
+/* line 511, ../sass/style.scss */
 .cube.hope div {
   padding-top: 20%;
 }
-/* line 315, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .cube.hope .cubeFront {
   color: white;
   background: #f16c97;
 }
-/* line 319, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 .cube.hope .cubeTop {
   background: #bb2e5b;
 }
-/* line 322, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .cube.hope .cubeRight {
   background: #bb2e5b;
 }
-/* line 325, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 .cube.hope .cubeLeft {
   background: #bb2e5b;
 }
-/* line 328, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .cube.hope .cubeBack {
   color: white;
   background: #f16c97;
 }
-/* line 332, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .cube.hope .cubeBottom {
   background: #780046;
 }
 
-/* line 519, ../sass/style.scss */
+/* line 521, ../sass/style.scss */
 .introShlter.in_top {
   -webkit-animation: intro_in_top 1s forwards;
   -o-animation: intro_in_top 1s forwards;
   -moz-animation: intro_in_top 1s forwards;
   animation: intro_in_top 1s forwards;
 }
-/* line 522, ../sass/style.scss */
+/* line 524, ../sass/style.scss */
 .introShlter.in_right {
   -webkit-animation: intro_in_right 1s forwards;
   -o-animation: intro_in_right 1s forwards;
   -moz-animation: intro_in_right 1s forwards;
   animation: intro_in_right 1s forwards;
 }
-/* line 525, ../sass/style.scss */
+/* line 527, ../sass/style.scss */
 .introShlter.in_bottom {
   -webkit-animation: intro_in_bottom 1s forwards;
   -o-animation: intro_in_bottom 1s forwards;
   -moz-animation: intro_in_bottom 1s forwards;
   animation: intro_in_bottom 1s forwards;
 }
-/* line 528, ../sass/style.scss */
+/* line 530, ../sass/style.scss */
 .introShlter.in_left {
   -webkit-animation: intro_in_left 1s forwards;
   -o-animation: intro_in_left 1s forwards;
   -moz-animation: intro_in_left 1s forwards;
   animation: intro_in_left 1s forwards;
 }
-/* line 531, ../sass/style.scss */
+/* line 533, ../sass/style.scss */
 .introShlter.out_top {
   -webkit-animation: intro_out_top 1s forwards;
   -o-animation: intro_out_top 1s forwards;
   -moz-animation: intro_out_top 1s forwards;
   animation: intro_out_top 1s forwards;
 }
-/* line 534, ../sass/style.scss */
+/* line 536, ../sass/style.scss */
 .introShlter.out_bottom {
   -webkit-animation: intro_out_bottom 1s forwards;
   -o-animation: intro_out_bottom 1s forwards;
   -moz-animation: intro_out_bottom 1s forwards;
   animation: intro_out_bottom 1s forwards;
 }
-/* line 537, ../sass/style.scss */
+/* line 539, ../sass/style.scss */
 .introShlter.out_left {
   -webkit-animation: intro_out_left 1s forwards;
   -o-animation: intro_out_left 1s forwards;
   -moz-animation: intro_out_left 1s forwards;
   animation: intro_out_left 1s forwards;
 }
-/* line 540, ../sass/style.scss */
+/* line 542, ../sass/style.scss */
 .introShlter.out_right {
   -webkit-animation: intro_out_right 1s forwards;
   -o-animation: intro_out_right 1s forwards;
@@ -2917,16 +3581,100 @@ body {
   animation: intro_out_right 1s forwards;
 }
 
-/********************************************** Like or dislike ***************************************/
-/* line 546, ../sass/style.scss */
+/********************************************** More About Me ***************************************/
+/* line 548, ../sass/style.scss */
 .likeContainer {
   height: 100%;
   width: auto;
   background: inherit;
-  padding-top: 2%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  /*Currently working smile faces	
+  .faces{
+  		z-index: 2;
+  		width: 100%;
+  		height: 10%;
+  		background:inherit;
+  		position: relative;
+  		//text-align:center;
+  }
+  #faces3{
+  	//background:#ffb2b2;
+  	.smile{
+  		float:right;
+  		background:#fff;
+  	}
+  	//float:right;
+  }
+  .smile, .upset{
+  	//absolute doesn't take position in the container
+  	// static and relative does. so the 'top' and 'left' are 
+  	// relative to the first element that is position static.
+  	z-index:10;
+  	position:relative;
+  	float:left;
+  	margin-left: auto;
+  	margin-right: auto;
+  	//width:30%;
+  	background:#fff;//#7fd0d0;
+  	//use border to have the shape of face;
+  	border: 2px solid black;
+  	@include border-radius(1em);
+  	@include box-sizing(border-box);
+  	//@include border-radius-part(top-left, 50%);
+  	//@include border-radius-part(bottom-right, 50%);
+  }
+  .eye{
+  	// half circle: width = 2 * height and border-radius = width
+  	position:absolute;//doesn't take palces
+  	width:12%;
+  	// height and border-radius are set in setting.js 
+  	// use border to get the shape of eye
+  	border: 2px solid black;
+  	border-bottom:0px;
+  	top:15%;
+  	background:transparent;
+  }
+  .left{
+  	left:28%;
+  }
+  .right{
+  	left:55%;
+  }
+  .mouth{
+  	
+  	width:51%;
+  	margin:auto;
+  	//if don't want to ruin the size of a container, use position absolute for
+  	// it's child element cause in that case they don't take any place;
+  	position:relative;
+  	
+  	//background:#e9b03d;
+  	border: 2px solid black;
+  	//@include box-sizing(border-box);
+  	overflow:hidden;
+  	.teeth{
+  		position:relative;
+  		width:100%;
+  		height:100%;
+  		left:-6%;
+  	}
+  	.teeth li:nth-child(-n + 5){
+  		height: 100%;
+  		width:16%;
+  		float:left;
+  		list-style: none;
+  		border-right:2px solid black;
+  		//border-bottom:2px solid black; // teeth or not
+  	}
+  }
+  .smile{
+  	.mouth{
+  		top:55%;
+  		@include transform( rotateZ(180deg) );
+  	}
+  }
   /*
   seems like not usefull
   .upset{
@@ -2954,208 +3702,153 @@ body {
   but I sitll couldn't figure it out why reverse doesn't work
   example: @include animation('upsetEye 5s reverse forwards');-- not working
   */
+  /*
+  .upsetEye{
+  	@include animation('upsetEye 1s forwards');
+  	@include transform-origin(50% 50% 0);
+  }
+  .upsetEye_right{
+  	@include animation('upsetEye_right 1s 0.2s forwards');
+  }
+  .upsetMouth{
+  	@include animation('upsetMouth 1s 1.6s forwards');
+  	@include transform-origin(50% 50% 0);
+  }
+  .smileEye{
+  	
+  	@include animation('smileEye 1s forwards');
+  	@include transform-origin(50% 50% 0);
+  }
+  .smileEye_right{
+  	@include animation('smileEye_right 1s forwards');
+  	@include transform-origin(50% 50% 0);
+  }
+  .smileMouth{
+  	@include animation('smileMouth 1s forwards');
+  	@include transform-origin(50% 50% 0);
+  }
+  .changeFace{
+  	@include animation('changeFace 3s forwards');
+  	@include transform-origin(center center 0);
+  }*/
 }
-/* line 552, ../sass/style.scss */
+/* line 553, ../sass/style.scss */
 .likeContainer .optionsWrap {
-  width: 66%;
-  padding: 5%;
+  width: 90%;
+  padding: 2%;
+  background: white;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-perspective: 500px;
   -moz-perspective: 500px;
   -ms-perspective: 500px;
   -o-perspective: 500px;
   perspective: 500px;
-}
-/* line 557, ../sass/style.scss */
-.likeContainer .optionsWrap .options {
-  float: left;
-  width: 90%;
-  height: 100%;
   text-align: center;
+}
+/* line 561, ../sass/style.scss */
+.likeContainer .optionsWrap .options {
+  width: 100%;
+  margin: 0;
+  float: left;
+  height: 100%;
   overflow: scroll;
 }
-/* line 564, ../sass/style.scss */
+/* line 567, ../sass/style.scss */
 .likeContainer .optionsWrap .options .heart {
-  width: 10%;
+  width: 25%;
   background: red;
   display: inline-block;
   float: left;
+  margin: 0 3% 0 0;
 }
-/* line 571, ../sass/style.scss */
-.likeContainer .optionsWrap .options .like, .likeContainer .optionsWrap .options .dislike {
-  float: left;
-}
-/* line 576, ../sass/style.scss */
-.likeContainer .optionList {
-  overflow: hidden;
-}
-/* line 579, ../sass/style.scss */
-.likeContainer .faces {
-  z-index: 2;
-  width: 100%;
-  height: 10%;
+/* line 574, ../sass/style.scss */
+.likeContainer .optionsWrap .options .option {
+  display: inline-block;
   background: inherit;
-  position: relative;
+  color: transparent;
+  margin: 2% 0 0% 2%;
+  opacity: 1;
+  text-shadow: 0px 0px 30px #f16c97;
+  -webkit-transition: text-shadow 1.5s;
+  -webkit-transition-delay: 2s;
+  -moz-transition: text-shadow 1.5s 2s;
+  -o-transition: text-shadow 1.5s 2s;
+  transition: text-shadow 1.5s 2s;
 }
-/* line 589, ../sass/style.scss */
-.likeContainer #faces3 .smile {
-  float: right;
-  background: #c3df8a;
-}
-/* line 595, ../sass/style.scss */
-.likeContainer .smile, .likeContainer .upset {
-  z-index: 10;
-  position: relative;
-  float: left;
-  margin-left: auto;
-  margin-right: auto;
-  background: #e9b03d;
-  border: 3px solid black;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* line 613, ../sass/style.scss */
-.likeContainer .eye {
-  position: absolute;
-  /*doesn't take palces*/
-  width: 12%;
-  border: 3px solid black;
-  border-bottom: 0px;
-  top: 15%;
-  background: transparent;
-}
-/* line 624, ../sass/style.scss */
-.likeContainer .left {
-  left: 28%;
-}
-/* line 627, ../sass/style.scss */
-.likeContainer .right {
-  left: 55%;
-}
-/* line 630, ../sass/style.scss */
-.likeContainer .mouth {
-  width: 51%;
-  margin: auto;
-  position: relative;
-  border: 3px solid black;
-  overflow: hidden;
-}
-/* line 642, ../sass/style.scss */
-.likeContainer .mouth .teeth {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  left: -6%;
-}
-/* line 648, ../sass/style.scss */
-.likeContainer .mouth .teeth li:nth-child(-n + 5) {
-  height: 100%;
-  width: 16%;
-  float: left;
-  list-style: none;
-  border-right: 3px solid black;
-}
-/* line 658, ../sass/style.scss */
-.likeContainer .smile .mouth {
-  top: 55%;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-  -ms-transform: rotateZ(180deg);
-  -o-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-}
-/* line 690, ../sass/style.scss */
-.likeContainer .upsetEye {
-  -webkit-animation: upsetEye 1s forwards;
-  -o-animation: upsetEye 1s forwards;
-  -moz-animation: upsetEye 1s forwards;
-  animation: upsetEye 1s forwards;
-  -webkit-transform-origin: 50% 50% 0 50%;
-  -moz-transform-origin: 50% 50% 0 50%;
-  -ms-transform-origin: 50% 50% 0 50%;
-  -o-transform-origin: 50% 50% 0 50%;
-  transform-origin: 50% 50% 0 50%;
-}
-/* line 694, ../sass/style.scss */
-.likeContainer .upsetEye_right {
-  -webkit-animation: upsetEye_right 1s 0.2s forwards;
-  -o-animation: upsetEye_right 1s 0.2s forwards;
-  -moz-animation: upsetEye_right 1s 0.2s forwards;
-  animation: upsetEye_right 1s 0.2s forwards;
-}
-/* line 697, ../sass/style.scss */
-.likeContainer .upsetMouth {
-  -webkit-animation: upsetMouth 1s 1.6s forwards;
-  -o-animation: upsetMouth 1s 1.6s forwards;
-  -moz-animation: upsetMouth 1s 1.6s forwards;
-  animation: upsetMouth 1s 1.6s forwards;
-  -webkit-transform-origin: 50% 50% 0 50%;
-  -moz-transform-origin: 50% 50% 0 50%;
-  -ms-transform-origin: 50% 50% 0 50%;
-  -o-transform-origin: 50% 50% 0 50%;
-  transform-origin: 50% 50% 0 50%;
-}
-/* line 701, ../sass/style.scss */
-.likeContainer .smileEye {
-  -webkit-animation: smileEye 1s forwards;
-  -o-animation: smileEye 1s forwards;
-  -moz-animation: smileEye 1s forwards;
-  animation: smileEye 1s forwards;
-  -webkit-transform-origin: 50% 50% 0 50%;
-  -moz-transform-origin: 50% 50% 0 50%;
-  -ms-transform-origin: 50% 50% 0 50%;
-  -o-transform-origin: 50% 50% 0 50%;
-  transform-origin: 50% 50% 0 50%;
-}
-/* line 706, ../sass/style.scss */
-.likeContainer .smileEye_right {
-  -webkit-animation: smileEye_right 1s forwards;
-  -o-animation: smileEye_right 1s forwards;
-  -moz-animation: smileEye_right 1s forwards;
-  animation: smileEye_right 1s forwards;
-  -webkit-transform-origin: 50% 50% 0 50%;
-  -moz-transform-origin: 50% 50% 0 50%;
-  -ms-transform-origin: 50% 50% 0 50%;
-  -o-transform-origin: 50% 50% 0 50%;
-  transform-origin: 50% 50% 0 50%;
-}
-/* line 710, ../sass/style.scss */
-.likeContainer .smileMouth {
-  -webkit-animation: smileMouth 1s forwards;
-  -o-animation: smileMouth 1s forwards;
-  -moz-animation: smileMouth 1s forwards;
-  animation: smileMouth 1s forwards;
-  -webkit-transform-origin: 50% 50% 0 50%;
-  -moz-transform-origin: 50% 50% 0 50%;
-  -ms-transform-origin: 50% 50% 0 50%;
-  -o-transform-origin: 50% 50% 0 50%;
-  transform-origin: 50% 50% 0 50%;
-}
-/* line 714, ../sass/style.scss */
-.likeContainer .changeFace {
-  -webkit-animation: changeFace 3s forwards;
-  -o-animation: changeFace 3s forwards;
-  -moz-animation: changeFace 3s forwards;
-  animation: changeFace 3s forwards;
+/* line 583, ../sass/style.scss */
+.likeContainer .optionsWrap .options .tada {
   -webkit-transform-origin: center center 0 50%;
   -moz-transform-origin: center center 0 50%;
   -ms-transform-origin: center center 0 50%;
   -o-transform-origin: center center 0 50%;
   transform-origin: center center 0 50%;
+  -webkit-animation: tada 1.3s forwards;
+  -o-animation: tada 1.3s forwards;
+  -moz-animation: tada 1.3s forwards;
+  animation: tada 1.3s forwards;
+}
+/* line 587, ../sass/style.scss */
+.likeContainer .optionsWrap .options .shake {
+  -webkit-animation: shake 1s forwards;
+  -o-animation: shake 1s forwards;
+  -moz-animation: shake 1s forwards;
+  animation: shake 1s forwards;
+}
+/* line 594, ../sass/style.scss */
+.likeContainer .face {
+  width: 4%;
+  z-index: 10;
+  position: relative;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border: 2px solid black;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 608, ../sass/style.scss */
+.likeContainer .eye {
+  position: absolute;
+  width: 12%;
+  border: 2px solid black;
+  border-bottom: 0px;
+  top: 15%;
+  background: transparent;
+}
+/* line 618, ../sass/style.scss */
+.likeContainer .eye.left {
+  left: 28%;
+}
+/* line 621, ../sass/style.scss */
+.likeContainer .eye.right {
+  left: 55%;
+}
+/* line 626, ../sass/style.scss */
+.likeContainer .mouth {
+  width: 51%;
+  margin: auto;
+  position: relative;
+  border: 2px solid black;
+  overflow: hidden;
 }
 
 /***********************************************  Projects ****************************************/
-/* line 728, ../sass/style.scss */
+/* line 790, ../sass/style.scss */
 #Experiments .row {
   margin: auto;
 }
 
-/* line 732, ../sass/style.scss */
+/* line 794, ../sass/style.scss */
 .projectWrapper {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffe440), color-stop(50%, #9ee0ff), color-stop(100%, #f16c97));
   background-image: -webkit-linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
@@ -3167,7 +3860,7 @@ body {
   text-align: center;
 }
 
-/* line 740, ../sass/style.scss */
+/* line 802, ../sass/style.scss */
 .projectFoot {
   position: absolute;
   background: transparent;
@@ -3180,7 +3873,7 @@ body {
   -moz-box-shadow: 3px 0px -3px -3px #666666;
   box-shadow: 3px 0px -3px -3px #666666;
 }
-/* line 751, ../sass/style.scss */
+/* line 813, ../sass/style.scss */
 .projectFoot .dialog {
   position: relative;
   color: #666;
@@ -3197,7 +3890,7 @@ body {
   box-shadow: 2px -2px 3px 1px #666666;
 }
 
-/* line 767, ../sass/style.scss */
+/* line 829, ../sass/style.scss */
 .clip {
   z-index: 2;
   position: relative;
@@ -3217,7 +3910,7 @@ body {
   
   	}*/
 }
-/* line 772, ../sass/style.scss */
+/* line 834, ../sass/style.scss */
 .clip:before {
   content: "";
   position: absolute;
@@ -3247,7 +3940,7 @@ body {
   border-left: 2px solid rgba(255, 255, 255, 0.8);
 }
 
-/* line 800, ../sass/style.scss */
+/* line 862, ../sass/style.scss */
 .buttonWrap {
   position: absolute;
   left: 0;
@@ -3261,13 +3954,13 @@ body {
   perspective: 400px;
   float: right;
 }
-/* line 809, ../sass/style.scss */
+/* line 871, ../sass/style.scss */
 .buttonWrap .load {
   width: 50%;
   margin: auto;
   color: #fff;
 }
-/* line 814, ../sass/style.scss */
+/* line 876, ../sass/style.scss */
 .buttonWrap .test {
   position: relative;
   width: 40%;
@@ -3275,7 +3968,7 @@ body {
   background: #fff;
 }
 
-/* line 822, ../sass/style.scss */
+/* line 884, ../sass/style.scss */
 .loadButton {
   margin: auto;
   display: inline-block;
@@ -3292,32 +3985,32 @@ body {
   border: 3px solid #bae847;
   border-bottom-color: #537d00;
 }
-/* line 835, ../sass/style.scss */
+/* line 897, ../sass/style.scss */
 .loadButton:hover {
   border-color: #537d00;
 }
-/* line 838, ../sass/style.scss */
+/* line 900, ../sass/style.scss */
 .loadButton:before {
   content: '';
   position: absolute;
 }
 
-/* line 843, ../sass/style.scss */
+/* line 905, ../sass/style.scss */
 .projectWrapper .projects:nth-last-of-type(-n+4) {
   margin-top: 15%;
 }
 
-/* line 846, ../sass/style.scss */
+/* line 908, ../sass/style.scss */
 .projects {
   float: left;
   width: 21%;
   margin: 2% 0 0 3%;
 }
-/* line 851, ../sass/style.scss */
+/* line 913, ../sass/style.scss */
 .projects:nth-child(1) {
   margin-left: 5%;
 }
-/* line 854, ../sass/style.scss */
+/* line 916, ../sass/style.scss */
 .projects .description {
   box-shadow: 1px #f2f2f2;
   position: relative;
@@ -3342,7 +4035,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 866, ../sass/style.scss */
+/* line 928, ../sass/style.scss */
 .projects .description .proShelter {
   position: absolute;
   width: 100%;
@@ -3351,12 +4044,12 @@ body {
   z-index: 1;
   overflow: hidden;
 }
-/* line 877, ../sass/style.scss */
+/* line 939, ../sass/style.scss */
 .projects .description .proShelter img {
   max-width: 100%;
   max-width: 100%;
 }
-/* line 882, ../sass/style.scss */
+/* line 944, ../sass/style.scss */
 .projects .description .descrpt {
   position: absolute;
   overflow: hidden;
@@ -3367,7 +4060,7 @@ body {
   opacity: 0.9;
   text-align: center;
 }
-/* line 898, ../sass/style.scss */
+/* line 960, ../sass/style.scss */
 .projects .description .descrpt h3 {
   margin-left: 0.5em;
   margin-right: 0.5em;
@@ -3375,7 +4068,7 @@ body {
   line-height: 1.2em;
   font-size: 0.9em;
 }
-/* line 908, ../sass/style.scss */
+/* line 970, ../sass/style.scss */
 .projects .description .top, .projects .description .top img {
   -webkit-border-top-left-radius: 0.3em;
   -moz-border-top-left-radius: 0.3em;
@@ -3388,7 +4081,7 @@ body {
   -o-border-top-right-radius: 0.3em;
   border-top-right-radius: 0.3em;
 }
-/* line 912, ../sass/style.scss */
+/* line 974, ../sass/style.scss */
 .projects .description .down {
   top: 50%;
   -webkit-border-bottom-left-radius: 0.3em;
@@ -3402,7 +4095,7 @@ body {
   -o-border-bottom-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
 }
-/* line 916, ../sass/style.scss */
+/* line 978, ../sass/style.scss */
 .projects .description .down img {
   position: relative;
   top: -100%;
@@ -3417,12 +4110,12 @@ body {
   -o-border-bottom-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
 }
-/* line 922, ../sass/style.scss */
+/* line 984, ../sass/style.scss */
 .projects .description .down h3 {
   position: relative;
   top: -100%;
 }
-/* line 927, ../sass/style.scss */
+/* line 989, ../sass/style.scss */
 .projects .description .in_top, .projects .description .in_right {
   -webkit-transform-origin: 50% 100% 0;
   -moz-transform-origin: 50% 100% 0;
@@ -3434,7 +4127,7 @@ body {
   -moz-animation: pro_in_top 0.5s forwards;
   animation: pro_in_top 0.5s forwards;
 }
-/* line 932, ../sass/style.scss */
+/* line 994, ../sass/style.scss */
 .projects .description .in_bottom, .projects .description .in_left {
   -webkit-transform-origin: 50% 0 0;
   -moz-transform-origin: 50% 0 0;
@@ -3446,7 +4139,7 @@ body {
   -moz-animation: pro_in_bottom 0.5s forwards;
   animation: pro_in_bottom 0.5s forwards;
 }
-/* line 936, ../sass/style.scss */
+/* line 998, ../sass/style.scss */
 .projects .description .out_top, .projects .description .out_right {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -3463,7 +4156,7 @@ body {
   -moz-animation: pro_out_top 0.5s 0.3s forwards;
   animation: pro_out_top 0.5s 0.3s forwards;
 }
-/* line 941, ../sass/style.scss */
+/* line 1003, ../sass/style.scss */
 .projects .description .out_bottom, .projects .description .out_left {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -3480,7 +4173,7 @@ body {
   -moz-animation: pro_out_bottom 0.5s 0.3s forwards;
   animation: pro_out_bottom 0.5s 0.3s forwards;
 }
-/* line 946, ../sass/style.scss */
+/* line 1008, ../sass/style.scss */
 .projects .description .rotate_in_bottom, .projects .description .rotate_in_left {
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
@@ -3499,7 +4192,7 @@ body {
   -moz-animation: rotate_in_bottom 0.5s 0.3s forwards;
   animation: rotate_in_bottom 0.5s 0.3s forwards;
 }
-/* line 953, ../sass/style.scss */
+/* line 1015, ../sass/style.scss */
 .projects .description .rotate_in_top, .projects .description .rotate_in_right {
   z-index: 1;
   opacity: 0;
@@ -3518,7 +4211,7 @@ body {
   -moz-animation: rotate_in_top 0.5s 0.3s forwards;
   animation: rotate_in_top 0.5s 0.3s forwards;
 }
-/* line 960, ../sass/style.scss */
+/* line 1022, ../sass/style.scss */
 .projects .description .rotate_out_top, .projects .description .rotate_out_right {
   z-index: 1;
   -webkit-transform-origin: 50% 0 0;
@@ -3531,7 +4224,7 @@ body {
   -moz-animation: rotate_out_top 0.5s forwards;
   animation: rotate_out_top 0.5s forwards;
 }
-/* line 965, ../sass/style.scss */
+/* line 1027, ../sass/style.scss */
 .projects .description .rotate_out_bottom, .projects .description .rotate_out_left {
   z-index: 1;
   -webkit-transform-origin: 50% 100% 0;
@@ -3544,7 +4237,7 @@ body {
   -moz-animation: rotate_out_bottom 0.5s  forwards;
   animation: rotate_out_bottom 0.5s  forwards;
 }
-/* line 971, ../sass/style.scss */
+/* line 1033, ../sass/style.scss */
 .projects .caption {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3564,19 +4257,19 @@ body {
   background: #fff;
   text-align: center;
 }
-/* line 979, ../sass/style.scss */
+/* line 1041, ../sass/style.scss */
 .projects .caption h3 {
   color: #558c00;
   font-size: 0.75em;
   line-height: 2em;
 }
-/* line 984, ../sass/style.scss */
+/* line 1046, ../sass/style.scss */
 .projects .caption p {
   color: #78a632;
   font-size: 0.6em;
 }
 
-/* line 991, ../sass/style.scss */
+/* line 1053, ../sass/style.scss */
 .rotateY {
   -webkit-transform-origin: 50% 50% 0;
   -moz-transform-origin: 50% 50% 0;
@@ -3589,7 +4282,7 @@ body {
   animation: rotateY 1.5s forwards;
 }
 
-/* line 996, ../sass/style.scss */
+/* line 1058, ../sass/style.scss */
 .btnRotateY {
   -webkit-transform-origin: 50% 0 0;
   -moz-transform-origin: 50% 0 0;
@@ -3603,7 +4296,7 @@ body {
 }
 
 /***************************************************** Blog **********************************/
-/* line 1006, ../sass/style.scss */
+/* line 1068, ../sass/style.scss */
 #Blog .row .contentWrap {
   position: relative;
   -webkit-perspective: 800px;
@@ -3613,7 +4306,7 @@ body {
   perspective: 800px;
   overflow: hidden;
 }
-/* line 1014, ../sass/style.scss */
+/* line 1076, ../sass/style.scss */
 #Blog .slider {
   overflow: hidden;
   background: #fff;
@@ -3621,24 +4314,24 @@ body {
   line-height: 2em;
   position: absolute;
 }
-/* line 1020, ../sass/style.scss */
+/* line 1082, ../sass/style.scss */
 #Blog .slider ul {
   left: 0;
   position: relative;
   height: 100%;
 }
-/* line 1024, ../sass/style.scss */
+/* line 1086, ../sass/style.scss */
 #Blog .slider ul li {
   height: 100%;
   position: relative;
   float: left;
 }
-/* line 1028, ../sass/style.scss */
+/* line 1090, ../sass/style.scss */
 #Blog .slider ul li img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 1034, ../sass/style.scss */
+/* line 1096, ../sass/style.scss */
 #Blog .slider .btnCtrl {
   background: transparent;
   position: absolute;
@@ -3648,27 +4341,27 @@ body {
   overflow: hidden;
   border: none;
 }
-/* line 1044, ../sass/style.scss */
+/* line 1106, ../sass/style.scss */
 #Blog .slider #prev {
   background: url("/static/images/gray_prev.png") no-repeat;
   background-position: 0 100%;
   left: 0;
 }
-/* line 1048, ../sass/style.scss */
+/* line 1110, ../sass/style.scss */
 #Blog .slider #prev:hover {
   background-position: 0 0;
 }
-/* line 1052, ../sass/style.scss */
+/* line 1114, ../sass/style.scss */
 #Blog .slider #next {
   background: url("/static/images/gray_next.png") no-repeat;
   right: 0;
   background-position: 0 100%;
 }
-/* line 1056, ../sass/style.scss */
+/* line 1118, ../sass/style.scss */
 #Blog .slider #next:hover {
   background-position: 0 0;
 }
-/* line 1061, ../sass/style.scss */
+/* line 1123, ../sass/style.scss */
 #Blog #sliderLeft {
   -webkit-transform: translateX(-80.5%) rotateY(45deg) scale(0.8) translateY(7.8%);
   -moz-transform: translateX(-80.5%) rotateY(45deg) scale(0.8) translateY(7.8%);
@@ -3681,7 +4374,7 @@ body {
   -o-transform-origin: top right 0 50%;
   transform-origin: top right 0 50%;
 }
-/* line 1065, ../sass/style.scss */
+/* line 1127, ../sass/style.scss */
 #Blog #sliderRight {
   -webkit-transform: translateX(99.7%) rotateY(-35deg) scale(0.8) translateY(7.8%);
   -moz-transform: translateX(99.7%) rotateY(-35deg) scale(0.8) translateY(7.8%);
@@ -3694,7 +4387,7 @@ body {
   -o-transform-origin: top left 0 50%;
   transform-origin: top left 0 50%;
 }
-/* line 1069, ../sass/style.scss */
+/* line 1131, ../sass/style.scss */
 #Blog #slicesWrapper {
   -webkit-transform: scale(0.8) translateX(12%) translateY(-4.97%);
   -moz-transform: scale(0.8) translateX(12%) translateY(-4.97%);
@@ -3702,7 +4395,7 @@ body {
   -o-transform: scale(0.8) translateX(12%) translateY(-4.97%);
   transform: scale(0.8) translateX(12%) translateY(-4.97%);
 }
-/* line 1071, ../sass/style.scss */
+/* line 1133, ../sass/style.scss */
 #Blog #slicesWrapper .slice {
   position: relative;
   background: #99d11c;
@@ -3711,7 +4404,7 @@ body {
   float: left;
   overflow: hidden;
 }
-/* line 1078, ../sass/style.scss */
+/* line 1140, ../sass/style.scss */
 #Blog #slicesWrapper .slice .dialogBox {
   position: relative;
   width: 100%;
@@ -3730,31 +4423,31 @@ body {
   opacity: 0.7;
   line-height: 150%;
 }
-/* line 1093, ../sass/style.scss */
+/* line 1155, ../sass/style.scss */
 #Blog #slicesWrapper .left .dialogBox {
   left: 50%;
 }
-/* line 1098, ../sass/style.scss */
+/* line 1160, ../sass/style.scss */
 #Blog #slicesWrapper .right .dialogBox {
   left: -50%;
 }
-/* line 1103, ../sass/style.scss */
+/* line 1165, ../sass/style.scss */
 #Blog .wrapper {
   position: absolute;
   width: 25%;
   height: 10%;
 }
-/* line 1107, ../sass/style.scss */
+/* line 1169, ../sass/style.scss */
 #Blog .wrapper.blogshots {
   top: 80%;
   left: 27%;
 }
-/* line 1111, ../sass/style.scss */
+/* line 1173, ../sass/style.scss */
 #Blog .wrapper.bloglink {
   top: 85%;
   right: 28%;
 }
-/* line 1115, ../sass/style.scss */
+/* line 1177, ../sass/style.scss */
 #Blog .wrapper .ribbon {
   position: relative;
   width: 1.5em;
@@ -3766,7 +4459,7 @@ body {
   left: -0.9em;
   z-index: 1;
 }
-/* line 1125, ../sass/style.scss */
+/* line 1187, ../sass/style.scss */
 #Blog .wrapper .ribbon.link {
   width: 1em;
   top: 0.6em;
@@ -3774,7 +4467,7 @@ body {
   border-color: #666666 transparent #666666 #666666;
 }
 
-/* line 1134, ../sass/style.scss */
+/* line 1196, ../sass/style.scss */
 #blogShots {
   z-index: 2;
   position: absolute;
@@ -3784,7 +4477,7 @@ body {
   color: #fff;
   background: #f86c99;
 }
-/* line 1143, ../sass/style.scss */
+/* line 1205, ../sass/style.scss */
 #blogShots:before {
   content: "Show Me";
   position: absolute;
@@ -3793,7 +4486,7 @@ body {
   color: #696969;
   top: -1em;
 }
-/* line 1152, ../sass/style.scss */
+/* line 1214, ../sass/style.scss */
 #blogShots:after {
   content: "";
   width: 0;
@@ -3806,7 +4499,7 @@ body {
   left: 1px;
 }
 
-/* line 1164, ../sass/style.scss */
+/* line 1226, ../sass/style.scss */
 #BlogLink {
   z-index: 2;
   position: absolute;
@@ -3816,7 +4509,7 @@ body {
   color: #fff;
   background: #666666;
 }
-/* line 1172, ../sass/style.scss */
+/* line 1234, ../sass/style.scss */
 #BlogLink:before {
   content: "";
   position: absolute;
@@ -3829,7 +4522,7 @@ body {
   top: 105%;
   border-style: solid;
 }
-/* line 1184, ../sass/style.scss */
+/* line 1246, ../sass/style.scss */
 #BlogLink:after {
   content: "In a new tab";
   position: absolute;
@@ -3840,11 +4533,11 @@ body {
 }
 
 /************************************************* Contact ********************************************/
-/* line 1198, ../sass/style.scss */
+/* line 1260, ../sass/style.scss */
 #Contact h1 {
   float: left;
 }
-/* line 1201, ../sass/style.scss */
+/* line 1263, ../sass/style.scss */
 #Contact .clouds {
   overflow: hidden;
   height: 14%;
@@ -3852,7 +4545,7 @@ body {
   position: relative;
   padding-bottom: 2%;
 }
-/* line 1207, ../sass/style.scss */
+/* line 1269, ../sass/style.scss */
 #Contact .clouds .cloud {
   margin-left: 5%;
   position: relative;
@@ -3865,7 +4558,7 @@ body {
   -moz-box-shadow: 0px 5px 25px 0px lightgrey;
   box-shadow: 0px 5px 25px 0px lightgrey;
 }
-/* line 1217, ../sass/style.scss */
+/* line 1279, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1, #Contact .clouds .cloud .cloudPart2 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -3875,19 +4568,19 @@ body {
   background: inherit;
   position: absolute;
 }
-/* line 1222, ../sass/style.scss */
+/* line 1284, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1 {
   top: -70%;
   width: 35%;
   left: 13%;
 }
-/* line 1227, ../sass/style.scss */
+/* line 1289, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart2 {
   top: -103%;
   width: 50%;
   left: 37%;
 }
-/* line 1235, ../sass/style.scss */
+/* line 1297, ../sass/style.scss */
 #Contact .icons {
   width: 30%;
   height: auto;
@@ -3895,21 +4588,21 @@ body {
   position: relative;
   margin: auto;
 }
-/* line 1241, ../sass/style.scss */
+/* line 1303, ../sass/style.scss */
 #Contact .icons a {
   position: relative;
   height: auto;
   overflow: hidden;
 }
-/* line 1247, ../sass/style.scss */
+/* line 1309, ../sass/style.scss */
 #Contact .icons a:nth-child(1) {
   margin-right: 35%;
 }
-/* line 1250, ../sass/style.scss */
+/* line 1312, ../sass/style.scss */
 #Contact .icons a:nth-child(3) {
   float: right;
 }
-/* line 1254, ../sass/style.scss */
+/* line 1316, ../sass/style.scss */
 #Contact .dialog {
   top: 0px;
   right: 0px;
@@ -3924,7 +4617,7 @@ body {
   padding-right: 3%;
   border: none;
 }
-/* line 1268, ../sass/style.scss */
+/* line 1330, ../sass/style.scss */
 #Contact .form {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3943,7 +4636,7 @@ body {
   margin-top: 5%;
   color: #558c00;
 }
-/* line 1281, ../sass/style.scss */
+/* line 1343, ../sass/style.scss */
 #Contact #contactForm {
   width: 90%;
   margin: auto;
@@ -3952,14 +4645,14 @@ body {
   background: #fff;
   color: #78a632;
 }
-/* line 1289, ../sass/style.scss */
+/* line 1351, ../sass/style.scss */
 #Contact .input {
   width: 45%;
   float: left;
   overflow: hidden;
   margin-right: 7%;
 }
-/* line 1294, ../sass/style.scss */
+/* line 1356, ../sass/style.scss */
 #Contact .input input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3975,20 +4668,20 @@ body {
   font-size: 0.9em;
   color: #666666;
 }
-/* line 1303, ../sass/style.scss */
+/* line 1365, ../sass/style.scss */
 #Contact .input input:focus, #Contact .input input:invalid {
   box-shadow: none !important;
 }
-/* line 1307, ../sass/style.scss */
+/* line 1369, ../sass/style.scss */
 #Contact .input .second {
   margin-top: 8%;
 }
-/* line 1312, ../sass/style.scss */
+/* line 1374, ../sass/style.scss */
 #Contact .message {
   overflow: hidden;
   float: 50%;
 }
-/* line 1316, ../sass/style.scss */
+/* line 1378, ../sass/style.scss */
 #Contact .message textarea {
   font-size: 0.9em;
   width: 98%;
@@ -4004,11 +4697,11 @@ body {
   resize: vertical;
   color: #666666;
 }
-/* line 1326, ../sass/style.scss */
+/* line 1388, ../sass/style.scss */
 #Contact .message textarea:focus, #Contact .message textarea:invalid {
   box-shadow: none !important;
 }
-/* line 1331, ../sass/style.scss */
+/* line 1393, ../sass/style.scss */
 #Contact .error {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4017,7 +4710,7 @@ body {
   font-size: 0.6em;
   font-weight: light;
 }
-/* line 1337, ../sass/style.scss */
+/* line 1399, ../sass/style.scss */
 #Contact .contactButton {
   float: right;
   width: 43%;
@@ -4034,11 +4727,11 @@ body {
   margin-top: 13%;
   margin-right: 10%;
 }
-/* line 1350, ../sass/style.scss */
+/* line 1412, ../sass/style.scss */
 #Contact .contactButton:hover {
   border-color: #486c10;
 }
-/* line 1355, ../sass/style.scss */
+/* line 1417, ../sass/style.scss */
 #Contact .alertBox {
   position: absolute;
   top: 0;
@@ -4047,7 +4740,7 @@ body {
   height: 100%;
   background: rgba(255, 225, 255, 0.5);
 }
-/* line 1362, ../sass/style.scss */
+/* line 1424, ../sass/style.scss */
 #Contact .alertBox div {
   color: #78A632;
   opacity: 1;
@@ -4068,7 +4761,7 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-/* line 1376, ../sass/style.scss */
+/* line 1438, ../sass/style.scss */
 #Contact .alertBox .contactButton {
   width: 15%;
 }

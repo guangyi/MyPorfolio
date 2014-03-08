@@ -78,7 +78,11 @@ var animtOnScroll = function(){
 		if($('#Experiments').offset().top <= $(window).height() * 0.7 && firstTimePrj){
 			fristTimePrj = false;
 			projectLoad();
-		};
+		}
+		if($('#MoreAboutMe').offset().top <= $(window).height() * 0.1 && firstTimePrj){
+			//alert('here');
+			//clearText();
+		}
 		cloudMove();// defined in cloudMove.js
 		//flyin();
 	});

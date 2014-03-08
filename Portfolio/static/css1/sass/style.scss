@@ -10,7 +10,6 @@ $bg_Contact:#9EE0FF;//#b2e6ff;//#73d1ff;//;//#BAE8E8;//#e68e8e;//rgba(204,100,10
 $bg_like:#F16c97;
 $bg_Blog:#99d11c;//#8cdb00;//#82cc00;//#99d11c;this one is ok;//bef13c;//#7fd0d0;
 $bg_intro:#fff;
-$smileBorder:3px solid #000;//rgba(222, 99,99,1);
 $smielFace: #e9b03d;//rgba(222, 99,99,1);
 $Cloud:#fff;//#7fd0d0;//#00acFF;//#40C1FF;
 $Button:#78A632;
@@ -139,7 +138,7 @@ height:100%;
 			//margin-bottom: 0.5em;
 		}
 		h2{
-			font-size: 1.5em;
+			font-size: 1.6em;
 		}
 		h3{
 			font-size: 1em;
@@ -154,7 +153,9 @@ height:100%;
 		}
 		h2{
 			font-size: 1.5em;
-			color: #fff;
+		}
+		h3{
+			font-size:1.1em;
 		}
 	}
 	#Experiments{
@@ -348,6 +349,7 @@ $shelter:#fdd1e0;
 	height:100%;
 }
 .middle{
+	float:left;
 	position:relative;
 	font-size:0.9em;
 	padding:5% 5% 0 5%;
@@ -542,40 +544,99 @@ $cubeWidth:160px;
 	}
 }
 
-/********************************************** Like or dislike ***************************************/
+/********************************************** More About Me ***************************************/
 .likeContainer{
 	height:100%;
 	width:auto;
 	background:inherit;
-	padding-top:2%;
 	@include box-sizing(border-box);
 	.optionsWrap{
-		width:66%;
-		padding:5%;
+		width:90%;
+		padding:2%;
+		background:white;
+		margin:auto;
+		@include box-sizing(border-box);
 		@include perspective(500px);
-
+		text-align:center;
 		.options{
+			width:100%;
+			margin:0;
 			float:left;
-			width:90%;
 			height:100%;
-			text-align: center;
-			//@include transform(rotateX(35deg));
 			overflow:scroll;
 			.heart{
-				width:10%;
+				width:25%;
 				background:red;
 				display:inline-block;
 				float:left;
+				margin:0 3% 0 0;
 			}
-			
-			.like, .dislike{
-				float:left;
+			.option{
+				display:inline-block;
+				background:inherit;
+				color:transparent;
+				margin:2% 0 0% 2%;
+				opacity:1;
+				text-shadow:0px 0px 30px $bg_like;
+				@include transition(text-shadow 1.5s 2s);
 			}
+			.tada{
+				@include transform-origin(center center 0);
+				@include animation('tada 1.3s forwards');
+			}
+			.shake{
+				@include animation('shake 1s forwards')
+			}
+
 		}
 	}
-	.optionList{
-		overflow: hidden;
+	$smileBorder:2px solid #000;//rgba(222, 99,99,1);
+	.face{
+		width:4%;
+		z-index:10;
+		position:relative;
+		float:left;
+		margin-left: auto;
+		margin-right: auto;
+		//width:30%;
+		background:#fff;//#7fd0d0;
+		//use border to have the shape of face;
+		border: #{$smileBorder};
+		@include border-radius(0.5em);
+		@include box-sizing(border-box);
 	}
+	.eye{
+	// half circle: width = 2 * height and border-radius = width
+		position:absolute;//doesn't take palces
+		width:12%;
+		// height and border-radius are set in setting.js 
+		// use border to get the shape of eye
+		border: #{$smileBorder};
+		border-bottom:0px;
+		top:15%;
+		background:transparent;
+		&.left{
+			left:28%;
+		}
+		&.right{
+			left:55%;
+		}
+	}
+	
+	.mouth{
+		
+		width:51%;
+		margin:auto;
+		//if don't want to ruin the size of a container, use position absolute for
+		// it's child element cause in that case they don't take any place;
+		position:relative;
+		
+		//background:#e9b03d;
+		border: #{$smileBorder};
+		//@include box-sizing(border-box);
+		overflow:hidden;
+	}
+/*Currently working smile faces	
 .faces{
 		z-index: 2;
 		width: 100%;
@@ -588,7 +649,7 @@ $cubeWidth:160px;
 	//background:#ffb2b2;
 	.smile{
 		float:right;
-		background:#c3df8a;
+		background:#fff;
 	}
 	//float:right;
 }
@@ -602,17 +663,17 @@ $cubeWidth:160px;
 	margin-left: auto;
 	margin-right: auto;
 	//width:30%;
-	background:$smielFace;//#7fd0d0;
+	background:#fff;//#7fd0d0;
 	//use border to have the shape of face;
 	border: #{$smileBorder};
-	@include border-radius(50%);
+	@include border-radius(1em);
 	@include box-sizing(border-box);
 	//@include border-radius-part(top-left, 50%);
 	//@include border-radius-part(bottom-right, 50%);
 }
 .eye{
 	// half circle: width = 2 * height and border-radius = width
-	position:absolute;/*doesn't take palces*/
+	position:absolute;//doesn't take palces
 	width:12%;
 	// height and border-radius are set in setting.js 
 	// use border to get the shape of eye
@@ -687,6 +748,7 @@ seems like not usefull
 but I sitll couldn't figure it out why reverse doesn't work
 example: @include animation('upsetEye 5s reverse forwards');-- not working
 */
+/*
 .upsetEye{
 	@include animation('upsetEye 1s forwards');
 	@include transform-origin(50% 50% 0);
@@ -714,7 +776,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 .changeFace{
 	@include animation('changeFace 3s forwards');
 	@include transform-origin(center center 0);
-}
+}*/
 }
 /***********************************************  Projects ****************************************/
 $description:#696969;

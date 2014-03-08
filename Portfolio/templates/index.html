@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/reset.css" media="screen">
 	<link href="{{STATIC_URL}}css1/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="{{STATIC_URL}}lib/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}lib/jquery.animate-textshadow.min.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular1-0-8.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular-animate.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular-cookies.js"></script>
@@ -16,6 +17,7 @@
 	<script type="text/javascript" src="{{STATIC_URL}}js/onScroll.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/directionAware.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/BlogAnimation.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/MoreAboutMe.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}js/main.js"></script>
 </head>
 <body ng-controller="contentCtrl">
@@ -40,6 +42,14 @@
 				<section class="main" id="Intro" style="height: {$screenHeight$}px">
 					<div class="row effOnScroll">
 						<div class="contentWrap">
+							
+							<div class="middle">
+								<h1>Welcome!</h1><br>
+								My name is Guangyi, a front-end engineer. I'm looking for a front-end position to work on exciting projects with awesome people. This portfolio, I hope, will help me find the right job for me.<br>
+								To keep up with the trand,this portfolio uses combination of HTML5, CSS3(Sass pre-processor), AngularJS, Django and MongoDB.fast-learning is a must-have skill.<br>
+								I have to admit, as an entry level engineer, this is not perfect, But "perfection" is not the point. I just want to use this portfolio to demostrate to you, my future employer, what I'm capable of doing and what potential I have.More importantly, prove to myself, I like what I'm doing and I'm good at what I'm doing.<br>
+								Check out each section to learn more detail! Thank you! 
+							</div><!-- end of middle -->
 							<div class="left">
 								<div class="perspective gra">
 									<div class="introShlter"><h2>TEST!!!</h2></div>
@@ -84,13 +94,6 @@
 									<h2>I graduated from Brandeis University last year. I'm a good studnt-- My GPA ≈ 3.7 Ok, Ok, be honsty, it's 3.67. While I was study there, I found out what I really want to do-- front-end engineer.</h2>-->
 								
 							</div><!--end of left-->
-							<div class="middle">
-								<h1>Welcome!</h1><br>
-								My name is Guangyi, a front-end engineer. I'm looking for a front-end position to work on exciting projects with awesome people. This portfolio, I hope, will help me find the right job for me.<br>
-								To keep up with the trand,this portfolio uses combination of HTML5, CSS3(Sass pre-processor), AngularJS, Django and MongoDB.fast-learning is a must-have skill.<br>
-								I have to admit, as an entry level engineer, this is not perfect, But "perfection" is not the point. I just want to use this portfolio to demostrate to you, my future employer, what I'm capable of doing and what potential I have.More importantly, prove to myself, I like what I'm doing and I'm good at what I'm doing.<br>
-								Check out each section to learn more detail! Thank you! 
-							</div><!-- end of middle -->
 							<div class="right">
 								<div class="perspective free">
 									<div class="introShlter"><h2>TEST!!!</h2></div>
@@ -253,31 +256,44 @@
 								<h1>More About Me</h1>
 								<div class="optionsWrap">
 									<div class="options">
-										<div class="heart"></div>
-										<h3 class="like">PINK!</h3>
-										<h3 class="like"> Black coffee and Tea</h3>
-										<h3 class="dislike">Winter in Boston</h3>
-										<h3 class="like">Book "Lean in"</h3>
-										<h3 class="dislike">Comlicate relationship</h3>
-										<h3 class="like">Sunshine in California</h3>
-										<h3 class="like">San Francisco</h3>
-										<h3 class="dislike">Messy code, Messy architecture</h3>
-										<h3 class="like">Book "head first--OODA"</h3>
-										<h3 class="like">Front-end filed technology</h3>
-										<h3 class="like">Learning new knowledge and skills</h3>
-										<h3 class="dislike"> Being judged</h3>
-										<h3 class="like">David Garrett</h3>
-										<h3 class="like">Piano and Violin</h3>
-										<h3 class="dislike">
-										<div class="face"></div>
-									</div><!--options end-->	
+										<div class="face smile">
+											<div class="eye left"></div>
+											<div class="eye right"></div>
+											<div class="mouth"></div>
+										</div>
+										<h3 class="option like" >Pink, Red, Warm Color</h3>
+										<h3 class="option like"> Black coffee and Tea</h3>
+										<br>
+										<h3 class="option like"> Try new things</h3>
+										<h3 class="option dislike"> Being judged</h3>
+										<br>
+										<h3 class="option dislike">Winter in Boston</h3>
+										<h3 class="option like">Sunshine in California</h3>
+										<br>
+										<h3 class="option like">Book "Lean in"</h3>
+										<h3 class="option like">Book "head first--OODA"</h3>
+										<h3 class="option like">Book "Eat Pray Love"</h3>
+										<br>
+										<h3 class="option dislike">Messy code</h3>
+										<h3 class="option dislike">Complicated relationship</h3>
+										<br>
+										
+										<h3 class="option like">Learn and use new knowledge and skills</h3>
+										<h3 class="option like">Being Front-end Engineer</h3>
+										<br>
+										<h3 class="option like">Piano and Violin</h3>
+										<h3 class="option like">David Garrett</h3>
+
+									</div><!--options end-->
 								</div><!--end of optionsWrap-->
-								<div class="optionLst">
-									<div class="likeList"></div>
-									<div class="dislikeLst"></div>
-								</div><!-- end of optionList -->
+								<!--
+								<div class="optionList">
+									<div class="likeList"> like</div>
+									<div class="dislikeLst"> dislike</div>
+								</div>end of optionList -->
 								<!--<div class="faces" id="faces1"></div>-->
-								<div class="faces" id="faces3">
+								<!-- ******************************************for later use******************-->
+								<!--<div class="faces" id="faces3">
 									<div class="smile changeFace">
 										<div class="eye left"></div>
 										<div class="eye right"></div>
@@ -288,14 +304,14 @@
 												<li></li>
 												<li></li>
 												<li></li>
-												<!--first row of teeth-->
+												first row of teeth
 											</ul>
 										</div>
 									</div>
 								</div> <!--face end-->
 							<!--
 							<div class="dislike">
-								<h2>Dislike it...</h1>
+								<h3>Dislike it...</h1>
 								<div class="upset">
 									<div class="eye left"></div>
 									<div class="eye right "></div>

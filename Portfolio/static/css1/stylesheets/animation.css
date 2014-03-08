@@ -1580,11 +1580,11 @@
 @-webkit-keyframes rotateY {
   /* line 158, ../sass/animation.scss */
   0% {
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
 
   /* line 159, ../sass/animation.scss */
@@ -1618,11 +1618,11 @@
 @-moz-keyframes rotateY {
   /* line 158, ../sass/animation.scss */
   0% {
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
 
   /* line 159, ../sass/animation.scss */
@@ -1656,11 +1656,11 @@
 @keyframes rotateY {
   /* line 158, ../sass/animation.scss */
   0% {
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
 
   /* line 159, ../sass/animation.scss */
@@ -2051,5 +2051,665 @@
     -ms-transform: rotateY(360deg);
     -o-transform: rotateY(360deg);
     transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes tada {
+  /* This is the "jump" effect for like/agree */
+  /* line 185, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 186, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 187, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 188, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 189, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 190, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 191, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 192, ../sass/animation.scss */
+  84% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 193, ../sass/animation.scss */
+  92% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 194, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    font-size: 1.1em;
+  }
+
+  /* Tada effect
+  10% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  25% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  32% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  39% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  46% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  53% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  60% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  67% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  74% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  81% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  88% {@include transform(rotate(0deg)  scale(1));   font-size:$startFont;}
+  100%{@include transform(rotate(0deg) scale(1));    font-size:$endFont;}*/
+}
+
+@-moz-keyframes tada {
+  /* This is the "jump" effect for like/agree */
+  /* line 185, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 186, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 187, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 188, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 189, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 190, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 191, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 192, ../sass/animation.scss */
+  84% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 193, ../sass/animation.scss */
+  92% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 194, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    font-size: 1.1em;
+  }
+
+  /* Tada effect
+  10% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  25% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  32% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  39% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  46% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  53% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  60% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  67% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  74% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  81% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  88% {@include transform(rotate(0deg)  scale(1));   font-size:$startFont;}
+  100%{@include transform(rotate(0deg) scale(1));    font-size:$endFont;}*/
+}
+
+@keyframes tada {
+  /* This is the "jump" effect for like/agree */
+  /* line 185, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 186, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 187, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 188, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 189, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 190, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 191, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 192, ../sass/animation.scss */
+  84% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 193, ../sass/animation.scss */
+  92% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 194, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    font-size: 1.1em;
+  }
+
+  /* Tada effect
+  10% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  25% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+  32% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  39% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  46% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  53% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  60% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  67% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  74% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+  81% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+  88% {@include transform(rotate(0deg)  scale(1));   font-size:$startFont;}
+  100%{@include transform(rotate(0deg) scale(1));    font-size:$endFont;}*/
+}
+
+@-webkit-keyframes shake {
+  /* line 210, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 211, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 212, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 213, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 214, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 215, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 216, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 217, ../sass/animation.scss */
+  82% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 218, ../sass/animation.scss */
+  90% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+  }
+
+  /* line 219, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+    color: gray;
+  }
+}
+
+@-moz-keyframes shake {
+  /* line 210, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 211, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 212, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 213, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 214, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 215, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 216, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 217, ../sass/animation.scss */
+  82% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 218, ../sass/animation.scss */
+  90% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+  }
+
+  /* line 219, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+    color: gray;
+  }
+}
+
+@keyframes shake {
+  /* line 210, ../sass/animation.scss */
+  28% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 211, ../sass/animation.scss */
+  36% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 212, ../sass/animation.scss */
+  44% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 213, ../sass/animation.scss */
+  52% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 214, ../sass/animation.scss */
+  60% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 215, ../sass/animation.scss */
+  68% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 216, ../sass/animation.scss */
+  76% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    font-size: 1.1em;
+  }
+
+  /* line 217, ../sass/animation.scss */
+  82% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    font-size: 1.1em;
+  }
+
+  /* line 218, ../sass/animation.scss */
+  90% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+  }
+
+  /* line 219, ../sass/animation.scss */
+  100% {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    font-size: 1.1em;
+    color: gray;
   }
 }

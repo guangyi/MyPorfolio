@@ -77,7 +77,6 @@
 	};
 	var mouseHover = function(){
 		$('.tag').mouseenter(function(event){
-				console.log(event.target);
 				$(this).animate({
 					top:'-=25'
 				},300);
@@ -242,11 +241,9 @@ var blog = function(){
 	};
 	blogSlider.prototype.animation = function(direction){
 		var that = this;
-		console.log("wahahahaha");
 		if ( 0 < this.current && this.current <= this.len){
 			that.move(direction);
 			that.current += direction * -1;
-			console.log(that.current);
 		}
 		else if( this.current === 0  || this.current > this.len){
 			that.toEnd();

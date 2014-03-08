@@ -155,7 +155,7 @@
 
 /////*** Projects ***////
 @include keyframes(rotateY){
-	0%   { @include transform(rotate(-10deg));}
+	0%   { @include transform(rotate(-5deg));}
 	25%  { @include transform(rotate(10deg));}
 	55%  { @include transform(rotate(-10deg));}
 	100% { @include transform(rotate(0deg)); }
@@ -167,14 +167,54 @@
 	100% { @include transform(rotateY(0deg)); }
 }
 @include keyframes(spin){
-	0 { @include transform(rotateY(0deg)); }
+	0   { @include transform(rotateY(0deg)); }
 	23% { @include transform(rotateY(0deg)); }
 	25% { @include transform(rotateY(90deg)); }
 	48% { @include transform(rotateY(90deg)); }
 	50% { @include transform(rotateY(180deg)); }
-	73%{ @include transform(rotateY(180deg)); }
+	73% { @include transform(rotateY(180deg)); }
 	75% { @include transform(rotateY(270deg)); }
 	98% { @include transform(rotateY(270deg)); }
 	100%{ @include transform(rotateY(360deg)); }
 }
-
+//**************** More About Me Animation *******************/
+$startFont:1.1em;
+$endFont:1.1em;
+@include keyframes(tada){
+	/* This is the "jump" effect for like/agree */
+	28% {@include transform(translateY(-10px)); font-size:$startFont;}
+	36% {@include transform(translateY(10px));  font-size:$startFont;}
+	44% {@include transform(translateY(-10px)); font-size:$startFont;}
+	52% {@include transform(translateY(10px));  font-size:$startFont;}
+	60% {@include transform(translateY(-10px)); font-size:$startFont;}
+	68% {@include transform(translateY(10px));  font-size:$startFont;}
+	76% {@include transform(translateY(-10px)); font-size:$startFont;}
+	84% {@include transform(translateY(10px));  font-size:$startFont;}
+	92% {@include transform(translateY(-10px)); font-size:$startFont;}
+	100%{@include transform(translateY(0px));   font-size:$endFont;}
+	/* Tada effect
+	10% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+	25% {@include transform(rotate(-5deg) scale(0.9)); font-size:$startFont;}
+	32% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+	39% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+	46% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+	53% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+	60% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+	67% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+	74% {@include transform(rotate(5deg)  scale(1));   font-size:$startFont;}
+	81% {@include transform(rotate(-5deg) scale(1));   font-size:$startFont;}
+	88% {@include transform(rotate(0deg)  scale(1));   font-size:$startFont;}
+	100%{@include transform(rotate(0deg) scale(1));    font-size:$endFont;}*/
+}
+@include keyframes(shake){
+	28% {@include transform(translateX(-10px)); font-size:$startFont;}
+	36% {@include transform(translateX(10px));  font-size:$startFont;}
+	44% {@include transform(translateX(-10px)); font-size:$startFont;}
+	52% {@include transform(translateX(10px));  font-size:$startFont;}
+	60% {@include transform(translateX(-10px)); font-size:$startFont;}
+	68% {@include transform(translateX(10px));  font-size:$startFont;}
+	76% {@include transform(translateX(-10px)); font-size:$startFont;}
+	82% {@include transform(translateX(10px));  font-size:$startFont;}
+	90% {@include transform(translateX(0px));   font-size:$startFont;}
+	100%{@include transform(translateX(0px));   font-size:$endFont; color:gray;}
+}

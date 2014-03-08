@@ -2,7 +2,7 @@ var duration = 1000;
 var faceNumber = 4;
 var mouthDelay = 1500;
 $(document).ready(function(){
-	initialFaces(faceNumber);
+	//initialFaces(faceNumber);
 	var eye = $('.eye');
 	var mouth = $('.mouth');
 	halfCircle( eye );
@@ -90,6 +90,7 @@ var cssSetting = function(obj, attr, num){
 	obj.css(attr, num);
 	obj.css('-webkit-' + attr, num);
 	obj.css('-moz-' + attr, num);
+	obj.css('-ms-' + attr, num);
 	obj.css('-o-' + attr, num);
 	obj.css(attr, num);
 };
@@ -125,7 +126,7 @@ var setWidTopLeft = function(width, top, left){
 };
 var initialFaces = function(faceNumber){
 	// fixednumber
-	var number = 10;
+	var number = 20;
 	var j=0
 	/*for(var i = 0; i < faceNumber.length; i++){
 		number += faceNumber[i]
@@ -185,7 +186,9 @@ var settings = function(){
 	$('.slider > ul > li').width( $('.slider').width());
 	var len = $('#sliderLeft > ul > li').length;
 	/******************************************* MoreAboutMe settings.js **************************************/
-	setHightByWidth($('.heart'), 1);
+	setHightByWidth($('.face'), 1);
+	setHeightByReference($('.optionsWrap'), $('.likeContainer > h1'), $(window));
+
 	/*******************************************  Contact settings settings.js ********************************/
 	//setHightByWidth($('.dialogBox'), 1);
 	setRadiusByHeight($('.cloud'), 0.5);
