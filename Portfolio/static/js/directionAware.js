@@ -47,7 +47,7 @@ $(document).ready(function(){
 	// mouseleave and mouseenter is different with mousehover and mouseout
 	// mouseleave and mouseenter won't affect the child of the animated element.
 	$('.perspective').on('mouseenter', function(event){
-			console.log('entering' + event.target);
+			//$(this).children('.introShlter').css('')
 			var d = getDirection(event, $(this));
 			removeClasses($(this).children('.introShlter'));
 			addClasses(d, $(this).children('.introShlter'), 'in');

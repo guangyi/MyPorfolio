@@ -1,0 +1,253 @@
+/** Shelter background and font color **/
+$shelterBg:#fdd1e0;
+$shelterFontColor:#FFF;
+
+/** Intro Main Part Title,font,background color **/
+$MainPartTitle:#C40000;
+$MainPartFontColor:#444;
+$MainPartBg:#FFF;
+
+/** Side Part, including each unit background, shelter and cube **/
+$sideFontColor:#FFF;
+$sideBorder:1px solid #B2B2B2;
+$sideBorderLight:1px solid #FFF;
+
+$gradientStart:#EEE;
+$gradientMiddle:#AD0000;
+$gradientEnd:#8A0000;
+
+/** cube each side color, size, font color **/
+$cubeWidth:140px;
+$cubeFontColor:#6E0000;
+$cubeLight:#FFF;
+$cubeMiddle:#DDD;
+$cubeDark:#666;
+@mixin cubeColor($light, $middle, $dark){
+	.cubeFront{
+		background:$light;
+	}
+	.cubeTop{
+		background:$middle;
+	}
+	.cubeRight{
+		background:$middle;
+	}
+	.cubeLeft{
+		background:$middle;
+	}
+	.cubeBack{
+		background:$light;
+	}
+	.cubeBottom{
+		background:$dark;
+	}
+}
+#Intro{
+	.contentWrap{
+		& h1{
+			color:$MainPartTitle;
+		}
+		.left{
+			float:left;
+			width:20%;
+			height:100%;
+		}
+	}
+}
+.middle{
+	float:left;
+	position:relative;
+	font-size:0.9em;
+	padding:5% 5% 0 5%;
+	text-align:center;
+	width:60%;
+	height:100%;
+	display:inline-block;
+	line-height:1.8em;
+	color:$MainPartFontColor;
+	@include background-image(linear-gradient(left, #fff, $gradientStart));
+	@include box-sizing(border-box);
+}
+.right{
+	float:left;
+	width:20%;
+	height:100%;
+}
+.perspective{
+	position:relative;
+	width:100%;
+	height:50%;
+	text-align:center;
+	color:$sideFontColor;
+	overflow:hidden;
+	.introShlter{
+		padding-top:1em;
+		position:absolute;
+		height:100%;
+		width:100%;
+		left:-100%;
+		top:0px;
+		line-height:1.5em;
+		z-index:10 !important;
+		color:$shelterFontColor;
+	}
+	.carve{
+		padding-top:10%;
+		margin-bottom:10%;
+	}
+	&.gra{
+		border-bottom:$sideBorderLight;
+		@include background-image(linear-gradient(left, $gradientStart $gradientMiddle));
+		@include perspective-origin(0 400px);
+		@include perspective(1000px);
+		.introShlter{
+			//@include transform(translateZ(0.8 * $cubeWidth) scale( 0.87) translateX(-4%));For safari, can use this
+			@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
+		}
+	}
+	&.free{
+		border-bottom:$sideBorder;
+		border-left:$sideBorder;
+		@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
+		@include perspective-origin(100% 380px);
+		@include perspective(800px);
+		.introShlter{
+			@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
+		}
+	}
+	&.bel{
+		border-top:$sideBorderLight;
+		@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
+		@include perspective-origin(0 340px);
+		@include perspective(800px);
+		.introShlter{
+			@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
+		}
+	}
+	&.Ihope{
+		border-left:$sideBorder;
+		@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
+		@include perspective-origin(100% 340px);
+		@include perspective(800px);
+		.introShlter{
+			@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
+		}
+	}
+}
+.cube{
+	font-size:0.7em;
+	margin-left:20%;
+	margin-top:15%;
+	position:relative;
+	float:left;
+	height:$cubeWidth;
+	width:$cubeWidth;//ifchange width, change translateZ of cubeFront too!
+	text-align:center;
+	@include transform-style(preserve-3d);
+	& div{
+		color:$cubeFontColor;
+		line-height:1.8em;
+		width:100%;
+		height:100%;
+		position:absolute;
+		padding:8% 3% 5% 3%;
+		@include box-sizing(border-box); 
+		@include border-radius(0.2em);
+	}
+	.cubeFront{
+		@include transform(translateZ(0.5 * $cubeWidth));/* should be half width,but percentage doesn't work on translateZ */
+	}
+	.cubeTop{
+		@include transform(rotateX(-90deg) translateY(-0.5 * $cubeWidth));// percentage related to width
+		-webkit-transform-origin: top center;
+		-moz-transform-origin: top center;
+		-ms-transform-origin: top center;
+		-o-transform-origin: top center;
+		transform-origin: top center;
+	}
+	.cubeRight{
+		@include transform(rotateY(-270deg) translateX(0.5 * $cubeWidth));
+		-webkit-transform-origin: top right;
+		-moz-transform-origin: top right;
+		-ms-transform-origin: top right;
+		-o-transform-origin: top right;
+		transform-origin: top right;
+	}
+	.cubeLeft{
+		@include transform(rotateY(270deg)  translateX(-0.5 * $cubeWidth));
+		-webkit-transform-origin: center left;
+		-moz-transform-origin: center left;
+		-ms-transform-origin: center left;
+		-o-transform-origin: center left;
+		transform-origin: center left;
+	}
+	.cubeBottom{
+		@include transform(rotateX(90deg) translateY(0.5 * $cubeWidth));
+		-webkit-transform-origin: bottom center;
+		-moz-transform-origin: bottom center;
+		-ms-transform-origin: bottom center;
+		-o-transform-origin: bottom center;
+		transform-origin: bottom center;
+	}
+	.cubeBack{
+		@include transform( translateZ(-0.5 * $cubeWidth) rotateY(180deg) );
+	}
+	&.graduated{
+
+		& div{
+			padding-top:25%;
+			}
+		@include cubeColor($cubeLight, $cubeMiddle, $cubeDark);
+		@include animation(spin 40s infinite linear);
+	}
+	&.frontEnd{
+		& div{
+			padding-top:20%;
+		}
+		margin-left:30%;
+		@include cubeColor($cubeLight, $cubeMiddle, $cubeDark);
+		@include animation(spin 40s  2s infinite linear);
+	}
+	&.believe{
+		& div{
+			padding-top:40%;
+		}
+		@include cubeColor($cubeLight, $cubeMiddle, $cubeDark);
+		@include animation(spin 40s  4s infinite linear);
+	}
+	&.hope{
+		& div{
+			padding-top:20%;
+		}
+		margin-left:30%;
+		@include cubeColor($cubeLight, $cubeMiddle, $cubeDark);
+		@include animation(spin 40s 6s infinite linear);
+	}
+}
+.introShlter{
+	//Mouse direction aware animation
+	&.in_top{
+		@include animation('intro_in_top 1s forwards');
+	}
+	&.in_right{
+		@include animation('intro_in_right 1s forwards');
+	}
+	&.in_bottom{
+		@include animation('intro_in_bottom 1s forwards');
+	}
+	&.in_left{
+		@include animation('intro_in_left 1s forwards');
+	}
+	&.out_top{
+		@include animation('intro_out_top 1s forwards');
+	}
+	&.out_bottom{
+		@include animation('intro_out_bottom 1s forwards');
+	}
+	&.out_left{
+		@include animation('intro_out_left 1s forwards');
+	}
+	&.out_right{
+		@include animation('intro_out_right 1s forwards');
+	}
+}

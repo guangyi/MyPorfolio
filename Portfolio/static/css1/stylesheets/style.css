@@ -2946,7 +2946,7 @@ body {
 }
 
 /****************************************************** About *******************************************/
-/* line 203, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 #profile {
   position: relative;
   margin-right: auto;
@@ -2962,7 +2962,7 @@ body {
   border-radius: 50%;
   box-shadow: 0px 0px 20px 0px #fff;
 }
-/* line 214, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 #profile:after {
   position: absolute;
   content: '';
@@ -2982,7 +2982,7 @@ body {
   background-image: radial-gradient(50% 50%, rgba(255, 255, 255, 0) 85%, #ffffff 100%);
 }
 
-/* line 227, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 #speech_bubble {
   margin-left: auto;
   margin-right: auto;
@@ -3002,7 +3002,7 @@ body {
   border-radius: 0.8em;
   z-index: 2;
 }
-/* line 242, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 #speech_bubble:before, #speech_bubble:after {
   content: '';
   position: absolute;
@@ -3017,20 +3017,20 @@ body {
   transform-origin: 0 0;
   transform: rotate(-45deg);*/
 }
-/* line 256, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 #speech_bubble:before {
   border-right: 5px solid white;
   height: 1em;
   z-index: 3;
 }
-/* line 261, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 #speech_bubble:after {
   border-right: 5px solid #a60026;
   height: 2em;
   z-index: 1;
 }
 
-/* line 268, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 #speech_bubble_arrowup {
   margin-left: auto;
   margin-right: auto;
@@ -3050,7 +3050,7 @@ body {
   border-radius: 0.8em;
   z-index: 1;
 }
-/* line 283, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
 #speech_bubble_arrowup:before, #speech_bubble_arrowup:after {
   content: '';
   position: absolute;
@@ -3058,7 +3058,7 @@ body {
   width: 0px;
   height: 0px;
 }
-/* line 290, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 #speech_bubble_arrowup:before {
   top: -31px;
   left: 434px;
@@ -3067,7 +3067,7 @@ body {
   border-bottom: 31px solid #a60026;
   z-index: 3;
 }
-/* line 298, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 #speech_bubble_arrowup:after {
   top: -40px;
   left: 425px;
@@ -3078,28 +3078,22 @@ body {
 }
 
 /*************************************************** Intro *****************************************/
-/* line 341, ../sass/style.scss */
-#Intro .contentWrap {
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
-}
-/* line 343, ../sass/style.scss */
+/** Shelter background and font color **/
+/** Intro Main Part Title,font,background color **/
+/** Side Part, including each unit background, shelter and cube **/
+/** cube each side color, size, font color **/
+/* line 47, ../sass/Intro.scss */
 #Intro .contentWrap h1 {
-  color: #C40000;
+  color: #c40000;
 }
-
-/* line 348, ../sass/style.scss */
-.left {
+/* line 50, ../sass/Intro.scss */
+#Intro .contentWrap .left {
   float: left;
-  display: inline-block;
   width: 20%;
   height: 100%;
 }
 
-/* line 354, ../sass/style.scss */
+/* line 57, ../sass/Intro.scss */
 .middle {
   float: left;
   position: relative;
@@ -3110,36 +3104,34 @@ body {
   height: 100%;
   display: inline-block;
   line-height: 1.8em;
-  color: #444;
-  background: #fff;
+  color: #444444;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -o-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: linear-gradient(left, #ffffff, #eeeeee);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border-top: 2px solid #666;
-  border-bottom: 2px solid #666;
 }
 
-/* line 372, ../sass/style.scss */
+/* line 71, ../sass/Intro.scss */
 .right {
-  float: right;
+  float: left;
   width: 20%;
   height: 100%;
-  display: inline-block;
 }
 
-/* line 378, ../sass/style.scss */
+/* line 76, ../sass/Intro.scss */
 .perspective {
   position: relative;
   width: 100%;
   height: 50%;
   text-align: center;
-  color: #fff;
+  color: white;
   overflow: hidden;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
-/* line 386, ../sass/style.scss */
+/* line 83, ../sass/Intro.scss */
 .perspective .introShlter {
   padding-top: 1em;
   position: absolute;
@@ -3148,52 +3140,45 @@ body {
   left: -100%;
   top: 0px;
   line-height: 1.5em;
-  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #ffffff), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(right, #ffffff, #ad0000);
-  background-image: -moz-linear-gradient(right, #ffffff, #ad0000);
-  background-image: -o-linear-gradient(right, #ffffff, #ad0000);
-  background-image: linear-gradient(right, #ffffff, #ad0000);
-  z-index: 100;
-  opacity: 1;
+  z-index: 10 !important;
+  color: white;
 }
-/* line 398, ../sass/style.scss */
+/* line 94, ../sass/Intro.scss */
 .perspective .carve {
   padding-top: 10%;
   margin-bottom: 10%;
 }
-/* line 402, ../sass/style.scss */
+/* line 98, ../sass/Intro.scss */
 .perspective.gra {
-  border-left: 2px solid gray;
-  border-bottom: none;
-  display: inline-block;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(2%, #ffffff), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #ffffff 2%, #ad0000);
-  background-image: -moz-linear-gradient(left, #ffffff 2%, #ad0000);
-  background-image: -o-linear-gradient(left, #ffffff 2%, #ad0000);
-  background-image: linear-gradient(left, #ffffff 2%, #ad0000);
-  -webkit-perspective-origin: 0% 380px;
-  -moz-perspective-origin: 0% 380px;
-  -ms-perspective-origin: 0% 380px;
-  -o-perspective-origin: 0% 380px;
-  perspective-origin: 0% 380px;
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
+  border-bottom: 1px solid white;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ad0000));
+  background-image: -webkit-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -moz-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -o-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: linear-gradient(left, #eeeeee, #ad0000);
+  -webkit-perspective-origin: 0 400px;
+  -moz-perspective-origin: 0 400px;
+  -ms-perspective-origin: 0 400px;
+  -o-perspective-origin: 0 400px;
+  perspective-origin: 0 400px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
 }
-/* line 412, ../sass/style.scss */
+/* line 103, ../sass/Intro.scss */
 .perspective.gra .introShlter {
-  color: #fff;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #ffffff, #ad0000);
-  background-image: -moz-linear-gradient(left, #ffffff, #ad0000);
-  background-image: -o-linear-gradient(left, #ffffff, #ad0000);
-  background-image: linear-gradient(left, #ffffff, #ad0000);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ad0000));
+  background-image: -webkit-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -moz-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -o-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: linear-gradient(left, #eeeeee, #ad0000);
 }
-/* line 417, ../sass/style.scss */
+/* line 108, ../sass/Intro.scss */
 .perspective.free {
-  display: inline-block;
+  border-bottom: 1px solid #b2b2b2;
+  border-left: 1px solid #b2b2b2;
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ad0000), color-stop(100%, #8a0000));
   background-image: -webkit-linear-gradient(left, #ad0000, #8a0000);
   background-image: -moz-linear-gradient(left, #ad0000, #8a0000);
@@ -3210,46 +3195,44 @@ body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 425, ../sass/style.scss */
+/* line 114, ../sass/Intro.scss */
 .perspective.free .introShlter {
-  color: #fff;
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ad0000), color-stop(100%, #8a0000));
   background-image: -webkit-linear-gradient(left, #ad0000, #8a0000);
   background-image: -moz-linear-gradient(left, #ad0000, #8a0000);
   background-image: -o-linear-gradient(left, #ad0000, #8a0000);
   background-image: linear-gradient(left, #ad0000, #8a0000);
 }
-/* line 430, ../sass/style.scss */
+/* line 118, ../sass/Intro.scss */
 .perspective.bel {
-  border-left: 2px solid gray;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(2%, #ffffff), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #ffffff 2%, #ad0000);
-  background-image: -moz-linear-gradient(left, #ffffff 2%, #ad0000);
-  background-image: -o-linear-gradient(left, #ffffff 2%, #ad0000);
-  background-image: linear-gradient(left, #ffffff 2%, #ad0000);
-  -webkit-perspective-origin: 0% 340px;
-  -moz-perspective-origin: 0% 340px;
-  -ms-perspective-origin: 0% 340px;
-  -o-perspective-origin: 0% 340px;
-  perspective-origin: 0% 340px;
+  border-top: 1px solid white;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ad0000));
+  background-image: -webkit-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -moz-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -o-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: linear-gradient(left, #eeeeee, #ad0000);
+  -webkit-perspective-origin: 0 340px;
+  -moz-perspective-origin: 0 340px;
+  -ms-perspective-origin: 0 340px;
+  -o-perspective-origin: 0 340px;
+  perspective-origin: 0 340px;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   -ms-perspective: 800px;
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 439, ../sass/style.scss */
+/* line 123, ../sass/Intro.scss */
 .perspective.bel .introShlter {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #ffffff, #ad0000);
-  background-image: -moz-linear-gradient(left, #ffffff, #ad0000);
-  background-image: -o-linear-gradient(left, #ffffff, #ad0000);
-  background-image: linear-gradient(left, #ffffff, #ad0000);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ad0000));
+  background-image: -webkit-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -moz-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -o-linear-gradient(left, #eeeeee, #ad0000);
+  background-image: linear-gradient(left, #eeeeee, #ad0000);
 }
-/* line 443, ../sass/style.scss */
-.perspective.Hope {
-  display: inline-block;
-  float: right;
+/* line 127, ../sass/Intro.scss */
+.perspective.Ihope {
+  border-left: 1px solid #b2b2b2;
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ad0000), color-stop(100%, #8a0000));
   background-image: -webkit-linear-gradient(left, #ad0000, #8a0000);
   background-image: -moz-linear-gradient(left, #ad0000, #8a0000);
@@ -3266,9 +3249,8 @@ body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 452, ../sass/style.scss */
-.perspective.Hope .introShlter {
-  color: #fff;
+/* line 132, ../sass/Intro.scss */
+.perspective.Ihope .introShlter {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ad0000), color-stop(100%, #8a0000));
   background-image: -webkit-linear-gradient(left, #ad0000, #8a0000);
   background-image: -moz-linear-gradient(left, #ad0000, #8a0000);
@@ -3276,11 +3258,7 @@ body {
   background-image: linear-gradient(left, #ad0000, #8a0000);
 }
 
-/*
-.cube {
-	@include animation(spin 8s infinite linear);
-}*/
-/* line 463, ../sass/style.scss */
+/* line 137, ../sass/Intro.scss */
 .cube {
   font-size: 0.7em;
   margin-left: 20%;
@@ -3296,9 +3274,9 @@ body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 474, ../sass/style.scss */
+/* line 147, ../sass/Intro.scss */
 .cube div {
-  color: #AD0000;
+  color: #6e0000;
   line-height: 1.8em;
   width: 100%;
   height: 100%;
@@ -3313,7 +3291,7 @@ body {
   -o-border-radius: 0.2em;
   border-radius: 0.2em;
 }
-/* line 485, ../sass/style.scss */
+/* line 157, ../sass/Intro.scss */
 .cube .cubeFront {
   -webkit-transform: translateZ(70px);
   -moz-transform: translateZ(70px);
@@ -3322,59 +3300,59 @@ body {
   transform: translateZ(70px);
   /* should be half width,but percentage doesn't work on translateZ */
 }
-/* line 489, ../sass/style.scss */
+/* line 160, ../sass/Intro.scss */
 .cube .cubeTop {
   -webkit-transform: rotateX(-90deg) translateY(-70px);
   -moz-transform: rotateX(-90deg) translateY(-70px);
   -ms-transform: rotateX(-90deg) translateY(-70px);
   -o-transform: rotateX(-90deg) translateY(-70px);
   transform: rotateX(-90deg) translateY(-70px);
-  -webkit-transform-origin: top center 0 50%;
-  -moz-transform-origin: top center 0 50%;
-  -ms-transform-origin: top center 0 50%;
-  -o-transform-origin: top center 0 50%;
-  transform-origin: top center 0 50%;
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -ms-transform-origin: top center;
+  -o-transform-origin: top center;
+  transform-origin: top center;
 }
-/* line 494, ../sass/style.scss */
+/* line 168, ../sass/Intro.scss */
 .cube .cubeRight {
   -webkit-transform: rotateY(-270deg) translateX(70px);
   -moz-transform: rotateY(-270deg) translateX(70px);
   -ms-transform: rotateY(-270deg) translateX(70px);
   -o-transform: rotateY(-270deg) translateX(70px);
   transform: rotateY(-270deg) translateX(70px);
-  -webkit-transform-origin: top right 0 50%;
-  -moz-transform-origin: top right 0 50%;
-  -ms-transform-origin: top right 0 50%;
-  -o-transform-origin: top right 0 50%;
-  transform-origin: top right 0 50%;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  -o-transform-origin: top right;
+  transform-origin: top right;
 }
-/* line 499, ../sass/style.scss */
+/* line 176, ../sass/Intro.scss */
 .cube .cubeLeft {
   -webkit-transform: rotateY(270deg) translateX(-70px);
   -moz-transform: rotateY(270deg) translateX(-70px);
   -ms-transform: rotateY(270deg) translateX(-70px);
   -o-transform: rotateY(270deg) translateX(-70px);
   transform: rotateY(270deg) translateX(-70px);
-  -webkit-transform-origin: center left 0 50%;
-  -moz-transform-origin: center left 0 50%;
-  -ms-transform-origin: center left 0 50%;
-  -o-transform-origin: center left 0 50%;
-  transform-origin: center left 0 50%;
+  -webkit-transform-origin: center left;
+  -moz-transform-origin: center left;
+  -ms-transform-origin: center left;
+  -o-transform-origin: center left;
+  transform-origin: center left;
 }
-/* line 503, ../sass/style.scss */
+/* line 184, ../sass/Intro.scss */
 .cube .cubeBottom {
   -webkit-transform: rotateX(90deg) translateY(70px);
   -moz-transform: rotateX(90deg) translateY(70px);
   -ms-transform: rotateX(90deg) translateY(70px);
   -o-transform: rotateX(90deg) translateY(70px);
   transform: rotateX(90deg) translateY(70px);
-  -webkit-transform-origin: bottom center 0 50%;
-  -moz-transform-origin: bottom center 0 50%;
-  -ms-transform-origin: bottom center 0 50%;
-  -o-transform-origin: bottom center 0 50%;
-  transform-origin: bottom center 0 50%;
+  -webkit-transform-origin: bottom center;
+  -moz-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  -o-transform-origin: bottom center;
+  transform-origin: bottom center;
 }
-/* line 507, ../sass/style.scss */
+/* line 192, ../sass/Intro.scss */
 .cube .cubeBack {
   -webkit-transform: translateZ(-70px) rotateY(180deg);
   -moz-transform: translateZ(-70px) rotateY(180deg);
@@ -3382,44 +3360,42 @@ body {
   -o-transform: translateZ(-70px) rotateY(180deg);
   transform: translateZ(-70px) rotateY(180deg);
 }
-/* line 510, ../sass/style.scss */
+/* line 195, ../sass/Intro.scss */
 .cube.graduated {
   -webkit-animation: spin 40s infinite linear;
   -o-animation: spin 40s infinite linear;
   -moz-animation: spin 40s infinite linear;
   animation: spin 40s infinite linear;
 }
-/* line 512, ../sass/style.scss */
+/* line 197, ../sass/Intro.scss */
 .cube.graduated div {
   padding-top: 25%;
 }
-/* line 319, ../sass/style.scss */
+/* line 26, ../sass/Intro.scss */
 .cube.graduated .cubeFront {
-  color: #ad0000;
-  background: #eeeeee;
+  background: white;
 }
-/* line 323, ../sass/style.scss */
+/* line 29, ../sass/Intro.scss */
 .cube.graduated .cubeTop {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 326, ../sass/style.scss */
+/* line 32, ../sass/Intro.scss */
 .cube.graduated .cubeRight {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 329, ../sass/style.scss */
+/* line 35, ../sass/Intro.scss */
 .cube.graduated .cubeLeft {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 332, ../sass/style.scss */
+/* line 38, ../sass/Intro.scss */
 .cube.graduated .cubeBack {
-  color: #ad0000;
-  background: #eeeeee;
+  background: white;
 }
-/* line 336, ../sass/style.scss */
+/* line 41, ../sass/Intro.scss */
 .cube.graduated .cubeBottom {
   background: #666666;
 }
-/* line 520, ../sass/style.scss */
+/* line 203, ../sass/Intro.scss */
 .cube.frontEnd {
   margin-left: 30%;
   -webkit-animation: spin 40s 2s infinite linear;
@@ -3427,74 +3403,70 @@ body {
   -moz-animation: spin 40s 2s infinite linear;
   animation: spin 40s 2s infinite linear;
 }
-/* line 522, ../sass/style.scss */
+/* line 204, ../sass/Intro.scss */
 .cube.frontEnd div {
   padding-top: 20%;
 }
-/* line 319, ../sass/style.scss */
+/* line 26, ../sass/Intro.scss */
 .cube.frontEnd .cubeFront {
-  color: #ad0000;
-  background: #eeeeee;
+  background: white;
 }
-/* line 323, ../sass/style.scss */
+/* line 29, ../sass/Intro.scss */
 .cube.frontEnd .cubeTop {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 326, ../sass/style.scss */
+/* line 32, ../sass/Intro.scss */
 .cube.frontEnd .cubeRight {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 329, ../sass/style.scss */
+/* line 35, ../sass/Intro.scss */
 .cube.frontEnd .cubeLeft {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 332, ../sass/style.scss */
+/* line 38, ../sass/Intro.scss */
 .cube.frontEnd .cubeBack {
-  color: #ad0000;
-  background: #eeeeee;
+  background: white;
 }
-/* line 336, ../sass/style.scss */
+/* line 41, ../sass/Intro.scss */
 .cube.frontEnd .cubeBottom {
   background: #666666;
 }
-/* line 530, ../sass/style.scss */
+/* line 211, ../sass/Intro.scss */
 .cube.believe {
   -webkit-animation: spin 40s 4s infinite linear;
   -o-animation: spin 40s 4s infinite linear;
   -moz-animation: spin 40s 4s infinite linear;
   animation: spin 40s 4s infinite linear;
 }
-/* line 532, ../sass/style.scss */
+/* line 212, ../sass/Intro.scss */
 .cube.believe div {
   padding-top: 40%;
 }
-/* line 319, ../sass/style.scss */
+/* line 26, ../sass/Intro.scss */
 .cube.believe .cubeFront {
-  color: #ad0000;
-  background: #eeeeee;
+  background: white;
 }
-/* line 323, ../sass/style.scss */
+/* line 29, ../sass/Intro.scss */
 .cube.believe .cubeTop {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 326, ../sass/style.scss */
+/* line 32, ../sass/Intro.scss */
 .cube.believe .cubeRight {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 329, ../sass/style.scss */
+/* line 35, ../sass/Intro.scss */
 .cube.believe .cubeLeft {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 332, ../sass/style.scss */
+/* line 38, ../sass/Intro.scss */
 .cube.believe .cubeBack {
-  color: #ad0000;
-  background: #eeeeee;
+  background: white;
 }
-/* line 336, ../sass/style.scss */
+/* line 41, ../sass/Intro.scss */
 .cube.believe .cubeBottom {
   background: #666666;
 }
-/* line 539, ../sass/style.scss */
+/* line 218, ../sass/Intro.scss */
 .cube.hope {
   margin-left: 30%;
   -webkit-animation: spin 40s 6s infinite linear;
@@ -3502,87 +3474,85 @@ body {
   -moz-animation: spin 40s 6s infinite linear;
   animation: spin 40s 6s infinite linear;
 }
-/* line 541, ../sass/style.scss */
+/* line 219, ../sass/Intro.scss */
 .cube.hope div {
   padding-top: 20%;
 }
-/* line 319, ../sass/style.scss */
+/* line 26, ../sass/Intro.scss */
 .cube.hope .cubeFront {
-  color: #ad0000;
-  background: #eeeeee;
+  background: white;
 }
-/* line 323, ../sass/style.scss */
+/* line 29, ../sass/Intro.scss */
 .cube.hope .cubeTop {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 326, ../sass/style.scss */
+/* line 32, ../sass/Intro.scss */
 .cube.hope .cubeRight {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 329, ../sass/style.scss */
+/* line 35, ../sass/Intro.scss */
 .cube.hope .cubeLeft {
-  background: #cfcfcf;
+  background: #dddddd;
 }
-/* line 332, ../sass/style.scss */
+/* line 38, ../sass/Intro.scss */
 .cube.hope .cubeBack {
-  color: #ad0000;
-  background: #eeeeee;
+  background: white;
 }
-/* line 336, ../sass/style.scss */
+/* line 41, ../sass/Intro.scss */
 .cube.hope .cubeBottom {
   background: #666666;
 }
 
-/* line 552, ../sass/style.scss */
+/* line 229, ../sass/Intro.scss */
 .introShlter.in_top {
   -webkit-animation: intro_in_top 1s forwards;
   -o-animation: intro_in_top 1s forwards;
   -moz-animation: intro_in_top 1s forwards;
   animation: intro_in_top 1s forwards;
 }
-/* line 555, ../sass/style.scss */
+/* line 232, ../sass/Intro.scss */
 .introShlter.in_right {
   -webkit-animation: intro_in_right 1s forwards;
   -o-animation: intro_in_right 1s forwards;
   -moz-animation: intro_in_right 1s forwards;
   animation: intro_in_right 1s forwards;
 }
-/* line 558, ../sass/style.scss */
+/* line 235, ../sass/Intro.scss */
 .introShlter.in_bottom {
   -webkit-animation: intro_in_bottom 1s forwards;
   -o-animation: intro_in_bottom 1s forwards;
   -moz-animation: intro_in_bottom 1s forwards;
   animation: intro_in_bottom 1s forwards;
 }
-/* line 561, ../sass/style.scss */
+/* line 238, ../sass/Intro.scss */
 .introShlter.in_left {
   -webkit-animation: intro_in_left 1s forwards;
   -o-animation: intro_in_left 1s forwards;
   -moz-animation: intro_in_left 1s forwards;
   animation: intro_in_left 1s forwards;
 }
-/* line 564, ../sass/style.scss */
+/* line 241, ../sass/Intro.scss */
 .introShlter.out_top {
   -webkit-animation: intro_out_top 1s forwards;
   -o-animation: intro_out_top 1s forwards;
   -moz-animation: intro_out_top 1s forwards;
   animation: intro_out_top 1s forwards;
 }
-/* line 567, ../sass/style.scss */
+/* line 244, ../sass/Intro.scss */
 .introShlter.out_bottom {
   -webkit-animation: intro_out_bottom 1s forwards;
   -o-animation: intro_out_bottom 1s forwards;
   -moz-animation: intro_out_bottom 1s forwards;
   animation: intro_out_bottom 1s forwards;
 }
-/* line 570, ../sass/style.scss */
+/* line 247, ../sass/Intro.scss */
 .introShlter.out_left {
   -webkit-animation: intro_out_left 1s forwards;
   -o-animation: intro_out_left 1s forwards;
   -moz-animation: intro_out_left 1s forwards;
   animation: intro_out_left 1s forwards;
 }
-/* line 573, ../sass/style.scss */
+/* line 250, ../sass/Intro.scss */
 .introShlter.out_right {
   -webkit-animation: intro_out_right 1s forwards;
   -o-animation: intro_out_right 1s forwards;
@@ -3591,7 +3561,7 @@ body {
 }
 
 /********************************************** More About Me ***************************************/
-/* line 579, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .likeContainer {
   height: 100%;
   width: auto;
@@ -3742,7 +3712,7 @@ body {
   	@include transform-origin(center center 0);
   }*/
 }
-/* line 585, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 .likeContainer .optionsWrap {
   width: 100%;
   background: white;
@@ -3757,7 +3727,7 @@ body {
   perspective: 500px;
   text-align: center;
 }
-/* line 593, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .likeContainer .optionsWrap .options {
   width: 100%;
   margin: 0;
@@ -3765,7 +3735,7 @@ body {
   height: 100%;
   overflow: scroll;
 }
-/* line 599, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .likeContainer .optionsWrap .options .heart {
   position: absolute;
   width: 8%;
@@ -3775,7 +3745,7 @@ body {
   float: left;
   margin: 0 3% 0 0;
 }
-/* line 607, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 .likeContainer .optionsWrap .options .heart:before {
   content: "";
   position: absolute;
@@ -3795,7 +3765,7 @@ body {
   -o-border-bottom-left-radius: 100%;
   border-bottom-left-radius: 100%;
 }
-/* line 619, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 .likeContainer .optionsWrap .options .option {
   display: inline-block;
   height: auto;
@@ -3810,7 +3780,7 @@ body {
   -o-transition: text-shadow 1.5s 2s;
   transition: text-shadow 1.5s 2s;
 }
-/* line 628, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .likeContainer .optionsWrap .options .option span {
   -webkit-transition: text-shadow 1.5s;
   -webkit-transition-delay: 2s;
@@ -3819,7 +3789,7 @@ body {
   transition: text-shadow 1.5s 2s;
   text-shadow: 0px 0px 30px #ff0000;
 }
-/* line 633, ../sass/style.scss */
+/* line 363, ../sass/style.scss */
 .likeContainer .optionsWrap .options .tada {
   -webkit-transform-origin: center center 0 50%;
   -moz-transform-origin: center center 0 50%;
@@ -3831,14 +3801,14 @@ body {
   -moz-animation: tada 1.3s forwards;
   animation: tada 1.3s forwards;
 }
-/* line 637, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 .likeContainer .optionsWrap .options .shake {
   -webkit-animation: shake 1s forwards;
   -o-animation: shake 1s forwards;
   -moz-animation: shake 1s forwards;
   animation: shake 1s forwards;
 }
-/* line 644, ../sass/style.scss */
+/* line 374, ../sass/style.scss */
 .likeContainer .face {
   height: 100%;
   z-index: 10;
@@ -3856,7 +3826,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 659, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 .likeContainer .eye {
   		/*
   		position:absolute;//doesn't take palces
@@ -3881,15 +3851,15 @@ body {
   height: 20%;
   background: #000;
 }
-/* line 683, ../sass/style.scss */
+/* line 413, ../sass/style.scss */
 .likeContainer .eye.leftEye {
   left: 28%;
 }
-/* line 686, ../sass/style.scss */
+/* line 416, ../sass/style.scss */
 .likeContainer .eye.rightEye {
   left: 55%;
 }
-/* line 691, ../sass/style.scss */
+/* line 421, ../sass/style.scss */
 .likeContainer .mouths {
   width: 30%;
   margin-left: auto;
@@ -3907,12 +3877,12 @@ body {
 }
 
 /***********************************************  Projects ****************************************/
-/* line 857, ../sass/style.scss */
+/* line 587, ../sass/style.scss */
 #Experiments .row {
   margin: auto;
 }
 
-/* line 861, ../sass/style.scss */
+/* line 591, ../sass/style.scss */
 .projectWrapper {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffe440), color-stop(50%, #9ee0ff), color-stop(100%, #f16c97));
   background-image: -webkit-linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
@@ -3924,7 +3894,7 @@ body {
   text-align: center;
 }
 
-/* line 869, ../sass/style.scss */
+/* line 599, ../sass/style.scss */
 .projectFoot {
   position: absolute;
   background: transparent;
@@ -3937,7 +3907,7 @@ body {
   -moz-box-shadow: 3px 0px -3px -3px #666666;
   box-shadow: 3px 0px -3px -3px #666666;
 }
-/* line 880, ../sass/style.scss */
+/* line 610, ../sass/style.scss */
 .projectFoot .dialog {
   position: relative;
   color: #666;
@@ -3954,7 +3924,7 @@ body {
   box-shadow: 2px -2px 3px 1px #666666;
 }
 
-/* line 896, ../sass/style.scss */
+/* line 626, ../sass/style.scss */
 .clip {
   z-index: 2;
   position: relative;
@@ -3974,7 +3944,7 @@ body {
   
   	}*/
 }
-/* line 901, ../sass/style.scss */
+/* line 631, ../sass/style.scss */
 .clip:before {
   content: "";
   position: absolute;
@@ -4004,7 +3974,7 @@ body {
   border-left: 2px solid rgba(255, 255, 255, 0.8);
 }
 
-/* line 929, ../sass/style.scss */
+/* line 659, ../sass/style.scss */
 .buttonWrap {
   position: absolute;
   left: 0;
@@ -4018,13 +3988,13 @@ body {
   perspective: 400px;
   float: right;
 }
-/* line 938, ../sass/style.scss */
+/* line 668, ../sass/style.scss */
 .buttonWrap .load {
   width: 50%;
   margin: auto;
   color: #fff;
 }
-/* line 943, ../sass/style.scss */
+/* line 673, ../sass/style.scss */
 .buttonWrap .test {
   position: relative;
   width: 40%;
@@ -4032,7 +4002,7 @@ body {
   background: #fff;
 }
 
-/* line 951, ../sass/style.scss */
+/* line 681, ../sass/style.scss */
 .loadButton {
   margin: auto;
   display: inline-block;
@@ -4049,32 +4019,32 @@ body {
   border: 3px solid #bae847;
   border-bottom-color: #537d00;
 }
-/* line 964, ../sass/style.scss */
+/* line 694, ../sass/style.scss */
 .loadButton:hover {
   border-color: #537d00;
 }
-/* line 967, ../sass/style.scss */
+/* line 697, ../sass/style.scss */
 .loadButton:before {
   content: '';
   position: absolute;
 }
 
-/* line 972, ../sass/style.scss */
+/* line 702, ../sass/style.scss */
 .projectWrapper .projects:nth-last-of-type(-n+4) {
   margin-top: 15%;
 }
 
-/* line 975, ../sass/style.scss */
+/* line 705, ../sass/style.scss */
 .projects {
   float: left;
   width: 21%;
   margin: 2% 0 0 3%;
 }
-/* line 980, ../sass/style.scss */
+/* line 710, ../sass/style.scss */
 .projects:nth-child(1) {
   margin-left: 5%;
 }
-/* line 983, ../sass/style.scss */
+/* line 713, ../sass/style.scss */
 .projects .description {
   box-shadow: 1px #f2f2f2;
   position: relative;
@@ -4099,7 +4069,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 995, ../sass/style.scss */
+/* line 725, ../sass/style.scss */
 .projects .description .proShelter {
   position: absolute;
   width: 100%;
@@ -4108,12 +4078,12 @@ body {
   z-index: 1;
   overflow: hidden;
 }
-/* line 1006, ../sass/style.scss */
+/* line 736, ../sass/style.scss */
 .projects .description .proShelter img {
   max-width: 100%;
   max-width: 100%;
 }
-/* line 1011, ../sass/style.scss */
+/* line 741, ../sass/style.scss */
 .projects .description .descrpt {
   position: absolute;
   overflow: hidden;
@@ -4124,7 +4094,7 @@ body {
   opacity: 0.9;
   text-align: center;
 }
-/* line 1027, ../sass/style.scss */
+/* line 757, ../sass/style.scss */
 .projects .description .descrpt h3 {
   margin-left: 0.5em;
   margin-right: 0.5em;
@@ -4132,7 +4102,7 @@ body {
   line-height: 1.2em;
   font-size: 0.9em;
 }
-/* line 1037, ../sass/style.scss */
+/* line 767, ../sass/style.scss */
 .projects .description .top, .projects .description .top img {
   -webkit-border-top-left-radius: 0.3em;
   -moz-border-top-left-radius: 0.3em;
@@ -4145,7 +4115,7 @@ body {
   -o-border-top-right-radius: 0.3em;
   border-top-right-radius: 0.3em;
 }
-/* line 1041, ../sass/style.scss */
+/* line 771, ../sass/style.scss */
 .projects .description .down {
   top: 50%;
   -webkit-border-bottom-left-radius: 0.3em;
@@ -4159,7 +4129,7 @@ body {
   -o-border-bottom-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
 }
-/* line 1045, ../sass/style.scss */
+/* line 775, ../sass/style.scss */
 .projects .description .down img {
   position: relative;
   top: -100%;
@@ -4174,12 +4144,12 @@ body {
   -o-border-bottom-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
 }
-/* line 1051, ../sass/style.scss */
+/* line 781, ../sass/style.scss */
 .projects .description .down h3 {
   position: relative;
   top: -100%;
 }
-/* line 1056, ../sass/style.scss */
+/* line 786, ../sass/style.scss */
 .projects .description .in_top, .projects .description .in_right {
   -webkit-transform-origin: 50% 100% 0;
   -moz-transform-origin: 50% 100% 0;
@@ -4191,7 +4161,7 @@ body {
   -moz-animation: pro_in_top 0.5s forwards;
   animation: pro_in_top 0.5s forwards;
 }
-/* line 1061, ../sass/style.scss */
+/* line 791, ../sass/style.scss */
 .projects .description .in_bottom, .projects .description .in_left {
   -webkit-transform-origin: 50% 0 0;
   -moz-transform-origin: 50% 0 0;
@@ -4203,7 +4173,7 @@ body {
   -moz-animation: pro_in_bottom 0.5s forwards;
   animation: pro_in_bottom 0.5s forwards;
 }
-/* line 1065, ../sass/style.scss */
+/* line 795, ../sass/style.scss */
 .projects .description .out_top, .projects .description .out_right {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -4220,7 +4190,7 @@ body {
   -moz-animation: pro_out_top 0.5s 0.3s forwards;
   animation: pro_out_top 0.5s 0.3s forwards;
 }
-/* line 1070, ../sass/style.scss */
+/* line 800, ../sass/style.scss */
 .projects .description .out_bottom, .projects .description .out_left {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -4237,7 +4207,7 @@ body {
   -moz-animation: pro_out_bottom 0.5s 0.3s forwards;
   animation: pro_out_bottom 0.5s 0.3s forwards;
 }
-/* line 1075, ../sass/style.scss */
+/* line 805, ../sass/style.scss */
 .projects .description .rotate_in_bottom, .projects .description .rotate_in_left {
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
@@ -4256,7 +4226,7 @@ body {
   -moz-animation: rotate_in_bottom 0.5s 0.3s forwards;
   animation: rotate_in_bottom 0.5s 0.3s forwards;
 }
-/* line 1082, ../sass/style.scss */
+/* line 812, ../sass/style.scss */
 .projects .description .rotate_in_top, .projects .description .rotate_in_right {
   z-index: 1;
   opacity: 0;
@@ -4275,7 +4245,7 @@ body {
   -moz-animation: rotate_in_top 0.5s 0.3s forwards;
   animation: rotate_in_top 0.5s 0.3s forwards;
 }
-/* line 1089, ../sass/style.scss */
+/* line 819, ../sass/style.scss */
 .projects .description .rotate_out_top, .projects .description .rotate_out_right {
   z-index: 1;
   -webkit-transform-origin: 50% 0 0;
@@ -4288,7 +4258,7 @@ body {
   -moz-animation: rotate_out_top 0.5s forwards;
   animation: rotate_out_top 0.5s forwards;
 }
-/* line 1094, ../sass/style.scss */
+/* line 824, ../sass/style.scss */
 .projects .description .rotate_out_bottom, .projects .description .rotate_out_left {
   z-index: 1;
   -webkit-transform-origin: 50% 100% 0;
@@ -4301,7 +4271,7 @@ body {
   -moz-animation: rotate_out_bottom 0.5s  forwards;
   animation: rotate_out_bottom 0.5s  forwards;
 }
-/* line 1100, ../sass/style.scss */
+/* line 830, ../sass/style.scss */
 .projects .caption {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4321,19 +4291,19 @@ body {
   background: #fff;
   text-align: center;
 }
-/* line 1108, ../sass/style.scss */
+/* line 838, ../sass/style.scss */
 .projects .caption h3 {
   color: #558c00;
   font-size: 0.75em;
   line-height: 2em;
 }
-/* line 1113, ../sass/style.scss */
+/* line 843, ../sass/style.scss */
 .projects .caption p {
   color: #78a632;
   font-size: 0.6em;
 }
 
-/* line 1120, ../sass/style.scss */
+/* line 850, ../sass/style.scss */
 .rotateY {
   -webkit-transform-origin: 50% 50% 0;
   -moz-transform-origin: 50% 50% 0;
@@ -4346,7 +4316,7 @@ body {
   animation: rotateY 1.5s forwards;
 }
 
-/* line 1125, ../sass/style.scss */
+/* line 855, ../sass/style.scss */
 .btnRotateY {
   -webkit-transform-origin: 50% 0 0;
   -moz-transform-origin: 50% 0 0;
@@ -4360,7 +4330,7 @@ body {
 }
 
 /***************************************************** Blog **********************************/
-/* line 1135, ../sass/style.scss */
+/* line 865, ../sass/style.scss */
 #Blog .row .contentWrap {
   position: relative;
   -webkit-perspective: 800px;
@@ -4370,7 +4340,7 @@ body {
   perspective: 800px;
   overflow: hidden;
 }
-/* line 1143, ../sass/style.scss */
+/* line 873, ../sass/style.scss */
 #Blog .slider {
   overflow: hidden;
   background: #fff;
@@ -4378,24 +4348,24 @@ body {
   line-height: 2em;
   position: absolute;
 }
-/* line 1149, ../sass/style.scss */
+/* line 879, ../sass/style.scss */
 #Blog .slider ul {
   left: 0;
   position: relative;
   height: 100%;
 }
-/* line 1153, ../sass/style.scss */
+/* line 883, ../sass/style.scss */
 #Blog .slider ul li {
   height: 100%;
   position: relative;
   float: left;
 }
-/* line 1157, ../sass/style.scss */
+/* line 887, ../sass/style.scss */
 #Blog .slider ul li img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 1163, ../sass/style.scss */
+/* line 893, ../sass/style.scss */
 #Blog .slider .btnCtrl {
   background: transparent;
   position: absolute;
@@ -4405,27 +4375,27 @@ body {
   overflow: hidden;
   border: none;
 }
-/* line 1173, ../sass/style.scss */
+/* line 903, ../sass/style.scss */
 #Blog .slider #prev {
   background: url("/static/images/gray_prev.png") no-repeat;
   background-position: 0 100%;
   left: 0;
 }
-/* line 1177, ../sass/style.scss */
+/* line 907, ../sass/style.scss */
 #Blog .slider #prev:hover {
   background-position: 0 0;
 }
-/* line 1181, ../sass/style.scss */
+/* line 911, ../sass/style.scss */
 #Blog .slider #next {
   background: url("/static/images/gray_next.png") no-repeat;
   right: 0;
   background-position: 0 100%;
 }
-/* line 1185, ../sass/style.scss */
+/* line 915, ../sass/style.scss */
 #Blog .slider #next:hover {
   background-position: 0 0;
 }
-/* line 1190, ../sass/style.scss */
+/* line 920, ../sass/style.scss */
 #Blog #sliderLeft {
   -webkit-transform: translateX(-80.5%) rotateY(45deg) scale(0.8) translateY(7.8%);
   -moz-transform: translateX(-80.5%) rotateY(45deg) scale(0.8) translateY(7.8%);
@@ -4438,7 +4408,7 @@ body {
   -o-transform-origin: top right 0 50%;
   transform-origin: top right 0 50%;
 }
-/* line 1194, ../sass/style.scss */
+/* line 924, ../sass/style.scss */
 #Blog #sliderRight {
   -webkit-transform: translateX(99.7%) rotateY(-35deg) scale(0.8) translateY(7.8%);
   -moz-transform: translateX(99.7%) rotateY(-35deg) scale(0.8) translateY(7.8%);
@@ -4451,7 +4421,7 @@ body {
   -o-transform-origin: top left 0 50%;
   transform-origin: top left 0 50%;
 }
-/* line 1198, ../sass/style.scss */
+/* line 928, ../sass/style.scss */
 #Blog #slicesWrapper {
   -webkit-transform: scale(0.8) translateX(12%) translateY(-4.97%);
   -moz-transform: scale(0.8) translateX(12%) translateY(-4.97%);
@@ -4459,7 +4429,7 @@ body {
   -o-transform: scale(0.8) translateX(12%) translateY(-4.97%);
   transform: scale(0.8) translateX(12%) translateY(-4.97%);
 }
-/* line 1200, ../sass/style.scss */
+/* line 930, ../sass/style.scss */
 #Blog #slicesWrapper .slice {
   position: relative;
   background: #99d11c;
@@ -4468,7 +4438,7 @@ body {
   float: left;
   overflow: hidden;
 }
-/* line 1207, ../sass/style.scss */
+/* line 937, ../sass/style.scss */
 #Blog #slicesWrapper .slice .dialogBox {
   position: relative;
   width: 100%;
@@ -4487,31 +4457,31 @@ body {
   opacity: 0.7;
   line-height: 150%;
 }
-/* line 1222, ../sass/style.scss */
+/* line 952, ../sass/style.scss */
 #Blog #slicesWrapper .left .dialogBox {
   left: 50%;
 }
-/* line 1227, ../sass/style.scss */
+/* line 957, ../sass/style.scss */
 #Blog #slicesWrapper .right .dialogBox {
   left: -50%;
 }
-/* line 1232, ../sass/style.scss */
+/* line 962, ../sass/style.scss */
 #Blog .wrapper {
   position: absolute;
   width: 25%;
   height: 10%;
 }
-/* line 1236, ../sass/style.scss */
+/* line 966, ../sass/style.scss */
 #Blog .wrapper.blogshots {
   top: 80%;
   left: 27%;
 }
-/* line 1240, ../sass/style.scss */
+/* line 970, ../sass/style.scss */
 #Blog .wrapper.bloglink {
   top: 85%;
   right: 28%;
 }
-/* line 1244, ../sass/style.scss */
+/* line 974, ../sass/style.scss */
 #Blog .wrapper .ribbon {
   position: relative;
   width: 1.5em;
@@ -4523,7 +4493,7 @@ body {
   left: -0.9em;
   z-index: 1;
 }
-/* line 1254, ../sass/style.scss */
+/* line 984, ../sass/style.scss */
 #Blog .wrapper .ribbon.link {
   width: 1em;
   top: 0.6em;
@@ -4531,7 +4501,7 @@ body {
   border-color: #666666 transparent #666666 #666666;
 }
 
-/* line 1263, ../sass/style.scss */
+/* line 993, ../sass/style.scss */
 #blogShots {
   z-index: 2;
   position: absolute;
@@ -4541,7 +4511,7 @@ body {
   color: #fff;
   background: #f86c99;
 }
-/* line 1272, ../sass/style.scss */
+/* line 1002, ../sass/style.scss */
 #blogShots:before {
   content: "Show Me";
   position: absolute;
@@ -4550,7 +4520,7 @@ body {
   color: #696969;
   top: -1em;
 }
-/* line 1281, ../sass/style.scss */
+/* line 1011, ../sass/style.scss */
 #blogShots:after {
   content: "";
   width: 0;
@@ -4563,7 +4533,7 @@ body {
   left: 1px;
 }
 
-/* line 1293, ../sass/style.scss */
+/* line 1023, ../sass/style.scss */
 #BlogLink {
   z-index: 2;
   position: absolute;
@@ -4573,7 +4543,7 @@ body {
   color: #fff;
   background: #666666;
 }
-/* line 1301, ../sass/style.scss */
+/* line 1031, ../sass/style.scss */
 #BlogLink:before {
   content: "";
   position: absolute;
@@ -4586,7 +4556,7 @@ body {
   top: 105%;
   border-style: solid;
 }
-/* line 1313, ../sass/style.scss */
+/* line 1043, ../sass/style.scss */
 #BlogLink:after {
   content: "In a new tab";
   position: absolute;
@@ -4597,11 +4567,11 @@ body {
 }
 
 /************************************************* Contact ********************************************/
-/* line 1327, ../sass/style.scss */
+/* line 1057, ../sass/style.scss */
 #Contact h1 {
   float: left;
 }
-/* line 1330, ../sass/style.scss */
+/* line 1060, ../sass/style.scss */
 #Contact .clouds {
   overflow: hidden;
   height: 14%;
@@ -4609,7 +4579,7 @@ body {
   position: relative;
   padding-bottom: 2%;
 }
-/* line 1336, ../sass/style.scss */
+/* line 1066, ../sass/style.scss */
 #Contact .clouds .cloud {
   margin-left: 5%;
   position: relative;
@@ -4622,7 +4592,7 @@ body {
   -moz-box-shadow: 0px 5px 25px 0px lightgrey;
   box-shadow: 0px 5px 25px 0px lightgrey;
 }
-/* line 1346, ../sass/style.scss */
+/* line 1076, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1, #Contact .clouds .cloud .cloudPart2 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -4632,19 +4602,19 @@ body {
   background: inherit;
   position: absolute;
 }
-/* line 1351, ../sass/style.scss */
+/* line 1081, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1 {
   top: -70%;
   width: 35%;
   left: 13%;
 }
-/* line 1356, ../sass/style.scss */
+/* line 1086, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart2 {
   top: -103%;
   width: 50%;
   left: 37%;
 }
-/* line 1364, ../sass/style.scss */
+/* line 1094, ../sass/style.scss */
 #Contact .icons {
   width: 30%;
   height: auto;
@@ -4652,21 +4622,21 @@ body {
   position: relative;
   margin: auto;
 }
-/* line 1370, ../sass/style.scss */
+/* line 1100, ../sass/style.scss */
 #Contact .icons a {
   position: relative;
   height: auto;
   overflow: hidden;
 }
-/* line 1376, ../sass/style.scss */
+/* line 1106, ../sass/style.scss */
 #Contact .icons a:nth-child(1) {
   margin-right: 35%;
 }
-/* line 1379, ../sass/style.scss */
+/* line 1109, ../sass/style.scss */
 #Contact .icons a:nth-child(3) {
   float: right;
 }
-/* line 1383, ../sass/style.scss */
+/* line 1113, ../sass/style.scss */
 #Contact .dialog {
   top: 0px;
   right: 0px;
@@ -4681,7 +4651,7 @@ body {
   padding-right: 3%;
   border: none;
 }
-/* line 1397, ../sass/style.scss */
+/* line 1127, ../sass/style.scss */
 #Contact .form {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4700,7 +4670,7 @@ body {
   margin-top: 5%;
   color: #558c00;
 }
-/* line 1410, ../sass/style.scss */
+/* line 1140, ../sass/style.scss */
 #Contact #contactForm {
   width: 90%;
   margin: auto;
@@ -4709,14 +4679,14 @@ body {
   background: #fff;
   color: #78a632;
 }
-/* line 1418, ../sass/style.scss */
+/* line 1148, ../sass/style.scss */
 #Contact .input {
   width: 45%;
   float: left;
   overflow: hidden;
   margin-right: 7%;
 }
-/* line 1423, ../sass/style.scss */
+/* line 1153, ../sass/style.scss */
 #Contact .input input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4732,20 +4702,20 @@ body {
   font-size: 0.9em;
   color: #666666;
 }
-/* line 1432, ../sass/style.scss */
+/* line 1162, ../sass/style.scss */
 #Contact .input input:focus, #Contact .input input:invalid {
   box-shadow: none !important;
 }
-/* line 1436, ../sass/style.scss */
+/* line 1166, ../sass/style.scss */
 #Contact .input .second {
   margin-top: 8%;
 }
-/* line 1441, ../sass/style.scss */
+/* line 1171, ../sass/style.scss */
 #Contact .message {
   overflow: hidden;
   float: 50%;
 }
-/* line 1445, ../sass/style.scss */
+/* line 1175, ../sass/style.scss */
 #Contact .message textarea {
   font-size: 0.9em;
   width: 98%;
@@ -4761,11 +4731,11 @@ body {
   resize: vertical;
   color: #666666;
 }
-/* line 1455, ../sass/style.scss */
+/* line 1185, ../sass/style.scss */
 #Contact .message textarea:focus, #Contact .message textarea:invalid {
   box-shadow: none !important;
 }
-/* line 1460, ../sass/style.scss */
+/* line 1190, ../sass/style.scss */
 #Contact .error {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4774,7 +4744,7 @@ body {
   font-size: 0.6em;
   font-weight: light;
 }
-/* line 1466, ../sass/style.scss */
+/* line 1196, ../sass/style.scss */
 #Contact .contactButton {
   float: right;
   width: 43%;
@@ -4791,11 +4761,11 @@ body {
   margin-top: 13%;
   margin-right: 10%;
 }
-/* line 1479, ../sass/style.scss */
+/* line 1209, ../sass/style.scss */
 #Contact .contactButton:hover {
   border-color: #486c10;
 }
-/* line 1484, ../sass/style.scss */
+/* line 1214, ../sass/style.scss */
 #Contact .alertBox {
   position: absolute;
   top: 0;
@@ -4804,7 +4774,7 @@ body {
   height: 100%;
   background: rgba(255, 225, 255, 0.5);
 }
-/* line 1491, ../sass/style.scss */
+/* line 1221, ../sass/style.scss */
 #Contact .alertBox div {
   color: #78A632;
   opacity: 1;
@@ -4825,7 +4795,7 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-/* line 1505, ../sass/style.scss */
+/* line 1235, ../sass/style.scss */
 #Contact .alertBox .contactButton {
   width: 15%;
 }
