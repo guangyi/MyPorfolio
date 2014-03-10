@@ -3,18 +3,7 @@ var faceNumber = 4;
 var mouthDelay = 1500;
 $(document).ready(function(){
 	//initialFaces(faceNumber);
-	var eye = $('.eye');
-	var mouth = $('.mouth');
-	halfCircle( eye );
-	halfCircle( mouth );
-	$('.faces').click(function(){
-		smileToUpset();
-	})
-	$(window).resize(function(){
-		halfCircle(eye);
-		//halfCircle(mouth);
-		//eye.css("border-width",$('.like').width() * 2 / 100 +'px');
-	});
+	
 });
 var smileToUpset = function(){
 	$('.left').addClass('upsetEye').delay(1000).animate(
@@ -104,8 +93,9 @@ var setHightByWidth = function(obj, ratio){
 var halfCircle = function(obj){
 	//Half circle: hight = 0.5 * height;
 	//circle radius = width;
-	obj.each(function(){
+	obj.each(function(index, obj){
 		circleWidth = $(this).width();
+		console.log(index + circleWidth);
 		setHightByWidth($(this), 0.5);
 		cssSetting( $(this), 'border-top-left-radius', circleWidth + "px" );
 		cssSetting( $(this), 'border-top-right-radius', circleWidth + "px" ); 
@@ -131,7 +121,6 @@ var initialFaces = function(faceNumber){
 	/*for(var i = 0; i < faceNumber.length; i++){
 		number += faceNumber[i]
 	}*/
-
 	var eachFaceWidth = $('.faces').width() / number;
 	//setup outerWidth, so each face's width is correct??
 	$('.smile').outerWidth(eachFaceWidth);
@@ -154,12 +143,11 @@ var setRadiusByHeight =  function(obj, ratio){
 		var radius = height * ratio;
 		cssSetting($(this), 'border-radius', parseInt(radius));
 	})
-	
-
 }
 var setWidthByHeight = function(obj, ratio){
 	obj.each(function(){
 		var height = $(this).height();
+		console.log(height);
 		var width = height * ratio;
 		$(this).outerWidth(width+'px');
 	});
@@ -186,7 +174,8 @@ var settings = function(){
 	$('.slider > ul > li').width( $('.slider').width());
 	var len = $('#sliderLeft > ul > li').length;
 	/******************************************* MoreAboutMe settings.js **************************************/
-	setHightByWidth($('.face'), 1);
+	$('.face').height($('.option').height());
+	setWidthByHeight($('.face'), 1);
 	setHeightByReference($('.optionsWrap'), $('.likeContainer > h1'), $(window));
 
 	/*******************************************  Contact settings settings.js ********************************/

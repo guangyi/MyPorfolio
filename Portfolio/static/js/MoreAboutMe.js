@@ -1,15 +1,24 @@
-
+//#F16c97';
 $(document).ready(function(){
-	//clearText();
+	var eye = $('.eye');
+	var mouth = $('.mouths');
+	//halfCircle( eye );
+	halfCircle( mouth );
+	$('.option').each(function(){
+
+		$(this).width($(this).children(''))
+	})
+
 	function textAnima(options){
 		this.options = options;	
 	};
 	textAnima.prototype.i = 0;
 	textAnima.prototype.loopText = function(){
 		var that = this;
+		$(that.options[that.i]).children('span').css({'text-shadow':'0 0 0px #ff0000'});
 		$(that.options[that.i]).delay(2500).css({
-			'text-shadow':'0 0 0px #F16c97'}).animate({
-			'opacity':'1'
+			'text-shadow':'0 0 0px #000000' }).animate({
+			opacity:'1'
 		},{
 			duration:800,
 			complete:function(){
@@ -22,7 +31,6 @@ $(document).ready(function(){
 					$(this).css({'text-decoration':'line-through'});
 				}
 				if (that.i <= that.options.length){
-					console.log('i=' + that.i);
 					that.loopText();
 				}
 			}
@@ -31,12 +39,20 @@ $(document).ready(function(){
 	var options = $('.option');
 	var textAnimation = new textAnima(options);
 	textAnimation.loopText();
+
+	
+	$('.faces').click(function(){
+		smileToUpset();
+	})
+	$(window).resize(function(){
+		halfCircle(eye);
+		//halfCircle(mouth);
+		//eye.css("border-width",$('.like').width() * 2 / 100 +'px');
+	});
 	
 });
 var clearText = function(){
 	//var options = $('.options').children();//get all the opstions
-	
-	console.log('optionLength'+options.length);
 	var i = 0;
 	//textAnima(options.first())
 

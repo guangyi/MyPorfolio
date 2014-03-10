@@ -279,8 +279,6 @@ var blog = function(){
 			this.autoSlide();
 		}
 	};
-
-	
 		var bs = new blogSlider();
 		bs.init();
 		bs.autoSlide();
