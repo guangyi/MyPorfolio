@@ -1,0 +1,201 @@
+$description:#696969;
+$loadButton:#99d11c;//#f13c76;pink
+$buttonBorder:#bae847;//#639500;//#F16c97;
+$captionTag:#78A632;//#99d11c;//
+$captionTitle:#558c00;//#639500;//#80c100;//$loadButton;
+$buttonBottemBdr:#537d00;
+$proBrdRds:0.3em;
+
+$titleColor:#fff;
+#Experiments{
+	.row{
+		margin:auto;
+		//background:#ad0000;
+		@include background-image(linear-gradient(top,  $bg_Contact 45%, #ff6666 45% ));
+		h1{
+			font-size:2.5em;
+			color:$titleColor;
+			margin:0% 0 3% 5%;
+		}
+		p{
+			font-size: 0.6em;
+		}
+
+	}	
+}
+.projectWrapper{
+	background:transparent;
+	width:100%;
+	margin:auto;
+	text-align:center;
+	margin-top:3%;
+	//@include box-shadow(3px -3px 3px 3px #666);
+}
+.projectWrapper .projects:nth-last-of-type(-n+3){
+	//margin-top:10%;
+}
+.projects{
+	float:left;
+	width:15%;
+	margin:5% 0 2% 3%;
+	//padding:14px 0 2px 0;
+	&:nth-child(1){
+			margin-left:5%;
+	}
+	&:nth-child(2n){
+		margin-top:13%;
+	}
+	&:nth-child(3){
+		margin-top:20%;
+	}
+	.description{
+		box-shadow: 1px #f2f2f2;
+		position:relative;
+		width:100%;
+		background-size: 100%;
+		@include perspective(600px);
+		@include border-radius-part(top-left, $proBrdRds);
+		@include border-radius-part(top-right, $proBrdRds);
+		@include box-sizing(border-box);
+		// set the perspective on the parent element
+		// so its child element can have different perspective on 3d transform animation!
+		.proShelter{
+			// if use position relative, .proShelter will take place,
+			// so the description will be below the proShelter, not under it and covered by it.
+			position:absolute;
+			width:100%;
+			height:50%;
+			background-position: 5% 5%; // sequence: left top
+			z-index:1;
+			//max-width: 100%;
+			//max-height: 100%;
+			overflow: hidden;
+			& img{
+				max-width: 100%;
+				max-width: 100%;
+			}
+		}
+		.descrpt{
+			//If you are trying to hide absolute positioned elements 
+			//make sure the container of those absolute positioned elements 
+			//is relatively positioned.
+			// it also work the opposite way--container: absolute, child: relative
+			position:absolute;
+			overflow: hidden;
+			height:50%;
+			width:100%;
+			background:#fff;//$bg_Projects;
+			color:$description;
+			// add padding but the "top" attribute for the down descrpt is still 100%;
+			// do not use box-sizing(border-box) here. it will affect the effect we want
+			opacity: 0.9;
+			text-align: center;
+			//@include box-sizing(border-box);
+			& p{
+				margin-left:0.5em;
+				margin-right:0.5em;
+				margin-top: 2em;
+				line-height:1.2em;
+				font-size: 0.9em;
+			}
+		}	
+		.top, .top img{
+			@include border-radius-part(top-left, $proBrdRds);
+			@include border-radius-part(top-right, $proBrdRds); 
+		}
+		.down{
+			top:50%;
+			@include border-radius-part(bottom-left, $proBrdRds);
+			@include border-radius-part(bottom-right, $proBrdRds); 
+			& img{
+				position:relative;
+				top:-100%;
+				@include border-radius-part(bottom-left, $proBrdRds);
+				@include border-radius-part(bottom-right, $proBrdRds); 
+			}
+			& p{
+				position:relative;
+				top:-100%;
+			}
+		}
+		.in_top, .in_right{
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('pro_in_top 0.5s forwards');
+		}
+		
+		.in_bottom, .in_left{
+			@include transform-origin(50%, 0, 0 );
+			@include animation('pro_in_bottom 0.5s forwards');
+		}
+		.out_top, .out_right{
+			@include transform(rotateX(90deg));
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('pro_out_top 0.5s 0.3s forwards');
+		}
+		.out_bottom, .out_left{
+			@include transform(rotateX(90deg));
+			@include transform-origin(50%,0, 0 );
+			@include animation('pro_out_bottom 0.5s 0.3s forwards');
+		}
+		.rotate_in_bottom, .rotate_in_left{
+			@include transform(rotateX(-90deg));
+			z-index: 1;
+			opacity: 0;
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('rotate_in_bottom 0.5s 0.3s forwards');
+		}
+		.rotate_in_top, .rotate_in_right{
+			z-index: 1;
+			opacity: 0;
+			@include transform-origin(50%, 0, 0 );
+			@include transform(rotateX(90deg));
+			@include animation('rotate_in_top 0.5s 0.3s forwards');
+		}
+		.rotate_out_top, .rotate_out_right{
+			z-index: 1;
+			@include transform-origin(50%, 0, 0 );
+			@include animation('rotate_out_top 0.5s forwards');
+		}
+		.rotate_out_bottom, .rotate_out_left{
+			z-index: 1;
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('rotate_out_bottom 0.5s  forwards');
+		}
+	}
+	.caption{
+			@include box-sizing(border-box);
+			@include border-radius-part(bottom-left, 0.3em);
+			@include border-radius-part(bottom-right, 0.3em);
+			padding:5% 2% 0 2%;
+			width:100%;
+			background:#fff;
+			text-align: center;
+			& h3{
+				color: #ad0000;//$captionTitle;
+				font-size: 0.7em;
+				line-height: 2em;
+			}
+			& p{
+				color:#ad0000;//$captionTag;
+				font-size:0.6em;
+			}
+	}
+	
+}
+.buttonWrap{
+	position:absolute;
+	left:0;
+	bottom:1em;
+	width:100%;
+	@include perspective(400px);
+	float:right;
+	& .load{
+		width:50%;
+		margin:auto;
+		color:#fff;
+	}
+}
+.rotateY{
+		@include transform-origin(50%,50%,0);
+		@include animation('rotateY 1.5s forwards');
+}

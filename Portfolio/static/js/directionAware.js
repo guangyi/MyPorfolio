@@ -48,12 +48,14 @@ $(document).ready(function(){
 	// mouseleave and mouseenter won't affect the child of the animated element.
 	$('.perspective').on('mouseenter', function(event){
 			//$(this).children('.introShlter').css('')
+			$(this).children('.cube').animate({'opacity':'0'},300);
 			var d = getDirection(event, $(this));
 			removeClasses($(this).children('.introShlter'));
 			addClasses(d, $(this).children('.introShlter'), 'in');
 		});
 	$('.perspective').mouseleave(function(event){
 		var d = getDirection(event, $(this));
+		$(this).children('.cube').animate({'opacity':'1'},300);
 		removeClasses($(this).children('.introShlter'));
 		addClasses(d, $(this).children('.introShlter'), 'out');
 	});

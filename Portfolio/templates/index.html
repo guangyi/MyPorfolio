@@ -80,18 +80,6 @@
 										<div class="cubeBottom"></div>
 									</div>
 								</div>
-							<!--<section class="centerIntro"></section>-->
-							
-								<!--<p> Welcome! I'm Guangyi. A recently graduated student, and also a front-end engineer. -->
-							<!--<div class="cube granduate">	
-								<div class="tag graduated"></div>
-								<div class="graduTop"></div>
-								<div class="graduRight"></div>	
-							</div>-->
-									<!--<h2>Recentely Graduated</h2>-->
-									<!--
-									<h2>I graduated from Brandeis University last year. I'm a good studnt-- My GPA ≈ 3.7 Ok, Ok, be honsty, it's 3.67. While I was study there, I found out what I really want to do-- front-end engineer.</h2>-->
-								
 							</div><!--end of left-->
 							<div class="right">
 								<div class="perspective free">
@@ -120,63 +108,30 @@
 									</div>
 								</div>
 							 </div><!--end of right--> 
-							<!--<div class="unitWrapper">
-								<section class="tag believe">
-									<h2>Believe in...</h2>
-										<!--
-										<h2> I believe in Dream, Hope and Passion. Thoes are 3 very important
-											thing to me. My happinese, my motivation and my love towards life
-											all come from these three thing. Oh BTW, sunshine is another very import thing to me! </h2>-->
-								<!--</section>
-							</div>-->
-									<!--<h2>Hope to...<h2>-->
-										<!--<h3> I hope to find a great job this year.
-										Great = 1.Great chemstry with team mates<br>
-									      + 2.Fit well in<br>
-									      + 3.Make contribution--being useful<br>
-									      + 4.Learn and develop new skill </h3>-->
 						</div><!-- end of content wrapper-->
 					</div>
 				</section>
-				
 				<section class="main" id="Experiments" style="height: {$screenHeight$}px" ng-controller="projectsCtrl">
 					<div class="row effOnScroll">
 						<h1>Experiments</h1>
 						<div class="projectWrapper">
-							<div class="projectFoot">
-									<div class="dialog">
-								<!--<div class="clip"></div> -->
-									<p>!These are small projects I did as practice and for fun. Each project helps me know better about different front-end knowledge and skills. I'm looking forward to getting my hands on more complecated ones.</p>
-								</div>
-							</div>
 							<div ng-repeat="project in projects" class='projects'>
 								<!--<-->
 								<div class="description" style="background-image:url({$ project.img_url $})">
 									<div class="proShelter top"><img ng-src='{$ project.img_url $}'></div>
 									<div class="proShelter down"><img ng-src="{$ project.img_url $}"></div>
-									<div class="descrpt top"><h3>{$project.description$}</h3></div>
-									<div class="descrpt down"><h3>{$project.description$}</h3></div>
+									<div class="descrpt top"><p>{$project.description$}</p></div>
+									<div class="descrpt down"><p>{$project.description$}</p></div>
 								</div>
 								<div class="caption">
-									<h3>{$project.caption$}</h3>
+									<p>{$project.caption$}</p>
 									<p>Tag:{$project.tag$}</p>
-								</div>
-							</div><!--end of each project unit-->
-							<!-- end of projectFoot -->
-							<div class="projectFoot" style="top:68%; left:5%">
-									<div class="dialog">
-								<!--<div class="clip"></div> -->
-									<p>!These are small projects I did as practice and for fun. Each project helps me know better about different front-end knowledge and skills. I'm looking forward to getting my hands on more complecated ones.</p>
 								</div>
 							</div>
 							<div class="buttonWrap">
-								<!--<button class="loadButton btnRotateY" ng-click="loadMore()">Load More Projects</button>-->
-								<div class="load"><p>Load More Expreiments</p></div>
+								<div class="load"><h3>This is my playground</h3></div>
 							</div>
 						</div><!--end of projects wrapper-->
-						
-
-
 					</div>
 				</section>
 				<section class="main" id="Blog" style="height: {$screenHeight$}px">

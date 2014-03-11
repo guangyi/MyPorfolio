@@ -3,9 +3,9 @@ $shelterBg:#fdd1e0;
 $shelterFontColor:#FFF;
 
 /** Intro Main Part Title,font,background color **/
-$MainPartTitle:#C40000;
+$MainPartTitle:#AD0000;
 $MainPartFontColor:#444;
-$MainPartBg:#FFF;
+$MainPartBg:#EEE;
 
 /** Side Part, including each unit background, shelter and cube **/
 $sideFontColor:#FFF;
@@ -13,15 +13,15 @@ $sideBorder:1px solid #B2B2B2;
 $sideBorderLight:1px solid #FFF;
 
 $gradientStart:#EEE;
-$gradientMiddle:#AD0000;
-$gradientEnd:#8A0000;
+$gradientMiddle:#ff6666;
+$gradientEnd:#ad0000;
 
 /** cube each side color, size, font color **/
 $cubeWidth:140px;
-$cubeFontColor:#6E0000;
+$cubeFontColor:#222;
 $cubeLight:#FFF;
-$cubeMiddle:#DDD;
-$cubeDark:#666;
+$cubeMiddle:#eee;
+$cubeDark:#ddd;
 @mixin cubeColor($light, $middle, $dark){
 	.cubeFront{
 		background:$light;
@@ -65,8 +65,9 @@ $cubeDark:#666;
 	display:inline-block;
 	line-height:1.8em;
 	color:$MainPartFontColor;
-	@include background-image(linear-gradient(left, #fff, $gradientStart));
+	@include background-image(linear-gradient(left, #fff, $MainPartBg));
 	@include box-sizing(border-box);
+	//background:$MainPartBg;
 }
 .right{
 	float:left;
@@ -97,7 +98,7 @@ $cubeDark:#666;
 	}
 	&.gra{
 		border-bottom:$sideBorderLight;
-		@include background-image(linear-gradient(left, $gradientStart $gradientMiddle));
+		@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
 		@include perspective-origin(0 400px);
 		@include perspective(1000px);
 		.introShlter{
@@ -107,7 +108,7 @@ $cubeDark:#666;
 	}
 	&.free{
 		border-bottom:$sideBorder;
-		border-left:$sideBorder;
+		//border-left:$sideBorder;
 		@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
 		@include perspective-origin(100% 380px);
 		@include perspective(800px);
@@ -116,7 +117,6 @@ $cubeDark:#666;
 		}
 	}
 	&.bel{
-		border-top:$sideBorderLight;
 		@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
 		@include perspective-origin(0 340px);
 		@include perspective(800px);
@@ -125,7 +125,7 @@ $cubeDark:#666;
 		}
 	}
 	&.Ihope{
-		border-left:$sideBorder;
+		//border-left:$sideBorder;
 		@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
 		@include perspective-origin(100% 340px);
 		@include perspective(800px);
@@ -141,7 +141,7 @@ $cubeDark:#666;
 	position:relative;
 	float:left;
 	height:$cubeWidth;
-	width:$cubeWidth;//ifchange width, change translateZ of cubeFront too!
+	width:$cubeWidth;
 	text-align:center;
 	@include transform-style(preserve-3d);
 	& div{

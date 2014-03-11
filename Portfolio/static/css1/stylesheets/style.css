@@ -2894,59 +2894,45 @@ body {
 .content .scroll #MoreAboutMe h3 {
   font-size: 1.1em;
 }
-/* line 164, ../sass/style.scss */
-.content .scroll #Experiments {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffe440), color-stop(50%, #9ee0ff), color-stop(100%, #f16c97));
-  background-image: -webkit-linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
-  background-image: -moz-linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
-  background-image: -o-linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
-  background-image: linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
-}
-/* line 167, ../sass/style.scss */
-.content .scroll #Experiments h1 {
-  font-size: 2.5em;
-  color: #fff;
-  margin-bottom: 3%;
-}
-/* line 173, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 .content .scroll #Blog {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #009b95), color-stop(17%, #a69700), color-stop(89%, #a69700), color-stop(91%, #ffe440), color-stop(100%, #009b95));
-  background-image: -webkit-linear-gradient(top, #009b95, #a69700 17%, #a69700 89%, #ffe440 91%, #009b95);
-  background-image: -moz-linear-gradient(top, #009b95, #a69700 17%, #a69700 89%, #ffe440 91%, #009b95);
-  background-image: -o-linear-gradient(top, #009b95, #a69700 17%, #a69700 89%, #ffe440 91%, #009b95);
-  background-image: linear-gradient(top, #009b95, #a69700 17%, #a69700 89%, #ffe440 91%, #009b95);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8a0000), color-stop(50%, #ad0000), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #8a0000, #ad0000, #ffffff);
+  background-image: -moz-linear-gradient(top, #8a0000, #ad0000, #ffffff);
+  background-image: -o-linear-gradient(top, #8a0000, #ad0000, #ffffff);
+  background-image: linear-gradient(top, #8a0000, #ad0000, #ffffff);
 }
-/* line 176, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 .content .scroll #Blog h1 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
   color: #fff;
 }
-/* line 181, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 .content .scroll #Blog h2 {
   font-size: 1.5em;
 }
-/* line 185, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 .content .scroll #Contact {
   background: #9ee0ff;
 }
-/* line 187, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 .content .scroll #Contact h1 {
   font-size: 2.5em;
   color: #FFF;
   margin-bottom: 0.5em;
 }
-/* line 192, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .content .scroll #Contact h2 {
   font-size: 1.3em;
 }
-/* line 195, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 .content .scroll #Contact h3 {
   font-size: 1em;
 }
 
 /****************************************************** About *******************************************/
-/* line 202, ../sass/style.scss */
+/* line 195, ../sass/style.scss */
 #profile {
   position: relative;
   margin-right: auto;
@@ -2962,7 +2948,7 @@ body {
   border-radius: 50%;
   box-shadow: 0px 0px 20px 0px #fff;
 }
-/* line 213, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 #profile:after {
   position: absolute;
   content: '';
@@ -2982,7 +2968,7 @@ body {
   background-image: radial-gradient(50% 50%, rgba(255, 255, 255, 0) 85%, #ffffff 100%);
 }
 
-/* line 226, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 #speech_bubble {
   margin-left: auto;
   margin-right: auto;
@@ -3002,7 +2988,7 @@ body {
   border-radius: 0.8em;
   z-index: 2;
 }
-/* line 241, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 #speech_bubble:before, #speech_bubble:after {
   content: '';
   position: absolute;
@@ -3017,20 +3003,20 @@ body {
   transform-origin: 0 0;
   transform: rotate(-45deg);*/
 }
-/* line 255, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 #speech_bubble:before {
   border-right: 5px solid white;
   height: 1em;
   z-index: 3;
 }
-/* line 260, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 #speech_bubble:after {
   border-right: 5px solid #a60026;
   height: 2em;
   z-index: 1;
 }
 
-/* line 267, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 #speech_bubble_arrowup {
   margin-left: auto;
   margin-right: auto;
@@ -3050,7 +3036,7 @@ body {
   border-radius: 0.8em;
   z-index: 1;
 }
-/* line 282, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 #speech_bubble_arrowup:before, #speech_bubble_arrowup:after {
   content: '';
   position: absolute;
@@ -3058,7 +3044,7 @@ body {
   width: 0px;
   height: 0px;
 }
-/* line 289, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
 #speech_bubble_arrowup:before {
   top: -31px;
   left: 434px;
@@ -3067,7 +3053,7 @@ body {
   border-bottom: 31px solid #a60026;
   z-index: 3;
 }
-/* line 297, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 #speech_bubble_arrowup:after {
   top: -40px;
   left: 425px;
@@ -3084,7 +3070,7 @@ body {
 /** cube each side color, size, font color **/
 /* line 47, ../sass/Intro.scss */
 #Intro .contentWrap h1 {
-  color: #c40000;
+  color: #ad0000;
 }
 /* line 50, ../sass/Intro.scss */
 #Intro .contentWrap .left {
@@ -3115,14 +3101,14 @@ body {
   box-sizing: border-box;
 }
 
-/* line 71, ../sass/Intro.scss */
+/* line 72, ../sass/Intro.scss */
 .right {
   float: left;
   width: 20%;
   height: 100%;
 }
 
-/* line 76, ../sass/Intro.scss */
+/* line 77, ../sass/Intro.scss */
 .perspective {
   position: relative;
   width: 100%;
@@ -3131,7 +3117,7 @@ body {
   color: white;
   overflow: hidden;
 }
-/* line 83, ../sass/Intro.scss */
+/* line 84, ../sass/Intro.scss */
 .perspective .introShlter {
   padding-top: 1em;
   position: absolute;
@@ -3143,19 +3129,19 @@ body {
   z-index: 10 !important;
   color: white;
 }
-/* line 94, ../sass/Intro.scss */
+/* line 95, ../sass/Intro.scss */
 .perspective .carve {
   padding-top: 10%;
   margin-bottom: 10%;
 }
-/* line 98, ../sass/Intro.scss */
+/* line 99, ../sass/Intro.scss */
 .perspective.gra {
   border-bottom: 1px solid white;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: -moz-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: -o-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ff6666));
+  background-image: -webkit-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: -moz-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: -o-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: linear-gradient(left, #eeeeee, #ff6666);
   -webkit-perspective-origin: 0 400px;
   -moz-perspective-origin: 0 400px;
   -ms-perspective-origin: 0 400px;
@@ -3167,23 +3153,22 @@ body {
   -o-perspective: 1000px;
   perspective: 1000px;
 }
-/* line 103, ../sass/Intro.scss */
+/* line 104, ../sass/Intro.scss */
 .perspective.gra .introShlter {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: -moz-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: -o-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ff6666));
+  background-image: -webkit-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: -moz-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: -o-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: linear-gradient(left, #eeeeee, #ff6666);
 }
-/* line 108, ../sass/Intro.scss */
+/* line 109, ../sass/Intro.scss */
 .perspective.free {
   border-bottom: 1px solid #b2b2b2;
-  border-left: 1px solid #b2b2b2;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ad0000), color-stop(100%, #8a0000));
-  background-image: -webkit-linear-gradient(left, #ad0000, #8a0000);
-  background-image: -moz-linear-gradient(left, #ad0000, #8a0000);
-  background-image: -o-linear-gradient(left, #ad0000, #8a0000);
-  background-image: linear-gradient(left, #ad0000, #8a0000);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6666), color-stop(100%, #ad0000));
+  background-image: -webkit-linear-gradient(left, #ff6666, #ad0000);
+  background-image: -moz-linear-gradient(left, #ff6666, #ad0000);
+  background-image: -o-linear-gradient(left, #ff6666, #ad0000);
+  background-image: linear-gradient(left, #ff6666, #ad0000);
   -webkit-perspective-origin: 100% 380px;
   -moz-perspective-origin: 100% 380px;
   -ms-perspective-origin: 100% 380px;
@@ -3195,22 +3180,21 @@ body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 114, ../sass/Intro.scss */
+/* line 115, ../sass/Intro.scss */
 .perspective.free .introShlter {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ad0000), color-stop(100%, #8a0000));
-  background-image: -webkit-linear-gradient(left, #ad0000, #8a0000);
-  background-image: -moz-linear-gradient(left, #ad0000, #8a0000);
-  background-image: -o-linear-gradient(left, #ad0000, #8a0000);
-  background-image: linear-gradient(left, #ad0000, #8a0000);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6666), color-stop(100%, #ad0000));
+  background-image: -webkit-linear-gradient(left, #ff6666, #ad0000);
+  background-image: -moz-linear-gradient(left, #ff6666, #ad0000);
+  background-image: -o-linear-gradient(left, #ff6666, #ad0000);
+  background-image: linear-gradient(left, #ff6666, #ad0000);
 }
-/* line 118, ../sass/Intro.scss */
+/* line 119, ../sass/Intro.scss */
 .perspective.bel {
-  border-top: 1px solid white;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: -moz-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: -o-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ff6666));
+  background-image: -webkit-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: -moz-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: -o-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: linear-gradient(left, #eeeeee, #ff6666);
   -webkit-perspective-origin: 0 340px;
   -moz-perspective-origin: 0 340px;
   -ms-perspective-origin: 0 340px;
@@ -3224,20 +3208,19 @@ body {
 }
 /* line 123, ../sass/Intro.scss */
 .perspective.bel .introShlter {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: -moz-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: -o-linear-gradient(left, #eeeeee, #ad0000);
-  background-image: linear-gradient(left, #eeeeee, #ad0000);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ff6666));
+  background-image: -webkit-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: -moz-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: -o-linear-gradient(left, #eeeeee, #ff6666);
+  background-image: linear-gradient(left, #eeeeee, #ff6666);
 }
 /* line 127, ../sass/Intro.scss */
 .perspective.Ihope {
-  border-left: 1px solid #b2b2b2;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ad0000), color-stop(100%, #8a0000));
-  background-image: -webkit-linear-gradient(left, #ad0000, #8a0000);
-  background-image: -moz-linear-gradient(left, #ad0000, #8a0000);
-  background-image: -o-linear-gradient(left, #ad0000, #8a0000);
-  background-image: linear-gradient(left, #ad0000, #8a0000);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6666), color-stop(100%, #ad0000));
+  background-image: -webkit-linear-gradient(left, #ff6666, #ad0000);
+  background-image: -moz-linear-gradient(left, #ff6666, #ad0000);
+  background-image: -o-linear-gradient(left, #ff6666, #ad0000);
+  background-image: linear-gradient(left, #ff6666, #ad0000);
   -webkit-perspective-origin: 100% 340px;
   -moz-perspective-origin: 100% 340px;
   -ms-perspective-origin: 100% 340px;
@@ -3251,11 +3234,11 @@ body {
 }
 /* line 132, ../sass/Intro.scss */
 .perspective.Ihope .introShlter {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ad0000), color-stop(100%, #8a0000));
-  background-image: -webkit-linear-gradient(left, #ad0000, #8a0000);
-  background-image: -moz-linear-gradient(left, #ad0000, #8a0000);
-  background-image: -o-linear-gradient(left, #ad0000, #8a0000);
-  background-image: linear-gradient(left, #ad0000, #8a0000);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6666), color-stop(100%, #ad0000));
+  background-image: -webkit-linear-gradient(left, #ff6666, #ad0000);
+  background-image: -moz-linear-gradient(left, #ff6666, #ad0000);
+  background-image: -o-linear-gradient(left, #ff6666, #ad0000);
+  background-image: linear-gradient(left, #ff6666, #ad0000);
 }
 
 /* line 137, ../sass/Intro.scss */
@@ -3276,7 +3259,7 @@ body {
 }
 /* line 147, ../sass/Intro.scss */
 .cube div {
-  color: #6e0000;
+  color: #222222;
   line-height: 1.8em;
   width: 100%;
   height: 100%;
@@ -3377,15 +3360,15 @@ body {
 }
 /* line 29, ../sass/Intro.scss */
 .cube.graduated .cubeTop {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 32, ../sass/Intro.scss */
 .cube.graduated .cubeRight {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 35, ../sass/Intro.scss */
 .cube.graduated .cubeLeft {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 38, ../sass/Intro.scss */
 .cube.graduated .cubeBack {
@@ -3393,7 +3376,7 @@ body {
 }
 /* line 41, ../sass/Intro.scss */
 .cube.graduated .cubeBottom {
-  background: #666666;
+  background: #dddddd;
 }
 /* line 203, ../sass/Intro.scss */
 .cube.frontEnd {
@@ -3413,15 +3396,15 @@ body {
 }
 /* line 29, ../sass/Intro.scss */
 .cube.frontEnd .cubeTop {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 32, ../sass/Intro.scss */
 .cube.frontEnd .cubeRight {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 35, ../sass/Intro.scss */
 .cube.frontEnd .cubeLeft {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 38, ../sass/Intro.scss */
 .cube.frontEnd .cubeBack {
@@ -3429,7 +3412,7 @@ body {
 }
 /* line 41, ../sass/Intro.scss */
 .cube.frontEnd .cubeBottom {
-  background: #666666;
+  background: #dddddd;
 }
 /* line 211, ../sass/Intro.scss */
 .cube.believe {
@@ -3448,15 +3431,15 @@ body {
 }
 /* line 29, ../sass/Intro.scss */
 .cube.believe .cubeTop {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 32, ../sass/Intro.scss */
 .cube.believe .cubeRight {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 35, ../sass/Intro.scss */
 .cube.believe .cubeLeft {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 38, ../sass/Intro.scss */
 .cube.believe .cubeBack {
@@ -3464,7 +3447,7 @@ body {
 }
 /* line 41, ../sass/Intro.scss */
 .cube.believe .cubeBottom {
-  background: #666666;
+  background: #dddddd;
 }
 /* line 218, ../sass/Intro.scss */
 .cube.hope {
@@ -3484,15 +3467,15 @@ body {
 }
 /* line 29, ../sass/Intro.scss */
 .cube.hope .cubeTop {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 32, ../sass/Intro.scss */
 .cube.hope .cubeRight {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 35, ../sass/Intro.scss */
 .cube.hope .cubeLeft {
-  background: #dddddd;
+  background: #eeeeee;
 }
 /* line 38, ../sass/Intro.scss */
 .cube.hope .cubeBack {
@@ -3500,7 +3483,7 @@ body {
 }
 /* line 41, ../sass/Intro.scss */
 .cube.hope .cubeBottom {
-  background: #666666;
+  background: #dddddd;
 }
 
 /* line 229, ../sass/Intro.scss */
@@ -3561,7 +3544,7 @@ body {
 }
 
 /********************************************** More About Me ***************************************/
-/* line 309, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 .likeContainer {
   height: 100%;
   width: auto;
@@ -3712,7 +3695,7 @@ body {
   	@include transform-origin(center center 0);
   }*/
 }
-/* line 315, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 .likeContainer .optionsWrap {
   width: 100%;
   background: white;
@@ -3727,7 +3710,7 @@ body {
   perspective: 500px;
   text-align: center;
 }
-/* line 323, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .likeContainer .optionsWrap .options {
   width: 100%;
   margin: 0;
@@ -3735,7 +3718,7 @@ body {
   height: 100%;
   overflow: scroll;
 }
-/* line 329, ../sass/style.scss */
+/* line 322, ../sass/style.scss */
 .likeContainer .optionsWrap .options .heart {
   position: absolute;
   width: 8%;
@@ -3745,7 +3728,7 @@ body {
   float: left;
   margin: 0 3% 0 0;
 }
-/* line 337, ../sass/style.scss */
+/* line 330, ../sass/style.scss */
 .likeContainer .optionsWrap .options .heart:before {
   content: "";
   position: absolute;
@@ -3765,7 +3748,7 @@ body {
   -o-border-bottom-left-radius: 100%;
   border-bottom-left-radius: 100%;
 }
-/* line 349, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
 .likeContainer .optionsWrap .options .option {
   display: inline-block;
   height: auto;
@@ -3780,7 +3763,7 @@ body {
   -o-transition: text-shadow 1.5s 2s;
   transition: text-shadow 1.5s 2s;
 }
-/* line 358, ../sass/style.scss */
+/* line 351, ../sass/style.scss */
 .likeContainer .optionsWrap .options .option span {
   -webkit-transition: text-shadow 1.5s;
   -webkit-transition-delay: 2s;
@@ -3789,7 +3772,7 @@ body {
   transition: text-shadow 1.5s 2s;
   text-shadow: 0px 0px 30px #ff0000;
 }
-/* line 363, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 .likeContainer .optionsWrap .options .tada {
   -webkit-transform-origin: center center 0 50%;
   -moz-transform-origin: center center 0 50%;
@@ -3801,14 +3784,14 @@ body {
   -moz-animation: tada 1.3s forwards;
   animation: tada 1.3s forwards;
 }
-/* line 367, ../sass/style.scss */
+/* line 360, ../sass/style.scss */
 .likeContainer .optionsWrap .options .shake {
   -webkit-animation: shake 1s forwards;
   -o-animation: shake 1s forwards;
   -moz-animation: shake 1s forwards;
   animation: shake 1s forwards;
 }
-/* line 374, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 .likeContainer .face {
   height: 100%;
   z-index: 10;
@@ -3826,7 +3809,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 389, ../sass/style.scss */
+/* line 382, ../sass/style.scss */
 .likeContainer .eye {
   		/*
   		position:absolute;//doesn't take palces
@@ -3851,15 +3834,15 @@ body {
   height: 20%;
   background: #000;
 }
-/* line 413, ../sass/style.scss */
+/* line 406, ../sass/style.scss */
 .likeContainer .eye.leftEye {
   left: 28%;
 }
-/* line 416, ../sass/style.scss */
+/* line 409, ../sass/style.scss */
 .likeContainer .eye.rightEye {
   left: 55%;
 }
-/* line 421, ../sass/style.scss */
+/* line 414, ../sass/style.scss */
 .likeContainer .mouths {
   width: 30%;
   margin-left: auto;
@@ -3877,174 +3860,54 @@ body {
 }
 
 /***********************************************  Projects ****************************************/
-/* line 587, ../sass/style.scss */
+/* line 11, ../sass/Experiments.scss */
 #Experiments .row {
   margin: auto;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(45%, #9ee0ff), color-stop(45%, #ff6666));
+  background-image: -webkit-linear-gradient(top, #9ee0ff 45%, #ff6666 45%);
+  background-image: -moz-linear-gradient(top, #9ee0ff 45%, #ff6666 45%);
+  background-image: -o-linear-gradient(top, #9ee0ff 45%, #ff6666 45%);
+  background-image: linear-gradient(top, #9ee0ff 45%, #ff6666 45%);
+}
+/* line 15, ../sass/Experiments.scss */
+#Experiments .row h1 {
+  font-size: 2.5em;
+  color: white;
+  margin: 0% 0 3% 5%;
+}
+/* line 20, ../sass/Experiments.scss */
+#Experiments .row p {
+  font-size: 0.6em;
 }
 
-/* line 591, ../sass/style.scss */
+/* line 26, ../sass/Experiments.scss */
 .projectWrapper {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffe440), color-stop(50%, #9ee0ff), color-stop(100%, #f16c97));
-  background-image: -webkit-linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
-  background-image: -moz-linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
-  background-image: -o-linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
-  background-image: linear-gradient(top left, #ffe440, #9ee0ff, #f16c97);
-  width: 90%;
+  background: transparent;
+  width: 100%;
   margin: auto;
   text-align: center;
+  margin-top: 3%;
 }
 
-/* line 599, ../sass/style.scss */
-.projectFoot {
-  position: absolute;
-  background: transparent;
-  width: 38%;
-  display: inline-block;
-  height: 15%;
-  right: 14%;
-  top: 18%;
-  -webkit-box-shadow: 3px 0px -3px -3px #666666;
-  -moz-box-shadow: 3px 0px -3px -3px #666666;
-  box-shadow: 3px 0px -3px -3px #666666;
-}
-/* line 610, ../sass/style.scss */
-.projectFoot .dialog {
-  position: relative;
-  color: #666;
-  width: 100%;
-  height: 100%;
-  margin-left: 2em;
-  font-size: 0.75em;
-  padding: 1%;
-  line-height: 1.5em;
-  display: inline-block;
-  background: #fdd1e0;
-  -webkit-box-shadow: 2px -2px 3px 1px #666666;
-  -moz-box-shadow: 2px -2px 3px 1px #666666;
-  box-shadow: 2px -2px 3px 1px #666666;
-}
-
-/* line 626, ../sass/style.scss */
-.clip {
-  z-index: 2;
-  position: relative;
-  background: transparent;
-  top: -1.4em;
-  	/*
-  	&:after{
-  		//the dot on the 
-  		content:"";
-  		position:absolute;
-  		width:6px;
-  		height:6px;
-  		background:#666;
-  		@include border-radius(100%);
-  		top:-0.3em;
-  		left:65%;
-  
-  	}*/
-}
-/* line 631, ../sass/style.scss */
-.clip:before {
-  content: "";
-  position: absolute;
-  width: 2em;
-  height: 1em;
-  background: inherit;
-  opacity: 0.9;
-  -webkit-transform: rotate(-5deg);
-  -moz-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
-  -o-transform: rotate(-5deg);
-  transform: rotate(-5deg);
-  -webkit-border-top-right-radius: 0.2em;
-  -moz-border-top-right-radius: 0.2em;
-  -ms-border-top-right-radius: 0.2em;
-  -o-border-top-right-radius: 0.2em;
-  border-top-right-radius: 0.2em;
-  -webkit-border-bottom-right-radius: 0.2em;
-  -moz-border-bottom-right-radius: 0.2em;
-  -ms-border-bottom-right-radius: 0.2em;
-  -o-border-bottom-right-radius: 0.2em;
-  border-bottom-right-radius: 0.2em;
-  -webkit-box-shadow: 3px 3px 3px #666666;
-  -moz-box-shadow: 3px 3px 3px #666666;
-  box-shadow: 3px 3px 3px #666666;
-  border-top: 2px solid rgba(255, 255, 255, 0.8);
-  border-left: 2px solid rgba(255, 255, 255, 0.8);
-}
-
-/* line 659, ../sass/style.scss */
-.buttonWrap {
-  position: absolute;
-  left: 0;
-  bottom: 1em;
-  display: inline-block;
-  width: 100%;
-  -webkit-perspective: 400px;
-  -moz-perspective: 400px;
-  -ms-perspective: 400px;
-  -o-perspective: 400px;
-  perspective: 400px;
-  float: right;
-}
-/* line 668, ../sass/style.scss */
-.buttonWrap .load {
-  width: 50%;
-  margin: auto;
-  color: #fff;
-}
-/* line 673, ../sass/style.scss */
-.buttonWrap .test {
-  position: relative;
-  width: 40%;
-  left: 5em;
-  background: #fff;
-}
-
-/* line 681, ../sass/style.scss */
-.loadButton {
-  margin: auto;
-  display: inline-block;
-  position: relative;
-  width: 30%;
-  font-size: 1.1em;
-  background: #99d11c;
-  color: #fff;
-  -webkit-border-radius: 0.8em;
-  -moz-border-radius: 0.8em;
-  -ms-border-radius: 0.8em;
-  -o-border-radius: 0.8em;
-  border-radius: 0.8em;
-  border: 3px solid #bae847;
-  border-bottom-color: #537d00;
-}
-/* line 694, ../sass/style.scss */
-.loadButton:hover {
-  border-color: #537d00;
-}
-/* line 697, ../sass/style.scss */
-.loadButton:before {
-  content: '';
-  position: absolute;
-}
-
-/* line 702, ../sass/style.scss */
-.projectWrapper .projects:nth-last-of-type(-n+4) {
-  margin-top: 15%;
-}
-
-/* line 705, ../sass/style.scss */
+/* line 37, ../sass/Experiments.scss */
 .projects {
   float: left;
-  width: 21%;
-  margin: 2% 0 0 3%;
+  width: 15%;
+  margin: 5% 0 2% 3%;
 }
-/* line 710, ../sass/style.scss */
+/* line 42, ../sass/Experiments.scss */
 .projects:nth-child(1) {
   margin-left: 5%;
 }
-/* line 713, ../sass/style.scss */
+/* line 45, ../sass/Experiments.scss */
+.projects:nth-child(2n) {
+  margin-top: 13%;
+}
+/* line 48, ../sass/Experiments.scss */
+.projects:nth-child(3) {
+  margin-top: 20%;
+}
+/* line 51, ../sass/Experiments.scss */
 .projects .description {
   box-shadow: 1px #f2f2f2;
   position: relative;
@@ -4069,7 +3932,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 725, ../sass/style.scss */
+/* line 62, ../sass/Experiments.scss */
 .projects .description .proShelter {
   position: absolute;
   width: 100%;
@@ -4078,12 +3941,12 @@ body {
   z-index: 1;
   overflow: hidden;
 }
-/* line 736, ../sass/style.scss */
+/* line 73, ../sass/Experiments.scss */
 .projects .description .proShelter img {
   max-width: 100%;
   max-width: 100%;
 }
-/* line 741, ../sass/style.scss */
+/* line 78, ../sass/Experiments.scss */
 .projects .description .descrpt {
   position: absolute;
   overflow: hidden;
@@ -4094,15 +3957,15 @@ body {
   opacity: 0.9;
   text-align: center;
 }
-/* line 757, ../sass/style.scss */
-.projects .description .descrpt h3 {
+/* line 94, ../sass/Experiments.scss */
+.projects .description .descrpt p {
   margin-left: 0.5em;
   margin-right: 0.5em;
   margin-top: 2em;
   line-height: 1.2em;
   font-size: 0.9em;
 }
-/* line 767, ../sass/style.scss */
+/* line 102, ../sass/Experiments.scss */
 .projects .description .top, .projects .description .top img {
   -webkit-border-top-left-radius: 0.3em;
   -moz-border-top-left-radius: 0.3em;
@@ -4115,7 +3978,7 @@ body {
   -o-border-top-right-radius: 0.3em;
   border-top-right-radius: 0.3em;
 }
-/* line 771, ../sass/style.scss */
+/* line 106, ../sass/Experiments.scss */
 .projects .description .down {
   top: 50%;
   -webkit-border-bottom-left-radius: 0.3em;
@@ -4129,7 +3992,7 @@ body {
   -o-border-bottom-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
 }
-/* line 775, ../sass/style.scss */
+/* line 110, ../sass/Experiments.scss */
 .projects .description .down img {
   position: relative;
   top: -100%;
@@ -4144,12 +4007,12 @@ body {
   -o-border-bottom-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
 }
-/* line 781, ../sass/style.scss */
-.projects .description .down h3 {
+/* line 116, ../sass/Experiments.scss */
+.projects .description .down p {
   position: relative;
   top: -100%;
 }
-/* line 786, ../sass/style.scss */
+/* line 121, ../sass/Experiments.scss */
 .projects .description .in_top, .projects .description .in_right {
   -webkit-transform-origin: 50% 100% 0;
   -moz-transform-origin: 50% 100% 0;
@@ -4161,7 +4024,7 @@ body {
   -moz-animation: pro_in_top 0.5s forwards;
   animation: pro_in_top 0.5s forwards;
 }
-/* line 791, ../sass/style.scss */
+/* line 126, ../sass/Experiments.scss */
 .projects .description .in_bottom, .projects .description .in_left {
   -webkit-transform-origin: 50% 0 0;
   -moz-transform-origin: 50% 0 0;
@@ -4173,7 +4036,7 @@ body {
   -moz-animation: pro_in_bottom 0.5s forwards;
   animation: pro_in_bottom 0.5s forwards;
 }
-/* line 795, ../sass/style.scss */
+/* line 130, ../sass/Experiments.scss */
 .projects .description .out_top, .projects .description .out_right {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -4190,7 +4053,7 @@ body {
   -moz-animation: pro_out_top 0.5s 0.3s forwards;
   animation: pro_out_top 0.5s 0.3s forwards;
 }
-/* line 800, ../sass/style.scss */
+/* line 135, ../sass/Experiments.scss */
 .projects .description .out_bottom, .projects .description .out_left {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -4207,7 +4070,7 @@ body {
   -moz-animation: pro_out_bottom 0.5s 0.3s forwards;
   animation: pro_out_bottom 0.5s 0.3s forwards;
 }
-/* line 805, ../sass/style.scss */
+/* line 140, ../sass/Experiments.scss */
 .projects .description .rotate_in_bottom, .projects .description .rotate_in_left {
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
@@ -4226,7 +4089,7 @@ body {
   -moz-animation: rotate_in_bottom 0.5s 0.3s forwards;
   animation: rotate_in_bottom 0.5s 0.3s forwards;
 }
-/* line 812, ../sass/style.scss */
+/* line 147, ../sass/Experiments.scss */
 .projects .description .rotate_in_top, .projects .description .rotate_in_right {
   z-index: 1;
   opacity: 0;
@@ -4245,7 +4108,7 @@ body {
   -moz-animation: rotate_in_top 0.5s 0.3s forwards;
   animation: rotate_in_top 0.5s 0.3s forwards;
 }
-/* line 819, ../sass/style.scss */
+/* line 154, ../sass/Experiments.scss */
 .projects .description .rotate_out_top, .projects .description .rotate_out_right {
   z-index: 1;
   -webkit-transform-origin: 50% 0 0;
@@ -4258,7 +4121,7 @@ body {
   -moz-animation: rotate_out_top 0.5s forwards;
   animation: rotate_out_top 0.5s forwards;
 }
-/* line 824, ../sass/style.scss */
+/* line 159, ../sass/Experiments.scss */
 .projects .description .rotate_out_bottom, .projects .description .rotate_out_left {
   z-index: 1;
   -webkit-transform-origin: 50% 100% 0;
@@ -4271,7 +4134,7 @@ body {
   -moz-animation: rotate_out_bottom 0.5s  forwards;
   animation: rotate_out_bottom 0.5s  forwards;
 }
-/* line 830, ../sass/style.scss */
+/* line 165, ../sass/Experiments.scss */
 .projects .caption {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4286,24 +4149,44 @@ body {
   -ms-border-bottom-right-radius: 0.3em;
   -o-border-bottom-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
-  padding: 5% 3% 0 3%;
+  padding: 5% 2% 0 2%;
   width: 100%;
   background: #fff;
   text-align: center;
 }
-/* line 838, ../sass/style.scss */
+/* line 173, ../sass/Experiments.scss */
 .projects .caption h3 {
-  color: #558c00;
-  font-size: 0.75em;
+  color: #ad0000;
+  font-size: 0.7em;
   line-height: 2em;
 }
-/* line 843, ../sass/style.scss */
+/* line 178, ../sass/Experiments.scss */
 .projects .caption p {
-  color: #78a632;
+  color: #ad0000;
   font-size: 0.6em;
 }
 
-/* line 850, ../sass/style.scss */
+/* line 185, ../sass/Experiments.scss */
+.buttonWrap {
+  position: absolute;
+  left: 0;
+  bottom: 1em;
+  width: 100%;
+  -webkit-perspective: 400px;
+  -moz-perspective: 400px;
+  -ms-perspective: 400px;
+  -o-perspective: 400px;
+  perspective: 400px;
+  float: right;
+}
+/* line 192, ../sass/Experiments.scss */
+.buttonWrap .load {
+  width: 50%;
+  margin: auto;
+  color: #fff;
+}
+
+/* line 198, ../sass/Experiments.scss */
 .rotateY {
   -webkit-transform-origin: 50% 50% 0;
   -moz-transform-origin: 50% 50% 0;
@@ -4316,21 +4199,8 @@ body {
   animation: rotateY 1.5s forwards;
 }
 
-/* line 855, ../sass/style.scss */
-.btnRotateY {
-  -webkit-transform-origin: 50% 0 0;
-  -moz-transform-origin: 50% 0 0;
-  -ms-transform-origin: 50% 0 0;
-  -o-transform-origin: 50% 0 0;
-  transform-origin: 50% 0 0;
-  -webkit-animation: btnRotateY 1.5s 0.5s forwards;
-  -o-animation: btnRotateY 1.5s 0.5s forwards;
-  -moz-animation: btnRotateY 1.5s 0.5s forwards;
-  animation: btnRotateY 1.5s 0.5s forwards;
-}
-
 /***************************************************** Blog **********************************/
-/* line 865, ../sass/style.scss */
+/* line 578, ../sass/style.scss */
 #Blog .row .contentWrap {
   position: relative;
   -webkit-perspective: 800px;
@@ -4340,7 +4210,7 @@ body {
   perspective: 800px;
   overflow: hidden;
 }
-/* line 873, ../sass/style.scss */
+/* line 586, ../sass/style.scss */
 #Blog .slider {
   overflow: hidden;
   background: #fff;
@@ -4348,24 +4218,24 @@ body {
   line-height: 2em;
   position: absolute;
 }
-/* line 879, ../sass/style.scss */
+/* line 592, ../sass/style.scss */
 #Blog .slider ul {
   left: 0;
   position: relative;
   height: 100%;
 }
-/* line 883, ../sass/style.scss */
+/* line 596, ../sass/style.scss */
 #Blog .slider ul li {
   height: 100%;
   position: relative;
   float: left;
 }
-/* line 887, ../sass/style.scss */
+/* line 600, ../sass/style.scss */
 #Blog .slider ul li img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 893, ../sass/style.scss */
+/* line 606, ../sass/style.scss */
 #Blog .slider .btnCtrl {
   background: transparent;
   position: absolute;
@@ -4375,27 +4245,27 @@ body {
   overflow: hidden;
   border: none;
 }
-/* line 903, ../sass/style.scss */
+/* line 616, ../sass/style.scss */
 #Blog .slider #prev {
   background: url("/static/images/gray_prev.png") no-repeat;
   background-position: 0 100%;
   left: 0;
 }
-/* line 907, ../sass/style.scss */
+/* line 620, ../sass/style.scss */
 #Blog .slider #prev:hover {
   background-position: 0 0;
 }
-/* line 911, ../sass/style.scss */
+/* line 624, ../sass/style.scss */
 #Blog .slider #next {
   background: url("/static/images/gray_next.png") no-repeat;
   right: 0;
   background-position: 0 100%;
 }
-/* line 915, ../sass/style.scss */
+/* line 628, ../sass/style.scss */
 #Blog .slider #next:hover {
   background-position: 0 0;
 }
-/* line 920, ../sass/style.scss */
+/* line 633, ../sass/style.scss */
 #Blog #sliderLeft {
   -webkit-transform: translateX(-80.5%) rotateY(45deg) scale(0.8) translateY(7.8%);
   -moz-transform: translateX(-80.5%) rotateY(45deg) scale(0.8) translateY(7.8%);
@@ -4408,7 +4278,7 @@ body {
   -o-transform-origin: top right 0 50%;
   transform-origin: top right 0 50%;
 }
-/* line 924, ../sass/style.scss */
+/* line 637, ../sass/style.scss */
 #Blog #sliderRight {
   -webkit-transform: translateX(99.7%) rotateY(-35deg) scale(0.8) translateY(7.8%);
   -moz-transform: translateX(99.7%) rotateY(-35deg) scale(0.8) translateY(7.8%);
@@ -4421,7 +4291,7 @@ body {
   -o-transform-origin: top left 0 50%;
   transform-origin: top left 0 50%;
 }
-/* line 928, ../sass/style.scss */
+/* line 641, ../sass/style.scss */
 #Blog #slicesWrapper {
   -webkit-transform: scale(0.8) translateX(12%) translateY(-4.97%);
   -moz-transform: scale(0.8) translateX(12%) translateY(-4.97%);
@@ -4429,7 +4299,7 @@ body {
   -o-transform: scale(0.8) translateX(12%) translateY(-4.97%);
   transform: scale(0.8) translateX(12%) translateY(-4.97%);
 }
-/* line 930, ../sass/style.scss */
+/* line 643, ../sass/style.scss */
 #Blog #slicesWrapper .slice {
   position: relative;
   background: #99d11c;
@@ -4438,7 +4308,7 @@ body {
   float: left;
   overflow: hidden;
 }
-/* line 937, ../sass/style.scss */
+/* line 650, ../sass/style.scss */
 #Blog #slicesWrapper .slice .dialogBox {
   position: relative;
   width: 100%;
@@ -4457,31 +4327,31 @@ body {
   opacity: 0.7;
   line-height: 150%;
 }
-/* line 952, ../sass/style.scss */
+/* line 665, ../sass/style.scss */
 #Blog #slicesWrapper .left .dialogBox {
   left: 50%;
 }
-/* line 957, ../sass/style.scss */
+/* line 670, ../sass/style.scss */
 #Blog #slicesWrapper .right .dialogBox {
   left: -50%;
 }
-/* line 962, ../sass/style.scss */
+/* line 675, ../sass/style.scss */
 #Blog .wrapper {
   position: absolute;
   width: 25%;
   height: 10%;
 }
-/* line 966, ../sass/style.scss */
+/* line 679, ../sass/style.scss */
 #Blog .wrapper.blogshots {
   top: 80%;
   left: 27%;
 }
-/* line 970, ../sass/style.scss */
+/* line 683, ../sass/style.scss */
 #Blog .wrapper.bloglink {
   top: 85%;
   right: 28%;
 }
-/* line 974, ../sass/style.scss */
+/* line 687, ../sass/style.scss */
 #Blog .wrapper .ribbon {
   position: relative;
   width: 1.5em;
@@ -4493,7 +4363,7 @@ body {
   left: -0.9em;
   z-index: 1;
 }
-/* line 984, ../sass/style.scss */
+/* line 697, ../sass/style.scss */
 #Blog .wrapper .ribbon.link {
   width: 1em;
   top: 0.6em;
@@ -4501,7 +4371,7 @@ body {
   border-color: #666666 transparent #666666 #666666;
 }
 
-/* line 993, ../sass/style.scss */
+/* line 706, ../sass/style.scss */
 #blogShots {
   z-index: 2;
   position: absolute;
@@ -4511,7 +4381,7 @@ body {
   color: #fff;
   background: #f86c99;
 }
-/* line 1002, ../sass/style.scss */
+/* line 715, ../sass/style.scss */
 #blogShots:before {
   content: "Show Me";
   position: absolute;
@@ -4520,7 +4390,7 @@ body {
   color: #696969;
   top: -1em;
 }
-/* line 1011, ../sass/style.scss */
+/* line 724, ../sass/style.scss */
 #blogShots:after {
   content: "";
   width: 0;
@@ -4533,7 +4403,7 @@ body {
   left: 1px;
 }
 
-/* line 1023, ../sass/style.scss */
+/* line 736, ../sass/style.scss */
 #BlogLink {
   z-index: 2;
   position: absolute;
@@ -4543,7 +4413,7 @@ body {
   color: #fff;
   background: #666666;
 }
-/* line 1031, ../sass/style.scss */
+/* line 744, ../sass/style.scss */
 #BlogLink:before {
   content: "";
   position: absolute;
@@ -4556,7 +4426,7 @@ body {
   top: 105%;
   border-style: solid;
 }
-/* line 1043, ../sass/style.scss */
+/* line 756, ../sass/style.scss */
 #BlogLink:after {
   content: "In a new tab";
   position: absolute;
@@ -4567,11 +4437,11 @@ body {
 }
 
 /************************************************* Contact ********************************************/
-/* line 1057, ../sass/style.scss */
+/* line 770, ../sass/style.scss */
 #Contact h1 {
   float: left;
 }
-/* line 1060, ../sass/style.scss */
+/* line 773, ../sass/style.scss */
 #Contact .clouds {
   overflow: hidden;
   height: 14%;
@@ -4579,7 +4449,7 @@ body {
   position: relative;
   padding-bottom: 2%;
 }
-/* line 1066, ../sass/style.scss */
+/* line 779, ../sass/style.scss */
 #Contact .clouds .cloud {
   margin-left: 5%;
   position: relative;
@@ -4592,7 +4462,7 @@ body {
   -moz-box-shadow: 0px 5px 25px 0px lightgrey;
   box-shadow: 0px 5px 25px 0px lightgrey;
 }
-/* line 1076, ../sass/style.scss */
+/* line 789, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1, #Contact .clouds .cloud .cloudPart2 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -4602,19 +4472,19 @@ body {
   background: inherit;
   position: absolute;
 }
-/* line 1081, ../sass/style.scss */
+/* line 794, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1 {
   top: -70%;
   width: 35%;
   left: 13%;
 }
-/* line 1086, ../sass/style.scss */
+/* line 799, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart2 {
   top: -103%;
   width: 50%;
   left: 37%;
 }
-/* line 1094, ../sass/style.scss */
+/* line 807, ../sass/style.scss */
 #Contact .icons {
   width: 30%;
   height: auto;
@@ -4622,21 +4492,21 @@ body {
   position: relative;
   margin: auto;
 }
-/* line 1100, ../sass/style.scss */
+/* line 813, ../sass/style.scss */
 #Contact .icons a {
   position: relative;
   height: auto;
   overflow: hidden;
 }
-/* line 1106, ../sass/style.scss */
+/* line 819, ../sass/style.scss */
 #Contact .icons a:nth-child(1) {
   margin-right: 35%;
 }
-/* line 1109, ../sass/style.scss */
+/* line 822, ../sass/style.scss */
 #Contact .icons a:nth-child(3) {
   float: right;
 }
-/* line 1113, ../sass/style.scss */
+/* line 826, ../sass/style.scss */
 #Contact .dialog {
   top: 0px;
   right: 0px;
@@ -4651,7 +4521,7 @@ body {
   padding-right: 3%;
   border: none;
 }
-/* line 1127, ../sass/style.scss */
+/* line 840, ../sass/style.scss */
 #Contact .form {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4670,7 +4540,7 @@ body {
   margin-top: 5%;
   color: #558c00;
 }
-/* line 1140, ../sass/style.scss */
+/* line 853, ../sass/style.scss */
 #Contact #contactForm {
   width: 90%;
   margin: auto;
@@ -4679,14 +4549,14 @@ body {
   background: #fff;
   color: #78a632;
 }
-/* line 1148, ../sass/style.scss */
+/* line 861, ../sass/style.scss */
 #Contact .input {
   width: 45%;
   float: left;
   overflow: hidden;
   margin-right: 7%;
 }
-/* line 1153, ../sass/style.scss */
+/* line 866, ../sass/style.scss */
 #Contact .input input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4702,20 +4572,20 @@ body {
   font-size: 0.9em;
   color: #666666;
 }
-/* line 1162, ../sass/style.scss */
+/* line 875, ../sass/style.scss */
 #Contact .input input:focus, #Contact .input input:invalid {
   box-shadow: none !important;
 }
-/* line 1166, ../sass/style.scss */
+/* line 879, ../sass/style.scss */
 #Contact .input .second {
   margin-top: 8%;
 }
-/* line 1171, ../sass/style.scss */
+/* line 884, ../sass/style.scss */
 #Contact .message {
   overflow: hidden;
   float: 50%;
 }
-/* line 1175, ../sass/style.scss */
+/* line 888, ../sass/style.scss */
 #Contact .message textarea {
   font-size: 0.9em;
   width: 98%;
@@ -4731,11 +4601,11 @@ body {
   resize: vertical;
   color: #666666;
 }
-/* line 1185, ../sass/style.scss */
+/* line 898, ../sass/style.scss */
 #Contact .message textarea:focus, #Contact .message textarea:invalid {
   box-shadow: none !important;
 }
-/* line 1190, ../sass/style.scss */
+/* line 903, ../sass/style.scss */
 #Contact .error {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4744,7 +4614,7 @@ body {
   font-size: 0.6em;
   font-weight: light;
 }
-/* line 1196, ../sass/style.scss */
+/* line 909, ../sass/style.scss */
 #Contact .contactButton {
   float: right;
   width: 43%;
@@ -4761,11 +4631,11 @@ body {
   margin-top: 13%;
   margin-right: 10%;
 }
-/* line 1209, ../sass/style.scss */
+/* line 922, ../sass/style.scss */
 #Contact .contactButton:hover {
   border-color: #486c10;
 }
-/* line 1214, ../sass/style.scss */
+/* line 927, ../sass/style.scss */
 #Contact .alertBox {
   position: absolute;
   top: 0;
@@ -4774,7 +4644,7 @@ body {
   height: 100%;
   background: rgba(255, 225, 255, 0.5);
 }
-/* line 1221, ../sass/style.scss */
+/* line 934, ../sass/style.scss */
 #Contact .alertBox div {
   color: #78A632;
   opacity: 1;
@@ -4795,7 +4665,7 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-/* line 1235, ../sass/style.scss */
+/* line 948, ../sass/style.scss */
 #Contact .alertBox .contactButton {
   width: 15%;
 }
