@@ -1,5 +1,40 @@
 //#F16c97';
 $(document).ready(function(){
+	$('.option').mouseover(function(){
+		$(this).css({
+			'-moz-transition': 'none',
+    		'-webkit-transition': 'none',
+   			'-o-transition': 'color 0 ease-in',
+    		'transition': 'none',
+    		'opacity':'1',
+    		'text-shadow':'0 0 0px #000' 
+		});
+		$(this).children('span').css({
+			'-moz-transition': 'none',
+    		'-webkit-transition': 'none',
+   			'-o-transition': 'color 0 ease-in',
+    		'transition': 'none',
+    		'opacity':'1',
+    		'text-shadow':'0 0 0px #ff0000'
+		});
+	}).mouseout(function(){
+		$(this).css({
+			'-moz-transition': 'none',
+    		'-webkit-transition': 'none',
+   			'-o-transition': 'color 0 ease-in',
+    		'transition': 'none',
+    		'opacity':'1',
+    		'text-shadow':'0 0 30px #000' 
+		});
+		$(this).children('span').css({
+			'-moz-transition': 'none',
+    		'-webkit-transition': 'none',
+   			'-o-transition': 'color 0 ease-in',
+    		'transition': 'none',
+    		'opacity':'1',
+    		'text-shadow':'0 0 30px #ff0000'
+		});
+	});
 	var eye = $('.eye');
 	var mouth = $('.mouths');
 	//halfCircle( eye );

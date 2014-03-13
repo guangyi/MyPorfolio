@@ -1,17 +1,19 @@
-$description:#696969;
-$loadButton:#99d11c;//#f13c76;pink
-$buttonBorder:#bae847;//#639500;//#F16c97;
-$captionTag:#78A632;//#99d11c;//
-$captionTitle:#558c00;//#639500;//#80c100;//$loadButton;
-$buttonBottemBdr:#537d00;
-$proBrdRds:0.3em;
+$bgTop:#9EE0FF;
+$bgBottom:#ff6666;
 
 $titleColor:#fff;
+$descriptionFontColor:#696969;
+$descriptionBG:#fff;
+$BorderRadius:0.3em;
+$captionBG:#fff;
+$captionTag:#AD0000;
+$captionTitle:#AD0000;
+$buttonFontColor:#fff;
 #Experiments{
 	.row{
 		margin:auto;
 		//background:#ad0000;
-		@include background-image(linear-gradient(top,  $bg_Contact 45%, #ff6666 45% ));
+		@include background-image(linear-gradient(top,  $bgTop 45%, $bgBottom 45% ));
 		h1{
 			font-size:2.5em;
 			color:$titleColor;
@@ -20,7 +22,6 @@ $titleColor:#fff;
 		p{
 			font-size: 0.6em;
 		}
-
 	}	
 }
 .projectWrapper{
@@ -29,18 +30,14 @@ $titleColor:#fff;
 	margin:auto;
 	text-align:center;
 	margin-top:3%;
-	//@include box-shadow(3px -3px 3px 3px #666);
-}
-.projectWrapper .projects:nth-last-of-type(-n+3){
-	//margin-top:10%;
 }
 .projects{
 	float:left;
 	width:15%;
 	margin:5% 0 2% 3%;
-	//padding:14px 0 2px 0;
+	//if there are elements other than .projects, than the nth-child not working correctly.
 	&:nth-child(1){
-			margin-left:5%;
+		margin-left:5%;
 	}
 	&:nth-child(2n){
 		margin-top:13%;
@@ -49,16 +46,16 @@ $titleColor:#fff;
 		margin-top:20%;
 	}
 	.description{
+		// set the perspective on the parent element
+		// so its child element can have different perspective on 3d transform animation!
 		box-shadow: 1px #f2f2f2;
 		position:relative;
 		width:100%;
 		background-size: 100%;
 		@include perspective(600px);
-		@include border-radius-part(top-left, $proBrdRds);
-		@include border-radius-part(top-right, $proBrdRds);
+		@include border-radius-part(top-left, $BorderRadius);
+		@include border-radius-part(top-right, $BorderRadius);
 		@include box-sizing(border-box);
-		// set the perspective on the parent element
-		// so its child element can have different perspective on 3d transform animation!
 		.proShelter{
 			// if use position relative, .proShelter will take place,
 			// so the description will be below the proShelter, not under it and covered by it.
@@ -67,12 +64,11 @@ $titleColor:#fff;
 			height:50%;
 			background-position: 5% 5%; // sequence: left top
 			z-index:1;
-			//max-width: 100%;
-			//max-height: 100%;
 			overflow: hidden;
 			& img{
+				//max/min-width to make the img zoom within the right container
 				max-width: 100%;
-				max-width: 100%;
+				min-width: 100%;
 			}
 		}
 		.descrpt{
@@ -84,13 +80,10 @@ $titleColor:#fff;
 			overflow: hidden;
 			height:50%;
 			width:100%;
-			background:#fff;//$bg_Projects;
-			color:$description;
-			// add padding but the "top" attribute for the down descrpt is still 100%;
-			// do not use box-sizing(border-box) here. it will affect the effect we want
+			background:$descriptionBG;
+			color:$descriptionFontColor;
 			opacity: 0.9;
 			text-align: center;
-			//@include box-sizing(border-box);
 			& p{
 				margin-left:0.5em;
 				margin-right:0.5em;
@@ -100,18 +93,18 @@ $titleColor:#fff;
 			}
 		}	
 		.top, .top img{
-			@include border-radius-part(top-left, $proBrdRds);
-			@include border-radius-part(top-right, $proBrdRds); 
+			@include border-radius-part(top-left, $BorderRadius);
+			@include border-radius-part(top-right, $BorderRadius); 
 		}
 		.down{
 			top:50%;
-			@include border-radius-part(bottom-left, $proBrdRds);
-			@include border-radius-part(bottom-right, $proBrdRds); 
+			@include border-radius-part(bottom-left, $BorderRadius);
+			@include border-radius-part(bottom-right, $BorderRadius); 
 			& img{
 				position:relative;
 				top:-100%;
-				@include border-radius-part(bottom-left, $proBrdRds);
-				@include border-radius-part(bottom-right, $proBrdRds); 
+				@include border-radius-part(bottom-left, $BorderRadius);
+				@include border-radius-part(bottom-right, $BorderRadius); 
 			}
 			& p{
 				position:relative;
@@ -168,19 +161,18 @@ $titleColor:#fff;
 			@include border-radius-part(bottom-right, 0.3em);
 			padding:5% 2% 0 2%;
 			width:100%;
-			background:#fff;
+			background:$captionBG;
 			text-align: center;
 			& h3{
-				color: #ad0000;//$captionTitle;
+				color:$captionTitle;
 				font-size: 0.7em;
 				line-height: 2em;
 			}
 			& p{
-				color:#ad0000;//$captionTag;
+				color:$captionTag;
 				font-size:0.6em;
 			}
 	}
-	
 }
 .buttonWrap{
 	position:absolute;
@@ -192,7 +184,7 @@ $titleColor:#fff;
 	& .load{
 		width:50%;
 		margin:auto;
-		color:#fff;
+		color:$buttonFontColor;
 	}
 }
 .rotateY{

@@ -26,4 +26,4 @@ def sendEmail(request):
 
 class loadProjects(generics.ListAPIView):
     model = Projects
-   # serializer = projectSerializer
+    #serializer = projectSerializer

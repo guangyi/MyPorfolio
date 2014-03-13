@@ -3544,7 +3544,7 @@ body {
 }
 
 /********************************************** More About Me ***************************************/
-/* line 302, ../sass/style.scss */
+/* line 1, ../sass/MoreAboutMe.scss */
 .likeContainer {
   height: 100%;
   width: auto;
@@ -3553,149 +3553,8 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
-  /*Currently working smile faces	
-  .faces{
-  		z-index: 2;
-  		width: 100%;
-  		height: 10%;
-  		background:inherit;
-  		position: relative;
-  		//text-align:center;
-  }
-  #faces3{
-  	//background:#ffb2b2;
-  	.smile{
-  		float:right;
-  		background:#fff;
-  	}
-  	//float:right;
-  }
-  .smile, .upset{
-  	//absolute doesn't take position in the container
-  	// static and relative does. so the 'top' and 'left' are 
-  	// relative to the first element that is position static.
-  	z-index:10;
-  	position:relative;
-  	float:left;
-  	margin-left: auto;
-  	margin-right: auto;
-  	//width:30%;
-  	background:#fff;//#7fd0d0;
-  	//use border to have the shape of face;
-  	border: 2px solid #f16c97;
-  	@include border-radius(1em);
-  	@include box-sizing(border-box);
-  	//@include border-radius-part(top-left, 50%);
-  	//@include border-radius-part(bottom-right, 50%);
-  }
-  .eye{
-  	// half circle: width = 2 * height and border-radius = width
-  	position:absolute;//doesn't take palces
-  	width:12%;
-  	// height and border-radius are set in setting.js 
-  	// use border to get the shape of eye
-  	border: 2px solid #f16c97;
-  	border-bottom:0px;
-  	top:15%;
-  	background:transparent;
-  }
-  .left{
-  	left:28%;
-  }
-  .right{
-  	left:55%;
-  }
-  .mouth{
-  	
-  	width:51%;
-  	margin:auto;
-  	//if don't want to ruin the size of a container, use position absolute for
-  	// it's child element cause in that case they don't take any place;
-  	position:relative;
-  	
-  	//background:#e9b03d;
-  	border: 2px solid #f16c97;
-  	//@include box-sizing(border-box);
-  	overflow:hidden;
-  	.teeth{
-  		position:relative;
-  		width:100%;
-  		height:100%;
-  		left:-6%;
-  	}
-  	.teeth li:nth-child(-n + 5){
-  		height: 100%;
-  		width:16%;
-  		float:left;
-  		list-style: none;
-  		border-right:2px solid #f16c97;
-  		//border-bottom:2px solid #f16c97; // teeth or not
-  	}
-  }
-  .smile{
-  	.mouth{
-  		top:55%;
-  		@include transform( rotateZ(180deg) );
-  	}
-  }
-  /*
-  seems like not usefull
-  .upset{
-  	.eye{
-  		width:10%;
-  		border-radius:0;
-  		top: 10%;
-  		@include transform(rotateX(180deg));
-  	}
-  	.mouth{
-  		top:80%;
-  		left:50%;
-  		border-bottom:30px;
-  		width:20%;
-  		@include transform( rotateZ( 5deg ));
-  	}
-  	.left{
-  		left:27%;
-  	}
-  	.right{
-  		left:50%;
-  	}
-  }*/
-  /* smile face and upset face roatetion animation
-  but I sitll couldn't figure it out why reverse doesn't work
-  example: @include animation('upsetEye 5s reverse forwards');-- not working
-  */
-  /*
-  .upsetEye{
-  	@include animation('upsetEye 1s forwards');
-  	@include transform-origin(50% 50% 0);
-  }
-  .upsetEye_right{
-  	@include animation('upsetEye_right 1s 0.2s forwards');
-  }
-  .upsetMouth{
-  	@include animation('upsetMouth 1s 1.6s forwards');
-  	@include transform-origin(50% 50% 0);
-  }
-  .smileEye{
-  	
-  	@include animation('smileEye 1s forwards');
-  	@include transform-origin(50% 50% 0);
-  }
-  .smileEye_right{
-  	@include animation('smileEye_right 1s forwards');
-  	@include transform-origin(50% 50% 0);
-  }
-  .smileMouth{
-  	@include animation('smileMouth 1s forwards');
-  	@include transform-origin(50% 50% 0);
-  }
-  .changeFace{
-  	@include animation('changeFace 3s forwards');
-  	@include transform-origin(center center 0);
-  }*/
 }
-/* line 308, ../sass/style.scss */
+/* line 7, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap {
   width: 100%;
   background: white;
@@ -3710,7 +3569,7 @@ body {
   perspective: 500px;
   text-align: center;
 }
-/* line 316, ../sass/style.scss */
+/* line 15, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap .options {
   width: 100%;
   margin: 0;
@@ -3718,7 +3577,7 @@ body {
   height: 100%;
   overflow: scroll;
 }
-/* line 322, ../sass/style.scss */
+/* line 21, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap .options .heart {
   position: absolute;
   width: 8%;
@@ -3728,7 +3587,7 @@ body {
   float: left;
   margin: 0 3% 0 0;
 }
-/* line 330, ../sass/style.scss */
+/* line 29, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap .options .heart:before {
   content: "";
   position: absolute;
@@ -3748,7 +3607,7 @@ body {
   -o-border-bottom-left-radius: 100%;
   border-bottom-left-radius: 100%;
 }
-/* line 342, ../sass/style.scss */
+/* line 41, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap .options .option {
   display: inline-block;
   height: auto;
@@ -3762,8 +3621,18 @@ body {
   -moz-transition: text-shadow 1.5s 2s;
   -o-transition: text-shadow 1.5s 2s;
   transition: text-shadow 1.5s 2s;
+  				/*&:hover{
+  					text-shadow:0px 0px 0px #000;
+  					-moz-transition: none;
+      				-webkit-transition: none;
+     					 -o-transition: color 0 ease-in;
+      				transition: none;
+      				& span{
+      					text-shadow:0px 0px 0px #ff0000;
+      				}
+  				}*/
 }
-/* line 351, ../sass/style.scss */
+/* line 60, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap .options .option span {
   -webkit-transition: text-shadow 1.5s;
   -webkit-transition-delay: 2s;
@@ -3772,7 +3641,7 @@ body {
   transition: text-shadow 1.5s 2s;
   text-shadow: 0px 0px 30px #ff0000;
 }
-/* line 356, ../sass/style.scss */
+/* line 65, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap .options .tada {
   -webkit-transform-origin: center center 0 50%;
   -moz-transform-origin: center center 0 50%;
@@ -3784,83 +3653,222 @@ body {
   -moz-animation: tada 1.3s forwards;
   animation: tada 1.3s forwards;
 }
-/* line 360, ../sass/style.scss */
+/* line 69, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap .options .shake {
   -webkit-animation: shake 1s forwards;
   -o-animation: shake 1s forwards;
   -moz-animation: shake 1s forwards;
   animation: shake 1s forwards;
 }
-/* line 367, ../sass/style.scss */
-.likeContainer .face {
-  height: 100%;
-  z-index: 10;
-  float: left;
-  position: relative;
-  display: inline-block;
-  background: #fff;
-  border: 2px solid #f16c97;
-  -webkit-border-radius: 0.2em;
-  -moz-border-radius: 0.2em;
-  -ms-border-radius: 0.2em;
-  -o-border-radius: 0.2em;
-  border-radius: 0.2em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* line 382, ../sass/style.scss */
-.likeContainer .eye {
-  		/*
-  		position:absolute;//doesn't take palces
-  		//display:inline-block;
-  		width:13%;
-  
-  		// height and border-radius are set in setting.js 
-  		// use border to get the shape of eye
-  		border:2px solid #f16c97;
-  		border-bottom:0px;
-  		top:15%;
-  		background:transparent;
-  		&.leftEye{
-  			left:23%;
-  		}
-  		&.rightEye{
-  			left:55%;
-  		}*/
-  position: absolute;
-  top: 15%;
-  width: 10%;
-  height: 20%;
-  background: #000;
-}
-/* line 406, ../sass/style.scss */
-.likeContainer .eye.leftEye {
-  left: 28%;
-}
-/* line 409, ../sass/style.scss */
-.likeContainer .eye.rightEye {
-  left: 55%;
-}
-/* line 414, ../sass/style.scss */
-.likeContainer .mouths {
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-  top: 58%;
-  position: relative;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-  border: 2px solid #f16c97;
-  border-bottom: none;
-  overflow: hidden;
-}
 
+		/*
+	face{
+		height:100%;
+		z-index:10;
+		float:left;
+		position:relative;
+		display:inline-block;
+		//margin-left: auto;
+		//margin-right: auto;
+		//width:30%;
+		background:#fff;//#7fd0d0;
+		//use border to have the shape of face;
+		border:2px solid $bg_like;
+		@include border-radius(0.2em);
+		@include box-sizing(border-box);
+	}
+	$smileBorder:2px solid $bg_like;
+	.eye{
+	// half circle: width = 2 * height and border-radius = width
+		/*
+		position:absolute;//doesn't take palces
+		//display:inline-block;
+		width:13%;
+
+		// height and border-radius are set in setting.js 
+		// use border to get the shape of eye
+		border:2px solid #f16c97;
+		border-bottom:0px;
+		top:15%;
+		background:transparent;
+		&.leftEye{
+			left:23%;
+		}
+		&.rightEye{
+			left:55%;
+		}
+		position:absolute;
+		top:15%;
+		width:10%;
+		height:20%;
+		background:#000;
+		&.leftEye{
+			left:28%;
+		}
+		&.rightEye{
+			left:55%;
+		}
+	}
+
+	.mouths{
+		width:30%;
+		margin-left:auto;
+		margin-right:auto;
+		top:58%;
+		//if don't want to ruin the size of a container, use position absolute for
+		// it's child element cause in that case they don't take any place;
+		position:relative;
+		@include transform(rotate(180deg));
+		//@include box-sizing(border-box);
+		//$smileBorder:2px solid $bg_like;
+		//border: 2px solid #f16c97;
+		border-bottom:none;
+		//@include box-sizing(border-box);
+		overflow:hidden;
+	}*/
+/*Currently working smile faces	
+.faces{
+		z-index: 2;
+		width: 100%;
+		height: 10%;
+		background:inherit;
+		position: relative;
+		//text-align:center;
+}
+#faces3{
+	//background:#ffb2b2;
+	.smile{
+		float:right;
+		background:#fff;
+	}
+	//float:right;
+}
+.smile, .upset{
+	//absolute doesn't take position in the container
+	// static and relative does. so the 'top' and 'left' are 
+	// relative to the first element that is position static.
+	z-index:10;
+	position:relative;
+	float:left;
+	margin-left: auto;
+	margin-right: auto;
+	//width:30%;
+	background:#fff;//#7fd0d0;
+	//use border to have the shape of face;
+	border: 2px solid #f16c97;
+	@include border-radius(1em);
+	@include box-sizing(border-box);
+	//@include border-radius-part(top-left, 50%);
+	//@include border-radius-part(bottom-right, 50%);
+}
+.eye{
+	// half circle: width = 2 * height and border-radius = width
+	position:absolute;//doesn't take palces
+	width:12%;
+	// height and border-radius are set in setting.js 
+	// use border to get the shape of eye
+	border: 2px solid #f16c97;
+	border-bottom:0px;
+	top:15%;
+	background:transparent;
+}
+.left{
+	left:28%;
+}
+.right{
+	left:55%;
+}
+.mouth{
+	
+	width:51%;
+	margin:auto;
+	//if don't want to ruin the size of a container, use position absolute for
+	// it's child element cause in that case they don't take any place;
+	position:relative;
+	
+	//background:#e9b03d;
+	border: 2px solid #f16c97;
+	//@include box-sizing(border-box);
+	overflow:hidden;
+	.teeth{
+		position:relative;
+		width:100%;
+		height:100%;
+		left:-6%;
+	}
+	.teeth li:nth-child(-n + 5){
+		height: 100%;
+		width:16%;
+		float:left;
+		list-style: none;
+		border-right:2px solid #f16c97;
+		//border-bottom:2px solid #f16c97; // teeth or not
+	}
+}
+.smile{
+	.mouth{
+		top:55%;
+		@include transform( rotateZ(180deg) );
+	}
+}
+/*
+seems like not usefull
+.upset{
+	.eye{
+		width:10%;
+		border-radius:0;
+		top: 10%;
+		@include transform(rotateX(180deg));
+	}
+	.mouth{
+		top:80%;
+		left:50%;
+		border-bottom:30px;
+		width:20%;
+		@include transform( rotateZ( 5deg ));
+	}
+	.left{
+		left:27%;
+	}
+	.right{
+		left:50%;
+	}
+}*/
+/* smile face and upset face roatetion animation
+but I sitll couldn't figure it out why reverse doesn't work
+example: @include animation('upsetEye 5s reverse forwards');-- not working
+*/
+/*
+.upsetEye{
+	@include animation('upsetEye 1s forwards');
+	@include transform-origin(50% 50% 0);
+}
+.upsetEye_right{
+	@include animation('upsetEye_right 1s 0.2s forwards');
+}
+.upsetMouth{
+	@include animation('upsetMouth 1s 1.6s forwards');
+	@include transform-origin(50% 50% 0);
+}
+.smileEye{
+	
+	@include animation('smileEye 1s forwards');
+	@include transform-origin(50% 50% 0);
+}
+.smileEye_right{
+	@include animation('smileEye_right 1s forwards');
+	@include transform-origin(50% 50% 0);
+}
+.smileMouth{
+	@include animation('smileMouth 1s forwards');
+	@include transform-origin(50% 50% 0);
+}
+.changeFace{
+	@include animation('changeFace 3s forwards');
+	@include transform-origin(center center 0);
+}*/
 /***********************************************  Projects ****************************************/
-/* line 11, ../sass/Experiments.scss */
+/* line 13, ../sass/Experiments.scss */
 #Experiments .row {
   margin: auto;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(45%, #9ee0ff), color-stop(45%, #ff6666));
@@ -3869,18 +3877,18 @@ body {
   background-image: -o-linear-gradient(top, #9ee0ff 45%, #ff6666 45%);
   background-image: linear-gradient(top, #9ee0ff 45%, #ff6666 45%);
 }
-/* line 15, ../sass/Experiments.scss */
+/* line 17, ../sass/Experiments.scss */
 #Experiments .row h1 {
   font-size: 2.5em;
   color: white;
   margin: 0% 0 3% 5%;
 }
-/* line 20, ../sass/Experiments.scss */
+/* line 22, ../sass/Experiments.scss */
 #Experiments .row p {
   font-size: 0.6em;
 }
 
-/* line 26, ../sass/Experiments.scss */
+/* line 27, ../sass/Experiments.scss */
 .projectWrapper {
   background: transparent;
   width: 100%;
@@ -3889,25 +3897,25 @@ body {
   margin-top: 3%;
 }
 
-/* line 37, ../sass/Experiments.scss */
+/* line 34, ../sass/Experiments.scss */
 .projects {
   float: left;
   width: 15%;
   margin: 5% 0 2% 3%;
 }
-/* line 42, ../sass/Experiments.scss */
+/* line 39, ../sass/Experiments.scss */
 .projects:nth-child(1) {
   margin-left: 5%;
 }
-/* line 45, ../sass/Experiments.scss */
+/* line 42, ../sass/Experiments.scss */
 .projects:nth-child(2n) {
   margin-top: 13%;
 }
-/* line 48, ../sass/Experiments.scss */
+/* line 45, ../sass/Experiments.scss */
 .projects:nth-child(3) {
   margin-top: 20%;
 }
-/* line 51, ../sass/Experiments.scss */
+/* line 48, ../sass/Experiments.scss */
 .projects .description {
   box-shadow: 1px #f2f2f2;
   position: relative;
@@ -3932,7 +3940,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 62, ../sass/Experiments.scss */
+/* line 59, ../sass/Experiments.scss */
 .projects .description .proShelter {
   position: absolute;
   width: 100%;
@@ -3941,23 +3949,23 @@ body {
   z-index: 1;
   overflow: hidden;
 }
-/* line 73, ../sass/Experiments.scss */
+/* line 68, ../sass/Experiments.scss */
 .projects .description .proShelter img {
   max-width: 100%;
-  max-width: 100%;
+  min-width: 100%;
 }
-/* line 78, ../sass/Experiments.scss */
+/* line 74, ../sass/Experiments.scss */
 .projects .description .descrpt {
   position: absolute;
   overflow: hidden;
   height: 50%;
   width: 100%;
-  background: #fff;
+  background: white;
   color: dimgrey;
   opacity: 0.9;
   text-align: center;
 }
-/* line 94, ../sass/Experiments.scss */
+/* line 87, ../sass/Experiments.scss */
 .projects .description .descrpt p {
   margin-left: 0.5em;
   margin-right: 0.5em;
@@ -3965,7 +3973,7 @@ body {
   line-height: 1.2em;
   font-size: 0.9em;
 }
-/* line 102, ../sass/Experiments.scss */
+/* line 95, ../sass/Experiments.scss */
 .projects .description .top, .projects .description .top img {
   -webkit-border-top-left-radius: 0.3em;
   -moz-border-top-left-radius: 0.3em;
@@ -3978,7 +3986,7 @@ body {
   -o-border-top-right-radius: 0.3em;
   border-top-right-radius: 0.3em;
 }
-/* line 106, ../sass/Experiments.scss */
+/* line 99, ../sass/Experiments.scss */
 .projects .description .down {
   top: 50%;
   -webkit-border-bottom-left-radius: 0.3em;
@@ -3992,7 +4000,7 @@ body {
   -o-border-bottom-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
 }
-/* line 110, ../sass/Experiments.scss */
+/* line 103, ../sass/Experiments.scss */
 .projects .description .down img {
   position: relative;
   top: -100%;
@@ -4007,12 +4015,12 @@ body {
   -o-border-bottom-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
 }
-/* line 116, ../sass/Experiments.scss */
+/* line 109, ../sass/Experiments.scss */
 .projects .description .down p {
   position: relative;
   top: -100%;
 }
-/* line 121, ../sass/Experiments.scss */
+/* line 114, ../sass/Experiments.scss */
 .projects .description .in_top, .projects .description .in_right {
   -webkit-transform-origin: 50% 100% 0;
   -moz-transform-origin: 50% 100% 0;
@@ -4024,7 +4032,7 @@ body {
   -moz-animation: pro_in_top 0.5s forwards;
   animation: pro_in_top 0.5s forwards;
 }
-/* line 126, ../sass/Experiments.scss */
+/* line 119, ../sass/Experiments.scss */
 .projects .description .in_bottom, .projects .description .in_left {
   -webkit-transform-origin: 50% 0 0;
   -moz-transform-origin: 50% 0 0;
@@ -4036,7 +4044,7 @@ body {
   -moz-animation: pro_in_bottom 0.5s forwards;
   animation: pro_in_bottom 0.5s forwards;
 }
-/* line 130, ../sass/Experiments.scss */
+/* line 123, ../sass/Experiments.scss */
 .projects .description .out_top, .projects .description .out_right {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -4053,7 +4061,7 @@ body {
   -moz-animation: pro_out_top 0.5s 0.3s forwards;
   animation: pro_out_top 0.5s 0.3s forwards;
 }
-/* line 135, ../sass/Experiments.scss */
+/* line 128, ../sass/Experiments.scss */
 .projects .description .out_bottom, .projects .description .out_left {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -4070,7 +4078,7 @@ body {
   -moz-animation: pro_out_bottom 0.5s 0.3s forwards;
   animation: pro_out_bottom 0.5s 0.3s forwards;
 }
-/* line 140, ../sass/Experiments.scss */
+/* line 133, ../sass/Experiments.scss */
 .projects .description .rotate_in_bottom, .projects .description .rotate_in_left {
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
@@ -4089,7 +4097,7 @@ body {
   -moz-animation: rotate_in_bottom 0.5s 0.3s forwards;
   animation: rotate_in_bottom 0.5s 0.3s forwards;
 }
-/* line 147, ../sass/Experiments.scss */
+/* line 140, ../sass/Experiments.scss */
 .projects .description .rotate_in_top, .projects .description .rotate_in_right {
   z-index: 1;
   opacity: 0;
@@ -4108,7 +4116,7 @@ body {
   -moz-animation: rotate_in_top 0.5s 0.3s forwards;
   animation: rotate_in_top 0.5s 0.3s forwards;
 }
-/* line 154, ../sass/Experiments.scss */
+/* line 147, ../sass/Experiments.scss */
 .projects .description .rotate_out_top, .projects .description .rotate_out_right {
   z-index: 1;
   -webkit-transform-origin: 50% 0 0;
@@ -4121,7 +4129,7 @@ body {
   -moz-animation: rotate_out_top 0.5s forwards;
   animation: rotate_out_top 0.5s forwards;
 }
-/* line 159, ../sass/Experiments.scss */
+/* line 152, ../sass/Experiments.scss */
 .projects .description .rotate_out_bottom, .projects .description .rotate_out_left {
   z-index: 1;
   -webkit-transform-origin: 50% 100% 0;
@@ -4134,7 +4142,7 @@ body {
   -moz-animation: rotate_out_bottom 0.5s  forwards;
   animation: rotate_out_bottom 0.5s  forwards;
 }
-/* line 165, ../sass/Experiments.scss */
+/* line 158, ../sass/Experiments.scss */
 .projects .caption {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4151,22 +4159,22 @@ body {
   border-bottom-right-radius: 0.3em;
   padding: 5% 2% 0 2%;
   width: 100%;
-  background: #fff;
+  background: white;
   text-align: center;
 }
-/* line 173, ../sass/Experiments.scss */
+/* line 166, ../sass/Experiments.scss */
 .projects .caption h3 {
   color: #ad0000;
   font-size: 0.7em;
   line-height: 2em;
 }
-/* line 178, ../sass/Experiments.scss */
+/* line 171, ../sass/Experiments.scss */
 .projects .caption p {
   color: #ad0000;
   font-size: 0.6em;
 }
 
-/* line 185, ../sass/Experiments.scss */
+/* line 177, ../sass/Experiments.scss */
 .buttonWrap {
   position: absolute;
   left: 0;
@@ -4179,14 +4187,14 @@ body {
   perspective: 400px;
   float: right;
 }
-/* line 192, ../sass/Experiments.scss */
+/* line 184, ../sass/Experiments.scss */
 .buttonWrap .load {
   width: 50%;
   margin: auto;
-  color: #fff;
+  color: white;
 }
 
-/* line 198, ../sass/Experiments.scss */
+/* line 190, ../sass/Experiments.scss */
 .rotateY {
   -webkit-transform-origin: 50% 50% 0;
   -moz-transform-origin: 50% 50% 0;
@@ -4200,7 +4208,7 @@ body {
 }
 
 /***************************************************** Blog **********************************/
-/* line 578, ../sass/style.scss */
+/* line 516, ../sass/style.scss */
 #Blog .row .contentWrap {
   position: relative;
   -webkit-perspective: 800px;
@@ -4210,7 +4218,7 @@ body {
   perspective: 800px;
   overflow: hidden;
 }
-/* line 586, ../sass/style.scss */
+/* line 524, ../sass/style.scss */
 #Blog .slider {
   overflow: hidden;
   background: #fff;
@@ -4218,24 +4226,24 @@ body {
   line-height: 2em;
   position: absolute;
 }
-/* line 592, ../sass/style.scss */
+/* line 530, ../sass/style.scss */
 #Blog .slider ul {
   left: 0;
   position: relative;
   height: 100%;
 }
-/* line 596, ../sass/style.scss */
+/* line 534, ../sass/style.scss */
 #Blog .slider ul li {
   height: 100%;
   position: relative;
   float: left;
 }
-/* line 600, ../sass/style.scss */
+/* line 538, ../sass/style.scss */
 #Blog .slider ul li img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 606, ../sass/style.scss */
+/* line 544, ../sass/style.scss */
 #Blog .slider .btnCtrl {
   background: transparent;
   position: absolute;
@@ -4245,27 +4253,27 @@ body {
   overflow: hidden;
   border: none;
 }
-/* line 616, ../sass/style.scss */
+/* line 554, ../sass/style.scss */
 #Blog .slider #prev {
   background: url("/static/images/gray_prev.png") no-repeat;
   background-position: 0 100%;
   left: 0;
 }
-/* line 620, ../sass/style.scss */
+/* line 558, ../sass/style.scss */
 #Blog .slider #prev:hover {
   background-position: 0 0;
 }
-/* line 624, ../sass/style.scss */
+/* line 562, ../sass/style.scss */
 #Blog .slider #next {
   background: url("/static/images/gray_next.png") no-repeat;
   right: 0;
   background-position: 0 100%;
 }
-/* line 628, ../sass/style.scss */
+/* line 566, ../sass/style.scss */
 #Blog .slider #next:hover {
   background-position: 0 0;
 }
-/* line 633, ../sass/style.scss */
+/* line 571, ../sass/style.scss */
 #Blog #sliderLeft {
   -webkit-transform: translateX(-80.5%) rotateY(45deg) scale(0.8) translateY(7.8%);
   -moz-transform: translateX(-80.5%) rotateY(45deg) scale(0.8) translateY(7.8%);
@@ -4278,7 +4286,7 @@ body {
   -o-transform-origin: top right 0 50%;
   transform-origin: top right 0 50%;
 }
-/* line 637, ../sass/style.scss */
+/* line 575, ../sass/style.scss */
 #Blog #sliderRight {
   -webkit-transform: translateX(99.7%) rotateY(-35deg) scale(0.8) translateY(7.8%);
   -moz-transform: translateX(99.7%) rotateY(-35deg) scale(0.8) translateY(7.8%);
@@ -4291,7 +4299,7 @@ body {
   -o-transform-origin: top left 0 50%;
   transform-origin: top left 0 50%;
 }
-/* line 641, ../sass/style.scss */
+/* line 579, ../sass/style.scss */
 #Blog #slicesWrapper {
   -webkit-transform: scale(0.8) translateX(12%) translateY(-4.97%);
   -moz-transform: scale(0.8) translateX(12%) translateY(-4.97%);
@@ -4299,7 +4307,7 @@ body {
   -o-transform: scale(0.8) translateX(12%) translateY(-4.97%);
   transform: scale(0.8) translateX(12%) translateY(-4.97%);
 }
-/* line 643, ../sass/style.scss */
+/* line 581, ../sass/style.scss */
 #Blog #slicesWrapper .slice {
   position: relative;
   background: #99d11c;
@@ -4308,7 +4316,7 @@ body {
   float: left;
   overflow: hidden;
 }
-/* line 650, ../sass/style.scss */
+/* line 588, ../sass/style.scss */
 #Blog #slicesWrapper .slice .dialogBox {
   position: relative;
   width: 100%;
@@ -4327,31 +4335,31 @@ body {
   opacity: 0.7;
   line-height: 150%;
 }
-/* line 665, ../sass/style.scss */
+/* line 603, ../sass/style.scss */
 #Blog #slicesWrapper .left .dialogBox {
   left: 50%;
 }
-/* line 670, ../sass/style.scss */
+/* line 608, ../sass/style.scss */
 #Blog #slicesWrapper .right .dialogBox {
   left: -50%;
 }
-/* line 675, ../sass/style.scss */
+/* line 613, ../sass/style.scss */
 #Blog .wrapper {
   position: absolute;
   width: 25%;
   height: 10%;
 }
-/* line 679, ../sass/style.scss */
+/* line 617, ../sass/style.scss */
 #Blog .wrapper.blogshots {
   top: 80%;
   left: 27%;
 }
-/* line 683, ../sass/style.scss */
+/* line 621, ../sass/style.scss */
 #Blog .wrapper.bloglink {
   top: 85%;
   right: 28%;
 }
-/* line 687, ../sass/style.scss */
+/* line 625, ../sass/style.scss */
 #Blog .wrapper .ribbon {
   position: relative;
   width: 1.5em;
@@ -4363,7 +4371,7 @@ body {
   left: -0.9em;
   z-index: 1;
 }
-/* line 697, ../sass/style.scss */
+/* line 635, ../sass/style.scss */
 #Blog .wrapper .ribbon.link {
   width: 1em;
   top: 0.6em;
@@ -4371,7 +4379,7 @@ body {
   border-color: #666666 transparent #666666 #666666;
 }
 
-/* line 706, ../sass/style.scss */
+/* line 644, ../sass/style.scss */
 #blogShots {
   z-index: 2;
   position: absolute;
@@ -4381,7 +4389,7 @@ body {
   color: #fff;
   background: #f86c99;
 }
-/* line 715, ../sass/style.scss */
+/* line 653, ../sass/style.scss */
 #blogShots:before {
   content: "Show Me";
   position: absolute;
@@ -4390,7 +4398,7 @@ body {
   color: #696969;
   top: -1em;
 }
-/* line 724, ../sass/style.scss */
+/* line 662, ../sass/style.scss */
 #blogShots:after {
   content: "";
   width: 0;
@@ -4403,7 +4411,7 @@ body {
   left: 1px;
 }
 
-/* line 736, ../sass/style.scss */
+/* line 674, ../sass/style.scss */
 #BlogLink {
   z-index: 2;
   position: absolute;
@@ -4413,7 +4421,7 @@ body {
   color: #fff;
   background: #666666;
 }
-/* line 744, ../sass/style.scss */
+/* line 682, ../sass/style.scss */
 #BlogLink:before {
   content: "";
   position: absolute;
@@ -4426,7 +4434,7 @@ body {
   top: 105%;
   border-style: solid;
 }
-/* line 756, ../sass/style.scss */
+/* line 694, ../sass/style.scss */
 #BlogLink:after {
   content: "In a new tab";
   position: absolute;
@@ -4437,11 +4445,11 @@ body {
 }
 
 /************************************************* Contact ********************************************/
-/* line 770, ../sass/style.scss */
+/* line 708, ../sass/style.scss */
 #Contact h1 {
   float: left;
 }
-/* line 773, ../sass/style.scss */
+/* line 711, ../sass/style.scss */
 #Contact .clouds {
   overflow: hidden;
   height: 14%;
@@ -4449,7 +4457,7 @@ body {
   position: relative;
   padding-bottom: 2%;
 }
-/* line 779, ../sass/style.scss */
+/* line 717, ../sass/style.scss */
 #Contact .clouds .cloud {
   margin-left: 5%;
   position: relative;
@@ -4462,7 +4470,7 @@ body {
   -moz-box-shadow: 0px 5px 25px 0px lightgrey;
   box-shadow: 0px 5px 25px 0px lightgrey;
 }
-/* line 789, ../sass/style.scss */
+/* line 727, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1, #Contact .clouds .cloud .cloudPart2 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -4472,19 +4480,19 @@ body {
   background: inherit;
   position: absolute;
 }
-/* line 794, ../sass/style.scss */
+/* line 732, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart1 {
   top: -70%;
   width: 35%;
   left: 13%;
 }
-/* line 799, ../sass/style.scss */
+/* line 737, ../sass/style.scss */
 #Contact .clouds .cloud .cloudPart2 {
   top: -103%;
   width: 50%;
   left: 37%;
 }
-/* line 807, ../sass/style.scss */
+/* line 745, ../sass/style.scss */
 #Contact .icons {
   width: 30%;
   height: auto;
@@ -4492,21 +4500,21 @@ body {
   position: relative;
   margin: auto;
 }
-/* line 813, ../sass/style.scss */
+/* line 751, ../sass/style.scss */
 #Contact .icons a {
   position: relative;
   height: auto;
   overflow: hidden;
 }
-/* line 819, ../sass/style.scss */
+/* line 757, ../sass/style.scss */
 #Contact .icons a:nth-child(1) {
   margin-right: 35%;
 }
-/* line 822, ../sass/style.scss */
+/* line 760, ../sass/style.scss */
 #Contact .icons a:nth-child(3) {
   float: right;
 }
-/* line 826, ../sass/style.scss */
+/* line 764, ../sass/style.scss */
 #Contact .dialog {
   top: 0px;
   right: 0px;
@@ -4521,7 +4529,7 @@ body {
   padding-right: 3%;
   border: none;
 }
-/* line 840, ../sass/style.scss */
+/* line 778, ../sass/style.scss */
 #Contact .form {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4540,7 +4548,7 @@ body {
   margin-top: 5%;
   color: #558c00;
 }
-/* line 853, ../sass/style.scss */
+/* line 791, ../sass/style.scss */
 #Contact #contactForm {
   width: 90%;
   margin: auto;
@@ -4549,14 +4557,14 @@ body {
   background: #fff;
   color: #78a632;
 }
-/* line 861, ../sass/style.scss */
+/* line 799, ../sass/style.scss */
 #Contact .input {
   width: 45%;
   float: left;
   overflow: hidden;
   margin-right: 7%;
 }
-/* line 866, ../sass/style.scss */
+/* line 804, ../sass/style.scss */
 #Contact .input input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4572,20 +4580,20 @@ body {
   font-size: 0.9em;
   color: #666666;
 }
-/* line 875, ../sass/style.scss */
+/* line 813, ../sass/style.scss */
 #Contact .input input:focus, #Contact .input input:invalid {
   box-shadow: none !important;
 }
-/* line 879, ../sass/style.scss */
+/* line 817, ../sass/style.scss */
 #Contact .input .second {
   margin-top: 8%;
 }
-/* line 884, ../sass/style.scss */
+/* line 822, ../sass/style.scss */
 #Contact .message {
   overflow: hidden;
   float: 50%;
 }
-/* line 888, ../sass/style.scss */
+/* line 826, ../sass/style.scss */
 #Contact .message textarea {
   font-size: 0.9em;
   width: 98%;
@@ -4601,11 +4609,11 @@ body {
   resize: vertical;
   color: #666666;
 }
-/* line 898, ../sass/style.scss */
+/* line 836, ../sass/style.scss */
 #Contact .message textarea:focus, #Contact .message textarea:invalid {
   box-shadow: none !important;
 }
-/* line 903, ../sass/style.scss */
+/* line 841, ../sass/style.scss */
 #Contact .error {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4614,7 +4622,7 @@ body {
   font-size: 0.6em;
   font-weight: light;
 }
-/* line 909, ../sass/style.scss */
+/* line 847, ../sass/style.scss */
 #Contact .contactButton {
   float: right;
   width: 43%;
@@ -4631,11 +4639,11 @@ body {
   margin-top: 13%;
   margin-right: 10%;
 }
-/* line 922, ../sass/style.scss */
+/* line 860, ../sass/style.scss */
 #Contact .contactButton:hover {
   border-color: #486c10;
 }
-/* line 927, ../sass/style.scss */
+/* line 865, ../sass/style.scss */
 #Contact .alertBox {
   position: absolute;
   top: 0;
@@ -4644,7 +4652,7 @@ body {
   height: 100%;
   background: rgba(255, 225, 255, 0.5);
 }
-/* line 934, ../sass/style.scss */
+/* line 872, ../sass/style.scss */
 #Contact .alertBox div {
   color: #78A632;
   opacity: 1;
@@ -4665,7 +4673,7 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-/* line 948, ../sass/style.scss */
+/* line 886, ../sass/style.scss */
 #Contact .alertBox .contactButton {
   width: 15%;
 }

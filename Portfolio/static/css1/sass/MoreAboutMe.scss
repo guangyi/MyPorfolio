@@ -1,0 +1,74 @@
+.likeContainer{
+	height:100%;
+	width:auto;
+	background:inherit;
+	@include box-sizing(border-box);
+	text-align:center;
+	.optionsWrap{
+		width:100%;
+		//padding:2%;
+		background:white;
+		margin:auto;
+		@include box-sizing(border-box);
+		@include perspective(500px);
+		text-align:center;
+		.options{
+			width:100%;
+			margin:0;
+			float:left;
+			height:100%;
+			overflow:scroll;
+			.heart{
+				position:absolute;
+				width:8%;
+				height:5%;
+				background:green;
+				display:inline-block;
+				float:left;
+				margin:0 3% 0 0;
+				&:before{
+					content:"";
+					position:absolute;
+					top:0;
+					left:0;
+					width:50%;
+					height:100%;
+					background:red;
+					@include border-radius-part('top-left', 100%);
+					@include border-radius-part('bottom-left', 100%);
+				}
+			}
+			.option{
+				display:inline-block;
+				height:auto;
+				background:inherit;
+				color:transparent;
+				margin:2% 0 3% 2%;
+				opacity:0.4;
+				text-shadow:0px 0px 30px #000;//$bg_like;
+				@include transition(text-shadow 1.5s 2s);
+				/*&:hover{
+					text-shadow:0px 0px 0px #000;
+					-moz-transition: none;
+    				-webkit-transition: none;
+   					 -o-transition: color 0 ease-in;
+    				transition: none;
+    				& span{
+    					text-shadow:0px 0px 0px #ff0000;
+    				}
+				}*/
+				& span{
+					@include transition(text-shadow 1.5s 2s);
+					text-shadow:0px 0px 30px #ff0000;
+				}
+			}
+			.tada{
+				@include transform-origin(center center 0);
+				@include animation('tada 1.3s forwards');
+			}
+			.shake{
+				@include animation('shake 1s forwards');
+			}
+		}
+	}
+}
