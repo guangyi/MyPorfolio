@@ -5,7 +5,6 @@ $(document).ready(function(){
 	$('.projects').hide();
 	animtOnScroll();
 	var blogShotsOriLet = $('.wrapper.blogshots').css('left');
-	console.log(blogShotsOriLet);
 	//$('.wrapper.blogshots').one('click', firstClick);
 	$('.topLeft').click(function(){
 		$(this).animate({
@@ -13,7 +12,7 @@ $(document).ready(function(){
 			height:'100%'
 		},1000);
 	});
-	blog();
+	
 	//blogAnimation();
 	//mouseHover();
 	

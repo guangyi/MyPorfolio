@@ -211,6 +211,7 @@
 		}
 	}, 6000);*/
 var blog = function(){
+	
 	function blogSlider(){
 	}
 	blogSlider.prototype.liWidth = $('.slider > ul > li').first().width();
@@ -219,6 +220,8 @@ var blog = function(){
 	blogSlider.prototype.slider = $('.slider > ul');
 	blogSlider.prototype.id = '';
 	blogSlider.prototype.init = function(){
+		this.current = 1;
+		this.id = '';
 		var liWidth = this.liWidth;
 		var len = this.len;
 		this.slider.each( function(){
@@ -237,22 +240,24 @@ var blog = function(){
 		this.id = setInterval( function slide(){
 			var direction = -1 ;
 			blogSliderThis.animation(direction);
-		}, 6000);
+		}, 9000);
+		console.log('thisid'+this.id);
 	};
 	blogSlider.prototype.animation = function(direction){
+
 		var that = this;
-		if ( 0 < this.current && this.current <= this.len){
+		if ( 0 < that.current && that.current <= that.len){
 			that.move(direction);
 			that.current += direction * -1;
 		}
-		else if( this.current === 0  || this.current > this.len){
+		else if( that.current === 0  || that.current > that.len){
 			that.toEnd();
 			that.animation(direction);
 		}
 	}
 	blogSlider.prototype.move = function(direction){
 		var that = this;
-		this.slider.each(function(){
+		that.slider.each(function(){
 			$(this).animate({
 				left:'+=' + direction * that.liWidth
 			}, 3000);
@@ -268,23 +273,44 @@ var blog = function(){
 	blogSlider.prototype.btnContrl = function(event){
 		var that = this;
 		var direction = (event.target.id === 'prev')? 1: -1;
-		if(this.slider.is(':not(:animated)')){
-			clearInterval(that.id);
-			this.animation(direction);
-			this.autoSlide();
+		console.log('so'+$('.slider > ul').is(':not(:animated)'));
+		if( $('.slider > ul').is(':not(:animated)')){
+			//stop current interval and restart
+			clearInterval(that.id)
+			that.animation(direction);
 		}
 		else{
-			that.slider.stop(true, true);
+			console.log('Imhere!!!');
+			//stop current interval and restart
+			console.log(that.id);
+			that.slider.stop(false,true);
 			clearInterval(that.id);
-			this.autoSlide();
 		}
+		that.autoSlide();
 	};
-		var bs = new blogSlider();
-		bs.init();
+	this.init = function(){
+
+	}
+	var bs = new blogSlider();
+	bs.init();
+	this.start = function(){
+		// only init when create a new blog object.
 		bs.autoSlide();
-		$('.btnCtrl').click(function(event){
+		// if put it in the start function, it will be called multitimes!
+		// maybe should unbind it in stop function!
+		$('.btnCtrl').on('click', function(event){
 			bs.btnContrl(event);
 		});
+	};
+	this.AnimId = function(){
+		return bs.id;
+	}
+	this.stop = function(){
+		clearInterval(bs.id);
+		$('.btnCtrl').unbind('click');
+	}
+	
+	
 };
 
 

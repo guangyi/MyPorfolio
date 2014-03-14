@@ -72,16 +72,29 @@ function has3D(){
     return (has3d !== undefined && has3d.length > 0 && has3d !== "none");
 }
 var animtOnScroll = function(){
+	var firstTimePrj = true;
+	var enterBlog = true;
+	// want to only one slider but can start and stop under different condition
+	// that's why put b here
+	var b = new blog();
 	$('.content').scroll(function(){
 		/******************************** Projects Page loading Animation **************/
-		var firstTimePrj = true;
-		if($('#Experiments').offset().top <= $(window).height() * 0.7 && firstTimePrj){
+		if($('#Experiments').offset().top <= $(window).height() * 0.7 && $('#Experiments').offset().top >= 0 && firstTimePrj){
 			fristTimePrj = false;
 			projectLoad();
 		}
-		if($('#MoreAboutMe').offset().top <= $(window).height() * 0.1 && firstTimePrj){
-			//alert('here');
-			//clearText();
+		if( $('#Blog').offset().top <= $(window).height() * 0.5  && $('#Blog').offset().top >= 0  && enterBlog ){
+			// enterBlog = false now, so even the page is in the right section, no more new animation created.
+			console.log('???');
+			enterBlog = false;
+			b.start();
+		}
+		else if( ($('#Blog').offset().top > $(window).height() * 0.5  || $('#Blog').offset().top < -0.5 * $(window).height()) && !enterBlog) {
+			if(b.AnimId()){
+				b.stop();
+			}
+			console.log('!!');
+			enterBlog = true;
 		}
 		cloudMove();// defined in cloudMove.js
 		//flyin();

@@ -1,40 +1,6 @@
 //#F16c97';
 $(document).ready(function(){
-	$('.option').mouseover(function(){
-		$(this).css({
-			'-moz-transition': 'none',
-    		'-webkit-transition': 'none',
-   			'-o-transition': 'color 0 ease-in',
-    		'transition': 'none',
-    		'opacity':'1',
-    		'text-shadow':'0 0 0px #000' 
-		});
-		$(this).children('span').css({
-			'-moz-transition': 'none',
-    		'-webkit-transition': 'none',
-   			'-o-transition': 'color 0 ease-in',
-    		'transition': 'none',
-    		'opacity':'1',
-    		'text-shadow':'0 0 0px #ff0000'
-		});
-	}).mouseout(function(){
-		$(this).css({
-			'-moz-transition': 'none',
-    		'-webkit-transition': 'none',
-   			'-o-transition': 'color 0 ease-in',
-    		'transition': 'none',
-    		'opacity':'1',
-    		'text-shadow':'0 0 30px #000' 
-		});
-		$(this).children('span').css({
-			'-moz-transition': 'none',
-    		'-webkit-transition': 'none',
-   			'-o-transition': 'color 0 ease-in',
-    		'transition': 'none',
-    		'opacity':'1',
-    		'text-shadow':'0 0 30px #ff0000'
-		});
-	});
+	
 	var eye = $('.eye');
 	var mouth = $('.mouths');
 	//halfCircle( eye );
@@ -42,12 +8,43 @@ $(document).ready(function(){
 	$('.option').each(function(){
 
 		$(this).width($(this).children(''))
-	})
+	});
+	
+
 
 	function textAnima(options){
 		this.options = options;	
 	};
 	textAnima.prototype.i = 0;
+	textAnima.prototype.done = false;
+	textAnima.prototype.hover = function(){
+		var previous;
+		$('.option').mouseover(function(){
+			console.log('here');
+			previous = $(this).clone();
+
+			console.log(previous.css('text-shadow'));
+			$(this).css({
+				'-moz-transition': 'none',
+				'-webkit-transition': 'none',
+				'-o-transition': 'color 0 ease-in',
+				'transition': 'none',
+				'opacity':'1',
+				'text-shadow':'0 0 0px #000' 
+			});
+			$(this).children('span').css({
+				'-moz-transition': 'none',
+				'-webkit-transition': 'none',
+				'-o-transition': 'color 0 ease-in',
+				'transition': 'none',
+				'opacity':'1',
+				'text-shadow':'0 0 0px #ff0000'
+			});
+		}).mouseleave(function(){
+			$(this).replaceWith(previous);
+			console.log(previous.css('text-shadow'));
+		});
+	};
 	textAnima.prototype.loopText = function(){
 		var that = this;
 		$(that.options[that.i]).children('span').css({'text-shadow':'0 0 0px #ff0000'});
@@ -68,12 +65,16 @@ $(document).ready(function(){
 				if (that.i <= that.options.length){
 					that.loopText();
 				}
+				else{
+					that.done = true;
+				}
 			}
 		});
 	};
 	var options = $('.option');
 	var textAnimation = new textAnima(options);
 	textAnimation.loopText();
+	//textAnimation.hover();
 
 	
 	$('.faces').click(function(){

@@ -53,8 +53,10 @@
     				-webkit-transition: none;
    					 -o-transition: color 0 ease-in;
     				transition: none;
-    				& span{
+    				.opion{
+    					span{
     					text-shadow:0px 0px 0px #ff0000;
+    					} 
     				}
 				}*/
 				& span{

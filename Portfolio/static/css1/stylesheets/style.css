@@ -3627,12 +3627,14 @@ body {
       				-webkit-transition: none;
      					 -o-transition: color 0 ease-in;
       				transition: none;
-      				& span{
+      				.opion{
+      					span{
       					text-shadow:0px 0px 0px #ff0000;
+      					} 
       				}
   				}*/
 }
-/* line 60, ../sass/MoreAboutMe.scss */
+/* line 62, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap .options .option span {
   -webkit-transition: text-shadow 1.5s;
   -webkit-transition-delay: 2s;
@@ -3641,7 +3643,7 @@ body {
   transition: text-shadow 1.5s 2s;
   text-shadow: 0px 0px 30px #ff0000;
 }
-/* line 65, ../sass/MoreAboutMe.scss */
+/* line 67, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap .options .tada {
   -webkit-transform-origin: center center 0 50%;
   -moz-transform-origin: center center 0 50%;
@@ -3653,7 +3655,7 @@ body {
   -moz-animation: tada 1.3s forwards;
   animation: tada 1.3s forwards;
 }
-/* line 69, ../sass/MoreAboutMe.scss */
+/* line 71, ../sass/MoreAboutMe.scss */
 .likeContainer .optionsWrap .options .shake {
   -webkit-animation: shake 1s forwards;
   -o-animation: shake 1s forwards;
