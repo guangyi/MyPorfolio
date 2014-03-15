@@ -97,7 +97,6 @@ $cubeDark:#ddd;
 		margin-bottom:10%;
 	}
 	&.gra{
-		border-bottom:$sideBorderLight;
 		@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
 		@include perspective-origin(0 400px);
 		@include perspective(1000px);
@@ -107,8 +106,6 @@ $cubeDark:#ddd;
 		}
 	}
 	&.free{
-		border-bottom:$sideBorder;
-		//border-left:$sideBorder;
 		@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
 		@include perspective-origin(100% 380px);
 		@include perspective(800px);
@@ -125,7 +122,6 @@ $cubeDark:#ddd;
 		}
 	}
 	&.Ihope{
-		//border-left:$sideBorder;
 		@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
 		@include perspective-origin(100% 340px);
 		@include perspective(800px);

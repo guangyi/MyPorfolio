@@ -74,27 +74,41 @@ function has3D(){
 var animtOnScroll = function(){
 	var firstTimePrj = true;
 	var enterBlog = true;
+	var enterAboutMe = true;
+	var leaveAboutMe = true;
 	// want to only one slider but can start and stop under different condition
 	// that's why put b here
 	var b = new blog();
+	var moreAboutMe = new MoreAboutMe();
 	$('.content').scroll(function(){
 		/******************************** Projects Page loading Animation **************/
 		if($('#Experiments').offset().top <= $(window).height() * 0.7 && $('#Experiments').offset().top >= 0 && firstTimePrj){
 			fristTimePrj = false;
 			projectLoad();
 		}
-		if( $('#Blog').offset().top <= $(window).height() * 0.5  && $('#Blog').offset().top >= 0  && enterBlog ){
+		if( $('#Blog').offset().top <= $(window).height() * 0.7  && $('#Blog').offset().top >= 0  && enterBlog ){
 			// enterBlog = false now, so even the page is in the right section, no more new animation created.
-			console.log('???');
 			enterBlog = false;
 			b.start();
 		}
-		else if( ($('#Blog').offset().top > $(window).height() * 0.5  || $('#Blog').offset().top < -0.5 * $(window).height()) && !enterBlog) {
+		else if( ($('#Blog').offset().top > $(window).height() * 0.3  || $('#Blog').offset().top < -0.8 * $(window).height()) && !enterBlog) {
 			if(b.AnimId()){
 				b.stop();
 			}
-			console.log('!!');
 			enterBlog = true;
+		}
+		if($('#MoreAboutMe').offset().top <= $(window).height() * 0.3  && $('#MoreAboutMe').offset().top >= 0 && enterAboutMe){
+			console.log("start");
+			moreAboutMe.start();
+			enterAboutMe = false;
+			leaveAboutMe = false;
+		}
+		else if( ($('#MoreAboutMe').offset().top > $(window).height() * 0.8  || $('#MoreAboutMe').offset().top < -0.8 * $(window).height()) && !leaveAboutMe){
+			//enterAboutMe = true;
+			console.log("stop");
+			moreAboutMe.stop();
+			leaveAboutMe = true;
+
 		}
 		cloudMove();// defined in cloudMove.js
 		//flyin();

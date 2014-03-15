@@ -1,13 +1,27 @@
+#MoreAboutMe{
+		background:#fff;//$bg_like;
+		h1{
+			font-size:2.5em;
+			margin-bottom: 0.5em;
+			color: #fff;
+		}
+		h2{
+			font-size: 1.5em;
+		}
+		h3{
+			font-size:1.1em;
+		}
+	}
 .likeContainer{
 	height:100%;
 	width:auto;
-	background:inherit;
+	@include background-image(linear-gradient(top, #AD0000, $bg_Contact));
 	@include box-sizing(border-box);
 	text-align:center;
 	.optionsWrap{
 		width:100%;
 		//padding:2%;
-		background:white;
+		background:transparent;
 		margin:auto;
 		@include box-sizing(border-box);
 		@include perspective(500px);
@@ -45,7 +59,7 @@
 				color:transparent;
 				margin:2% 0 3% 2%;
 				opacity:0.4;
-				text-shadow:0px 0px 30px #000;//$bg_like;
+				text-shadow:0px 0px 30px #fff;//$bg_like;
 				@include transition(text-shadow 1.5s 2s);
 				/*&:hover{
 					text-shadow:0px 0px 0px #000;

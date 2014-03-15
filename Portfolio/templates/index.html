@@ -26,7 +26,7 @@
 	<div class="container">
 		<header id="header">
 			<nav id="nav">
-				<a ng-repeat="nav in navNames" ng-class="{active:isActive( '/' + nav )}" ng-click="menuClick( nav )">{$ nav $}</a>
+				<h2><a ng-repeat="nav in navNames" ng-class="{active:isActive( '/' + nav )}" ng-click="menuClick( nav )">{$ nav $}</a><h2>
 			</nav>
 		</header>
 		<div class="content"  ng-controller="contentCtrl" style="height: {$screenHeight$}px">
@@ -116,6 +116,7 @@
 				<section class="main" id="Experiments" style="height: {$screenHeight$}px" ng-controller="projectsCtrl">
 					<div class="row effOnScroll">
 						<h1>Experiments</h1>
+						<h3>This is my Playground</h3>
 						<div class="projectWrapper">
 							<div ng-repeat="project in projects" class='projects'>
 								<!--<-->
@@ -131,7 +132,7 @@
 								</div>
 							</div>
 							<div class="buttonWrap">
-								<div class="load"><h3>This is my playground</h3></div>
+								<!--<div class="load"><h3>This is my playground</h3></div>-->
 							</div>
 						</div><!--end of projects wrapper-->
 					</div>
@@ -155,53 +156,84 @@
 							<!--use button & its pseudo element<input> & <img> doesn't has pseudo element.-->
 							<!--</div>-->
 							<h1>My Blog</h1>
-							<div class="slider" id="sliderLeft">
-								<ul>
-									<li><img src="/static/images/profile.JPG" style="float:right;"></li>
-									<li><h3>My blog is my first side project. While building this project,
-											I used AngularJS as the front-end framework and Django/REST framwork
-											as the back-end. For the database, it's noSQL--MongoDB. Also, like
-											this portfolio, I use SASS for styling. The reason why I use these things
-											is I want to learn new things, new knowledge and new skills. As you know,
-											fron-end is a fast going field, self-learning is a must-have quality
-											for front-end software engineer. So I chose those stuffs to nail this blog.
-										</h3>
-									</li>
-									<li><img src="/static/images/car.JPG"></li>
-								</ul>
+							<div class="sliderWrapper">
+									<div class="slider" id="sliderLeft">
+										<ul>
+											<li><img src="/static/images/Blog-Create.PNG" style="float:right;"></li>
+											<li><h3>My blog is my first side project. While building this project,
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end. For the database, it's noSQL--MongoDB. Also, like
+													this portfolio, I use SASS for styling. The reason why I use these things
+													is I want to learn new things, new knowledge and new skills. As you know,
+													fron-end is a fast going field, self-learning is a must-have quality
+													for front-end software engineer. So I chose those stuffs to nail this blog.
+													My blog is my first side project. While building this project,
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end. For the database, it's noSQL--MongoDB. Also, like
+													this portfolio, I use SASS for styling. The reason why I use these things
+													is I want to learn new things, new knowledge and new skills. As you know,
+													fron-end is a fast going field, self-learning is a must-have quality
+													for front-end software engineer. So I chose those stuffs to nail this blog.
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end.
+												</h3>
+											</li>
+											<li><img src="/static/images/Blog-Create.PNG"></li>
+										</ul>
+									</div>
+									<div class="slider" id="slicesWrapper">
+										<ul>
+											<li><h3>My blog is my first side project. While building this project,
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end. For the database, it's noSQL--MongoDB. Also, like
+													this portfolio, I use SASS for styling. The reason why I use these things
+													is I want to learn new things, new knowledge and new skills. As you know,
+													fron-end is a fast going field, self-learning is a must-have quality
+													for front-end software engineer. So I chose those stuffs to nail this blog.
+													My blog is my first side project. While building this project,
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end. For the database, it's noSQL--MongoDB. Also, like
+													this portfolio, I use SASS for styling. The reason why I use these things
+													is I want to learn new things, new knowledge and new skills. As you know,
+													fron-end is a fast going field, self-learning is a must-have quality
+													for front-end software engineer. So I chose those stuffs to nail this blog.
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end. 
+													
+												</h3>
+											</li>
+											<li><img src="/static/images/Blog-Create.PNG"></li>
+											<li><img src="/static/images/Blog-Create.PNG"></li>	
+										</ul>
+										<button class="btnCtrl" id="prev"></button>
+										<button class="btnCtrl" id="next"></button>
+									</div>
+									<div class="slider" id="sliderRight">
+										<ul>
+											<li><img src="/static/images/Blog-Create.PNG"></li>
+											<li><img src="/static/images/Blog-Create.PNG"></li>	
+											<li><h3>My blog is my first side project. While building this project,
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end. For the database, it's noSQL--MongoDB. Also, like
+													this portfolio, I use SASS for styling. The reason why I use these things
+													is I want to learn new things, new knowledge and new skills. As you know,
+													fron-end is a fast going field, self-learning is a must-have quality
+													for front-end software engineer. So I chose those stuffs to nail this blog.
+													My blog is my first side project. While building this project,
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end. For the database, it's noSQL--MongoDB. Also, like
+													this portfolio, I use SASS for styling. The reason why I use these things
+													is I want to learn new things, new knowledge and new skills. As you know,
+													fron-end is a fast going field, self-learning is a must-have quality
+													for front-end software engineer. So I chose those stuffs to nail this blog.
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end.
+												</h3>
+											</li>
+										</ul>
+									</div>
 							</div>
-							<div class="slider" id="slicesWrapper">
-								<ul>
-									<li><h3>My blog is my first side project. While building this project,
-											I used AngularJS as the front-end framework and Django/REST framwork
-											as the back-end. For the database, it's noSQL--MongoDB. Also, like
-											this portfolio, I use SASS for styling. The reason why I use these things
-											is I want to learn new things, new knowledge and new skills. As you know,
-											fron-end is a fast going field, self-learning is a must-have quality
-											for front-end software engineer. So I chose those stuffs to nail this blog.
-										</h3>
-									</li>
-									<li><img src="/static/images/car.JPG"></li>
-									<li><img src="/static/images/profile.JPG"></li>	
-								</ul>
-								<button class="btnCtrl" id="prev"></button>
-								<button class="btnCtrl" id="next"></button>
-							</div>
-							<div class="slider" id="sliderRight">
-								<ul>
-									<li><img src="/static/images/car.JPG"></li>
-									<li><img src="/static/images/profile.JPG"></li>	
-									<li><h3>My blog is my first side project. While building this project,
-											I used AngularJS as the front-end framework and Django/REST framwork
-											as the back-end. For the database, it's noSQL--MongoDB. Also, like
-											this portfolio, I use SASS for styling. The reason why I use these things
-											is I want to learn new things, new knowledge and new skills. As you know,
-											fron-end is a fast going field, self-learning is a must-have quality
-											for front-end software engineer. So I chose those stuffs to nail this blog.
-										</h3>
-									</li>
-								</ul>
-							</div>
+							
 						</div><!-- end of contentWrap-->
 					</div><!-- end of row effOnScroll-->
 				</section>
@@ -223,25 +255,25 @@
 										<h3 class="option like"><span><i class="icon-heart"></i></span> Black coffee and Tea</h3>
 										<br>
 										<h3 class="option dislike"> Being judged</h3>
-										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Try new things</h3>
+										<h3 class="option like"><span><i class="icon-heart"></i></span> Try new things</h3>
 										<br>
 										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Sunshine in California</h3>
 										<h3 class="option dislike">Winter in Boston</h3>
 										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> SanFrancisco</h3>
 										<br>
-										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Book "Lean in"</h3>
-										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Book "head first--OODA"</h3>
-										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Book "Eat Pray Love"</h3>
+										<h3 class="option like"><span><i class="icon-heart"></i></span> Book "Lean in"</h3>
+										<h3 class="option like"><span><i class="icon-heart"></i></span> Book "head first--OODA"</h3>
+										<h3 class="option like"><span><i class="icon-heart"></i></span> Book "Eat Pray Love"</h3>
 										<br>
 										<h3 class="option dislike">Messy code</h3>
 										<h3 class="option dislike">Complicated relationship</h3>
 										<br>
 										
-										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Learn and use new knowledge and skills</h3>
-										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Being Front-end Engineer</h3>
+										<h3 class="option like"><span><i class="icon-heart"></i></span> Learn and use new knowledge and skills</h3>
+										<h3 class="option like"><span><i class="icon-heart"></i></span> Being Front-end Engineer</h3>
 										<br>
-										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Piano and Violin</h3>
-										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> David Garrett</h3>
+										<h3 class="option like"><span><i class="icon-heart"></i></span> Piano and Violin</h3>
+										<h3 class="option like"><span><i class="icon-heart"></i></span> David Garrett</h3>
 
 									</div><!--options end-->
 								</div><!--end of optionsWrap-->

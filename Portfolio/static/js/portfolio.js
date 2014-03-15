@@ -158,12 +158,11 @@ portfolio.controller('contactCtrl',['$scope','emailService', function($scope, em
 			var result = emailService.sendEmail($scope.emailData);
 			result.then(function(data){
 				// data == what emailService resolve will show up here.
-				switch(data){
-					case 'success': $scope.alertMsg = 'Thank you ' + $scope.emailData.name + '! Your message has been sent successfully!'; break;
-					default : $scope.alertMsg = 'Oops! Something is wrong! Error code: ' + data + 'Try again later!';break;
-				}
+				$scope.alertMsg = 'Thank you ' + $scope.emailData.name + '! Your message has been sent successfully!'; 
 				//when get returned result, msg box show up.
 				$scope.alert = true;
+			},function(reason){
+				$scope.alertMsg = 'Oops! Something is wrong! Error code: ' + reason + 'Try again later!';
 			}).then(function(){
 				$scope.emailData = {};
 			});
