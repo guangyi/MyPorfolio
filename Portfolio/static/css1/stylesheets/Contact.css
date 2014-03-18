@@ -1,14 +1,14 @@
 /*
-Syntax error: Undefined mixin 'background-image'.
-        on line 3 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss, in `background-image'
-        from line 3 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss
+Syntax error: Undefined variable: "$bg_Contact".
+        on line 4 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Contact.scss
 
-1: /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss
+1: /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Contact.scss
 
 Backtrace:
-/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss:3:in `background-image'
-/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss:3
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
+/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Contact.scss:4
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/script/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/script/node.rb:40:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -76,4 +76,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'background-image'.\A         on line 3 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss, in `background-image'\A         from line 3 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss\A \A 1: /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss"; }
+  content: "Syntax error: Undefined variable: \"$bg_Contact\".\A         on line 4 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Contact.scss\A \A 1: /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Contact.scss"; }

@@ -1,0 +1,232 @@
+$inputLable:#78A632;
+$formTitle:#558c00;
+#Contact{
+	background:$bg_Contact;
+	h1{
+		text-align: center;
+		font-size:2.5em;
+		color:#FFF;//#3F6399;//#629D30;
+		}
+	h2{
+		font-size:1.3em;
+	}
+	h3{
+		font-size: 1em;
+	}
+}
+#Contact{
+	//overflow:scroll;
+	.clouds{
+		width:90%;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		height:14%;
+		background:inherit;
+		position:relative;
+		padding-bottom:2%;
+		.cloud{
+			margin-left:5%;
+			position:relative;
+			top:68%;
+			width:17%;
+			min-width: 100px;
+			height:45%;
+			//@include border-radius(50%);
+			background:$Cloud;
+			@include box-shadow(0px 5px 25px 0px lightgray);
+			.cloudPart1, .cloudPart2{
+				@include border-radius(100%);
+				background:inherit;
+				position: absolute;
+			}
+			.cloudPart1{
+				//top:-70%;
+				width:35%;
+				left:13%;
+				bottom:30%;
+			}
+			.cloudPart2{
+				// the Bigger part of cloud
+				//top:-103%;
+				width:50%;
+				left:37%;
+				bottom:0;
+			}
+		}
+	}
+	.icons{
+		width:30%;
+		height:auto;
+		background:inherit;
+		position:relative;
+		margin:auto;
+		& a{
+			//float:left;
+			position:relative;
+			height:auto;
+			overflow:hidden;
+			}
+		& a:nth-child(1){
+			margin-right:35%;
+		}
+		& a:nth-child(3){
+			float:right;
+		}
+	}
+	.dialog{
+		bottom:0;
+		right:0px;
+		position:absolute;
+		float:right;
+		color:$formText;
+		width:35%;
+		margin:auto;
+		font-size:0.9em;
+		z-index:1;
+		padding-top:3%;
+		padding-right:3%;
+		border:none;
+	}
+	.form{
+		text-align:left;
+		h2,p{
+			display: inline-block;
+		}
+		p{
+			font-size:0.7em;
+			color:#666;
+		}
+		@include box-sizing(border-box);
+		@include border-radius(0.3em);
+		padding:2% 2% 5% 2%;
+		background:#fff;
+		width:90%;
+		margin-left:auto;
+		margin-right:auto;
+		position:relative;
+		//margin-top:3%;
+		color:$formTitle;//color for form main title //#707070;
+	}
+	#contactForm{
+		width:90%;
+		margin:auto;
+		margin-top:3%;
+		position:relative;
+		background:#fff;
+		color:$inputLable// color for input and textare label
+	}
+	.input{
+		width:45%;
+		float:left;
+		overflow:hidden;
+		margin-right:7%;
+		& input{
+			@include box-sizing(border-box);
+			@include border-radius(0.3em);//5px / 16px = 0.3
+			border:2px solid lightgray;
+			height:1.8em;
+			width:100%;
+			font-size: 0.9em;
+			color:$formText;// color for input content
+		}
+		& input:focus, & input:invalid {
+			//use this to prevent the red border in firefox
+	    	box-shadow:none !important;
+		}
+		.second{
+			margin-top:8%;
+		}		
+	}
+	.message{
+		overflow:hidden;
+		float:50%;
+		//margin-top:10%;
+		& textarea{
+			font-size:0.9em;
+			width:98%;
+			@include box-sizing(border-box);
+			@include border-radius(0.3em);
+			border:2px solid lightgray;
+			resize:vertical;//the textare can only resize vertically.not horizontally.
+			color:$formText;
+		}
+
+		& textarea:focus, & textarea:invalid {
+			//use this to prevent the red border in firefox
+	    	box-shadow:none !important;
+		}
+	}
+	.error{
+		@include box-sizing(border-box);
+		color:orange;
+		font-size:0.6em;
+		font-weight:light;
+}
+	.contactButton{
+		float:right;
+		width:43%;
+		font-size:1em;
+		color:#fff;
+		background:$Button;
+		border:3px solid #88b542;
+		border-bottom-color:#486c10;//#78A632;//#629D30;almost like the btn bg
+		@include border-radius(1em);//20px / 16px = 1.25
+		margin-top:13%;
+		margin-right:10%;
+		//box-shadow:
+		//@include box-shadow(4px 2px 3px 3px lightgray);
+		&:hover{
+			border-color:#486c10;
+			//border-bottom-color:#A4E8E8
+		}
+	}
+	.alertBox{
+		position:absolute;
+		top:0;
+		z-index:10;
+		width:100%;
+		height:100%;
+		background:rgba(158, 224, 255,0.8);
+		h2{color:#fff;}
+		.loading{
+			margin:auto;
+			width:30%;
+			height:20%;
+			position:relative;
+			top:35%;
+			//border-bottom:1px solid #666;
+			h1{
+				font-size: 3em;
+				position:absolute;
+				display: inline-block;
+				left:0;
+				top:0;
+				color:#ff6666;
+			}
+			.mailRotate{
+				@include animation('mailRotate 1.6s linear infinite');
+			}
+		}
+		.alert{
+			color:#78A632;
+			opacity:1;
+			top:25%;
+			width:90%;
+			height:70%;
+			padding:5% 3%;
+			background:white;
+			margin:auto;
+			position:relative;
+			@include border-radius(0.625em);// 10 / 16px = 0.625
+			@include box-sizing(border-box);
+			text-align: center;
+		}
+		.contactButton{
+			//background:orange;
+			//color:white;
+			width:15%;
+			//border-color:white;
+		}
+	}
+}

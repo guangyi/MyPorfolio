@@ -2683,3 +2683,178 @@
     color: #bcbcbc;
   }
 }
+
+/************ Contact Page loading Animation *****************/
+@-webkit-keyframes mailRotate {
+  /* line 223, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 225, ../sass/animation.scss */
+  5% {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  /* line 227, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 229, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotate(175deg);
+    -moz-transform: rotate(175deg);
+    -ms-transform: rotate(175deg);
+    -o-transform: rotate(175deg);
+    transform: rotate(175deg);
+  }
+
+  /*100% {@include transform(rotate(365deg));
+  	
+  	}*/
+ /*0% {@include transform(rotate(5deg)); 
+	left:0;
+	top:0;
+}
+25% {@include transform(rotate(185deg));
+	left:30%;
+	top:90%;
+	}
+75% {@include transform(rotate(365deg));
+	left:60%;
+	top:90%; 
+	}
+100% {@include transform(rotate(545deg));
+	left:90%;
+	top:50%;
+ }*/
+}
+
+@-moz-keyframes mailRotate {
+  /* line 223, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 225, ../sass/animation.scss */
+  5% {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  /* line 227, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 229, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotate(175deg);
+    -moz-transform: rotate(175deg);
+    -ms-transform: rotate(175deg);
+    -o-transform: rotate(175deg);
+    transform: rotate(175deg);
+  }
+
+  /*100% {@include transform(rotate(365deg));
+  	
+  	}*/
+ /*0% {@include transform(rotate(5deg)); 
+	left:0;
+	top:0;
+}
+25% {@include transform(rotate(185deg));
+	left:30%;
+	top:90%;
+	}
+75% {@include transform(rotate(365deg));
+	left:60%;
+	top:90%; 
+	}
+100% {@include transform(rotate(545deg));
+	left:90%;
+	top:50%;
+ }*/
+}
+
+@keyframes mailRotate {
+  /* line 223, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 225, ../sass/animation.scss */
+  5% {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  /* line 227, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 229, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotate(175deg);
+    -moz-transform: rotate(175deg);
+    -ms-transform: rotate(175deg);
+    -o-transform: rotate(175deg);
+    transform: rotate(175deg);
+  }
+
+  /*100% {@include transform(rotate(365deg));
+  	
+  	}*/
+ /*0% {@include transform(rotate(5deg)); 
+	left:0;
+	top:0;
+}
+25% {@include transform(rotate(185deg));
+	left:30%;
+	top:90%;
+	}
+75% {@include transform(rotate(365deg));
+	left:60%;
+	top:90%; 
+	}
+100% {@include transform(rotate(545deg));
+	left:90%;
+	top:50%;
+ }*/
+}

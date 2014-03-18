@@ -1,5 +1,5 @@
-$bgTop:#ad0000;
-$bgBottom:#000;//#ff6666;//#ff6666;
+$bgTop:#ff4444;//#af0000;
+$bgBottom:#430008;//#ff6666;//#ff6666;
 
 $titleColor:#fff;
 $descriptionFontColor:#696969;
@@ -13,7 +13,7 @@ $buttonFontColor:#fff;
 	.row{
 		margin:auto;
 		//background:#ad0000;
-		@include background-image(linear-gradient(top, $bgTop, #fff, $bgBottom  95%));
+		@include background-image(linear-gradient(top, $bgTop, $bgBottom));
 		text-align: center;
 		h1{
 			font-size:2.5em;
@@ -181,7 +181,7 @@ $buttonFontColor:#fff;
 .buttonWrap{
 	position:absolute;
 	left:0;
-	bottom:1em;
+	bottom:5em;
 	width:100%;
 	@include perspective(400px);
 	float:right;

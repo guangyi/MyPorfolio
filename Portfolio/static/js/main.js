@@ -12,7 +12,7 @@ $(document).ready(function(){
 			height:'100%'
 		},1000);
 	});
-	
+	loading();
 	//blogAnimation();
 	//mouseHover();
 	

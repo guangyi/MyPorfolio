@@ -141,6 +141,7 @@ portfolio.controller('contactCtrl',['$scope','emailService', function($scope, em
 	$scope.emailData = {};
 	// $scope.clicked used to detect wether the submit button has been cliked or not
 	// if it's not clicked, than the validation message of input and textare won't show up
+	$scope.loading = false;//loding icon
 	$scope.clicked = false;
 	$scope.alert = false;
 	$scope.alertMsg = '';
@@ -154,6 +155,7 @@ portfolio.controller('contactCtrl',['$scope','emailService', function($scope, em
 		$scope.clicked = true;
 		if ($scope.contactForm.$valid){
 			$scope.base = true;
+			$scope.loading = true;
 			//console.log($scope.emailData.name);
 			var result = emailService.sendEmail($scope.emailData);
 			result.then(function(data){
@@ -161,8 +163,10 @@ portfolio.controller('contactCtrl',['$scope','emailService', function($scope, em
 				$scope.alertMsg = 'Thank you ' + $scope.emailData.name + '! Your message has been sent successfully!'; 
 				//when get returned result, msg box show up.
 				$scope.alert = true;
+				$scope.loading = false;
 			},function(reason){
 				$scope.alertMsg = 'Oops! Something is wrong! Error code: ' + reason + 'Try again later!';
+				$scope.loading = false;
 			}).then(function(){
 				$scope.emailData = {};
 			});

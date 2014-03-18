@@ -1,13 +1,11 @@
 /*
-Syntax error: Undefined mixin 'background-image'.
-        on line 3 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss, in `background-image'
-        from line 3 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss
-
-1: /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss
+Syntax error: Undefined mixin 'border-radius'.
+        on line 22 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/About.scss, in `border-radius'
+        from line 22 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/About.scss
 
 Backtrace:
-/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss:3:in `background-image'
-/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss:3
+/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/About.scss:22:in `border-radius'
+/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/About.scss:22
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
@@ -76,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'background-image'.\A         on line 3 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss, in `background-image'\A         from line 3 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss\A \A 1: /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/MoreAboutMe.scss"; }
+  content: "Syntax error: Undefined mixin 'border-radius'.\A         on line 22 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/About.scss, in `border-radius'\A         from line 22 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/About.scss"; }

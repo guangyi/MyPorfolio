@@ -96,7 +96,36 @@ var upDown = function(obj){
 	}).dequeue('vertical');
 };
 
+var loading = function(){
+	console.log('here');
+	$('.mailRotate').animate({
+		'left':'20%',
+		'top':'70%'
+	}, {
+		queue:false,
+		duration:800,
+		easing:'linear',
+		complete:function(){
+			$(this).animate({
+				'left':'50%',
+				'top':'5%',
+				'opacity':'0'
+			},{
+				duration:800,
+				easing:'linear',
+				complete:function(){
+					$(this).css({
+						'left':'0',
+						'top':'0',
+						'opacity':'1'
+					});
+					loading();
+				}
 
+			});
+		}
+	});
+};
 
 
 

@@ -80,6 +80,7 @@ var animtOnScroll = function(){
 	// that's why put b here
 	var b = new blog();
 	var moreAboutMe = new MoreAboutMe();
+	console.log('display'+$('.loading').css('display'));
 	$('.content').scroll(function(){
 		/******************************** Projects Page loading Animation **************/
 		if($('#Experiments').offset().top <= $(window).height() * 0.7 && $('#Experiments').offset().top >= 0 && firstTimePrj){
@@ -108,7 +109,6 @@ var animtOnScroll = function(){
 			console.log("stop");
 			moreAboutMe.stop();
 			leaveAboutMe = true;
-
 		}
 		cloudMove();// defined in cloudMove.js
 		//flyin();

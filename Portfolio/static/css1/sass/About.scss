@@ -1,0 +1,185 @@
+#About{
+		//@include background-image(linear-gradient(top, #ff6666,#fff));
+		background:#9ee0ff;//#600;//#EFFF96;//#FFF8EA;//#FFFD7F; //#F2E0E1;
+		text-align:center;
+		p{
+			font-size:1em;
+			color:#F2F2F2;
+			margin:0.5em 0em;
+		}
+	}
+#profile{
+	top:10%;
+	position:relative;
+	margin-right:auto;
+	margin-left:auto;
+	width:25vw;
+	height:25vw;
+	//padding-bottom = width, can make circle responsive
+	//padding-bottom:30%;
+	//background: url('/static/images/profile.JPG') no-repeat;
+	//background-position: 38% 50%;
+	@include border-radius(100%);
+	box-shadow: 0px 0px 20px 0px #fff;
+	& img{
+		border-radius:100%;
+		max-width:100%;
+		max-height: 110%;
+	}
+	&:after{
+		// this is the white shadow around the picture
+		position: absolute;
+		content: '';
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		@include border-radius(50%);
+		// gradient but don't know where to import...
+		@include background-image(radial-gradient(50% 50%, rgba(255,255,255,0) 85%, rgba(255,255,255,1) 100%));
+	}
+}
+#speech_bubble{
+	// use before and after to create
+	// those arror on the left
+	// center an element: margin-left and margin-right both be auto;
+	margin-left: auto;
+	margin-right:auto;
+	position:relative;
+	width:70%;
+	height: 6em;
+	top: 2em;
+	border:5px solid $speech_bubble_border;
+	padding:1em;
+	@include box-sizing(border-box);
+	@include border-radius(0.8em);// 20px / 1.5 * 16 = 5 / 6
+	z-index:2;
+	&:before, &:after{
+		content: '';
+		position:absolute;
+		left:-46px;//-5.25%;
+		top:1.5em;
+		width:1.5em;
+		border-bottom-left-radius: 100%;
+		border-left: 5px solid $speech_bubble_border;
+		border-bottom:5px solid $speech_bubble_border;
+		background: transparent;
+		/* no rotate version
+		transform-origin: 0 0;
+		transform: rotate(-45deg);*/
+	}
+	&:before{
+		border-right:5px solid $speech_bubble_border;
+		height:1em;
+		z-index:3;
+	}
+	&:after{
+		// the bigger curve.
+		border-right:5px solid transparent;
+		height:2em;
+		z-index: 1;
+	}
+}
+#speech_bubble_arrowup{
+	// use before and after to create
+	// those arror on the left
+	// center an element: margin-left and margin-right both be auto;
+	h1{
+		font-size:3em; //3em /
+		color:#fff;
+	}
+	margin-left: auto;
+	margin-right:auto;
+	position:relative;
+	width:65vw;
+	//height: 22%;
+	top: 25%;
+	border:5px solid $speech_bubble_border;
+	padding:1em;
+	@include box-sizing(border-box);
+	@include border-radius(0.8em);// 20px / 1.5 * 16 = 5 / 6
+	z-index:1;
+	&:before, &:after{
+		content: '';
+		position:absolute;
+		width:0px;
+		height:0px;
+	}
+	&:before{
+		top:-30px;
+		left:46.1%;
+		border-left: 30px solid transparent;
+		border-right:30px solid transparent;
+		border-bottom: 30px solid $bg_About;
+		z-index: 3;
+	}
+	&:after{
+		top:-41px;
+		left:45%;
+		border-left: 40px solid transparent;
+		border-right:40px solid transparent;
+		border-bottom:40px solid $speech_bubble_border;
+		z-index:2;
+	}
+}
+@media screen and (max-width:81.25em){ //1300px / 16px
+	#speech_bubble_arrowup{
+		&:before{
+			left:46.2%
+		}
+	}
+}
+@media screen and (max-width:60.625em){ //970/16px = 60.625
+	#speech_bubble_arrowup{
+		h1{
+		font-size:2.5em; 
+		}
+		&:before{
+			left:46.5%
+		}
+	}
+}
+@media screen and (max-width:51.875em){//830px / 16 = 51.875em
+		#speech_bubble_arrowup{
+		h1{
+		font-size:1.7em; 
+		}
+		&:before{
+			left:46.8%
+		}
+	}
+}
+@media screen and (max-width:37.5em){//600px / 16 = 51.875em
+	#speech_bubble_arrowup{
+		top:42%;
+		h1{
+		font-size:1.1em; 
+		}
+		&:before{
+			left:39%
+		}
+		&:after{
+			left:36%;
+		}
+	}
+	#profile{
+		top:20%;
+	}
+}
+@media screen and (max-width:28.125em){//450px / 16 = 51.875em
+	#speech_bubble_arrowup{
+		top:43%;
+		h1{
+		font-size:0.9em; 
+		}
+		&:before{
+			left:39.1%
+		}
+		&:after{
+			left:36%;
+		}
+	}
+	#profile{
+		top:30%;
+	}
+}

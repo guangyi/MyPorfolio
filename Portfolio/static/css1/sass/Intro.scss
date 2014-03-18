@@ -1,14 +1,14 @@
 /** Shelter background and font color **/
 $shelterBg:#fdd1e0;
-$shelterFontColor:#FFF;
+$shelterFontColor:#630a00;
 
 /** Intro Main Part Title,font,background color **/
-$MainPartTitle:#AD0000;
-$MainPartFontColor:#444;
+$MainPartTitle:#fff;
+$MainPartFontColor:#fff;
 $MainPartBg:#EEE;
 
 /** Side Part, including each unit background, shelter and cube **/
-$sideFontColor:#FFF;
+$sideFontColor:#700000;
 $sideBorder:1px solid #B2B2B2;
 $sideBorderLight:1px solid #FFF;
 
@@ -18,10 +18,11 @@ $gradientEnd:#ad0000;
 
 /** cube each side color, size, font color **/
 $cubeWidth:140px;
-$cubeFontColor:#222;
-$cubeLight:#FFF;
-$cubeMiddle:#eee;
-$cubeDark:#ddd;
+$cubeFontColor:#fff;
+$cubeLight:#ff7373;
+$cubeMiddle:#ff4444;
+$cubeDark:#ad0000;
+$cubeBorder:#ad0000;
 @mixin cubeColor($light, $middle, $dark){
 	.cubeFront{
 		background:$light;
@@ -43,9 +44,22 @@ $cubeDark:#ddd;
 	}
 }
 #Intro{
+	@include background-image(linear-gradient(top, #9ee0ff, #ff4444));
 	.contentWrap{
+		text-align: center;
+		background:transparent;
 		& h1{
+			font-size:2.5em;
 			color:$MainPartTitle;
+		}
+		& h2{
+			font-size: 1.5em;
+		}
+		& h3{
+			font-size: 1em;
+		}
+		& p{
+			font-size: 1em;
 		}
 		.left{
 			float:left;
@@ -54,81 +68,73 @@ $cubeDark:#ddd;
 		}
 	}
 }
-.middle{
-	float:left;
-	position:relative;
-	font-size:0.9em;
-	padding:5% 5% 0 5%;
-	text-align:center;
-	width:60%;
-	height:100%;
-	display:inline-block;
-	line-height:1.8em;
-	color:$MainPartFontColor;
-	@include background-image(linear-gradient(left, #fff, $MainPartBg));
-	@include box-sizing(border-box);
-	//background:$MainPartBg;
+.introWrapper{
+	width:100%;
 }
-.right{
-	float:left;
-	width:20%;
-	height:100%;
+.topPart{
+	height:40%;
+	width:100%;
+	color:$MainPartFontColor;
+}
+.bottomPart{
+	height:55%;
+	width:100%;
+	overflow:hidden;
 }
 .perspective{
 	position:relative;
-	width:100%;
-	height:50%;
 	text-align:center;
 	color:$sideFontColor;
 	overflow:hidden;
-	.introShlter{
-		padding-top:1em;
+	margin-right:1%;
+	width:23%;
+	height:90%;
+	float:left;
+	border-right:1px dashed #ccc;
+	.shelterWrapper{
 		position:absolute;
-		height:100%;
+		height:80%;
+		width:99%;
+		bottom:0;
+		overflow: hidden;
+		&.gra{
+		//@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
+			@include perspective-origin(0 250px);
+			@include perspective(800px);
+		}
+		&.free{
+			//@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
+			@include perspective-origin(0 250px);
+			@include perspective(800px);
+		}
+		&.bel{
+			//@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
+			@include perspective-origin(100% 250px);
+			@include perspective(800px);
+		}
+		&.Ihope{
+			//@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
+			@include perspective-origin(100% 250px);
+			@include perspective(800px);
+			}
+	}
+	.introShlter{
+		position:absolute;
+		height:80%;
 		width:100%;
 		left:-100%;
-		top:0px;
+		top:0;
 		line-height:1.5em;
-		z-index:10 !important;
+		z-index:10;
 		color:$shelterFontColor;
+		font-size:0.8em;
+		background:transparent;
 	}
 	.carve{
 		padding-top:10%;
 		margin-bottom:10%;
 	}
-	&.gra{
-		@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
-		@include perspective-origin(0 400px);
-		@include perspective(1000px);
-		.introShlter{
-			//@include transform(translateZ(0.8 * $cubeWidth) scale( 0.87) translateX(-4%));For safari, can use this
-			@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
-		}
-	}
-	&.free{
-		@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
-		@include perspective-origin(100% 380px);
-		@include perspective(800px);
-		.introShlter{
-			@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
-		}
-	}
-	&.bel{
-		@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
-		@include perspective-origin(0 340px);
-		@include perspective(800px);
-		.introShlter{
-			@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
-		}
-	}
-	&.Ihope{
-		@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
-		@include perspective-origin(100% 340px);
-		@include perspective(800px);
-		.introShlter{
-			@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
-		}
-	}
+	
 }
 .cube{
 	font-size:0.7em;
@@ -149,11 +155,13 @@ $cubeDark:#ddd;
 		padding:8% 3% 5% 3%;
 		@include box-sizing(border-box); 
 		@include border-radius(0.2em);
+		border:2px dashed $cubeBorder;
 	}
 	.cubeFront{
 		@include transform(translateZ(0.5 * $cubeWidth));/* should be half width,but percentage doesn't work on translateZ */
 	}
 	.cubeTop{
+		border:none;
 		@include transform(rotateX(-90deg) translateY(-0.5 * $cubeWidth));// percentage related to width
 		-webkit-transform-origin: top center;
 		-moz-transform-origin: top center;
@@ -178,6 +186,7 @@ $cubeDark:#ddd;
 		transform-origin: center left;
 	}
 	.cubeBottom{
+		border:none;
 		@include transform(rotateX(90deg) translateY(0.5 * $cubeWidth));
 		-webkit-transform-origin: bottom center;
 		-moz-transform-origin: bottom center;
@@ -200,7 +209,7 @@ $cubeDark:#ddd;
 		& div{
 			padding-top:20%;
 		}
-		margin-left:30%;
+		margin-left:20%;
 		@include cubeColor($cubeLight, $cubeMiddle, $cubeDark);
 		@include animation(spin 40s  2s infinite linear);
 	}
@@ -208,12 +217,13 @@ $cubeDark:#ddd;
 		& div{
 			padding-top:40%;
 		}
+		margin-left:30%;
 		@include cubeColor($cubeLight, $cubeMiddle, $cubeDark);
 		@include animation(spin 40s  4s infinite linear);
 	}
 	&.hope{
 		& div{
-			padding-top:20%;
+			padding-top:5%;
 		}
 		margin-left:30%;
 		@include cubeColor($cubeLight, $cubeMiddle, $cubeDark);
@@ -247,3 +257,80 @@ $cubeDark:#ddd;
 		@include animation('intro_out_right 1s forwards');
 	}
 }
+
+
+
+/*<div class="middle">
+									<p>
+										I'm Guangyi <br><br>
+										I'm a recently graduated student <br><br>
+										I'm a Front-End Engineer<br><br>
+										I'm looking for a Job<br><br>
+										My Skill Set:HTML5 CSS3 SASS Bootstrap<br><br>
+										jQuery AngularJS Django MongoDB<br><br>
+									<!--My name is Guangyi, a front-end engineer. I'm looking for a front-end position to work on exciting projects with awesome people. This portfolio, I hope, will help me find the right job for me.<br>
+									To keep up with the trand,this portfolio uses combination of HTML5, CSS3(Sass pre-processor), AngularJS, Django and MongoDB.fast-learning is a must-have skill.<br>
+									I have to admit, as an entry level engineer, this is not perfect, But "perfection" is not the point. I just want to use this portfolio to demostrate to you, my future employer, what I'm capable of doing and what potential I have.More importantly, prove to myself, I like what I'm doing and I'm good at what I'm doing.<br>
+									Check out each section to learn more detail! Thank you! -->
+								</p>
+								</div><!-- end of middle -->
+								<div class="left">
+									<div class="perspective gra">
+										<div class="carve"><h3> I'm a student </h3></div>
+										<div class="cube graduated">	
+											<div class="cubeTop"></div>
+											<div class="cubeRight">Always <br> work hard</div>
+											<div class="cubeLeft">Master Degree <br> Major in C.S.</div>
+											<div class="cubeBack">GPA≈3.7<br><span style="font-size:0.7em">Well,honestly 3.67 </span></div>
+											<div class="cubeFront">Rencently Graduated</div>
+											<div class="cubeBottom"></div>
+										</div>
+										<div class="introShlter">
+											<p>Recently Graduated Student:<br><br>Brandeis University<br> + <br> 
+										Graduated in May 2013<br> + <br>Master in Computer Science<br> + <br> GPA=3.67</p>
+										</div>
+									</div>
+									<div class="perspective bel">
+										<div class="introShlter"><p>I Believe in:<br><br> Dream <br> + <br> Hope <br> + <br> Passion</p></div>
+										<div class="carve"><h3>I believe in.. </h3></div>
+										<div class="cube believe">	
+											<div class="cubeTop"></div>
+											<div class="cubeFront">DREAM</div>
+											<div class="cubeRight">Sunshine</div>
+											<div class="cubeLeft">HOPE</div>
+											<div class="cubeBack">PASSION</div>
+											<div class="cubeBottom"></div>
+										</div>
+									</div>
+								</div><!--end of left-->
+								<div class="right">
+									<div class="perspective free">
+										<div class="introShlter"><p>Front-End Skill Set:<br><br>HTML5 Sass CSS3 <br> + <br>JQuery/Javascript
+											<br> + <br> Bootstrap AngularJS <br> + <br>Django + MongoDB</p></div>
+										<div class="carve"><h3>Front-End Engineer</h3></div>
+										<div class="cube frontEnd" >	
+											<div class="cubeTop"></div>
+											<div class="cubeFront">HTML5, CSS3,Sass, JS/JQuery</div>
+											<div class="cubeRight">Detailed <br> & Passionate</div>
+											<div class="cubeLeft">AngularJS, <br>Django, MongoDB, </div>
+											<div class="cubeBack">Self-taught<br> &Self-Motivated</div>
+											<div class="cubeBottom"></div>
+										</div>
+									</div>
+									<div class="perspective Ihope">
+										<div class="introShlter"><p>Great job == <br><br> good chemistry<br> + <br>fit in the company culture
+											<br> +<br> make contribution<br> +<br> personal development</p></div>
+										<div class="carve"><h3> I hope to </h3></div>
+										<div class="cube hope">											<div class="cubeTop"></div>
+											<div class="cubeFront">Find A Great Job <br>in San Francisco <br> or Boston</div>
+											<div class="cubeRight">Find A Great Job <br>in San Francisco <br> or Boston</div>
+											<div class="cubeLeft">Find A Great Job <br>in San Francisco <br> or Boston</div>
+											<div class="cubeBack">Find A Great Job <br>in San Francisco <br> or Boston</div>
+											<div class="cubeBottom"></div>
+										</div>
+									</div>
+							 </div><!--end of right--> 
+
+
+
+							 */

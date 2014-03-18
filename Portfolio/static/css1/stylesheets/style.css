@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -2753,25 +2754,200 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
+/************ Contact Page loading Animation *****************/
+@-webkit-keyframes mailRotate {
+  /* line 223, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 225, ../sass/animation.scss */
+  5% {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  /* line 227, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 229, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotate(175deg);
+    -moz-transform: rotate(175deg);
+    -ms-transform: rotate(175deg);
+    -o-transform: rotate(175deg);
+    transform: rotate(175deg);
+  }
+
+  /*100% {@include transform(rotate(365deg));
+  	
+  	}*/
+ /*0% {@include transform(rotate(5deg)); 
+	left:0;
+	top:0;
+}
+25% {@include transform(rotate(185deg));
+	left:30%;
+	top:90%;
+	}
+75% {@include transform(rotate(365deg));
+	left:60%;
+	top:90%; 
+	}
+100% {@include transform(rotate(545deg));
+	left:90%;
+	top:50%;
+ }*/
+}
+
+@-moz-keyframes mailRotate {
+  /* line 223, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 225, ../sass/animation.scss */
+  5% {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  /* line 227, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 229, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotate(175deg);
+    -moz-transform: rotate(175deg);
+    -ms-transform: rotate(175deg);
+    -o-transform: rotate(175deg);
+    transform: rotate(175deg);
+  }
+
+  /*100% {@include transform(rotate(365deg));
+  	
+  	}*/
+ /*0% {@include transform(rotate(5deg)); 
+	left:0;
+	top:0;
+}
+25% {@include transform(rotate(185deg));
+	left:30%;
+	top:90%;
+	}
+75% {@include transform(rotate(365deg));
+	left:60%;
+	top:90%; 
+	}
+100% {@include transform(rotate(545deg));
+	left:90%;
+	top:50%;
+ }*/
+}
+
+@keyframes mailRotate {
+  /* line 223, ../sass/animation.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 225, ../sass/animation.scss */
+  5% {
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  /* line 227, ../sass/animation.scss */
+  50% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 229, ../sass/animation.scss */
+  100% {
+    -webkit-transform: rotate(175deg);
+    -moz-transform: rotate(175deg);
+    -ms-transform: rotate(175deg);
+    -o-transform: rotate(175deg);
+    transform: rotate(175deg);
+  }
+
+  /*100% {@include transform(rotate(365deg));
+  	
+  	}*/
+ /*0% {@include transform(rotate(5deg)); 
+	left:0;
+	top:0;
+}
+25% {@include transform(rotate(185deg));
+	left:30%;
+	top:90%;
+	}
+75% {@include transform(rotate(365deg));
+	left:60%;
+	top:90%; 
+	}
+100% {@include transform(rotate(545deg));
+	left:90%;
+	top:50%;
+ }*/
+}
+
 /********************************************** Framework ****************************************/
 /* line 47, ../sass/style.scss */
 html, body {
   font-family: "proxima nova light","Helvetica Neue",Helvetica,Arial,Sans-serif;
   height: 100%;
+  font-size: 100%;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .conatiner {
   width: 100%;
   height: 100%;
 }
 
-/* line 56, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 #header {
   height: 100%;
   position: fixed;
-  top: 5em;
-  width: 5%;
+  width: 7%;
   /*text-align: center;*/
   color: #fff;
   z-index: 6;
@@ -2783,48 +2959,49 @@ html, body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  /*&:hover{
-  	width:7%;
-  	background:rgba(22,22,22,1);
-  }*/
+  opacity: 0.2;
+}
+/* line 72, ../sass/style.scss */
+#header:hover {
+  opacity: 0.7;
 }
 /* line 76, ../sass/style.scss */
 #header #nav a {
   text-align: center;
+  padding-top: 1em;
   font-family: "proxima nova light","Helvetica Neue",Helvetica,Arial,Sans-serif;
   display: block;
   width: 100%;
-  height: 3em;
-  color: #FDE7EF;
+  height: 1.5em;
+  color: #fff;
   text-decoration: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid gray;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  border-radius: 0.2em;
 }
 /* line 86, ../sass/style.scss */
 #header #nav a:hover {
-  background: #924032;
+  background: #eee;
   opacity: 1;
   color: #fff;
 }
 /* line 91, ../sass/style.scss */
 #header #nav a.active {
-  background: #924032;
+  background: #ddd;
 }
 
-/* line 98, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .content {
   width: 100%;
   overflow: scroll;
 }
-/* line 101, ../sass/style.scss */
+/* line 102, ../sass/style.scss */
 .content .scroll {
   overflow: hidden;
 }
-/* line 103, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .content .scroll .main {
   font-size: 1.5em;
   /*text-align: center;*/
@@ -2832,96 +3009,65 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 110, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .content .scroll .main .row {
   position: relative;
   height: 100%;
 }
-/* line 113, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .content .scroll .main .row .rotate {
   -webkit-transform-origin: center;
   -moz-transform-origin: center;
 }
-/* line 117, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 .content .scroll .main .row .contentWrap {
+  padding-top: 1em;
+  padding-bottom: 1em;
   height: 100%;
-  width: 100%;
-  padding: 0;
+  width: 90%;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 127, ../sass/style.scss */
-.content .scroll #About {
-  background: #a60026;
+
+/****************************************************** About *******************************************/
+/* line 1, ../sass/About.scss */
+#About {
+  background: #9ee0ff;
   text-align: center;
 }
-/* line 130, ../sass/style.scss */
-.content .scroll #About h1 {
-  font-size: 4em;
-  color: white;
-}
-/* line 135, ../sass/style.scss */
-.content .scroll #About p {
+/* line 5, ../sass/About.scss */
+#About p {
   font-size: 1em;
   color: #F2F2F2;
   margin: 0.5em 0em;
 }
-/* line 141, ../sass/style.scss */
-.content .scroll #Intro {
-  background: white;
-}
-/* line 143, ../sass/style.scss */
-.content .scroll #Intro h1 {
-  font-size: 2.5em;
-}
-/* line 147, ../sass/style.scss */
-.content .scroll #Intro h2 {
-  font-size: 1.5em;
-}
-/* line 150, ../sass/style.scss */
-.content .scroll #Intro h3 {
-  font-size: 1em;
-}
-/* line 153, ../sass/style.scss */
-.content .scroll #Intro p {
-  font-size: 0.8em;
-}
-/* line 157, ../sass/style.scss */
-.content .scroll #Contact {
-  background: #9ee0ff;
-}
-/* line 159, ../sass/style.scss */
-.content .scroll #Contact h1 {
-  font-size: 2.5em;
-  color: #FFF;
-  margin-bottom: 0.5em;
-}
-/* line 164, ../sass/style.scss */
-.content .scroll #Contact h2 {
-  font-size: 1.3em;
-}
-/* line 167, ../sass/style.scss */
-.content .scroll #Contact h3 {
-  font-size: 1em;
-}
 
-/****************************************************** About *******************************************/
-/* line 174, ../sass/style.scss */
+/* line 11, ../sass/About.scss */
 #profile {
+  top: 10%;
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  width: 30%;
-  padding-bottom: 30%;
-  background: url("/static/images/profile.JPG") no-repeat;
-  background-position: 38% 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
+  width: 25vw;
+  height: 25vw;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
   box-shadow: 0px 0px 20px 0px #fff;
 }
-/* line 185, ../sass/style.scss */
+/* line 24, ../sass/About.scss */
+#profile img {
+  border-radius: 100%;
+  max-width: 100%;
+  max-height: 110%;
+}
+/* line 29, ../sass/About.scss */
 #profile:after {
   position: absolute;
   content: '';
@@ -2941,7 +3087,7 @@ html, body {
   background-image: radial-gradient(50% 50%, rgba(255, 255, 255, 0) 85%, #ffffff 100%);
 }
 
-/* line 198, ../sass/style.scss */
+/* line 42, ../sass/About.scss */
 #speech_bubble {
   margin-left: auto;
   margin-right: auto;
@@ -2961,7 +3107,7 @@ html, body {
   border-radius: 0.8em;
   z-index: 2;
 }
-/* line 213, ../sass/style.scss */
+/* line 57, ../sass/About.scss */
 #speech_bubble:before, #speech_bubble:after {
   content: '';
   position: absolute;
@@ -2976,27 +3122,26 @@ html, body {
   transform-origin: 0 0;
   transform: rotate(-45deg);*/
 }
-/* line 227, ../sass/style.scss */
+/* line 71, ../sass/About.scss */
 #speech_bubble:before {
   border-right: 5px solid white;
   height: 1em;
   z-index: 3;
 }
-/* line 232, ../sass/style.scss */
+/* line 76, ../sass/About.scss */
 #speech_bubble:after {
-  border-right: 5px solid #a60026;
+  border-right: 5px solid transparent;
   height: 2em;
   z-index: 1;
 }
 
-/* line 239, ../sass/style.scss */
+/* line 83, ../sass/About.scss */
 #speech_bubble_arrowup {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 70%;
-  height: 6em;
-  top: 4em;
+  width: 65vw;
+  top: 25%;
   border: 5px solid white;
   padding: 1em;
   -webkit-box-sizing: border-box;
@@ -3009,210 +3154,262 @@ html, body {
   border-radius: 0.8em;
   z-index: 1;
 }
-/* line 254, ../sass/style.scss */
+/* line 87, ../sass/About.scss */
+#speech_bubble_arrowup h1 {
+  font-size: 3em;
+  color: #fff;
+}
+/* line 102, ../sass/About.scss */
 #speech_bubble_arrowup:before, #speech_bubble_arrowup:after {
   content: '';
   position: absolute;
-  top: -10px;
   width: 0px;
   height: 0px;
 }
-/* line 261, ../sass/style.scss */
+/* line 108, ../sass/About.scss */
 #speech_bubble_arrowup:before {
-  top: -31px;
-  left: 434px;
-  border-left: 31px solid transparent;
-  border-right: 31px solid transparent;
-  border-bottom: 31px solid #a60026;
+  top: -30px;
+  left: 46.1%;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #9ee0ff;
   z-index: 3;
 }
-/* line 269, ../sass/style.scss */
+/* line 116, ../sass/About.scss */
 #speech_bubble_arrowup:after {
-  top: -40px;
-  left: 425px;
+  top: -41px;
+  left: 45%;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
   border-bottom: 40px solid white;
   z-index: 2;
 }
 
+@media screen and (max-width: 81.25em) {
+  /* line 127, ../sass/About.scss */
+  #speech_bubble_arrowup:before {
+    left: 46.2%;
+  }
+}
+@media screen and (max-width: 60.625em) {
+  /* line 134, ../sass/About.scss */
+  #speech_bubble_arrowup h1 {
+    font-size: 2.5em;
+  }
+  /* line 137, ../sass/About.scss */
+  #speech_bubble_arrowup:before {
+    left: 46.5%;
+  }
+}
+@media screen and (max-width: 51.875em) {
+  /* line 144, ../sass/About.scss */
+  #speech_bubble_arrowup h1 {
+    font-size: 1.7em;
+  }
+  /* line 147, ../sass/About.scss */
+  #speech_bubble_arrowup:before {
+    left: 46.8%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  /* line 153, ../sass/About.scss */
+  #speech_bubble_arrowup {
+    top: 42%;
+  }
+  /* line 155, ../sass/About.scss */
+  #speech_bubble_arrowup h1 {
+    font-size: 1.1em;
+  }
+  /* line 158, ../sass/About.scss */
+  #speech_bubble_arrowup:before {
+    left: 39%;
+  }
+  /* line 161, ../sass/About.scss */
+  #speech_bubble_arrowup:after {
+    left: 36%;
+  }
+
+  /* line 165, ../sass/About.scss */
+  #profile {
+    top: 20%;
+  }
+}
+@media screen and (max-width: 28.125em) {
+  /* line 170, ../sass/About.scss */
+  #speech_bubble_arrowup {
+    top: 43%;
+  }
+  /* line 172, ../sass/About.scss */
+  #speech_bubble_arrowup h1 {
+    font-size: 0.9em;
+  }
+  /* line 175, ../sass/About.scss */
+  #speech_bubble_arrowup:before {
+    left: 39.1%;
+  }
+  /* line 178, ../sass/About.scss */
+  #speech_bubble_arrowup:after {
+    left: 36%;
+  }
+
+  /* line 182, ../sass/About.scss */
+  #profile {
+    top: 30%;
+  }
+}
 /*************************************************** Intro *****************************************/
 /** Shelter background and font color **/
 /** Intro Main Part Title,font,background color **/
 /** Side Part, including each unit background, shelter and cube **/
 /** cube each side color, size, font color **/
-/* line 47, ../sass/Intro.scss */
-#Intro .contentWrap h1 {
-  color: #ad0000;
+/* line 46, ../sass/Intro.scss */
+#Intro {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9ee0ff), color-stop(100%, #ff4444));
+  background-image: -webkit-linear-gradient(top, #9ee0ff, #ff4444);
+  background-image: -moz-linear-gradient(top, #9ee0ff, #ff4444);
+  background-image: -o-linear-gradient(top, #9ee0ff, #ff4444);
+  background-image: linear-gradient(top, #9ee0ff, #ff4444);
 }
-/* line 50, ../sass/Intro.scss */
+/* line 48, ../sass/Intro.scss */
+#Intro .contentWrap {
+  text-align: center;
+  background: transparent;
+}
+/* line 51, ../sass/Intro.scss */
+#Intro .contentWrap h1 {
+  font-size: 2.5em;
+  color: white;
+}
+/* line 55, ../sass/Intro.scss */
+#Intro .contentWrap h2 {
+  font-size: 1.5em;
+}
+/* line 58, ../sass/Intro.scss */
+#Intro .contentWrap h3 {
+  font-size: 1em;
+}
+/* line 61, ../sass/Intro.scss */
+#Intro .contentWrap p {
+  font-size: 1em;
+}
+/* line 64, ../sass/Intro.scss */
 #Intro .contentWrap .left {
   float: left;
   width: 20%;
   height: 100%;
 }
 
-/* line 57, ../sass/Intro.scss */
-.middle {
-  float: left;
-  position: relative;
-  font-size: 0.9em;
-  padding: 5% 5% 0 5%;
-  text-align: center;
-  width: 60%;
-  height: 100%;
-  display: inline-block;
-  line-height: 1.8em;
-  color: #444444;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
-  background-image: -webkit-linear-gradient(left, #ffffff, #eeeeee);
-  background-image: -moz-linear-gradient(left, #ffffff, #eeeeee);
-  background-image: -o-linear-gradient(left, #ffffff, #eeeeee);
-  background-image: linear-gradient(left, #ffffff, #eeeeee);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 72, ../sass/Intro.scss */
-.right {
-  float: left;
-  width: 20%;
-  height: 100%;
-}
-
-/* line 77, ../sass/Intro.scss */
-.perspective {
-  position: relative;
+/* line 71, ../sass/Intro.scss */
+.introWrapper {
   width: 100%;
-  height: 50%;
-  text-align: center;
+}
+
+/* line 74, ../sass/Intro.scss */
+.topPart {
+  height: 40%;
+  width: 100%;
   color: white;
+}
+
+/* line 79, ../sass/Intro.scss */
+.bottomPart {
+  height: 55%;
+  width: 100%;
   overflow: hidden;
 }
+
 /* line 84, ../sass/Intro.scss */
-.perspective .introShlter {
-  padding-top: 1em;
+.perspective {
+  position: relative;
+  text-align: center;
+  color: #700000;
+  overflow: hidden;
+  margin-right: 1%;
+  width: 23%;
+  height: 90%;
+  float: left;
+  border-right: 1px dashed #ccc;
+}
+/* line 94, ../sass/Intro.scss */
+.perspective .shelterWrapper {
   position: absolute;
-  height: 100%;
+  height: 80%;
+  width: 99%;
+  bottom: 0;
+  overflow: hidden;
+}
+/* line 100, ../sass/Intro.scss */
+.perspective .shelterWrapper.gra {
+  -webkit-perspective-origin: 0 250px;
+  -moz-perspective-origin: 0 250px;
+  -ms-perspective-origin: 0 250px;
+  -o-perspective-origin: 0 250px;
+  perspective-origin: 0 250px;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+/* line 105, ../sass/Intro.scss */
+.perspective .shelterWrapper.free {
+  -webkit-perspective-origin: 0 250px;
+  -moz-perspective-origin: 0 250px;
+  -ms-perspective-origin: 0 250px;
+  -o-perspective-origin: 0 250px;
+  perspective-origin: 0 250px;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+/* line 110, ../sass/Intro.scss */
+.perspective .shelterWrapper.bel {
+  -webkit-perspective-origin: 100% 250px;
+  -moz-perspective-origin: 100% 250px;
+  -ms-perspective-origin: 100% 250px;
+  -o-perspective-origin: 100% 250px;
+  perspective-origin: 100% 250px;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+/* line 115, ../sass/Intro.scss */
+.perspective .shelterWrapper.Ihope {
+  -webkit-perspective-origin: 100% 250px;
+  -moz-perspective-origin: 100% 250px;
+  -ms-perspective-origin: 100% 250px;
+  -o-perspective-origin: 100% 250px;
+  perspective-origin: 100% 250px;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+/* line 121, ../sass/Intro.scss */
+.perspective .introShlter {
+  position: absolute;
+  height: 80%;
   width: 100%;
   left: -100%;
-  top: 0px;
+  top: 0;
   line-height: 1.5em;
-  z-index: 10 !important;
-  color: white;
+  z-index: 10;
+  color: #630a00;
+  font-size: 0.8em;
+  background: transparent;
 }
-/* line 95, ../sass/Intro.scss */
+/* line 133, ../sass/Intro.scss */
 .perspective .carve {
   padding-top: 10%;
   margin-bottom: 10%;
 }
-/* line 99, ../sass/Intro.scss */
-.perspective.gra {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ff6666));
-  background-image: -webkit-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: -moz-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: -o-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: linear-gradient(left, #eeeeee, #ff6666);
-  -webkit-perspective-origin: 0 400px;
-  -moz-perspective-origin: 0 400px;
-  -ms-perspective-origin: 0 400px;
-  -o-perspective-origin: 0 400px;
-  perspective-origin: 0 400px;
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  -ms-perspective: 1000px;
-  -o-perspective: 1000px;
-  perspective: 1000px;
-}
-/* line 103, ../sass/Intro.scss */
-.perspective.gra .introShlter {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ff6666));
-  background-image: -webkit-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: -moz-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: -o-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: linear-gradient(left, #eeeeee, #ff6666);
-}
-/* line 108, ../sass/Intro.scss */
-.perspective.free {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6666), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #ff6666, #ad0000);
-  background-image: -moz-linear-gradient(left, #ff6666, #ad0000);
-  background-image: -o-linear-gradient(left, #ff6666, #ad0000);
-  background-image: linear-gradient(left, #ff6666, #ad0000);
-  -webkit-perspective-origin: 100% 380px;
-  -moz-perspective-origin: 100% 380px;
-  -ms-perspective-origin: 100% 380px;
-  -o-perspective-origin: 100% 380px;
-  perspective-origin: 100% 380px;
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
-}
-/* line 112, ../sass/Intro.scss */
-.perspective.free .introShlter {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6666), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #ff6666, #ad0000);
-  background-image: -moz-linear-gradient(left, #ff6666, #ad0000);
-  background-image: -o-linear-gradient(left, #ff6666, #ad0000);
-  background-image: linear-gradient(left, #ff6666, #ad0000);
-}
-/* line 116, ../sass/Intro.scss */
-.perspective.bel {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ff6666));
-  background-image: -webkit-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: -moz-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: -o-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: linear-gradient(left, #eeeeee, #ff6666);
-  -webkit-perspective-origin: 0 340px;
-  -moz-perspective-origin: 0 340px;
-  -ms-perspective-origin: 0 340px;
-  -o-perspective-origin: 0 340px;
-  perspective-origin: 0 340px;
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
-}
-/* line 120, ../sass/Intro.scss */
-.perspective.bel .introShlter {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(100%, #ff6666));
-  background-image: -webkit-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: -moz-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: -o-linear-gradient(left, #eeeeee, #ff6666);
-  background-image: linear-gradient(left, #eeeeee, #ff6666);
-}
-/* line 124, ../sass/Intro.scss */
-.perspective.Ihope {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6666), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #ff6666, #ad0000);
-  background-image: -moz-linear-gradient(left, #ff6666, #ad0000);
-  background-image: -o-linear-gradient(left, #ff6666, #ad0000);
-  background-image: linear-gradient(left, #ff6666, #ad0000);
-  -webkit-perspective-origin: 100% 340px;
-  -moz-perspective-origin: 100% 340px;
-  -ms-perspective-origin: 100% 340px;
-  -o-perspective-origin: 100% 340px;
-  perspective-origin: 100% 340px;
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
-}
-/* line 128, ../sass/Intro.scss */
-.perspective.Ihope .introShlter {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff6666), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(left, #ff6666, #ad0000);
-  background-image: -moz-linear-gradient(left, #ff6666, #ad0000);
-  background-image: -o-linear-gradient(left, #ff6666, #ad0000);
-  background-image: linear-gradient(left, #ff6666, #ad0000);
-}
 
-/* line 133, ../sass/Intro.scss */
+/* line 139, ../sass/Intro.scss */
 .cube {
   font-size: 0.7em;
   margin-left: 20%;
@@ -3228,9 +3425,9 @@ html, body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 143, ../sass/Intro.scss */
+/* line 149, ../sass/Intro.scss */
 .cube div {
-  color: #222222;
+  color: white;
   line-height: 1.8em;
   width: 100%;
   height: 100%;
@@ -3244,8 +3441,9 @@ html, body {
   -ms-border-radius: 0.2em;
   -o-border-radius: 0.2em;
   border-radius: 0.2em;
+  border: 2px dashed #ad0000;
 }
-/* line 153, ../sass/Intro.scss */
+/* line 160, ../sass/Intro.scss */
 .cube .cubeFront {
   -webkit-transform: translateZ(70px);
   -moz-transform: translateZ(70px);
@@ -3254,8 +3452,9 @@ html, body {
   transform: translateZ(70px);
   /* should be half width,but percentage doesn't work on translateZ */
 }
-/* line 156, ../sass/Intro.scss */
+/* line 163, ../sass/Intro.scss */
 .cube .cubeTop {
+  border: none;
   -webkit-transform: rotateX(-90deg) translateY(-70px);
   -moz-transform: rotateX(-90deg) translateY(-70px);
   -ms-transform: rotateX(-90deg) translateY(-70px);
@@ -3267,7 +3466,7 @@ html, body {
   -o-transform-origin: top center;
   transform-origin: top center;
 }
-/* line 164, ../sass/Intro.scss */
+/* line 172, ../sass/Intro.scss */
 .cube .cubeRight {
   -webkit-transform: rotateY(-270deg) translateX(70px);
   -moz-transform: rotateY(-270deg) translateX(70px);
@@ -3280,7 +3479,7 @@ html, body {
   -o-transform-origin: top right;
   transform-origin: top right;
 }
-/* line 172, ../sass/Intro.scss */
+/* line 180, ../sass/Intro.scss */
 .cube .cubeLeft {
   -webkit-transform: rotateY(270deg) translateX(-70px);
   -moz-transform: rotateY(270deg) translateX(-70px);
@@ -3293,8 +3492,9 @@ html, body {
   -o-transform-origin: center left;
   transform-origin: center left;
 }
-/* line 180, ../sass/Intro.scss */
+/* line 188, ../sass/Intro.scss */
 .cube .cubeBottom {
+  border: none;
   -webkit-transform: rotateX(90deg) translateY(70px);
   -moz-transform: rotateX(90deg) translateY(70px);
   -ms-transform: rotateX(90deg) translateY(70px);
@@ -3306,7 +3506,7 @@ html, body {
   -o-transform-origin: bottom center;
   transform-origin: bottom center;
 }
-/* line 188, ../sass/Intro.scss */
+/* line 197, ../sass/Intro.scss */
 .cube .cubeBack {
   -webkit-transform: translateZ(-70px) rotateY(180deg);
   -moz-transform: translateZ(-70px) rotateY(180deg);
@@ -3314,113 +3514,114 @@ html, body {
   -o-transform: translateZ(-70px) rotateY(180deg);
   transform: translateZ(-70px) rotateY(180deg);
 }
-/* line 191, ../sass/Intro.scss */
+/* line 200, ../sass/Intro.scss */
 .cube.graduated {
   -webkit-animation: spin 40s infinite linear;
   -o-animation: spin 40s infinite linear;
   -moz-animation: spin 40s infinite linear;
   animation: spin 40s infinite linear;
 }
-/* line 193, ../sass/Intro.scss */
+/* line 202, ../sass/Intro.scss */
 .cube.graduated div {
   padding-top: 25%;
 }
-/* line 26, ../sass/Intro.scss */
+/* line 27, ../sass/Intro.scss */
 .cube.graduated .cubeFront {
-  background: white;
+  background: #ff7373;
 }
-/* line 29, ../sass/Intro.scss */
+/* line 30, ../sass/Intro.scss */
 .cube.graduated .cubeTop {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 32, ../sass/Intro.scss */
+/* line 33, ../sass/Intro.scss */
 .cube.graduated .cubeRight {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 35, ../sass/Intro.scss */
+/* line 36, ../sass/Intro.scss */
 .cube.graduated .cubeLeft {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 38, ../sass/Intro.scss */
+/* line 39, ../sass/Intro.scss */
 .cube.graduated .cubeBack {
-  background: white;
+  background: #ff7373;
 }
-/* line 41, ../sass/Intro.scss */
+/* line 42, ../sass/Intro.scss */
 .cube.graduated .cubeBottom {
-  background: #dddddd;
+  background: #ad0000;
 }
-/* line 199, ../sass/Intro.scss */
+/* line 208, ../sass/Intro.scss */
 .cube.frontEnd {
-  margin-left: 30%;
+  margin-left: 20%;
   -webkit-animation: spin 40s 2s infinite linear;
   -o-animation: spin 40s 2s infinite linear;
   -moz-animation: spin 40s 2s infinite linear;
   animation: spin 40s 2s infinite linear;
 }
-/* line 200, ../sass/Intro.scss */
+/* line 209, ../sass/Intro.scss */
 .cube.frontEnd div {
   padding-top: 20%;
 }
-/* line 26, ../sass/Intro.scss */
+/* line 27, ../sass/Intro.scss */
 .cube.frontEnd .cubeFront {
-  background: white;
+  background: #ff7373;
 }
-/* line 29, ../sass/Intro.scss */
+/* line 30, ../sass/Intro.scss */
 .cube.frontEnd .cubeTop {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 32, ../sass/Intro.scss */
+/* line 33, ../sass/Intro.scss */
 .cube.frontEnd .cubeRight {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 35, ../sass/Intro.scss */
+/* line 36, ../sass/Intro.scss */
 .cube.frontEnd .cubeLeft {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 38, ../sass/Intro.scss */
+/* line 39, ../sass/Intro.scss */
 .cube.frontEnd .cubeBack {
-  background: white;
+  background: #ff7373;
 }
-/* line 41, ../sass/Intro.scss */
+/* line 42, ../sass/Intro.scss */
 .cube.frontEnd .cubeBottom {
-  background: #dddddd;
+  background: #ad0000;
 }
-/* line 207, ../sass/Intro.scss */
+/* line 216, ../sass/Intro.scss */
 .cube.believe {
+  margin-left: 30%;
   -webkit-animation: spin 40s 4s infinite linear;
   -o-animation: spin 40s 4s infinite linear;
   -moz-animation: spin 40s 4s infinite linear;
   animation: spin 40s 4s infinite linear;
 }
-/* line 208, ../sass/Intro.scss */
+/* line 217, ../sass/Intro.scss */
 .cube.believe div {
   padding-top: 40%;
 }
-/* line 26, ../sass/Intro.scss */
+/* line 27, ../sass/Intro.scss */
 .cube.believe .cubeFront {
-  background: white;
+  background: #ff7373;
 }
-/* line 29, ../sass/Intro.scss */
+/* line 30, ../sass/Intro.scss */
 .cube.believe .cubeTop {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 32, ../sass/Intro.scss */
+/* line 33, ../sass/Intro.scss */
 .cube.believe .cubeRight {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 35, ../sass/Intro.scss */
+/* line 36, ../sass/Intro.scss */
 .cube.believe .cubeLeft {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 38, ../sass/Intro.scss */
+/* line 39, ../sass/Intro.scss */
 .cube.believe .cubeBack {
-  background: white;
+  background: #ff7373;
 }
-/* line 41, ../sass/Intro.scss */
+/* line 42, ../sass/Intro.scss */
 .cube.believe .cubeBottom {
-  background: #dddddd;
+  background: #ad0000;
 }
-/* line 214, ../sass/Intro.scss */
+/* line 224, ../sass/Intro.scss */
 .cube.hope {
   margin-left: 30%;
   -webkit-animation: spin 40s 6s infinite linear;
@@ -3428,85 +3629,85 @@ html, body {
   -moz-animation: spin 40s 6s infinite linear;
   animation: spin 40s 6s infinite linear;
 }
-/* line 215, ../sass/Intro.scss */
+/* line 225, ../sass/Intro.scss */
 .cube.hope div {
-  padding-top: 20%;
+  padding-top: 5%;
 }
-/* line 26, ../sass/Intro.scss */
+/* line 27, ../sass/Intro.scss */
 .cube.hope .cubeFront {
-  background: white;
+  background: #ff7373;
 }
-/* line 29, ../sass/Intro.scss */
+/* line 30, ../sass/Intro.scss */
 .cube.hope .cubeTop {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 32, ../sass/Intro.scss */
+/* line 33, ../sass/Intro.scss */
 .cube.hope .cubeRight {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 35, ../sass/Intro.scss */
+/* line 36, ../sass/Intro.scss */
 .cube.hope .cubeLeft {
-  background: #eeeeee;
+  background: #ff4444;
 }
-/* line 38, ../sass/Intro.scss */
+/* line 39, ../sass/Intro.scss */
 .cube.hope .cubeBack {
-  background: white;
+  background: #ff7373;
 }
-/* line 41, ../sass/Intro.scss */
+/* line 42, ../sass/Intro.scss */
 .cube.hope .cubeBottom {
-  background: #dddddd;
+  background: #ad0000;
 }
 
-/* line 225, ../sass/Intro.scss */
+/* line 235, ../sass/Intro.scss */
 .introShlter.in_top {
   -webkit-animation: intro_in_top 1s forwards;
   -o-animation: intro_in_top 1s forwards;
   -moz-animation: intro_in_top 1s forwards;
   animation: intro_in_top 1s forwards;
 }
-/* line 228, ../sass/Intro.scss */
+/* line 238, ../sass/Intro.scss */
 .introShlter.in_right {
   -webkit-animation: intro_in_right 1s forwards;
   -o-animation: intro_in_right 1s forwards;
   -moz-animation: intro_in_right 1s forwards;
   animation: intro_in_right 1s forwards;
 }
-/* line 231, ../sass/Intro.scss */
+/* line 241, ../sass/Intro.scss */
 .introShlter.in_bottom {
   -webkit-animation: intro_in_bottom 1s forwards;
   -o-animation: intro_in_bottom 1s forwards;
   -moz-animation: intro_in_bottom 1s forwards;
   animation: intro_in_bottom 1s forwards;
 }
-/* line 234, ../sass/Intro.scss */
+/* line 244, ../sass/Intro.scss */
 .introShlter.in_left {
   -webkit-animation: intro_in_left 1s forwards;
   -o-animation: intro_in_left 1s forwards;
   -moz-animation: intro_in_left 1s forwards;
   animation: intro_in_left 1s forwards;
 }
-/* line 237, ../sass/Intro.scss */
+/* line 247, ../sass/Intro.scss */
 .introShlter.out_top {
   -webkit-animation: intro_out_top 1s forwards;
   -o-animation: intro_out_top 1s forwards;
   -moz-animation: intro_out_top 1s forwards;
   animation: intro_out_top 1s forwards;
 }
-/* line 240, ../sass/Intro.scss */
+/* line 250, ../sass/Intro.scss */
 .introShlter.out_bottom {
   -webkit-animation: intro_out_bottom 1s forwards;
   -o-animation: intro_out_bottom 1s forwards;
   -moz-animation: intro_out_bottom 1s forwards;
   animation: intro_out_bottom 1s forwards;
 }
-/* line 243, ../sass/Intro.scss */
+/* line 253, ../sass/Intro.scss */
 .introShlter.out_left {
   -webkit-animation: intro_out_left 1s forwards;
   -o-animation: intro_out_left 1s forwards;
   -moz-animation: intro_out_left 1s forwards;
   animation: intro_out_left 1s forwards;
 }
-/* line 246, ../sass/Intro.scss */
+/* line 256, ../sass/Intro.scss */
 .introShlter.out_right {
   -webkit-animation: intro_out_right 1s forwards;
   -o-animation: intro_out_right 1s forwards;
@@ -3514,42 +3715,117 @@ html, body {
   animation: intro_out_right 1s forwards;
 }
 
+/*<div class="middle">
+									<p>
+										I'm Guangyi <br><br>
+										I'm a recently graduated student <br><br>
+										I'm a Front-End Engineer<br><br>
+										I'm looking for a Job<br><br>
+										My Skill Set:HTML5 CSS3 SASS Bootstrap<br><br>
+										jQuery AngularJS Django MongoDB<br><br>
+									<!--My name is Guangyi, a front-end engineer. I'm looking for a front-end position to work on exciting projects with awesome people. This portfolio, I hope, will help me find the right job for me.<br>
+									To keep up with the trand,this portfolio uses combination of HTML5, CSS3(Sass pre-processor), AngularJS, Django and MongoDB.fast-learning is a must-have skill.<br>
+									I have to admit, as an entry level engineer, this is not perfect, But "perfection" is not the point. I just want to use this portfolio to demostrate to you, my future employer, what I'm capable of doing and what potential I have.More importantly, prove to myself, I like what I'm doing and I'm good at what I'm doing.<br>
+									Check out each section to learn more detail! Thank you! -->
+								</p>
+								</div><!-- end of middle -->
+								<div class="left">
+									<div class="perspective gra">
+										<div class="carve"><h3> I'm a student </h3></div>
+										<div class="cube graduated">	
+											<div class="cubeTop"></div>
+											<div class="cubeRight">Always <br> work hard</div>
+											<div class="cubeLeft">Master Degree <br> Major in C.S.</div>
+											<div class="cubeBack">GPA≈3.7<br><span style="font-size:0.7em">Well,honestly 3.67 </span></div>
+											<div class="cubeFront">Rencently Graduated</div>
+											<div class="cubeBottom"></div>
+										</div>
+										<div class="introShlter">
+											<p>Recently Graduated Student:<br><br>Brandeis University<br> + <br> 
+										Graduated in May 2013<br> + <br>Master in Computer Science<br> + <br> GPA=3.67</p>
+										</div>
+									</div>
+									<div class="perspective bel">
+										<div class="introShlter"><p>I Believe in:<br><br> Dream <br> + <br> Hope <br> + <br> Passion</p></div>
+										<div class="carve"><h3>I believe in.. </h3></div>
+										<div class="cube believe">	
+											<div class="cubeTop"></div>
+											<div class="cubeFront">DREAM</div>
+											<div class="cubeRight">Sunshine</div>
+											<div class="cubeLeft">HOPE</div>
+											<div class="cubeBack">PASSION</div>
+											<div class="cubeBottom"></div>
+										</div>
+									</div>
+								</div><!--end of left-->
+								<div class="right">
+									<div class="perspective free">
+										<div class="introShlter"><p>Front-End Skill Set:<br><br>HTML5 Sass CSS3 <br> + <br>JQuery/Javascript
+											<br> + <br> Bootstrap AngularJS <br> + <br>Django + MongoDB</p></div>
+										<div class="carve"><h3>Front-End Engineer</h3></div>
+										<div class="cube frontEnd" >	
+											<div class="cubeTop"></div>
+											<div class="cubeFront">HTML5, CSS3,Sass, JS/JQuery</div>
+											<div class="cubeRight">Detailed <br> & Passionate</div>
+											<div class="cubeLeft">AngularJS, <br>Django, MongoDB, </div>
+											<div class="cubeBack">Self-taught<br> &Self-Motivated</div>
+											<div class="cubeBottom"></div>
+										</div>
+									</div>
+									<div class="perspective Ihope">
+										<div class="introShlter"><p>Great job == <br><br> good chemistry<br> + <br>fit in the company culture
+											<br> +<br> make contribution<br> +<br> personal development</p></div>
+										<div class="carve"><h3> I hope to </h3></div>
+										<div class="cube hope">											<div class="cubeTop"></div>
+											<div class="cubeFront">Find A Great Job <br>in San Francisco <br> or Boston</div>
+											<div class="cubeRight">Find A Great Job <br>in San Francisco <br> or Boston</div>
+											<div class="cubeLeft">Find A Great Job <br>in San Francisco <br> or Boston</div>
+											<div class="cubeBack">Find A Great Job <br>in San Francisco <br> or Boston</div>
+											<div class="cubeBottom"></div>
+										</div>
+									</div>
+							 </div><!--end of right--> 
+
+
+
+							 */
 /********************************************** More About Me ***************************************/
 /* line 1, ../sass/MoreAboutMe.scss */
 #MoreAboutMe {
   background: #fff;
-}
-/* line 3, ../sass/MoreAboutMe.scss */
-#MoreAboutMe h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-  color: #fff;
-}
-/* line 8, ../sass/MoreAboutMe.scss */
-#MoreAboutMe h2 {
-  font-size: 1.5em;
-}
-/* line 11, ../sass/MoreAboutMe.scss */
-#MoreAboutMe h3 {
-  font-size: 1.1em;
-}
-
-/* line 15, ../sass/MoreAboutMe.scss */
-.likeContainer {
-  height: 100%;
-  width: auto;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ad0000), color-stop(100%, #9ee0ff));
   background-image: -webkit-linear-gradient(top, #ad0000, #9ee0ff);
   background-image: -moz-linear-gradient(top, #ad0000, #9ee0ff);
   background-image: -o-linear-gradient(top, #ad0000, #9ee0ff);
   background-image: linear-gradient(top, #ad0000, #9ee0ff);
+}
+/* line 4, ../sass/MoreAboutMe.scss */
+#MoreAboutMe h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+/* line 9, ../sass/MoreAboutMe.scss */
+#MoreAboutMe h2 {
+  font-size: 1.5em;
+}
+/* line 12, ../sass/MoreAboutMe.scss */
+#MoreAboutMe h3 {
+  font-size: 1.1em;
+}
+
+/* line 16, ../sass/MoreAboutMe.scss */
+.contentWrap {
+  height: 100%;
+  width: auto;
+  background: transparent;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
 }
-/* line 21, ../sass/MoreAboutMe.scss */
-.likeContainer .optionsWrap {
+/* line 22, ../sass/MoreAboutMe.scss */
+.contentWrap .optionsWrap {
   width: 100%;
   background: transparent;
   margin: auto;
@@ -3563,16 +3839,16 @@ html, body {
   perspective: 500px;
   text-align: center;
 }
-/* line 29, ../sass/MoreAboutMe.scss */
-.likeContainer .optionsWrap .options {
+/* line 30, ../sass/MoreAboutMe.scss */
+.contentWrap .optionsWrap .options {
   width: 100%;
   margin: 0;
   float: left;
   height: 100%;
   overflow: scroll;
 }
-/* line 35, ../sass/MoreAboutMe.scss */
-.likeContainer .optionsWrap .options .heart {
+/* line 36, ../sass/MoreAboutMe.scss */
+.contentWrap .optionsWrap .options .heart {
   position: absolute;
   width: 8%;
   height: 5%;
@@ -3581,8 +3857,8 @@ html, body {
   float: left;
   margin: 0 3% 0 0;
 }
-/* line 43, ../sass/MoreAboutMe.scss */
-.likeContainer .optionsWrap .options .heart:before {
+/* line 44, ../sass/MoreAboutMe.scss */
+.contentWrap .optionsWrap .options .heart:before {
   content: "";
   position: absolute;
   top: 0;
@@ -3601,8 +3877,8 @@ html, body {
   -o-border-bottom-left-radius: 100%;
   border-bottom-left-radius: 100%;
 }
-/* line 55, ../sass/MoreAboutMe.scss */
-.likeContainer .optionsWrap .options .option {
+/* line 56, ../sass/MoreAboutMe.scss */
+.contentWrap .optionsWrap .options .option {
   display: inline-block;
   height: auto;
   background: inherit;
@@ -3628,8 +3904,8 @@ html, body {
       				}
   				}*/
 }
-/* line 76, ../sass/MoreAboutMe.scss */
-.likeContainer .optionsWrap .options .option span {
+/* line 77, ../sass/MoreAboutMe.scss */
+.contentWrap .optionsWrap .options .option span {
   -webkit-transition: text-shadow 1.5s;
   -webkit-transition-delay: 2s;
   -moz-transition: text-shadow 1.5s 2s;
@@ -3637,8 +3913,8 @@ html, body {
   transition: text-shadow 1.5s 2s;
   text-shadow: 0px 0px 30px #ff0000;
 }
-/* line 81, ../sass/MoreAboutMe.scss */
-.likeContainer .optionsWrap .options .tada {
+/* line 82, ../sass/MoreAboutMe.scss */
+.contentWrap .optionsWrap .options .tada {
   -webkit-transform-origin: center center 0 50%;
   -moz-transform-origin: center center 0 50%;
   -ms-transform-origin: center center 0 50%;
@@ -3649,8 +3925,8 @@ html, body {
   -moz-animation: tada 1.3s forwards;
   animation: tada 1.3s forwards;
 }
-/* line 85, ../sass/MoreAboutMe.scss */
-.likeContainer .optionsWrap .options .shake {
+/* line 86, ../sass/MoreAboutMe.scss */
+.contentWrap .optionsWrap .options .shake {
   -webkit-animation: shake 1s forwards;
   -o-animation: shake 1s forwards;
   -moz-animation: shake 1s forwards;
@@ -3867,11 +4143,11 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 /* line 13, ../sass/Experiments.scss */
 #Experiments .row {
   margin: auto;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ad0000), color-stop(47.5%, #ffffff), color-stop(95%, #000000));
-  background-image: -webkit-linear-gradient(top, #ad0000, #ffffff, #000000 95%);
-  background-image: -moz-linear-gradient(top, #ad0000, #ffffff, #000000 95%);
-  background-image: -o-linear-gradient(top, #ad0000, #ffffff, #000000 95%);
-  background-image: linear-gradient(top, #ad0000, #ffffff, #000000 95%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff4444), color-stop(100%, #430008));
+  background-image: -webkit-linear-gradient(top, #ff4444, #430008);
+  background-image: -moz-linear-gradient(top, #ff4444, #430008);
+  background-image: -o-linear-gradient(top, #ff4444, #430008);
+  background-image: linear-gradient(top, #ff4444, #430008);
   text-align: center;
 }
 /* line 18, ../sass/Experiments.scss */
@@ -4179,7 +4455,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 .buttonWrap {
   position: absolute;
   left: 0;
-  bottom: 1em;
+  bottom: 5em;
   width: 100%;
   -webkit-perspective: 400px;
   -moz-perspective: 400px;
@@ -4211,11 +4487,11 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 /***************************************************** Blog **********************************/
 /* line 4, ../sass/Blog.scss */
 #Blog {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(100%, #ad0000));
-  background-image: -webkit-linear-gradient(top, #000000, #ad0000);
-  background-image: -moz-linear-gradient(top, #000000, #ad0000);
-  background-image: -o-linear-gradient(top, #000000, #ad0000);
-  background-image: linear-gradient(top, #000000, #ad0000);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #430008), color-stop(100%, #ad0000));
+  background-image: -webkit-linear-gradient(top, #430008, #ad0000);
+  background-image: -moz-linear-gradient(top, #430008, #ad0000);
+  background-image: -o-linear-gradient(top, #430008, #ad0000);
+  background-image: linear-gradient(top, #430008, #ad0000);
   text-align: center;
 }
 /* line 7, ../sass/Blog.scss */
@@ -4228,9 +4504,15 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 #Blog h2 {
   font-size: 1.5em;
 }
+/* line 15, ../sass/Blog.scss */
+#Blog p {
+  font-size: 1em;
+}
 
-/* line 18, ../sass/Blog.scss */
+/* line 21, ../sass/Blog.scss */
 #Blog .row .contentWrap {
+  width: 100%;
+  left: 0;
   position: relative;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
@@ -4239,42 +4521,61 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   perspective: 800px;
   overflow: hidden;
 }
-/* line 22, ../sass/Blog.scss */
+/* line 27, ../sass/Blog.scss */
 #Blog .row .contentWrap .sliderWrapper {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   text-align: center;
 }
-/* line 30, ../sass/Blog.scss */
+/* line 36, ../sass/Blog.scss */
 #Blog .slider {
   overflow: hidden;
   background: #fff;
-  width: 80%;
-  height: 75%;
+  width: 73%;
+  height: 82%;
   line-height: 2em;
   position: absolute;
-  -webkit-box-shadow: 0px 5px 13px black;
-  -moz-box-shadow: 0px 5px 13px black;
-  box-shadow: 0px 5px 13px black;
+  -webkit-box-shadow: 0px 3px 5px black;
+  -moz-box-shadow: 0px 3px 5px black;
+  box-shadow: 0px 3px 5px black;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
   -webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 75%, white);
 }
-/* line 39, ../sass/Blog.scss */
+/* line 47, ../sass/Blog.scss */
 #Blog .slider ul {
   left: 0;
   position: relative;
   height: 100%;
 }
-/* line 43, ../sass/Blog.scss */
+/* line 51, ../sass/Blog.scss */
 #Blog .slider ul li {
+  background: rgba(158, 224, 255, 0.8);
+  color: #555;
   height: 100%;
   position: relative;
   float: left;
 }
-/* line 47, ../sass/Blog.scss */
+/* line 57, ../sass/Blog.scss */
 #Blog .slider ul li img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 53, ../sass/Blog.scss */
+/* line 63, ../sass/Blog.scss */
+#Blog .slider ul li p {
+  padding: 1em;
+}
+/* line 68, ../sass/Blog.scss */
 #Blog .slider .btnCtrl {
   background: transparent;
   position: absolute;
@@ -4284,33 +4585,33 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   overflow: hidden;
   border: none;
 }
-/* line 63, ../sass/Blog.scss */
+/* line 77, ../sass/Blog.scss */
 #Blog .slider #prev {
   background: url("/static/images/gray_prev.png") no-repeat;
   background-position: 0 100%;
   left: 0;
 }
-/* line 67, ../sass/Blog.scss */
+/* line 81, ../sass/Blog.scss */
 #Blog .slider #prev:hover {
   background-position: 0 0;
 }
-/* line 71, ../sass/Blog.scss */
+/* line 85, ../sass/Blog.scss */
 #Blog .slider #next {
   background: url("/static/images/gray_next.png") no-repeat;
   right: 0;
   background-position: 0 100%;
 }
-/* line 75, ../sass/Blog.scss */
+/* line 89, ../sass/Blog.scss */
 #Blog .slider #next:hover {
   background-position: 0 0;
 }
-/* line 80, ../sass/Blog.scss */
+/* line 94, ../sass/Blog.scss */
 #Blog #sliderLeft {
-  -webkit-transform: translateX(-82.6%) rotateY(-25deg) scale(0.9) translateY(0%);
-  -moz-transform: translateX(-82.6%) rotateY(-25deg) scale(0.9) translateY(0%);
-  -ms-transform: translateX(-82.6%) rotateY(-25deg) scale(0.9) translateY(0%);
-  -o-transform: translateX(-82.6%) rotateY(-25deg) scale(0.9) translateY(0%);
-  transform: translateX(-82.6%) rotateY(-25deg) scale(0.9) translateY(0%);
+  -webkit-transform: translateX(-79.7%) rotateY(-25deg) scale(0.88) translateY(0%);
+  -moz-transform: translateX(-79.7%) rotateY(-25deg) scale(0.88) translateY(0%);
+  -ms-transform: translateX(-79.7%) rotateY(-25deg) scale(0.88) translateY(0%);
+  -o-transform: translateX(-79.7%) rotateY(-25deg) scale(0.88) translateY(0%);
+  transform: translateX(-79.7%) rotateY(-25deg) scale(0.88) translateY(0%);
   -webkit-transform-origin: top right;
   -moz-transform-origin: top right;
   -ms-transform-origin: top right;
@@ -4318,18 +4619,13 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   transform-origin: top right;
   opacity: 0.8;
 }
-/* line 90, ../sass/Blog.scss */
+/* line 104, ../sass/Blog.scss */
 #Blog #sliderRight {
-  -webkit-transform: translateX(107.7%) rotateY(25deg) scale(0.9) translateY(0%);
-  -moz-transform: translateX(107.7%) rotateY(25deg) scale(0.9) translateY(0%);
-  -ms-transform: translateX(107.7%) rotateY(25deg) scale(0.9) translateY(0%);
-  -o-transform: translateX(107.7%) rotateY(25deg) scale(0.9) translateY(0%);
-  transform: translateX(107.7%) rotateY(25deg) scale(0.9) translateY(0%);
-  -webkit-transform-origin: top left 0 50%;
-  -moz-transform-origin: top left 0 50%;
-  -ms-transform-origin: top left 0 50%;
-  -o-transform-origin: top left 0 50%;
-  transform-origin: top left 0 50%;
+  -webkit-transform: translateX(108.5%) rotateY(25deg) scale(0.88) translateY(0%);
+  -moz-transform: translateX(108.5%) rotateY(25deg) scale(0.88) translateY(0%);
+  -ms-transform: translateX(108.5%) rotateY(25deg) scale(0.88) translateY(0%);
+  -o-transform: translateX(108.5%) rotateY(25deg) scale(0.88) translateY(0%);
+  transform: translateX(108.5%) rotateY(25deg) scale(0.88) translateY(0%);
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
   -ms-transform-origin: top left;
@@ -4337,16 +4633,16 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   transform-origin: top left;
   opacity: 0.8;
 }
-/* line 100, ../sass/Blog.scss */
+/* line 114, ../sass/Blog.scss */
 #Blog #slicesWrapper {
   -webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 75%, white);
-  -webkit-transform: scale(0.9) translateX(14%) translateY(-6%);
-  -moz-transform: scale(0.9) translateX(14%) translateY(-6%);
-  -ms-transform: scale(0.9) translateX(14%) translateY(-6%);
-  -o-transform: scale(0.9) translateX(14%) translateY(-6%);
-  transform: scale(0.9) translateX(14%) translateY(-6%);
+  -webkit-transform: scale(0.88) translateX(16.4%) translateY(-7%);
+  -moz-transform: scale(0.88) translateX(16.4%) translateY(-7%);
+  -ms-transform: scale(0.88) translateX(16.4%) translateY(-7%);
+  -o-transform: scale(0.88) translateX(16.4%) translateY(-7%);
+  transform: scale(0.88) translateX(16.4%) translateY(-7%);
 }
-/* line 103, ../sass/Blog.scss */
+/* line 117, ../sass/Blog.scss */
 #Blog #slicesWrapper .slice {
   position: relative;
   background: #99d11c;
@@ -4355,7 +4651,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   float: left;
   overflow: hidden;
 }
-/* line 110, ../sass/Blog.scss */
+/* line 124, ../sass/Blog.scss */
 #Blog #slicesWrapper .slice .dialogBox {
   position: relative;
   width: 100%;
@@ -4374,31 +4670,31 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   opacity: 0.7;
   line-height: 150%;
 }
-/* line 125, ../sass/Blog.scss */
+/* line 139, ../sass/Blog.scss */
 #Blog #slicesWrapper .left .dialogBox {
   left: 50%;
 }
-/* line 130, ../sass/Blog.scss */
+/* line 144, ../sass/Blog.scss */
 #Blog #slicesWrapper .right .dialogBox {
   left: -50%;
 }
-/* line 135, ../sass/Blog.scss */
+/* line 149, ../sass/Blog.scss */
 #Blog .wrapper {
   position: absolute;
   width: 25%;
   height: 10%;
 }
-/* line 139, ../sass/Blog.scss */
+/* line 153, ../sass/Blog.scss */
 #Blog .wrapper.blogshots {
   top: 80%;
   left: 27%;
 }
-/* line 143, ../sass/Blog.scss */
+/* line 157, ../sass/Blog.scss */
 #Blog .wrapper.bloglink {
   top: 85%;
   right: 28%;
 }
-/* line 147, ../sass/Blog.scss */
+/* line 161, ../sass/Blog.scss */
 #Blog .wrapper .ribbon {
   position: relative;
   width: 1.5em;
@@ -4410,7 +4706,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   left: -0.9em;
   z-index: 1;
 }
-/* line 157, ../sass/Blog.scss */
+/* line 171, ../sass/Blog.scss */
 #Blog .wrapper .ribbon.link {
   width: 1em;
   top: 0.6em;
@@ -4418,7 +4714,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   border-color: #666666 transparent #666666 #666666;
 }
 
-/* line 166, ../sass/Blog.scss */
+/* line 180, ../sass/Blog.scss */
 #blogShots {
   z-index: 2;
   position: absolute;
@@ -4428,7 +4724,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   color: #fff;
   background: #f86c99;
 }
-/* line 175, ../sass/Blog.scss */
+/* line 189, ../sass/Blog.scss */
 #blogShots:before {
   content: "Show Me";
   position: absolute;
@@ -4437,7 +4733,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   color: #696969;
   top: -1em;
 }
-/* line 184, ../sass/Blog.scss */
+/* line 198, ../sass/Blog.scss */
 #blogShots:after {
   content: "";
   width: 0;
@@ -4450,7 +4746,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   left: 1px;
 }
 
-/* line 196, ../sass/Blog.scss */
+/* line 210, ../sass/Blog.scss */
 #BlogLink {
   z-index: 2;
   position: absolute;
@@ -4460,7 +4756,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   color: #fff;
   background: #666666;
 }
-/* line 204, ../sass/Blog.scss */
+/* line 218, ../sass/Blog.scss */
 #BlogLink:before {
   content: "";
   position: absolute;
@@ -4473,7 +4769,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   top: 105%;
   border-style: solid;
 }
-/* line 216, ../sass/Blog.scss */
+/* line 230, ../sass/Blog.scss */
 #BlogLink:after {
   content: "In a new tab";
   position: absolute;
@@ -4484,19 +4780,37 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 }
 
 /************************************************* Contact ********************************************/
-/* line 499, ../sass/style.scss */
-#Contact h1 {
-  float: left;
+/* line 3, ../sass/Contact.scss */
+#Contact {
+  background: #9ee0ff;
 }
-/* line 502, ../sass/style.scss */
+/* line 5, ../sass/Contact.scss */
+#Contact h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #FFF;
+}
+/* line 10, ../sass/Contact.scss */
+#Contact h2 {
+  font-size: 1.3em;
+}
+/* line 13, ../sass/Contact.scss */
+#Contact h3 {
+  font-size: 1em;
+}
+
+/* line 19, ../sass/Contact.scss */
 #Contact .clouds {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   height: 14%;
   background: inherit;
   position: relative;
   padding-bottom: 2%;
 }
-/* line 508, ../sass/style.scss */
+/* line 28, ../sass/Contact.scss */
 #Contact .clouds .cloud {
   margin-left: 5%;
   position: relative;
@@ -4509,7 +4823,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-box-shadow: 0px 5px 25px 0px lightgrey;
   box-shadow: 0px 5px 25px 0px lightgrey;
 }
-/* line 518, ../sass/style.scss */
+/* line 38, ../sass/Contact.scss */
 #Contact .clouds .cloud .cloudPart1, #Contact .clouds .cloud .cloudPart2 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -4519,19 +4833,19 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   background: inherit;
   position: absolute;
 }
-/* line 523, ../sass/style.scss */
+/* line 43, ../sass/Contact.scss */
 #Contact .clouds .cloud .cloudPart1 {
-  top: -70%;
   width: 35%;
   left: 13%;
+  bottom: 30%;
 }
-/* line 528, ../sass/style.scss */
+/* line 49, ../sass/Contact.scss */
 #Contact .clouds .cloud .cloudPart2 {
-  top: -103%;
   width: 50%;
   left: 37%;
+  bottom: 0;
 }
-/* line 536, ../sass/style.scss */
+/* line 58, ../sass/Contact.scss */
 #Contact .icons {
   width: 30%;
   height: auto;
@@ -4539,28 +4853,28 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   position: relative;
   margin: auto;
 }
-/* line 542, ../sass/style.scss */
+/* line 64, ../sass/Contact.scss */
 #Contact .icons a {
   position: relative;
   height: auto;
   overflow: hidden;
 }
-/* line 548, ../sass/style.scss */
+/* line 70, ../sass/Contact.scss */
 #Contact .icons a:nth-child(1) {
   margin-right: 35%;
 }
-/* line 551, ../sass/style.scss */
+/* line 73, ../sass/Contact.scss */
 #Contact .icons a:nth-child(3) {
   float: right;
 }
-/* line 555, ../sass/style.scss */
+/* line 77, ../sass/Contact.scss */
 #Contact .dialog {
-  top: 0px;
+  bottom: 0;
   right: 0px;
   position: absolute;
   float: right;
   color: #666666;
-  width: 55%;
+  width: 35%;
   margin: auto;
   font-size: 0.9em;
   z-index: 1;
@@ -4568,8 +4882,9 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   padding-right: 3%;
   border: none;
 }
-/* line 569, ../sass/style.scss */
+/* line 91, ../sass/Contact.scss */
 #Contact .form {
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -4584,10 +4899,18 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  margin-top: 5%;
   color: #558c00;
 }
-/* line 582, ../sass/style.scss */
+/* line 93, ../sass/Contact.scss */
+#Contact .form h2, #Contact .form p {
+  display: inline-block;
+}
+/* line 96, ../sass/Contact.scss */
+#Contact .form p {
+  font-size: 0.7em;
+  color: #666;
+}
+/* line 111, ../sass/Contact.scss */
 #Contact #contactForm {
   width: 90%;
   margin: auto;
@@ -4596,14 +4919,14 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   background: #fff;
   color: #78a632;
 }
-/* line 590, ../sass/style.scss */
+/* line 119, ../sass/Contact.scss */
 #Contact .input {
   width: 45%;
   float: left;
   overflow: hidden;
   margin-right: 7%;
 }
-/* line 595, ../sass/style.scss */
+/* line 124, ../sass/Contact.scss */
 #Contact .input input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4619,20 +4942,20 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   font-size: 0.9em;
   color: #666666;
 }
-/* line 604, ../sass/style.scss */
+/* line 133, ../sass/Contact.scss */
 #Contact .input input:focus, #Contact .input input:invalid {
   box-shadow: none !important;
 }
-/* line 608, ../sass/style.scss */
+/* line 137, ../sass/Contact.scss */
 #Contact .input .second {
   margin-top: 8%;
 }
-/* line 613, ../sass/style.scss */
+/* line 141, ../sass/Contact.scss */
 #Contact .message {
   overflow: hidden;
   float: 50%;
 }
-/* line 617, ../sass/style.scss */
+/* line 145, ../sass/Contact.scss */
 #Contact .message textarea {
   font-size: 0.9em;
   width: 98%;
@@ -4648,11 +4971,11 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   resize: vertical;
   color: #666666;
 }
-/* line 627, ../sass/style.scss */
+/* line 155, ../sass/Contact.scss */
 #Contact .message textarea:focus, #Contact .message textarea:invalid {
   box-shadow: none !important;
 }
-/* line 632, ../sass/style.scss */
+/* line 160, ../sass/Contact.scss */
 #Contact .error {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4661,7 +4984,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   font-size: 0.6em;
   font-weight: light;
 }
-/* line 638, ../sass/style.scss */
+/* line 166, ../sass/Contact.scss */
 #Contact .contactButton {
   float: right;
   width: 43%;
@@ -4678,21 +5001,49 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   margin-top: 13%;
   margin-right: 10%;
 }
-/* line 651, ../sass/style.scss */
+/* line 179, ../sass/Contact.scss */
 #Contact .contactButton:hover {
   border-color: #486c10;
 }
-/* line 656, ../sass/style.scss */
+/* line 184, ../sass/Contact.scss */
 #Contact .alertBox {
   position: absolute;
   top: 0;
-  z-index: 5;
+  z-index: 10;
   width: 100%;
   height: 100%;
-  background: rgba(255, 225, 255, 0.5);
+  background: rgba(158, 224, 255, 0.8);
 }
-/* line 663, ../sass/style.scss */
-#Contact .alertBox div {
+/* line 191, ../sass/Contact.scss */
+#Contact .alertBox h2 {
+  color: #fff;
+}
+/* line 192, ../sass/Contact.scss */
+#Contact .alertBox .loading {
+  margin: auto;
+  width: 30%;
+  height: 20%;
+  position: relative;
+  top: 35%;
+}
+/* line 199, ../sass/Contact.scss */
+#Contact .alertBox .loading h1 {
+  font-size: 3em;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  color: #ff6666;
+}
+/* line 207, ../sass/Contact.scss */
+#Contact .alertBox .loading .mailRotate {
+  -webkit-animation: mailRotate 1.6s linear infinite;
+  -o-animation: mailRotate 1.6s linear infinite;
+  -moz-animation: mailRotate 1.6s linear infinite;
+  animation: mailRotate 1.6s linear infinite;
+}
+/* line 211, ../sass/Contact.scss */
+#Contact .alertBox .alert {
   color: #78A632;
   opacity: 1;
   top: 25%;
@@ -4712,7 +5063,198 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   box-sizing: border-box;
   text-align: center;
 }
-/* line 677, ../sass/style.scss */
+/* line 225, ../sass/Contact.scss */
 #Contact .alertBox .contactButton {
   width: 15%;
 }
+
+/*$inputLable:#78A632;
+$formTitle:#558c00;
+#Contact{
+	//overflow:scroll;
+	& h1{
+		float:left;
+	}
+.clouds{
+	overflow:hidden;
+	height:14%;
+	background:inherit;
+	position:relative;
+	padding-bottom:2%;
+	.cloud{
+		margin-left:5%;
+		position:relative;
+		top:68%;
+		width:17%;
+		min-width: 100px;
+		height:45%;
+		//@include border-radius(50%);
+		background:$Cloud;
+		@include box-shadow(0px 5px 25px 0px lightgray);
+		.cloudPart1, .cloudPart2{
+			@include border-radius(100%);
+			background:inherit;
+			position: absolute;
+		}
+		.cloudPart1{
+			top:-70%;
+			width:35%;
+			left:13%;
+		}
+		.cloudPart2{
+			// the Bigger part of cloud
+			top:-103%;
+			width:50%;
+			left:37%;
+		}
+	}
+}
+.icons{
+	width:30%;
+	height:auto;
+	background:inherit;
+	position:relative;
+	margin:auto;
+	& a{
+		//float:left;
+		position:relative;
+		height:auto;
+		overflow:hidden;
+		}
+	& a:nth-child(1){
+		margin-right:35%;
+	}
+	& a:nth-child(3){
+		float:right;
+	}
+}
+.dialog{
+	top:0px;
+	right:0px;
+	position:absolute;
+	float:right;
+	color:$formText;
+	width:55%;
+	margin:auto;
+	font-size:0.9em;
+	z-index:1;
+	padding-top:3%;
+	padding-right:3%;
+	border:none;
+}
+.form{
+	@include box-sizing(border-box);
+	@include border-radius(0.3em);
+	padding:2% 2% 5% 2%;
+	background:#fff;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	margin-top:5%;
+	color:$formTitle;//color for form main title //#707070;
+
+}
+#contactForm{
+	width:90%;
+	margin:auto;
+	margin-top:3%;
+	position:relative;
+	background:#fff;
+	color:$inputLable// color for input and textare label
+}
+.input{
+	width:45%;
+	float:left;
+	overflow:hidden;
+	margin-right:7%;
+	& input{
+		@include box-sizing(border-box);
+		@include border-radius(0.3em);//5px / 16px = 0.3
+		border:2px solid lightgray;
+		height:1.8em;
+		width:100%;
+		font-size: 0.9em;
+		color:$formText;// color for input content
+	}
+	& input:focus, & input:invalid {
+		//use this to prevent the red border in firefox
+    	box-shadow:none !important;
+	}
+	.second{
+		margin-top:8%;
+	}
+		
+}
+.message{
+	overflow:hidden;
+	float:50%;
+	//margin-top:10%;
+	& textarea{
+		font-size:0.9em;
+		width:98%;
+		@include box-sizing(border-box);
+		@include border-radius(0.3em);
+		border:2px solid lightgray;
+		resize:vertical;//the textare can only resize vertically.not horizontally.
+		color:$formText;
+	}
+
+	& textarea:focus, & textarea:invalid {
+		//use this to prevent the red border in firefox
+    	box-shadow:none !important;
+	}
+}
+.error{
+	@include box-sizing(border-box);
+	color:orange;
+	font-size:0.6em;
+	font-weight:light;
+}
+.contactButton{
+	float:right;
+	width:43%;
+	font-size:1em;
+	color:#fff;
+	background:$Button;
+	border:3px solid #88b542;
+	border-bottom-color:#486c10;//#78A632;//#629D30;almost like the btn bg
+	@include border-radius(1em);//20px / 16px = 1.25
+	margin-top:13%;
+	margin-right:10%;
+	//box-shadow:
+	//@include box-shadow(4px 2px 3px 3px lightgray);
+	&:hover{
+		border-color:#486c10;
+		//border-bottom-color:#A4E8E8
+	}
+}
+.alertBox{
+	position:absolute;
+	top:0;
+	z-index:5;
+	width:100%;
+	height:100%;
+	background:rgba(255,225,255,0.5);
+	& div{
+		color:#78A632;
+		opacity:1;
+		top:25%;
+		width:90%;
+		height:70%;
+		padding:5% 3%;
+		background:white;
+		margin:auto;
+		position:relative;
+		@include border-radius(0.625em);// 10 / 16px = 0.625
+		@include box-sizing(border-box);
+		text-align: center;
+	}
+	.contactButton{
+		//background:orange;
+		//color:white;
+		width:15%;
+		//border-color:white;
+	}
+}
+}*/

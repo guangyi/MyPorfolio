@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-$bg_About: #A60026;//rgba(204,100,100,1);//#000;
+$bg_About: #9EE0FF;//rgba(204,100,100,1);//#000;
 $speech_bubble_border:#fff;//rgba(204,100,100,1);
 $bg_Projects:#ffe440;//dfdc1e;//ffec5d;//#FFBF00;//url('images/profile.JPG');//rgba(252,200,200,1);
 $bg_Contact:#9EE0FF;//#b2e6ff;//#73d1ff;//;//#BAE8E8;//#e68e8e;//rgba(204,100,100,1);
@@ -47,6 +47,7 @@ $smileBorder:2px solid $bg_like;
 html,body{
 font-family: "proxima nova light","Helvetica Neue",Helvetica,Arial,Sans-serif;
 height:100%;
+font-size:100%;
 }
 
 .conatiner{
@@ -56,8 +57,7 @@ height:100%;
 #header{
 	height:100%;
 	position:fixed;
-	top:5em;
-	width:5%;
+	width:7%;
 	/*text-align: center;*/
 	color: #fff;
 	//position: fixed;
@@ -68,28 +68,29 @@ height:100%;
 	font-family:'Roboto Slab', serif;
 	overflow:hidden;
 	@include box-sizing(border-box);
-	/*&:hover{
-		width:7%;
-		background:rgba(22,22,22,1);
-	}*/
+	opacity:0.2;
+	&:hover{
+		opacity: 0.7;
+	}
 	#nav{
 		a{
 			text-align: center;
+			padding-top:1em;
 			font-family: "proxima nova light","Helvetica Neue",Helvetica,Arial,Sans-serif;
 			display:block;
 			width:100%;
-			height:3em;
-			color: #FDE7EF;
+			height:1.5em;
+			color: #fff;
 			text-decoration:none;
-			@include border-radius(50%);
-			border:2px solid gray;
+			@include border-radius(0.2em);
 			&:hover{
-				background:#924032;
+				background:#eee;
 				opacity: 1;
 				color:#fff;
 			}
 			&.active{
-				background: #924032;
+
+				background:#ddd;
 			}
 		}
 	} 
@@ -116,165 +117,25 @@ height:100%;
 				}
 				.contentWrap{
 					//overflow: hidden;
+					padding-top:1em;
+					padding-bottom:1em;
 					height:100%;
-					width:100%;
-					padding:0;
+					width:90%;
 					position:relative;
+					margin-left:auto;
+					margin-right:auto;
+					@include box-sizing(border-box);
 					//text-align: center;
 				}
 			}
 		}
-	#About{
-		background:$bg_About;//#924032;//#600;//#EFFF96;//#FFF8EA;//#FFFD7F; //#F2E0E1;
-		text-align:center;
-		h1{
-			font-size:4em;
-			color:$speech_bubble_border;//#F2F2F2;
-			//margin-bottom: 0.5em;
-		}
-		p{
-			font-size:1em;
-			color:#F2F2F2;
-			margin:0.5em 0em;
-		}
-	}
-	#Intro{
-		background:$bg_intro;
-		h1{
-			font-size:2.5em;
-			//margin-bottom: 0.5em;
-		}
-		h2{
-			font-size: 1.5em;
-		}
-		h3{
-			font-size: 1em;
-		}
-		p{
-			font-size: 0.8em;
-		}
-	}	
-	#Contact{
-		background:$bg_Contact;
-		h1{
-			font-size:2.5em;
-			color:#FFF;//#3F6399;//#629D30;
-			margin-bottom: 0.5em;
-		}
-		h2{
-			font-size:1.3em;
-		}
-		h3{
-			font-size: 1em;
-		}
-	}
+	
+	
+	
 	}
 }
 /****************************************************** About *******************************************/
-#profile{
-	position:relative;
-	margin-right:auto;
-	margin-left:auto;
-	width:30%;
-	//padding-bottom = width, can make circle responsive
-	padding-bottom:30%;
-	background: url('/static/images/profile.JPG') no-repeat;
-	background-position: 38% 50%;
-	@include border-radius(50%);
-	box-shadow: 0px 0px 20px 0px #fff;
-	&:after{
-		// this is the white shadow around the picture
-		position: absolute;
-		content: '';
-		width:100%;
-		height:100%;
-		top:0;
-		left:0;
-		@include border-radius(50%);
-		// gradient but don't know where to import...
-		@include background-image(radial-gradient(50% 50%, rgba(255,255,255,0) 85%, rgba(255,255,255,1) 100%));
-	}
-}
-#speech_bubble{
-	// use before and after to create
-	// those arror on the left
-	// center an element: margin-left and margin-right both be auto;
-	margin-left: auto;
-	margin-right:auto;
-	position:relative;
-	width:70%;
-	height: 6em;
-	top: 2em;
-	border:5px solid $speech_bubble_border;
-	padding:1em;
-	@include box-sizing(border-box);
-	@include border-radius(0.8em);// 20px / 1.5 * 16 = 5 / 6
-	z-index:2;
-	&:before, &:after{
-		content: '';
-		position:absolute;
-		left:-46px;//-5.25%;
-		top:1.5em;
-		width:1.5em;
-		border-bottom-left-radius: 100%;
-		border-left: 5px solid $speech_bubble_border;
-		border-bottom:5px solid $speech_bubble_border;
-		background: transparent;
-		/* no rotate version
-		transform-origin: 0 0;
-		transform: rotate(-45deg);*/
-	}
-	&:before{
-		border-right:5px solid $speech_bubble_border;
-		height:1em;
-		z-index:3;
-	}
-	&:after{
-		// the bigger curve.
-		border-right:5px solid $bg_About;
-		height:2em;
-		z-index: 1;
-	}
-}
-#speech_bubble_arrowup{
-	// use before and after to create
-	// those arror on the left
-	// center an element: margin-left and margin-right both be auto;
-	margin-left: auto;
-	margin-right:auto;
-	position:relative;
-	width:70%;
-	height: 6em;
-	top: 4em;
-	border:5px solid $speech_bubble_border;
-	padding:1em;
-	@include box-sizing(border-box);
-	@include border-radius(0.8em);// 20px / 1.5 * 16 = 5 / 6
-	z-index:1;
-	&:before, &:after{
-		content: '';
-		position:absolute;
-		top:-10px;
-		width:0px;
-		height:0px;
-	}
-	&:before{
-		top:-31px;
-		left:434px;
-		border-left: 31px solid transparent;
-		border-right:31px solid transparent;
-		border-bottom: 31px solid $bg_About;
-		z-index: 3;
-	}
-	&:after{
-		top:-40px;
-		left:425px;
-		border-left: 40px solid transparent;
-		border-right:40px solid transparent;
-		border-bottom:40px solid $speech_bubble_border;
-		z-index:2;
-	}
-}
+@import "About";
 /*************************************************** Intro *****************************************/
 @import "Intro.scss";
 /********************************************** More About Me ***************************************/
@@ -492,7 +353,8 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 
 
 /************************************************* Contact ********************************************/
-$inputLable:#78A632;
+@import 'Contact';
+/*$inputLable:#78A632;
 $formTitle:#558c00;
 #Contact{
 	//overflow:scroll;
@@ -681,6 +543,6 @@ $formTitle:#558c00;
 		//border-color:white;
 	}
 }
-}
+}*/
 
 

@@ -164,6 +164,7 @@ var setTopByReference = function(obj, referenObj){
 	obj.css('top', referTop + referHeight);
 }
 var settings = function(){
+	setHeightByReference( $('.introWrapper'), $('#Intro >.row > .contentWrap > h1'), $(window));
 	/******************************************** projects settings settings.js *******************************/
 	setHightByWidth($('.projects'), 1.3);
 	setHightByWidth($('.description'), 1);
@@ -177,7 +178,7 @@ var settings = function(){
 	$('.face').height($('.option').height());
 	//set$('.heart').
 	setWidthByHeight($('.face'), 1);
-	setHeightByReference($('.optionsWrap'), $('.likeContainer > h1'), $(window));
+	setHeightByReference($('.optionsWrap'), $('#MoreAboutMe >.row > .contentWrap > h1'), $(window));
 
 	/*******************************************  Contact settings settings.js ********************************/
 	//setHightByWidth($('.dialogBox'), 1);
