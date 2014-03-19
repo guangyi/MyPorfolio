@@ -97,7 +97,6 @@ var upDown = function(obj){
 };
 
 var loading = function(){
-	console.log('here');
 	$('.mailRotate').animate({
 		'left':'20%',
 		'top':'70%'

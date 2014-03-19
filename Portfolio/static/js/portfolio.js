@@ -55,7 +55,6 @@ portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($s
 	// watch the change in URL?
 	// first element --value is current URL
 	$scope.menuClick = function(href){
-		console.log(href);
 		$scope.menuClicked = true;
 		$location.path('/' + href);
 	}
@@ -75,6 +74,7 @@ portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($s
 						var offset = $(idToScroll).offset().top;
 						var contentScroll = $('.content').scrollTop();
 						var upToTop = contentScroll + offset;
+						console.log(upToTop);
 						$('.content').animate({
 							scrollTop: upToTop
 						},"slow");
@@ -101,7 +101,7 @@ portfolio.controller('projectsCtrl',['$scope',function($scope){
 							 'img_url':     '/static/images/bouncing_ball_Y.JPG'
 							},
 						'bouncing_ball_XY':{
-							'caption':     'Bouncing Ball on X and Y axis',
+							'caption':     'Bouncing Ball on X & Y axis',
 							'tag':         'Canvas',
 							'description': 'This is the practice on Html5 Canvas. A bouncing ball on X and Y axis,This is the practice on Html5 Canvas. A bouncing ball on X and Y axis',
 							 'img_url':     '/static/images/profile.JPG'

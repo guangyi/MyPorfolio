@@ -27,9 +27,9 @@
 				<h2><a ng-repeat="nav in navNames" ng-class="{active:isActive( '/' + nav )}" ng-click="menuClick( nav )">{$ nav $}</a><h2>
 			</nav>
 		</header>
-		<div class="content"  ng-controller="contentCtrl" style="height: {$screenHeight$}px">
+		<div class="content"  ng-controller="contentCtrl" >
 			<div class="scroll" >
-				<section class="main" id="About" style="height: {$screenHeight$}px">
+				<section class="main" id="About" >
 					<div class="row effOnScroll">
 						<div class="contentWrap">
 							<div id="profile"><img src="/static/images/profile.JPG"></div>
@@ -39,7 +39,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="main" id="Intro" style="height: {$screenHeight$}px">
+				<section class="main" id="Intro">
 					<div class="row effOnScroll">
 						<div class="contentWrap">
 							<h1>About Me</h1><br>
@@ -69,7 +69,7 @@
 												<div class="cubeBottom"></div>
 											</div>
 											<div class="introShlter">
-												<br>Brandeis University<br> + <br> 
+												<p>Brandeis University<br> + <br> 
 											Graduated in May 2013<br> + <br>Master in Computer Science<br> + <br> GPA=3.67</p>
 											</div>
 										</div>
@@ -78,7 +78,7 @@
 										<div class="carve"><h3>Front-End Engineer</h3></div>
 										<div class="shelterWrapper free">
 											<div class="introShlter">
-												<br>HTML5 Sass CSS3 <br> + <br>JQuery/Javascript
+												<p>HTML5 Sass CSS3 <br> + <br>JQuery/Javascript
 												<br> + <br> Bootstrap AngularJS <br> + <br>Django + MongoDB</p>
 											</div>
 											<div class="cube frontEnd" >	
@@ -95,7 +95,7 @@
 										<div class="carve"><h3>I believe in.. </h3></div>
 										<div class="shelterWrapper bel">
 											<div class="introShlter">
-												<br> Dream <br> + <br> Hope <br> + <br> Passion</p>
+												<p>Dream <br> + <br> Hope <br> + <br> Passion</p>
 											</div>
 											<div class="cube believe">	
 												<div class="cubeTop"></div>
@@ -113,7 +113,7 @@
 										<div class="carve"><h3> I hope to </h3></div>
 										<div class="shelterWrapper Ihope">
 											<div class="introShlter">
-												<p>Great job == <br><br> good chemistry<br> + <br>fit in the company culture
+												<p>Great job:<br> good chemistry<br> + <br>fit in the company culture
 												<br> +<br> make contribution<br> +<br> personal development</p>
 											</div>
 											<div class="cube hope">											
@@ -131,7 +131,7 @@
 						</div><!-- end of content wrapper-->
 					</div>
 				</section>
-				<section class="main" id="Experiments" style="height: {$screenHeight$}px" ng-controller="projectsCtrl">
+				<section class="main" id="Experiments" ng-controller="projectsCtrl">
 					<div class="row effOnScroll">
 						<div class="contentWrap">
 							<h1>Experiments</h1>
@@ -157,7 +157,7 @@
 						</div><!-- end of contentWrap-->
 					</div>
 				</section>
-				<section class="main" id="Blog" style="height: {$screenHeight$}px">
+				<section class="main" id="Blog">
 					<div class="row effOnScroll">
 						<div class="contentWrap ">
 							<!--
@@ -240,7 +240,7 @@
 						</div><!-- end of contentWrap-->
 					</div><!-- end of row effOnScroll-->
 				</section>
-				<section class="main" id="MoreAboutMe" style="height: {$screenHeight$}px">
+				<section class="main" id="MoreAboutMe">
 					<div class="row effOnScroll">
 						<section class="contentWrap">
 								<h1>More About Me</h1>
@@ -319,7 +319,7 @@
 						</section>
 					</div>
 				</section>
-				<section class="main" id="Contact" style="height: {$screenHeight$}px" ng-controller="contactCtrl">
+				<section class="main" id="Contact" ng-controller="contactCtrl">
 					<div class="row effOnScroll">
 						<div class="contentWrap">
 							<h1>Contact Me</h1>

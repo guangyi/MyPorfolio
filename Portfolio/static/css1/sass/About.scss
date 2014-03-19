@@ -7,14 +7,22 @@
 			color:#F2F2F2;
 			margin:0.5em 0em;
 		}
+		.row .contentWrap{
+			height:100vh;
+			min-height: 480px;
+		}
 	}
 #profile{
-	top:10%;
+	top:8%;
 	position:relative;
 	margin-right:auto;
 	margin-left:auto;
 	width:25vw;
 	height:25vw;
+	min-width:130px;
+	min-height:130px;
+	max-width:352px;
+	max-height:352px;
 	//padding-bottom = width, can make circle responsive
 	//padding-bottom:30%;
 	//background: url('/static/images/profile.JPG') no-repeat;
@@ -24,7 +32,7 @@
 	& img{
 		border-radius:100%;
 		max-width:100%;
-		max-height: 110%;
+		max-height: 100%;
 	}
 	&:after{
 		// this is the white shadow around the picture
@@ -92,8 +100,7 @@
 	margin-right:auto;
 	position:relative;
 	width:65vw;
-	//height: 22%;
-	top: 25%;
+	top: 20%;
 	border:5px solid $speech_bubble_border;
 	padding:1em;
 	@include box-sizing(border-box);
@@ -135,31 +142,35 @@
 		font-size:2.5em; 
 		}
 		&:before{
-			left:46.5%
+			left:45.5%
+		}
+		&:after{
+			left:44%;
 		}
 	}
 }
 @media screen and (max-width:51.875em){//830px / 16 = 51.875em
-		#speech_bubble_arrowup{
+	#speech_bubble_arrowup{
+		top:30%;
 		h1{
 		font-size:1.7em; 
 		}
 		&:before{
-			left:46.8%
+			left:45.9%
 		}
 	}
 }
-@media screen and (max-width:37.5em){//600px / 16 = 51.875em
+@media screen and (max-width:40.625em){//650px / 16 = 51.875em
 	#speech_bubble_arrowup{
 		top:42%;
 		h1{
-		font-size:1.1em; 
+			font-size:1.3em; 
 		}
 		&:before{
-			left:39%
+			left:41.3%;
 		}
 		&:after{
-			left:36%;
+			left:39%;
 		}
 	}
 	#profile{
@@ -168,9 +179,9 @@
 }
 @media screen and (max-width:28.125em){//450px / 16 = 51.875em
 	#speech_bubble_arrowup{
-		top:43%;
+		top:42%;
 		h1{
-		font-size:0.9em; 
+		font-size:1.3em; 
 		}
 		&:before{
 			left:39.1%
@@ -180,6 +191,24 @@
 		}
 	}
 	#profile{
-		top:30%;
+		top:20%;
 	}
 }
+@media screen and (max-width:21.875em){//350px / 16 = 18.75em
+	#speech_bubble_arrowup{
+		top:38%;
+		h1{
+			font-size:0.9em; 
+		}
+		&:before{
+			left:35%
+		}
+		&:after{
+			left:30%;
+		}
+	}
+	#profile{
+		top:20%;
+	}
+}
+

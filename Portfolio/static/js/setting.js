@@ -164,11 +164,11 @@ var setTopByReference = function(obj, referenObj){
 	obj.css('top', referTop + referHeight);
 }
 var settings = function(){
-	setHeightByReference( $('.introWrapper'), $('#Intro >.row > .contentWrap > h1'), $(window));
+	//setHeightByReference( $('.introWrapper'), $('#Intro >.row > .contentWrap > h1'), $(window));
 	/******************************************** projects settings settings.js *******************************/
-	setHightByWidth($('.projects'), 1.3);
-	setHightByWidth($('.description'), 1);
-	setHightByWidth($('.caption'),0.25);
+	//setHightByWidth($('.projects'), 1.3);
+	//setHightByWidth($('.description'), 1);
+	//setHightByWidth($('.caption'),0.25);
 	setHeightByReference($('.projectWrapper'), $('#Experiments >.row > h1'), $(window));
 	/******************************************* Blog Settings settings.js*************************************/
 	setHeightByReference( $('.sliderWrapper'), $('#Blog >.row > .contentWrap > h1'), $(window));// set slider's height by h1's height
@@ -185,6 +185,11 @@ var settings = function(){
 	setRadiusByHeight($('.cloud'), 0.5);
 	setHightByWidth($('.cloudPart1'), 1);
 	setHightByWidth($('.cloudPart2'), 1);
-
+	/*$(window).resize(function(){
+		setHightByWidth($('.projects'), 1.3);
+		setHightByWidth($('.description'), 1);
+		setHightByWidth($('.caption'),0.25);
+		//setHeightByReference($('.projectWrapper'), $('#Experiments >.row > h1'), $(window));
+	});*/
 }
 
