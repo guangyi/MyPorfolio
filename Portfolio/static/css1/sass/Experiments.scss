@@ -32,6 +32,9 @@ $projectWidth:14vw;
 	margin:auto;
 	text-align:center;
 	margin-top:3%;
+	display:table;
+	min-height:700px;
+
 }
 .projects{
 	float:left;
@@ -227,6 +230,7 @@ $projectWidth:14vw;
 	.projectWrapper{
 		margin-right: auto;
 		margin-left: auto;
+		display:table;
 	}
 	$projectWidth:22vw;
 	.projects{

@@ -71,16 +71,14 @@ function has3D(){
     document.body.removeChild(el);
     return (has3d !== undefined && has3d.length > 0 && has3d !== "none");
 }
-var animtOnScroll = function(){
+var animtOnScroll = function(b){
 	var firstTimePrj = true;
 	var enterBlog = true;
 	var enterAboutMe = true;
 	var leaveAboutMe = true;
-	// want to only one slider but can start and stop under different condition
-	// that's why put b here
-	var b = new blog();
+	
 	var moreAboutMe = new MoreAboutMe();
-	console.log('display'+$('.loading').css('display'));
+	
 	$('.content').scroll(function(){
 		/******************************** Projects Page loading Animation **************/
 		if($('#Experiments').offset().top <= $(window).height() * 0.7 && $('#Experiments').offset().top >= 0 && firstTimePrj){
@@ -99,14 +97,12 @@ var animtOnScroll = function(){
 			enterBlog = true;
 		}
 		if($('#MoreAboutMe').offset().top <= $(window).height() * 0.3  && $('#MoreAboutMe').offset().top >= 0 && enterAboutMe){
-			console.log("start");
 			moreAboutMe.start();
 			enterAboutMe = false;
 			leaveAboutMe = false;
 		}
 		else if( ($('#MoreAboutMe').offset().top > $(window).height() * 0.8  || $('#MoreAboutMe').offset().top < -0.8 * $(window).height()) && !leaveAboutMe){
 			//enterAboutMe = true;
-			console.log("stop");
 			moreAboutMe.stop();
 			leaveAboutMe = true;
 		}

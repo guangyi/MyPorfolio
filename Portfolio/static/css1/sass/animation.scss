@@ -182,16 +182,16 @@ $startFont:1.1em;
 $endFont:1.1em;
 @include keyframes(tada){
 	/* This is the "jump" effect for like/agree */
-	28% {@include transform(translateY(-7px));font-size:$startFont;}
-	36% {@include transform(translateY(7px));font-size:$startFont; }
-	44% {@include transform(translateY(-7px));font-size:$startFont;}
-	52% {@include transform(translateY(7px)); font-size:$startFont;}
-	60% {@include transform(translateY(-7px));font-size:$startFont;}
-	68% {@include transform(translateY(7px)); font-size:$startFont;}
-	76% {@include transform(translateY(-7px));font-size:$startFont;}
-	84% {@include transform(translateY(7px)); font-size:$startFont;}
-	92% {@include transform(translateY(-7px));font-size:$endFont;}
-	100%{@include transform(translateY(0px));font-size:$endFont;}
+	28% {@include transform(translateY(-7px));}
+	36% {@include transform(translateY(7px)); }
+	44% {@include transform(translateY(-7px));}
+	52% {@include transform(translateY(7px)); }
+	60% {@include transform(translateY(-7px));}
+	68% {@include transform(translateY(7px)); }
+	76% {@include transform(translateY(-7px));}
+	84% {@include transform(translateY(7px)); }
+	92% {@include transform(translateY(-7px));}
+	100%{@include transform(translateY(0px));}
 	/* Tada effect
 	10% {@include transform(rotate(-5deg) scale(0.9));}
 	25% {@include transform(rotate(-5deg) scale(0.9));}

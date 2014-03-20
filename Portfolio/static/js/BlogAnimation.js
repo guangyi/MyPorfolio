@@ -215,7 +215,7 @@ var blog = function(){
 	function blogSlider(){
 	}
 	blogSlider.prototype.liWidth = $('.slider > ul > li').first().width();
-	blogSlider.prototype.len = $('#sliderLeft > ul > li').length;
+	blogSlider.prototype.len = $('#sliderLeft > ul > li').length;// how mamy li children
 	blogSlider.prototype.current = 1;// current item displaying
 	blogSlider.prototype.slider = $('.slider > ul');
 	blogSlider.prototype.id = '';
@@ -231,7 +231,7 @@ var blog = function(){
 			// user before: prepend() will append element as the first child element of matched elements.
 			first.before(last.clone(true));// ; clone(true) clone data 
 			last.after(first.clone(true));
-			$(this).width(liWidth * (len + 2));
+			$(this).width(liWidth * (len + 2));// set ul width
 			$(this).css('left', -1 * liWidth);
 		});
 	};
@@ -241,11 +241,12 @@ var blog = function(){
 			var direction = -1 ;
 			blogSliderThis.animation(direction);
 		}, 9000);
-		console.log('thisid'+this.id);
 	};
 	blogSlider.prototype.animation = function(direction){
 
 		var that = this;
+		console.log(this.current);
+		console.log(that.len+'len');
 		if ( 0 < that.current && that.current <= that.len){
 			that.move(direction);
 			that.current += direction * -1;
@@ -273,26 +274,32 @@ var blog = function(){
 	blogSlider.prototype.btnContrl = function(event){
 		var that = this;
 		var direction = (event.target.id === 'prev')? 1: -1;
-		console.log('so'+$('.slider > ul').is(':not(:animated)'));
 		if( $('.slider > ul').is(':not(:animated)')){
 			//stop current interval and restart
 			clearInterval(that.id)
 			that.animation(direction);
 		}
 		else{
-			console.log('Imhere!!!');
 			//stop current interval and restart
-			console.log(that.id);
 			that.slider.stop(false,true);
 			clearInterval(that.id);
 		}
 		that.autoSlide();
 	};
-	this.init = function(){
-
+	blogSlider.prototype.reset = function(){
+		var that = this;
+		$('.slider > ul > li').width($('.slider').width());
+		this.liWidth = $('#sliderLeft > ul > li').first().width();
+		this.slider.each( function(){
+			$(this).width(that.liWidth * (that.len +　2));
+			$(this).css('left',-1 * that.current * that.liWidth);
+			console.log(that.current + 'current');
+		});
+		console.log('newWidth' +　this.liWidth);
 	}
 	var bs = new blogSlider();
 	bs.init();
+
 	this.start = function(){
 		// only init when create a new blog object.
 		bs.autoSlide();
@@ -302,6 +309,9 @@ var blog = function(){
 			bs.btnContrl(event);
 		});
 	};
+	this.reset = function() {
+		bs.reset();
+	}
 	this.AnimId = function(){
 		return bs.id;
 	}
