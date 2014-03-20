@@ -17,19 +17,17 @@ $(document).ready(function(){
 	});
 	loading();
 	$(window).resize(function(){
-		console.log('ailllRii');
 		// set blog ul width
+		console.log('id' +　b.AnimId());
 		if(b.AnimId()){
 			$('.slider > ul').stop(false,true);
 			b.stop();
 			var liWidth = $('#sliderLeft > ul > li').width();
-			console.log('width'+liWidth);
 			var length = $('#sliderLeft > ul > li').length;
-			console.log(length * liWidth);
-
 			b.reset();
 			b.start();
 		}
+		console.log('newid' +　b.AnimId());
 		/*
 		$('.slider > ul').each(function(){
 			$(this).width( liWidth * length);

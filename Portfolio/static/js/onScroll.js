@@ -90,7 +90,7 @@ var animtOnScroll = function(b){
 			enterBlog = false;
 			b.start();
 		}
-		else if( ($('#Blog').offset().top > $(window).height() * 0.3  || $('#Blog').offset().top < -0.8 * $(window).height()) && !enterBlog) {
+		else if( ($('#Blog').offset().top > $(window).height() * 0.8  || $('#Blog').offset().top < -0.8 * $(window).height()) && !enterBlog) {
 			if(b.AnimId()){
 				b.stop();
 			}

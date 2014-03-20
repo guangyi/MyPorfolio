@@ -4112,9 +4112,8 @@ html, body {
 #MoreAboutMe h2 {
   font-size: 1.5em;
 }
-
-/* line 14, ../sass/MoreAboutMe.scss */
-.contentWrap {
+/* line 13, ../sass/MoreAboutMe.scss */
+#MoreAboutMe .row .contentWrap {
   height: 100%;
   width: auto;
   background: transparent;
@@ -4122,66 +4121,33 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
+  display: table;
 }
-/* line 20, ../sass/MoreAboutMe.scss */
-.contentWrap .optionsWrap {
-  width: 100%;
-  background: transparent;
-  margin: auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+/* line 22, ../sass/MoreAboutMe.scss */
+#MoreAboutMe .row .contentWrap .options {
   -webkit-perspective: 500px;
   -moz-perspective: 500px;
   -ms-perspective: 500px;
   -o-perspective: 500px;
   perspective: 500px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   text-align: center;
-}
-/* line 28, ../sass/MoreAboutMe.scss */
-.contentWrap .optionsWrap .options {
+  display: table;
   width: 100%;
-  margin: 0;
+  margin: auto;
   float: left;
   height: 100%;
   overflow: scroll;
+  background: transparent;
 }
-/* line 29, ../sass/MoreAboutMe.scss */
-.contentWrap .optionsWrap .options h3 {
+/* line 33, ../sass/MoreAboutMe.scss */
+#MoreAboutMe .row .contentWrap .options h3 {
   font-size: 1.1em;
 }
-/* line 37, ../sass/MoreAboutMe.scss */
-.contentWrap .optionsWrap .options .heart {
-  position: absolute;
-  width: 8%;
-  height: 5%;
-  background: green;
-  display: inline-block;
-  float: left;
-  margin: 0 3% 0 0;
-}
-/* line 45, ../sass/MoreAboutMe.scss */
-.contentWrap .optionsWrap .options .heart:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: red;
-  -webkit-border-top-left-radius: 100%;
-  -moz-border-top-left-radius: 100%;
-  -ms-border-top-left-radius: 100%;
-  -o-border-top-left-radius: 100%;
-  border-top-left-radius: 100%;
-  -webkit-border-bottom-left-radius: 100%;
-  -moz-border-bottom-left-radius: 100%;
-  -ms-border-bottom-left-radius: 100%;
-  -o-border-bottom-left-radius: 100%;
-  border-bottom-left-radius: 100%;
-}
-/* line 57, ../sass/MoreAboutMe.scss */
-.contentWrap .optionsWrap .options .option {
+/* line 36, ../sass/MoreAboutMe.scss */
+#MoreAboutMe .row .contentWrap .options .option {
   display: inline-block;
   height: auto;
   background: inherit;
@@ -4207,8 +4173,8 @@ html, body {
       				}
   				}*/
 }
-/* line 78, ../sass/MoreAboutMe.scss */
-.contentWrap .optionsWrap .options .option span {
+/* line 57, ../sass/MoreAboutMe.scss */
+#MoreAboutMe .row .contentWrap .options .option span {
   -webkit-transition: text-shadow 1.5s;
   -webkit-transition-delay: 2s;
   -moz-transition: text-shadow 1.5s 2s;
@@ -4216,8 +4182,8 @@ html, body {
   transition: text-shadow 1.5s 2s;
   text-shadow: 0px 0px 30px #ff0000;
 }
-/* line 83, ../sass/MoreAboutMe.scss */
-.contentWrap .optionsWrap .options .tada {
+/* line 62, ../sass/MoreAboutMe.scss */
+#MoreAboutMe .row .contentWrap .options .tada {
   -webkit-transform-origin: center center 0 50%;
   -moz-transform-origin: center center 0 50%;
   -ms-transform-origin: center center 0 50%;
@@ -4228,8 +4194,8 @@ html, body {
   -moz-animation: tada 1.3s forwards;
   animation: tada 1.3s forwards;
 }
-/* line 87, ../sass/MoreAboutMe.scss */
-.contentWrap .optionsWrap .options .shake {
+/* line 66, ../sass/MoreAboutMe.scss */
+#MoreAboutMe .row .contentWrap .options .shake {
   -webkit-animation: shake 1s forwards;
   -o-animation: shake 1s forwards;
   -moz-animation: shake 1s forwards;
@@ -4237,42 +4203,33 @@ html, body {
 }
 
 @media screen and (max-width: 65.625em) {
-  /* line 96, ../sass/MoreAboutMe.scss */
+  /* line 77, ../sass/MoreAboutMe.scss */
   #MoreAboutMe h1 {
     font-size: 2em;
   }
-
-  /* line 103, ../sass/MoreAboutMe.scss */
-  .contentWrap .optionsWrap .options h3 {
+  /* line 82, ../sass/MoreAboutMe.scss */
+  #MoreAboutMe .row .contentWrap .options h3 {
     font-size: 0.9em;
   }
 }
 @media screen and (max-width: 56.25em) {
-  /* line 112, ../sass/MoreAboutMe.scss */
+  /* line 91, ../sass/MoreAboutMe.scss */
   #MoreAboutMe h1 {
     font-size: 1.8em;
   }
-
-  /* line 119, ../sass/MoreAboutMe.scss */
-  .contentWrap .optionsWrap .options h3 {
+  /* line 96, ../sass/MoreAboutMe.scss */
+  #MoreAboutMe .row .contentWrap .options h3 {
     font-size: 0.8em;
   }
 }
 @media screen and (max-width: 31.25em) {
-  /* line 128, ../sass/MoreAboutMe.scss */
+  /* line 105, ../sass/MoreAboutMe.scss */
   #MoreAboutMe h1 {
     font-size: 1.5em;
   }
-
-  /* line 135, ../sass/MoreAboutMe.scss */
-  .contentWrap .optionsWrap .options h3 {
-    font-size: 0.8em;
-    display: block;
-  }
-
-  /* line 142, ../sass/MoreAboutMe.scss */
-  .contentWrap .optionsWrap .options h3 {
-    display: block;
+  /* line 110, ../sass/MoreAboutMe.scss */
+  #MoreAboutMe .row .contentWrap .options h3 {
+    font-size: 0.6em;
   }
 }
 		/*

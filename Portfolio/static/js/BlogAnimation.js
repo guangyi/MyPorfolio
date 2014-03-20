@@ -245,8 +245,6 @@ var blog = function(){
 	blogSlider.prototype.animation = function(direction){
 
 		var that = this;
-		console.log(this.current);
-		console.log(that.len+'len');
 		if ( 0 < that.current && that.current <= that.len){
 			that.move(direction);
 			that.current += direction * -1;
@@ -278,11 +276,13 @@ var blog = function(){
 			//stop current interval and restart
 			clearInterval(that.id)
 			that.animation(direction);
+			console.log('not');
 		}
 		else{
 			//stop current interval and restart
 			that.slider.stop(false,true);
 			clearInterval(that.id);
+			console.log('yes');
 		}
 		that.autoSlide();
 	};
@@ -292,10 +292,10 @@ var blog = function(){
 		this.liWidth = $('#sliderLeft > ul > li').first().width();
 		this.slider.each( function(){
 			$(this).width(that.liWidth * (that.len +　2));
+			console.log('current' + that.current);
 			$(this).css('left',-1 * that.current * that.liWidth);
-			console.log(that.current + 'current');
+			console.log('left' + -1 * that.current * that.liWidth);
 		});
-		console.log('newWidth' +　this.liWidth);
 	}
 	var bs = new blogSlider();
 	bs.init();
@@ -316,6 +316,7 @@ var blog = function(){
 		return bs.id;
 	}
 	this.stop = function(){
+		console.log('clear' + bs.id);
 		clearInterval(bs.id);
 		$('.btnCtrl').unbind('click');
 	}

@@ -74,7 +74,6 @@ portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($s
 						var offset = $(idToScroll).offset().top;
 						var contentScroll = $('.content').scrollTop();
 						var upToTop = contentScroll + offset;
-						console.log(upToTop);
 						$('.content').animate({
 							scrollTop: upToTop
 						},"slow");

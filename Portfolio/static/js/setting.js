@@ -178,7 +178,7 @@ var settings = function(){
 	$('.face').height($('.option').height());
 	//set$('.heart').
 	setWidthByHeight($('.face'), 1);
-	setHeightByReference($('.optionsWrap'), $('#MoreAboutMe >.row > .contentWrap > h1'), $(window));
+	//setHeightByReference($('.optionsWrap'), $('#MoreAboutMe >.row > .contentWrap > h1'), $(window));
 
 	/*******************************************  Contact settings settings.js ********************************/
 	//setHightByWidth($('.dialogBox'), 1);
