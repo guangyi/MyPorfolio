@@ -5,8 +5,10 @@ $(document).ready(function(){
 	$('.projects').hide();
 	// want to only one slider but can start and stop under different condition
 	// that's why put b here
-	var b = new blog();
-	animtOnScroll(b);
+	var blog = new Blog();
+	var cloud = new cloudMove();
+	animtOnScroll(blog, cloud);
+
 	var blogShotsOriLet = $('.wrapper.blogshots').css('left');
 	//$('.wrapper.blogshots').one('click', firstClick);
 	$('.topLeft').click(function(){
@@ -18,16 +20,15 @@ $(document).ready(function(){
 	loading();
 	$(window).resize(function(){
 		// set blog ul width
-		console.log('id' +　b.AnimId());
-		if(b.AnimId()){
+		if(blog.AnimId()){
 			$('.slider > ul').stop(false,true);
-			b.stop();
-			var liWidth = $('#sliderLeft > ul > li').width();
-			var length = $('#sliderLeft > ul > li').length;
-			b.reset();
-			b.start();
+			blog.stop();
+			blog.reset();
+			blog.start();
 		}
-		console.log('newid' +　b.AnimId());
+		cloud.stop(false);
+		//cloud.adjust();
+		cloud.float();
 		/*
 		$('.slider > ul').each(function(){
 			$(this).width( liWidth * length);

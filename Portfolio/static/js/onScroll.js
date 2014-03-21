@@ -71,11 +71,12 @@ function has3D(){
     document.body.removeChild(el);
     return (has3d !== undefined && has3d.length > 0 && has3d !== "none");
 }
-var animtOnScroll = function(b){
+var animtOnScroll = function(blog, cloud){
 	var firstTimePrj = true;
 	var enterBlog = true;
 	var enterAboutMe = true;
 	var leaveAboutMe = true;
+	var firstTimeCont = true;
 	
 	var moreAboutMe = new MoreAboutMe();
 	
@@ -88,11 +89,11 @@ var animtOnScroll = function(b){
 		if( $('#Blog').offset().top <= $(window).height() * 0.7  && $('#Blog').offset().top >= 0  && enterBlog ){
 			// enterBlog = false now, so even the page is in the right section, no more new animation created.
 			enterBlog = false;
-			b.start();
+			blog.start();
 		}
 		else if( ($('#Blog').offset().top > $(window).height() * 0.8  || $('#Blog').offset().top < -0.8 * $(window).height()) && !enterBlog) {
-			if(b.AnimId()){
-				b.stop();
+			if(blog.AnimId()){
+				blog.stop();
 			}
 			enterBlog = true;
 		}
@@ -106,7 +107,29 @@ var animtOnScroll = function(b){
 			moreAboutMe.stop();
 			leaveAboutMe = true;
 		}
-		cloudMove();// defined in cloudMove.js
+		if($('#Contact').offset().top >= $(window).height() * 0.96 && !firstTimeCont){
+			firstTimeCont = true;
+		// clearInterval when user is not on the contact page
+		// stop the current animtion, go back to the end. otherwise I don't know why
+		// the top property always gets lower-- maybe because the callback function is the current animation
+		// so its previous point is +10px after the first animation. but end point is the very origin point of cloud top
+		//$('.cloud').stop(true, true);// stop at end point
+			cloud.stop();
+		}
+		else if($('#Contact').offset().top < $(window).height() * 0.7  && firstTimeCont){
+		// when scroll to the contact page for the firstTime
+		// has the slide effect
+		//$('.cloud').stop();
+			cloud.sliding();
+		}
+		if( $('#Contact').offset().top <= 10 && firstTimeCont){
+		// the first time scroll to contact page, the cloud effect begins
+		// if go back to this page, the effect is on, but it never stops
+			firstTimeCont = false;
+			var endPoint = cloud.getEndPoint();
+			cloud.float(endPoint);
+		}
+		//cloudMove();// defined in cloudMove.js
 		//flyin();
 	});
 }

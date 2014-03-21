@@ -336,7 +336,7 @@
 								</div>-->
 							</div><!--end of clouds -->
 							<div class="form">
-								<h2>Send me an Email </h2><p> ---Tell me what you think, let me know how can I do better.I'm looking forward to hearing from you.</p>
+								<h2>Send me an Email </h2><p>Tell me what you think, let me know how can I do better.I'm looking forward to hearing from you.</p>
 								<!--Angular Form with its way of validation-->
 								<form id="contactForm" name="contactForm" novalidation>
 									<div class="input">
@@ -352,7 +352,7 @@
 										<label>Your Message: </label><br>
 										<span class="error" ng-show="contactForm.message.$error.required && clicked">Your Message are Required!</span><br>
 										<textarea rows="6em" cols="170" required ng-model="emailData.message" name="message"></textarea>
-										<input class="contactButton" type="button" value="Send your Email" ng-click="sendEmail()" >
+										<button class="contactButton" type="button" ng-click="sendEmail()" >Send Your Email</button>
 									</div><!-- end of message-->
 								</form><!-- end of form-->
 							</div>

@@ -210,7 +210,7 @@
 			clearInterval(id);
 		}
 	}, 6000);*/
-var blog = function(){
+var Blog = function(){
 	
 	function blogSlider(){
 	}

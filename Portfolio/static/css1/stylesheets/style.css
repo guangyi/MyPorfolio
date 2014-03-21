@@ -4123,7 +4123,7 @@ html, body {
   text-align: center;
   display: table;
 }
-/* line 22, ../sass/MoreAboutMe.scss */
+/* line 20, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .row .contentWrap .options {
   -webkit-perspective: 500px;
   -moz-perspective: 500px;
@@ -4142,11 +4142,11 @@ html, body {
   overflow: scroll;
   background: transparent;
 }
-/* line 33, ../sass/MoreAboutMe.scss */
+/* line 31, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .row .contentWrap .options h3 {
   font-size: 1.1em;
 }
-/* line 36, ../sass/MoreAboutMe.scss */
+/* line 34, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .row .contentWrap .options .option {
   display: inline-block;
   height: auto;
@@ -4173,7 +4173,7 @@ html, body {
       				}
   				}*/
 }
-/* line 57, ../sass/MoreAboutMe.scss */
+/* line 55, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .row .contentWrap .options .option span {
   -webkit-transition: text-shadow 1.5s;
   -webkit-transition-delay: 2s;
@@ -4182,7 +4182,7 @@ html, body {
   transition: text-shadow 1.5s 2s;
   text-shadow: 0px 0px 30px #ff0000;
 }
-/* line 62, ../sass/MoreAboutMe.scss */
+/* line 60, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .row .contentWrap .options .tada {
   -webkit-transform-origin: center center 0 50%;
   -moz-transform-origin: center center 0 50%;
@@ -4194,7 +4194,7 @@ html, body {
   -moz-animation: tada 1.3s forwards;
   animation: tada 1.3s forwards;
 }
-/* line 66, ../sass/MoreAboutMe.scss */
+/* line 64, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .row .contentWrap .options .shake {
   -webkit-animation: shake 1s forwards;
   -o-animation: shake 1s forwards;
@@ -4203,31 +4203,31 @@ html, body {
 }
 
 @media screen and (max-width: 65.625em) {
-  /* line 77, ../sass/MoreAboutMe.scss */
+  /* line 75, ../sass/MoreAboutMe.scss */
   #MoreAboutMe h1 {
     font-size: 2em;
   }
-  /* line 82, ../sass/MoreAboutMe.scss */
+  /* line 80, ../sass/MoreAboutMe.scss */
   #MoreAboutMe .row .contentWrap .options h3 {
     font-size: 0.9em;
   }
 }
 @media screen and (max-width: 56.25em) {
-  /* line 91, ../sass/MoreAboutMe.scss */
+  /* line 89, ../sass/MoreAboutMe.scss */
   #MoreAboutMe h1 {
     font-size: 1.8em;
   }
-  /* line 96, ../sass/MoreAboutMe.scss */
+  /* line 94, ../sass/MoreAboutMe.scss */
   #MoreAboutMe .row .contentWrap .options h3 {
     font-size: 0.8em;
   }
 }
 @media screen and (max-width: 31.25em) {
-  /* line 105, ../sass/MoreAboutMe.scss */
+  /* line 103, ../sass/MoreAboutMe.scss */
   #MoreAboutMe h1 {
     font-size: 1.5em;
   }
-  /* line 110, ../sass/MoreAboutMe.scss */
+  /* line 108, ../sass/MoreAboutMe.scss */
   #MoreAboutMe .row .contentWrap .options h3 {
     font-size: 0.6em;
   }
@@ -5239,51 +5239,66 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   }
 }
 /************************************************* Contact ********************************************/
-/* line 3, ../sass/Contact.scss */
+/* line 8, ../sass/Contact.scss */
 #Contact {
   background: #9ee0ff;
 }
-/* line 5, ../sass/Contact.scss */
-#Contact h1 {
-  text-align: center;
-  font-size: 2.5em;
-  color: #FFF;
-}
-/* line 10, ../sass/Contact.scss */
-#Contact h2 {
-  font-size: 1.3em;
-}
-/* line 13, ../sass/Contact.scss */
+/* line 11, ../sass/Contact.scss */
 #Contact h3 {
   font-size: 1em;
 }
 
+/* line 15, ../sass/Contact.scss */
+#Contact {
+  display: table;
+}
+/* line 18, ../sass/Contact.scss */
+#Contact .row .contentWrap {
+  display: table;
+  min-height: 800px;
+}
 /* line 19, ../sass/Contact.scss */
-#Contact .clouds {
-  width: 90%;
+#Contact .row .contentWrap h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #FFF;
+}
+/* line 26, ../sass/Contact.scss */
+#Contact .row .contentWrap .clouds {
+  width: 90vw;
+  height: 18vw;
+  min-height: 100px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  height: 14%;
+  height: 11.7vw;
   background: inherit;
   position: relative;
   padding-bottom: 2%;
 }
-/* line 28, ../sass/Contact.scss */
-#Contact .clouds .cloud {
+/* line 37, ../sass/Contact.scss */
+#Contact .row .contentWrap .clouds .cloud {
   margin-left: 5%;
   position: relative;
-  top: 68%;
-  width: 17%;
-  min-width: 100px;
-  height: 45%;
+  top: 50%;
+  width: 13.5vw;
+  min-width: 80px;
+  max-width: 200px;
+  max-height: 80px;
+  min-height: 22px;
+  height: 3.51vw;
   background: white;
   -webkit-box-shadow: 0px 5px 25px 0px lightgrey;
   -moz-box-shadow: 0px 5px 25px 0px lightgrey;
   box-shadow: 0px 5px 25px 0px lightgrey;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
 }
-/* line 38, ../sass/Contact.scss */
-#Contact .clouds .cloud .cloudPart1, #Contact .clouds .cloud .cloudPart2 {
+/* line 51, ../sass/Contact.scss */
+#Contact .row .contentWrap .clouds .cloud .cloudPart1, #Contact .row .contentWrap .clouds .cloud .cloudPart2 {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
@@ -5292,19 +5307,29 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   background: inherit;
   position: absolute;
 }
-/* line 43, ../sass/Contact.scss */
-#Contact .clouds .cloud .cloudPart1 {
-  width: 35%;
+/* line 56, ../sass/Contact.scss */
+#Contact .row .contentWrap .clouds .cloud .cloudPart1 {
   left: 13%;
-  bottom: 30%;
+  width: 4.725vw;
+  height: 4.725vw;
+  bottom: 1.485vw;
+  min-width: 28px;
+  max-width: 70px;
+  min-height: 28px;
+  max-height: 70px;
 }
-/* line 49, ../sass/Contact.scss */
-#Contact .clouds .cloud .cloudPart2 {
-  width: 50%;
+/* line 66, ../sass/Contact.scss */
+#Contact .row .contentWrap .clouds .cloud .cloudPart2 {
+  width: 6.75vw;
+  height: 6.75vw;
   left: 37%;
-  bottom: 0;
+  bottom: 0.135vw;
+  min-width: 40px;
+  max-width: 100px;
+  min-height: 40px;
+  max-height: 100px;
 }
-/* line 58, ../sass/Contact.scss */
+/* line 81, ../sass/Contact.scss */
 #Contact .icons {
   width: 30%;
   height: auto;
@@ -5312,21 +5337,21 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   position: relative;
   margin: auto;
 }
-/* line 64, ../sass/Contact.scss */
+/* line 87, ../sass/Contact.scss */
 #Contact .icons a {
   position: relative;
   height: auto;
   overflow: hidden;
 }
-/* line 70, ../sass/Contact.scss */
+/* line 93, ../sass/Contact.scss */
 #Contact .icons a:nth-child(1) {
   margin-right: 35%;
 }
-/* line 73, ../sass/Contact.scss */
+/* line 96, ../sass/Contact.scss */
 #Contact .icons a:nth-child(3) {
   float: right;
 }
-/* line 77, ../sass/Contact.scss */
+/* line 100, ../sass/Contact.scss */
 #Contact .dialog {
   bottom: 0;
   right: 0px;
@@ -5341,7 +5366,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   padding-right: 3%;
   border: none;
 }
-/* line 91, ../sass/Contact.scss */
+/* line 114, ../sass/Contact.scss */
 #Contact .form {
   text-align: left;
   -webkit-box-sizing: border-box;
@@ -5360,16 +5385,19 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   position: relative;
   color: #558c00;
 }
-/* line 93, ../sass/Contact.scss */
-#Contact .form h2, #Contact .form p {
+/* line 116, ../sass/Contact.scss */
+#Contact .form h2 {
+  font-size: 1.3em;
   display: inline-block;
 }
-/* line 96, ../sass/Contact.scss */
+/* line 120, ../sass/Contact.scss */
 #Contact .form p {
+  display: inline-block;
   font-size: 0.7em;
   color: #666;
+  margin-left: 1em;
 }
-/* line 111, ../sass/Contact.scss */
+/* line 137, ../sass/Contact.scss */
 #Contact #contactForm {
   width: 90%;
   margin: auto;
@@ -5378,14 +5406,14 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   background: #fff;
   color: #78a632;
 }
-/* line 119, ../sass/Contact.scss */
+/* line 145, ../sass/Contact.scss */
 #Contact .input {
   width: 45%;
   float: left;
   overflow: hidden;
   margin-right: 7%;
 }
-/* line 124, ../sass/Contact.scss */
+/* line 150, ../sass/Contact.scss */
 #Contact .input input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -5401,23 +5429,22 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   font-size: 0.9em;
   color: #666666;
 }
-/* line 133, ../sass/Contact.scss */
+/* line 159, ../sass/Contact.scss */
 #Contact .input input:focus, #Contact .input input:invalid {
   box-shadow: none !important;
 }
-/* line 137, ../sass/Contact.scss */
+/* line 163, ../sass/Contact.scss */
 #Contact .input .second {
   margin-top: 8%;
 }
-/* line 141, ../sass/Contact.scss */
+/* line 167, ../sass/Contact.scss */
 #Contact .message {
   overflow: hidden;
-  float: 50%;
 }
-/* line 145, ../sass/Contact.scss */
+/* line 169, ../sass/Contact.scss */
 #Contact .message textarea {
   font-size: 0.9em;
-  width: 98%;
+  width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -5430,11 +5457,11 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   resize: vertical;
   color: #666666;
 }
-/* line 155, ../sass/Contact.scss */
+/* line 178, ../sass/Contact.scss */
 #Contact .message textarea:focus, #Contact .message textarea:invalid {
   box-shadow: none !important;
 }
-/* line 160, ../sass/Contact.scss */
+/* line 183, ../sass/Contact.scss */
 #Contact .error {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -5443,10 +5470,10 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   font-size: 0.6em;
   font-weight: light;
 }
-/* line 166, ../sass/Contact.scss */
+/* line 189, ../sass/Contact.scss */
 #Contact .contactButton {
   float: right;
-  width: 43%;
+  width: 45%;
   font-size: 1em;
   color: #fff;
   background: #78a632;
@@ -5460,11 +5487,11 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   margin-top: 13%;
   margin-right: 10%;
 }
-/* line 179, ../sass/Contact.scss */
+/* line 202, ../sass/Contact.scss */
 #Contact .contactButton:hover {
   border-color: #486c10;
 }
-/* line 184, ../sass/Contact.scss */
+/* line 207, ../sass/Contact.scss */
 #Contact .alertBox {
   position: absolute;
   top: 0;
@@ -5473,11 +5500,11 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   height: 100%;
   background: rgba(158, 224, 255, 0.8);
 }
-/* line 191, ../sass/Contact.scss */
+/* line 214, ../sass/Contact.scss */
 #Contact .alertBox h2 {
   color: #fff;
 }
-/* line 192, ../sass/Contact.scss */
+/* line 215, ../sass/Contact.scss */
 #Contact .alertBox .loading {
   margin: auto;
   width: 30%;
@@ -5485,7 +5512,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   position: relative;
   top: 35%;
 }
-/* line 199, ../sass/Contact.scss */
+/* line 222, ../sass/Contact.scss */
 #Contact .alertBox .loading h1 {
   font-size: 3em;
   position: absolute;
@@ -5494,14 +5521,14 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   top: 0;
   color: #ff6666;
 }
-/* line 207, ../sass/Contact.scss */
+/* line 230, ../sass/Contact.scss */
 #Contact .alertBox .loading .mailRotate {
   -webkit-animation: mailRotate 1.6s linear infinite;
   -o-animation: mailRotate 1.6s linear infinite;
   -moz-animation: mailRotate 1.6s linear infinite;
   animation: mailRotate 1.6s linear infinite;
 }
-/* line 211, ../sass/Contact.scss */
+/* line 234, ../sass/Contact.scss */
 #Contact .alertBox .alert {
   color: #78A632;
   opacity: 1;
@@ -5522,11 +5549,99 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   box-sizing: border-box;
   text-align: center;
 }
-/* line 225, ../sass/Contact.scss */
+/* line 248, ../sass/Contact.scss */
 #Contact .alertBox .contactButton {
   width: 15%;
 }
 
+@media screen and (max-width: 81.25em) {
+  /* line 260, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form p {
+    font-size: 0.6em;
+  }
+  /* line 264, ../sass/Contact.scss */
+  #Contact .row .contentWrap .contactButton {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 71.875em) {
+  /* line 273, ../sass/Contact.scss */
+  #Contact .row .contentWrap h1 {
+    font-size: 2em;
+  }
+  /* line 277, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form h2 {
+    font-size: 1em;
+  }
+  /* line 280, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form p {
+    display: block;
+    margin: 1em 0;
+    font-size: 0.6em;
+  }
+  /* line 285, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form .input, #Contact .row .contentWrap .form .message {
+    font-size: 0.8em;
+  }
+  /* line 289, ../sass/Contact.scss */
+  #Contact .row .contentWrap .contactButton {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 50em) {
+  /* line 298, ../sass/Contact.scss */
+  #Contact .row .contentWrap h1 {
+    font-size: 1.5em;
+  }
+  /* line 302, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form h2 {
+    font-size: 0.9em;
+  }
+  /* line 305, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form p {
+    font-size: 0.5em;
+    margin: 1em 0;
+    display: block;
+  }
+  /* line 310, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form .input, #Contact .row .contentWrap .form .message {
+    font-size: 0.7em;
+  }
+  /* line 314, ../sass/Contact.scss */
+  #Contact .row .contentWrap .contactButton {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 43.75em) {
+  /* line 324, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form h2 {
+    font-size: 0.9em;
+  }
+  /* line 327, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form p {
+    font-size: 0.5em;
+    margin: 1em 0;
+    display: block;
+  }
+  /* line 332, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form .input, #Contact .row .contentWrap .form .message {
+    width: 95%;
+    font-size: 0.7em;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 339, ../sass/Contact.scss */
+  #Contact .row .contentWrap .form .message {
+    margin-top: 2em;
+  }
+  /* line 343, ../sass/Contact.scss */
+  #Contact .row .contentWrap .contactButton {
+    font-size: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 /*$inputLable:#78A632;
 $formTitle:#558c00;
 #Contact{

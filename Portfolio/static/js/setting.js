@@ -175,16 +175,16 @@ var settings = function(){
 	$('.slider > ul > li').width( $('.slider').width());
 	var len = $('#sliderLeft > ul > li').length;
 	/******************************************* MoreAboutMe settings.js **************************************/
-	$('.face').height($('.option').height());
+	//$('.face').height($('.option').height());
 	//set$('.heart').
-	setWidthByHeight($('.face'), 1);
+	//setWidthByHeight($('.face'), 1);
 	//setHeightByReference($('.optionsWrap'), $('#MoreAboutMe >.row > .contentWrap > h1'), $(window));
 
 	/*******************************************  Contact settings settings.js ********************************/
 	//setHightByWidth($('.dialogBox'), 1);
-	setRadiusByHeight($('.cloud'), 0.5);
-	setHightByWidth($('.cloudPart1'), 1);
-	setHightByWidth($('.cloudPart2'), 1);
+	//setRadiusByHeight($('.cloud'), 0.5);
+	//setHightByWidth($('.cloudPart1'), 1);
+	//setHightByWidth($('.cloudPart2'), 1);
 	/*$(window).resize(function(){
 		setHightByWidth($('.projects'), 1.3);
 		setHightByWidth($('.description'), 1);
