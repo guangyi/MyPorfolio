@@ -1,14 +1,13 @@
 /** Shelter background and font color **/
 $shelterBg:#fdd1e0;
-$shelterFontColor:#630a00;
-
+$shelterFontColor:#462304;
 /** Intro Main Part Title,font,background color **/
 $MainPartTitle:#fff;
 $MainPartFontColor:#fff;
 $MainPartBg:#EEE;
 
 /** Side Part, including each unit background, shelter and cube **/
-$sideFontColor:#700000;
+$sideFontColor:#462304;
 $sideBorder:1px solid #B2B2B2;
 $sideBorderLight:1px solid #FFF;
 
@@ -19,10 +18,10 @@ $gradientEnd:#ad0000;
 /** cube each side color, size, font color **/
 $cubeWidth:140px;//140/ 1440 = 9.722%
 $cubeFontColor:#fff;
-$cubeLight:#ff7373;
-$cubeMiddle:#ff4444;
-$cubeDark:#ad0000;
-$cubeBorder:#ad0000;
+$cubeLight:#ffad00;//#ff7373;
+$cubeMiddle:#ffad00;//#ff4444;
+$cubeDark:#ffad00;
+$cubeBorder:#fff;//#ad0000;
 @mixin cubeColor($light, $middle, $dark){
 	.cubeFront{
 		background:$light;
@@ -44,12 +43,13 @@ $cubeBorder:#ad0000;
 	}
 }
 #Intro{
-	@include background-image(linear-gradient(top, #9ee0ff, #ff4444));
+	//@include background-image(linear-gradient(top, #9ee0ff 15%, #fff 15%));//#ff4444
+	background:#ffad00;
 	.contentWrap{
 		text-align: center;
 		background:transparent;
 		height:auto;
-		& h1{
+		h1{
 			font-size:2.5em;
 			color:$MainPartTitle;
 		}
@@ -90,39 +90,40 @@ $cubeBorder:#ad0000;
 	text-align:center;
 	color:$sideFontColor;
 	overflow:hidden;
-	margin-right:1%;
+	margin-right:auto;
+	margin-left:auto;
 	margin-bottom:2%;
 	width:23.5%;
-	height:35vh;
-	max-width:333px;
+	height:50vh;
+	max-width:425px;
 	max-height:330px;
 	min-height:260px;
 	float:left;
 	border-right:1px dashed #ccc;
 	.shelterWrapper{
 		position:absolute;
-		height:85%;
+		height:80%;
 		width:99%;
 		bottom:0;
 		overflow: hidden;
 		&.gra{
 		//@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
-			@include perspective-origin(0 250px);
+			@include perspective-origin(50% 250px);
 			@include perspective(800px);
 		}
 		&.free{
 			//@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
-			@include perspective-origin(0 250px);
+			@include perspective-origin(50% 250px);
 			@include perspective(800px);
 		}
 		&.bel{
 			//@include background-image(linear-gradient(left, $gradientStart, $gradientMiddle));
-			@include perspective-origin(100% 250px);
+			@include perspective-origin(50% 250px);
 			@include perspective(800px);
 		}
 		&.Ihope{
 			//@include background-image(linear-gradient(left, $gradientMiddle, $gradientEnd));
-			@include perspective-origin(100% 250px);
+			@include perspective-origin(50% 250px);
 			@include perspective(800px);
 		}
 	}
@@ -133,7 +134,7 @@ $cubeBorder:#ad0000;
 		width:100%;
 		left:-100%;
 		top:0;
-		line-height:1.5em;
+		line-height:1.1em;
 		z-index:10;
 		color:$shelterFontColor;
 		font-size:0.8em;
@@ -150,7 +151,7 @@ $cubeBorder:#ad0000;
 }
 
 .cube{
-	font-size:0.6em;
+	font-size:0.65em;
 	margin-left:20%;
 	margin-top:13%;
 	position:relative;
@@ -161,13 +162,13 @@ $cubeBorder:#ad0000;
 	@include transform-style(preserve-3d);
 	& div{
 		color:$cubeFontColor;
-		line-height:1.8em;
+		line-height:1.5em;
 		width:100%;
 		height:100%;
 		position:absolute;
 		padding:8% 3% 5% 3%;
 		@include box-sizing(border-box); 
-		@include border-radius(0.2em);
+		@include border-radius(0em);
 		border:2px dashed $cubeBorder;
 	}
 	.cubeFront{
@@ -214,6 +215,7 @@ $cubeBorder:#ad0000;
 		& div{
 			padding-top:25%;
 			}
+		margin-left:26%;
 		@include cubeColor($cubeLight, $cubeMiddle, $cubeDark);
 		@include animation(spin 40s infinite linear);
 	}
@@ -221,7 +223,7 @@ $cubeBorder:#ad0000;
 		& div{
 			padding-top:20%;
 		}
-		margin-left:20%;
+		margin-left:26%;
 		@include cubeColor($cubeLight, $cubeMiddle, $cubeDark);
 		@include animation(spin 40s  2s infinite linear);
 	}
@@ -302,6 +304,7 @@ $cubeBorder:#ad0000;
 		}
 		&.hope{
 			margin-left:22%;
+			font-size:0.6em;
 		}
 		&.frontEnd{
 			margin-left: 16%;
@@ -367,9 +370,10 @@ $cubeBorder:#ad0000;
 		font-size: 0.8em;
 	}
 }
-@media screen and (max-width:53.125em){// 850px / 16 = 53.125
-	#Intro{
-		//height:150vh !important;
+@media screen and (max-width:53.125em){// 850px / 16 = 53.12
+	// switch to two box each line
+	#Intro .contentWrap h1{
+		font-size: 2em;
 	}
 	.topPart{
 		height:25vh;
@@ -389,17 +393,6 @@ $cubeBorder:#ad0000;
 		.carve h3{
 			font-size: 0.8em;
 		}
-		.shelterWrapper{
-			&.free{
-				@include perspective-origin(100% 250px);
-			}
-			&.bel{
-				@include perspective-origin(0 250px);
-			}
-			&.Ihope{
-				@include perspective-origin(100% 250px);
-			}
-		}
 	}
 	.cube{
 		&.believe{
@@ -409,7 +402,7 @@ $cubeBorder:#ad0000;
 			margin-left:30%;
 		}
 		&.frontEnd{
-			margin-left: 30%;
+			margin-left:30%;
 		}
 		&.graduated{
 			margin-left:30%;
@@ -417,6 +410,10 @@ $cubeBorder:#ad0000;
 	}
 }
 @media screen and (max-width:40.625em){// 650px / 16 = 40.625
+	// switch to two box each line
+	#Intro .contentWrap h1{
+		font-size: 1.5em;
+	}
 	.topPart p{
 		font-size: 0.7em;
 	}
@@ -425,17 +422,34 @@ $cubeBorder:#ad0000;
 			margin-left:25%;
 		}
 		&.hope{
-			margin-left:30%;
+			margin-left:25%;
 		}
 		&.frontEnd{
-			margin-left: 30%;
+			margin-left:25%;
 		}
 		&.graduated{
 			margin-left:25%;
 		}
 	}
 }
+/*@media screen and (max-width:37.5em){// 650px / 16 = 40.6256
+	.cube{
+		&.believe{
+			margin-left:25%;
+		}
+		&.hope{
+			margin-left:25%;
+		}
+		&.frontEnd{
+			margin-left:25%;
+		}
+		&.graduated{
+			margin-left:25%;
+		}
+	}
+}*/
 @media screen and (max-width:31.25em){// 500px / 16 = 40.625
+	//switch to single box each line
 	.topPart{
 		height:26vh;
 	}
@@ -444,6 +458,7 @@ $cubeBorder:#ad0000;
 		//height: 136vh;
 	}
 	.perspective{
+		position:relative;
 		width:90vw;
 		height:34vh;
 		border:none;
@@ -456,20 +471,6 @@ $cubeBorder:#ad0000;
 		}
 		.carve h3{
 			font-size: 0.8em;
-		}
-		.shelterWrapper{
-			&.gra{
-				@include perspective-origin(50% 250px);
-			}
-			&.free{
-				@include perspective-origin(50% 250px);
-			}
-			&.bel{
-				@include perspective-origin(50% 250px);
-			}
-			&.Ihope{
-				@include perspective-origin(50% 250px);
-			}
 		}
 	}
 	.cube{
@@ -488,10 +489,6 @@ $cubeBorder:#ad0000;
 	}
 }
 @media screen and (max-width:22.5em){//360px / 16 = 22.5
-	#Intro .contentWrap h1{
-		font-size:2em;
-		//height:250vh !important;
-	} 
 	.topPart{
 		height:40vh;
 	}
@@ -509,7 +506,7 @@ $cubeBorder:#ad0000;
 			margin-left:28%;
 		}
 		&.frontEnd{
-			margin-left: 28%;
+			margin-left:28%;
 		}
 		&.graduated{
 			margin-left:28%;

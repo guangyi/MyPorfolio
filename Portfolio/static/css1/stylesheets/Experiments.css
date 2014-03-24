@@ -1,12 +1,22 @@
 /*
-Syntax error: Undefined mixin 'background-image'.
-        on line 14 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss, in `background-image'
-        from line 14 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss
+Syntax error: Undefined mixin 'perspective'.
+        on line 65 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss, in `perspective'
+        from line 65 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss
 
 Backtrace:
-/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss:14:in `background-image'
-/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss:14
+/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss:65:in `perspective'
+/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss:65
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -74,4 +84,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'background-image'.\A         on line 14 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss, in `background-image'\A         from line 14 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss"; }
+  content: "Syntax error: Undefined mixin 'perspective'.\A         on line 65 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss, in `perspective'\A         from line 65 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Experiments.scss"; }

@@ -79,35 +79,35 @@ var animtOnScroll = function(blog, cloud){
 	var firstTimeCont = true;
 	
 	var moreAboutMe = new MoreAboutMe();
-	
+	var windowHight = $(window).height();
 	$('.content').scroll(function(){
 		/******************************** Projects Page loading Animation **************/
-		if($('#Experiments').offset().top <= $(window).height() * 0.7 && $('#Experiments').offset().top >= 0 && firstTimePrj){
+		if($('#Experiments').offset().top <= windowHight * 0.7 && $('#Experiments').offset().top >= windowHight * -0.2 && firstTimePrj){
 			fristTimePrj = false;
 			projectLoad();
 		}
-		if( $('#Blog').offset().top <= $(window).height() * 0.7  && $('#Blog').offset().top >= 0  && enterBlog ){
+		if( $('#Blog').offset().top <= windowHight * 0.7  && $('#Blog').offset().top >= 0  && enterBlog ){
 			// enterBlog = false now, so even the page is in the right section, no more new animation created.
 			enterBlog = false;
 			blog.start();
 		}
-		else if( ($('#Blog').offset().top > $(window).height() * 0.8  || $('#Blog').offset().top < -0.8 * $(window).height()) && !enterBlog) {
+		else if( ($('#Blog').offset().top > windowHight * 0.8  || $('#Blog').offset().top < -0.8 * windowHight) && !enterBlog) {
 			if(blog.AnimId()){
 				blog.stop();
 			}
 			enterBlog = true;
 		}
-		if($('#MoreAboutMe').offset().top <= $(window).height() * 0.3  && $('#MoreAboutMe').offset().top >= 0 && enterAboutMe){
+		if($('#MoreAboutMe').offset().top <= windowHight * 0.3  && $('#MoreAboutMe').offset().top >= 0 && enterAboutMe){
 			moreAboutMe.start();
 			enterAboutMe = false;
 			leaveAboutMe = false;
 		}
-		else if( ($('#MoreAboutMe').offset().top > $(window).height() * 0.8  || $('#MoreAboutMe').offset().top < -0.8 * $(window).height()) && !leaveAboutMe){
+		else if( ($('#MoreAboutMe').offset().top > windowHight * 0.8  || $('#MoreAboutMe').offset().top < -0.8 * windowHight) && !leaveAboutMe){
 			//enterAboutMe = true;
 			moreAboutMe.stop();
 			leaveAboutMe = true;
 		}
-		if($('#Contact').offset().top >= $(window).height() * 0.96 && !firstTimeCont){
+		if($('#Contact').offset().top >= windowHight * 0.96 && !firstTimeCont){
 			firstTimeCont = true;
 		// clearInterval when user is not on the contact page
 		// stop the current animtion, go back to the end. otherwise I don't know why
@@ -116,13 +116,13 @@ var animtOnScroll = function(blog, cloud){
 		//$('.cloud').stop(true, true);// stop at end point
 			cloud.stop();
 		}
-		else if($('#Contact').offset().top < $(window).height() * 0.7  && firstTimeCont){
+		else if($('#Contact').offset().top < windowHight * 0.7  && firstTimeCont){
 		// when scroll to the contact page for the firstTime
 		// has the slide effect
 		//$('.cloud').stop();
 			cloud.sliding();
 		}
-		if( $('#Contact').offset().top <= 10 && firstTimeCont){
+		if( $('#Contact').offset().top <= windowHight * 0.1 && firstTimeCont){
 		// the first time scroll to contact page, the cloud effect begins
 		// if go back to this page, the effect is on, but it never stops
 			firstTimeCont = false;

@@ -292,9 +292,7 @@ var Blog = function(){
 		this.liWidth = $('#sliderLeft > ul > li').first().width();
 		this.slider.each( function(){
 			$(this).width(that.liWidth * (that.len +　2));
-			console.log('current' + that.current);
 			$(this).css('left',-1 * that.current * that.liWidth);
-			console.log('left' + -1 * that.current * that.liWidth);
 		});
 	}
 	var bs = new blogSlider();

@@ -1,97 +1,421 @@
-/*
-Syntax error: Undefined variable: "$bg_Blog".
-        on line 121 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Blog.scss
+/* line 4, ../sass/Blog.scss */
+#Blog {
+  background: #ff7575;
+  text-align: center;
+}
+/* line 8, ../sass/Blog.scss */
+#Blog h1 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  color: #fff;
+}
+/* line 13, ../sass/Blog.scss */
+#Blog h2 {
+  font-size: 1.5em;
+}
 
-Backtrace:
-/Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Blog.scss:121
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/script/variable.rb:49:in `_perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/script/node.rb:40:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/engine.rb:315:in `_render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.12/lib/sass/engine.rb:262:in `render'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `each'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block in run'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `loop'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `run'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
-/Library/Ruby/Gems/2.0.0/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/bin/compass:44:in `call'
-/Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
-/usr/bin/compass:23:in `load'
-/usr/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$bg_Blog\".\A         on line 121 of /Users/zhouguangyi2009/Documents/Websites/Guangyi-Portfolio-t/Portfolio/static/css1/sass/Blog.scss"; }
+/* line 17, ../sass/Blog.scss */
+#Blog {
+ /*
+.wrapper{
+	position:absolute;
+	width:25%;
+	height:10%;
+	&.blogshots{
+		top:80%;
+		left:27%;
+	}
+	&.bloglink{
+		top:85%;
+		right:28%;
+	}
+	.ribbon{
+		position:relative;
+		width:1.5em;
+		height:0;
+		border-width:0.8em 0.5em;
+		border-color:$btnBlogShots $btnBlogShots $btnBlogShots transparent;
+		border-style:solid;
+		top:0.65em;
+		left:-0.9em;
+		z-index: 1;
+		&.link{
+			width:1em;
+			top:0.6em;
+			left:92%;
+			border-color:$btnBlogLink transparent $btnBlogLink $btnBlogLink ;
+		}
+	}
+}*/
+}
+/* line 19, ../sass/Blog.scss */
+#Blog .row .contentWrap {
+  width: 100%;
+  left: 0;
+  position: relative;
+  overflow: hidden;
+}
+/* line 24, ../sass/Blog.scss */
+#Blog .row .contentWrap .sliderWrapper {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+}
+/* line 33, ../sass/Blog.scss */
+#Blog .slider {
+  overflow: hidden;
+  background: #fff;
+  width: 70vw;
+  max-height: 500px;
+  position: absolute;
+  -webkit-box-shadow: 0px 6px 3px black;
+  -moz-box-shadow: 0px 6px 3px black;
+  box-shadow: 0px 6px 3px black;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
+  -webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 80%, white);
+}
+/* line 45, ../sass/Blog.scss */
+#Blog .slider ul {
+  left: 0;
+  position: relative;
+  height: 100%;
+  display: table;
+}
+/* line 50, ../sass/Blog.scss */
+#Blog .slider ul li {
+  background: #ad0000;
+  color: #fff;
+  width: 60vw;
+  height: 70vh;
+  min-height: 300px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 60, ../sass/Blog.scss */
+#Blog .slider ul li img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/* line 68, ../sass/Blog.scss */
+#Blog .slider ul li h3 {
+  line-height: 2em;
+  font-size: 2vw;
+  padding: 5vw;
+}
+/* line 76, ../sass/Blog.scss */
+#Blog .slider .btnCtrl {
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  height: 2.7em;
+  width: 2.7em;
+  overflow: hidden;
+  border: none;
+}
+/* line 85, ../sass/Blog.scss */
+#Blog .slider #prev {
+  background: url("/static/images/gray_prev.png") no-repeat;
+  background-position: 0 100%;
+  left: 0;
+}
+/* line 89, ../sass/Blog.scss */
+#Blog .slider #prev:hover {
+  background-position: 0 0;
+}
+/* line 93, ../sass/Blog.scss */
+#Blog .slider #next {
+  background: url("/static/images/gray_next.png") no-repeat;
+  right: 0;
+  background-position: 0 100%;
+}
+/* line 97, ../sass/Blog.scss */
+#Blog .slider #next:hover {
+  background-position: 0 0;
+}
+/* line 102, ../sass/Blog.scss */
+#Blog #sliderLeft {
+  -webkit-transform: translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%);
+  -moz-transform: translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%);
+  -ms-transform: translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%);
+  -o-transform: translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%);
+  transform: translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%);
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  -o-transform-origin: top right;
+  transform-origin: top right;
+}
+/* line 106, ../sass/Blog.scss */
+#Blog #sliderLeft ul li:nth-child(1) {
+  background: #ffcc00;
+}
+/* line 106, ../sass/Blog.scss */
+#Blog #sliderLeft ul li:nth-child(2) {
+  background: white;
+}
+/* line 106, ../sass/Blog.scss */
+#Blog #sliderLeft ul li:nth-child(3) {
+  background: #9ee0ff;
+}
+/* line 106, ../sass/Blog.scss */
+#Blog #sliderLeft ul li:nth-child(4) {
+  background: #a4db00;
+}
+/* line 106, ../sass/Blog.scss */
+#Blog #sliderLeft ul li:nth-child(5) {
+  background: #ffcc00;
+}
+/* line 106, ../sass/Blog.scss */
+#Blog #sliderLeft ul li:nth-child(6) {
+  background: white;
+}
+/* line 120, ../sass/Blog.scss */
+#Blog #sliderRight {
+  -webkit-transform: translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%);
+  -moz-transform: translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%);
+  -ms-transform: translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%);
+  -o-transform: translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%);
+  transform: translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%);
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+  -o-transform-origin: top left;
+  transform-origin: top left;
+}
+/* line 124, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-child(1) {
+  background: #9ee0ff;
+}
+/* line 124, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-child(2) {
+  background: #a4db00;
+}
+/* line 124, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-child(3) {
+  background: #ffcc00;
+}
+/* line 124, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-child(4) {
+  background: white;
+}
+/* line 124, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-child(5) {
+  background: #9ee0ff;
+}
+/* line 124, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-child(6) {
+  background: #a4db00;
+}
+/* line 138, ../sass/Blog.scss */
+#Blog #slicesWrapper {
+  -webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 80%, white);
+  -webkit-transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
+  -moz-transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
+  -ms-transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
+  -o-transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
+  transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
+  /*.left{
+  	.dialogBox{
+  		left:50%;
+  	}
+  }
+  .right{
+  	.dialogBox{
+  		left:-50%;
+  	}
+  }*/
+}
+/* line 142, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(1) {
+  background: white;
+}
+/* line 142, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(2) {
+  background: #9ee0ff;
+}
+/* line 142, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(3) {
+  background: #a4db00;
+}
+/* line 142, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(4) {
+  background: #ffcc00;
+}
+/* line 142, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(5) {
+  background: white;
+}
+/* line 142, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(6) {
+  background: #9ee0ff;
+}
+/* line 149, ../sass/Blog.scss */
+#Blog #slicesWrapper .slice {
+  position: relative;
+  background: #9ee0ff;
+  width: 50%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+/* line 156, ../sass/Blog.scss */
+#Blog #slicesWrapper .slice .dialogBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: #fff;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5% 8% 5% 8%;
+  line-height: 150%;
+}
+/* line 181, ../sass/Blog.scss */
+#Blog .blogLink {
+  position: relative;
+  float: right;
+  width: 30%;
+  color: #fff;
+}
+
+ /*
+#blogShots{
+	z-index:2;
+	position:absolute;
+	top:0;
+	left:0;
+	font-size:1.1em;
+	color:#fff;
+	background:$btnBlogShots;
+	//@include border-radius(0.3em);
+	&:before{
+		content: "Show Me";
+		position:absolute;
+		top:-1em;
+		font-size: 0.7em;
+		color:#696969;
+		top:-1em;
+		
+	}
+	&:after{
+		content:"";
+		width:0;
+		height:0;
+		position:absolute;
+		border-width:0.3em 0.7em;
+		border-color: #9d133f #9d133f transparent transparent;
+		border-style:solid;
+		top:103%;
+		left:1px;
+	}
+}
+#BlogLink{
+	z-index:2;
+	position:absolute;
+	top:0;
+	right:0;
+	font-size:1em;
+	color:#fff;
+	background:$btnBlogLink;//#929292;
+	&:before{
+		content: "";
+		position:absolute;
+		width:0;
+		height:0;
+		border-width:0.3em 0.55em;
+		border-color:#333 transparent transparent #333;
+		bottom:-2px;
+		right:-1px;
+		top:105%;
+		border-style:solid;
+	}
+	&:after{
+		content:"In a new tab";
+		position:absolute;
+		font-size: 0.7em;
+		color:#696969;
+		top:-1em;
+		right:0;
+	}
+}*/
+@media screen and (max-width: 78.125em) {
+  /* line 278, ../sass/Blog.scss */
+  #Blog h1 {
+    font-size: 2em;
+  }
+
+  /* line 281, ../sass/Blog.scss */
+  .slider ul li img {
+    -webkit-transform: scale(1.2) translateY(8.4%);
+    -moz-transform: scale(1.2) translateY(8.4%);
+    -ms-transform: scale(1.2) translateY(8.4%);
+    -o-transform: scale(1.2) translateY(8.4%);
+    transform: scale(1.2) translateY(8.4%);
+  }
+}
+@media screen and (max-width: 71.875em) {
+  /* line 286, ../sass/Blog.scss */
+  .slider ul li img {
+    -webkit-transform: scale(1.3) translateY(11.6%);
+    -moz-transform: scale(1.3) translateY(11.6%);
+    -ms-transform: scale(1.3) translateY(11.6%);
+    -o-transform: scale(1.3) translateY(11.6%);
+    transform: scale(1.3) translateY(11.6%);
+  }
+}
+@media screen and (max-width: 65.625em) {
+  /* line 291, ../sass/Blog.scss */
+  #Blog h1 {
+    font-size: 1.5em;
+  }
+
+  /* line 297, ../sass/Blog.scss */
+  .slider ul li img {
+    -webkit-transform: scale(1.4) translateY(14.3%);
+    -moz-transform: scale(1.4) translateY(14.3%);
+    -ms-transform: scale(1.4) translateY(14.3%);
+    -o-transform: scale(1.4) translateY(14.3%);
+    transform: scale(1.4) translateY(14.3%);
+  }
+}
+@media screen and (max-width: 53.125em) {
+  /* line 305, ../sass/Blog.scss */
+  .slider ul li img {
+    -webkit-transform: scale(1.5) translateY(17.3%);
+    -moz-transform: scale(1.5) translateY(17.3%);
+    -ms-transform: scale(1.5) translateY(17.3%);
+    -o-transform: scale(1.5) translateY(17.3%);
+    transform: scale(1.5) translateY(17.3%);
+  }
+}
+@media screen and (max-width: 46.875em) {
+  /* line 314, ../sass/Blog.scss */
+  #Blog .slider ul li img {
+    -webkit-transform: scale(1.6) translateY(19.3%);
+    -moz-transform: scale(1.6) translateY(19.3%);
+    -ms-transform: scale(1.6) translateY(19.3%);
+    -o-transform: scale(1.6) translateY(19.3%);
+    transform: scale(1.6) translateY(19.3%);
+  }
+}

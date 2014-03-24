@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/reset.css" media="screen">
 	<link href="{{STATIC_URL}}css1/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="{{STATIC_URL}}css1/fontello-aef3b19b/css/fontello.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="{{STATIC_URL}}css1/fontello-9660c119/css/fontello.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="{{STATIC_URL}}lib/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular1-0-8.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular-animate.js"></script>
@@ -42,12 +42,12 @@
 				<section class="main" id="Intro">
 					<div class="row effOnScroll">
 						<div class="contentWrap">
-							<h1>About Me</h1><br>
+							<h1><i class="icon-info-circled"></i>About Me</h1><br>
 							<div class="introWrapper">
 								<div class="topPart">
 									<p>	<br>
 										I'm Guangyi, a recently graduated student, a Front-End Engineer<br><br>
-										I'm looking for a Job<br><br>
+										<i class="icon-search-1"></i>I'm looking for a Job<br><br>
 										My Skill Set: HTML5 + CSS3 + SASS + Bootstrap<br><br>
 										jQuery + AngularJS + Django + MongoDB<br><br>
 									<!--My name is Guangyi, a front-end engineer. I'm looking for a front-end position to work on exciting projects with awesome people. This portfolio, I hope, will help me find the right job for me.<br>
@@ -58,7 +58,7 @@
 								</div>
 								<div class="bottomPart">
 									<div class="perspective ">
-										<div class="carve"><h3> I'm a student </h3></div>
+										<div class="carve"><h3><i class="icon-graduation-cap"></i> I'm a student </h3></div>
 										<div class="shelterWrapper gra">
 											<div class="cube graduated">	
 												<div class="cubeTop"></div>
@@ -75,7 +75,7 @@
 										</div>
 									</div>
 									<div class="perspective">
-										<div class="carve"><h3>Front-End Engineer</h3></div>
+										<div class="carve"><h3><i class="icon-desktop"></i> Front-End Engineer</h3></div>
 										<div class="shelterWrapper free">
 											<div class="introShlter">
 												<p>HTML5 Sass CSS3 <br> + <br>JQuery/Javascript
@@ -92,10 +92,10 @@
 										</div>
 									</div>
 									<div class="perspective ">
-										<div class="carve"><h3>I believe in.. </h3></div>
+										<div class="carve"><h3><i class="icon-heart"></i>I believe in.. </h3></div>
 										<div class="shelterWrapper bel">
 											<div class="introShlter">
-												<p>Dream <br> + <br> Hope <br> + <br> Passion</p>
+												<p><br>Dream <br> + <br> Hope <br> + <br> Passion</p>
 											</div>
 											<div class="cube believe">	
 												<div class="cubeTop"></div>
@@ -109,11 +109,10 @@
 									</div>
 									
 									<div class="perspective Ihope">
-										
-										<div class="carve"><h3> I hope to </h3></div>
+										<div class="carve"><h3><i class="icon-light-up"></i> I hope to </h3></div>
 										<div class="shelterWrapper Ihope">
 											<div class="introShlter">
-												<p>Great job:<br> good chemistry<br> + <br>fit in the company culture
+												<p>Find a great job:<br> good chemistry<br> + <br>fit in the company culture
 												<br> +<br> make contribution<br> +<br> personal development</p>
 											</div>
 											<div class="cube hope">											
@@ -134,7 +133,7 @@
 				<section class="main" id="Experiments" ng-controller="projectsCtrl">
 					<div class="row effOnScroll">
 						<div class="contentWrap">
-							<h1>Experiments</h1>
+							<h1><i class="icon-beaker"></i>Experiments</h1>
 							<!--<h3>This is my Playground</h3>-->
 							<div class="projectWrapper">
 								<div ng-repeat="project in projects" class='projects'>
@@ -142,12 +141,12 @@
 									<div class="description" style="background-image:url({$ project.img_url $})">
 										<div class="proShelter top"><img ng-src='{$ project.img_url $}'></div>
 										<div class="proShelter down"><img ng-src="{$ project.img_url $}"></div>
-										<div class="descrpt top"><p>{$project.description$}</p></div>
-										<div class="descrpt down"><p>{$project.description$}</p></div>
+										<div class="descrpt top"><p><i class="icon-pencil"></i>{$project.description$}</p></div>
+										<div class="descrpt down"><p><i class="icon-pencil"></i>{$project.description$}</p></div>
 									</div>
 									<div class="caption">
 										<p>{$project.caption$}</p>
-										<p>Tag:{$project.tag$}</p>
+										<p><i class="icon-cog"></i>Tag:{$project.tag$}</p>
 									</div>
 								</div>
 								<div class="buttonWrap">
@@ -174,79 +173,99 @@
 								<button  id="BlogLink">Check My Blog > </button>
 							<!--use button & its pseudo element<input> & <img> doesn't has pseudo element.-->
 							<!--</div>-->
-							<h1>My Blog</h1>
+							<h1><i class="icon-align-left"></i>My Blog</h1>
 							<div class="sliderWrapper">
 									<div class="slider" id="sliderLeft">
 										<ul>
-											
-											<li><p>My blog is my first side project. While building this project,
-													I used AngularJS as the front-end framework and Django/REST framwork
-													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling. The reason why I use these things
-													is I want to learn new things, new knowledge and new skills. As you know,
-													fron-end is a fast going field, self-learning is a must-have quality
-													for front-end software engineer. So I chose those stuffs to nail this blog.
-													My blog is my first side project. While building this project,
-													I used AngularJS as the front-end framework and Django/REST framwork
-													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling. 
-												</p>
-											</li>
 											<li><img src="/static/images/Blog-Create.PNG"></li>
-											<li><img src="/static/images/Blog-Create.PNG" style="float:right;"></li>
+											<li><h3>
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end. For the database, it's noSQL--MongoDB. Also, like
+													this portfolio, I use SASS for styling.
+												</h3>
+											</li>
+											<li>
+												<h3>
+													I want to learn new things, new knowledge and new skills. As you know,
+													fron-end is a fast going field, self-learning is a must-have quality
+													for front-end software engineer. 
+												</h3>
+											</li>
+											<li>
+												<h3>
+													While building this project,
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end. For the database, it's noSQL--MongoDB. Also, like
+													this portfolio, I use SASS for styling. Screen Shots<i class="icon-right-hand"></i>
+												</h3>
+											</li>
+											
 										</ul>
 									</div>
 									<div class="slider" id="slicesWrapper">
 										<ul>
-											
-											<li><img src="/static/images/Blog-Create.PNG"></li>
-											<li><img src="/static/images/Blog-Create.PNG"></li>
-											<li><p>My blog is my first side project. While building this project,
+											<li><h3>
 													I used AngularJS as the front-end framework and Django/REST framwork
 													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling. The reason why I use these things
-													is I want to learn new things, new knowledge and new skills. As you know,
+													this portfolio, I use SASS for styling.
+												</h3>
+											</li>
+											<li>
+												<h3>
+													I want to learn new things, new knowledge and new skills. As you know,
 													fron-end is a fast going field, self-learning is a must-have quality
-													for front-end software engineer. So I chose those stuffs to nail this blog.
-													My blog is my first side project. While building this project,
+													for front-end software engineer. 
+												</h3>
+											</li>
+											<li>
+												<h3>
+													While building this project,
 													I used AngularJS as the front-end framework and Django/REST framwork
 													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling. 
-													
-												</p>
-											</li>	
+													this portfolio, I use SASS for styling. Screen Shots<i class="icon-right-hand"></i>
+												</h3>
+											</li>
+											<li><img src="/static/images/Blog-Create.PNG"></li>	
 										</ul>
 										<button class="btnCtrl" id="prev"></button>
 										<button class="btnCtrl" id="next"></button>
 									</div>
 									<div class="slider" id="sliderRight">
 										<ul>
-											
-											<li><img src="/static/images/Blog-Create.PNG"></li>	
-											<li><p>My blog is my first side project. While building this project,
-													I used AngularJS as the front-end framework and Django/REST framwork
-													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling. The reason why I use these things
-													is I want to learn new things, new knowledge and new skills. As you know,
+											<li>
+												<h3>
+													I want to learn new things, new knowledge and new skills. As you know,
 													fron-end is a fast going field, self-learning is a must-have quality
-													for front-end software engineer. So I chose those stuffs to nail this blog.
-													My blog is my first side project. While building this project,
+													for front-end software engineer. 
+												</h3>
+											</li>
+											<li>
+												<h3>
+													While building this project,
 													I used AngularJS as the front-end framework and Django/REST framwork
 													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling. 
+													this portfolio, I use SASS for styling. Screen Shots<i class="icon-right-hand"></i>
+												</h3>
 											</li>
 											<li><img src="/static/images/Blog-Create.PNG"></li>
+											<li><h3>
+													I used AngularJS as the front-end framework and Django/REST framwork
+													as the back-end. For the database, it's noSQL--MongoDB. Also, like
+													this portfolio, I use SASS for styling.
+												</h3>
+											</li>
+											
 										</ul>
 									</div>
 							</div>
-							
+							<div class="blogLink"><i class="icon-link-ext"></i>Check out the Blog</div>
 						</div><!-- end of contentWrap-->
 					</div><!-- end of row effOnScroll-->
 				</section>
 				<section class="main" id="MoreAboutMe">
 					<div class="row effOnScroll">
 						<section class="contentWrap">
-								<h1>More About Me</h1>
+								<h1><i class="icon-star"></i> More About Me</h1>
 								
 									<div class="options">
 										<!--
@@ -257,29 +276,29 @@
 											</div>-->
 											<!--<div class="heart"></div>-->
 										
-										<h3 class="option like"><span><i class="icon-heart"></i></span> Pink, Red, Warm Color</h3>
-										<h3 class="option like"><span><i class="icon-heart"></i></span> Black coffee and Tea</h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Pink, Red, Warm Color</h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Black coffee and Tea</h3>
 										<br>
 										<h3 class="option dislike"> Being judged</h3>
-										<h3 class="option like"><span><i class="icon-heart"></i></span> Try new things</h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Try new things</h3>
 										<br>
 										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Sunshine in California</h3>
 										<h3 class="option dislike">Winter in Boston</h3>
 										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> SanFrancisco</h3>
 										<br>
-										<h3 class="option like"><span><i class="icon-heart"></i></span> Book "Lean in"</h3>
-										<h3 class="option like"><span><i class="icon-heart"></i></span> Book "head first--OODA"</h3>
-										<h3 class="option like"><span><i class="icon-heart"></i></span> Book "Eat Pray Love"</h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Book "Lean in"</h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Book "head first--OODA"</h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Book "Eat Pray Love"</h3>
 										<br>
 										<h3 class="option dislike">Messy code</h3>
 										<h3 class="option dislike">Complicated relationship</h3>
 										<br>
 										
-										<h3 class="option like"><span><i class="icon-heart"></i></span> Learn and use new knowledge and skills</h3>
-										<h3 class="option like"><span><i class="icon-heart"></i></span> Being Front-end Engineer</h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Learn and use new knowledge and skills</h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Being Front-end Engineer</h3>
 										<br>
-										<h3 class="option like"><span><i class="icon-heart"></i></span> Piano and Violin</h3>
-										<h3 class="option like"><span><i class="icon-heart"></i></span> David Garrett</h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Piano and Violin</h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> David Garrett</h3>
 
 									</div><!--options end-->
 								<!--end of optionsWrap-->
@@ -325,7 +344,7 @@
 				<section class="main" id="Contact" ng-controller="contactCtrl">
 					<div class="row effOnScroll">
 						<div class="contentWrap">
-							<h1>Contact Me</h1>
+							<h1><i class="icon-mail"></i>Contact Me</h1>
 							<div class="clouds">
 								<div class="cloud">
 									<div class="cloudPart1"></div>

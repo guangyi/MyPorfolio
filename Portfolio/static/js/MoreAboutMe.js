@@ -42,7 +42,7 @@
 			var that = this;
 			$(that.options[that.i]).children('span').css({'text-shadow':'0 0 0px #ff0000'});
 			$(that.options[that.i]).delay(2500).css({
-				'text-shadow':'0 0 0px #fff' }).animate({
+				'text-shadow':'0 0 0px #000' }).animate({
 				opacity:'1'
 			},{
 				duration:800,
@@ -79,7 +79,7 @@
 					'-webkit-transition':'none',
 					'-o-transition':'color 0 ease-in',
 					'transition':'none',
-					'text-shadow':'0px 0px 0px #fff'
+					'text-shadow':'0px 0px 0px #000'
 				});
 				$(this).children('span').css({
 					'-moz-transition':'none',

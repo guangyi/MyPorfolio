@@ -117,13 +117,13 @@ font-size:100%;
 			.row{	
 				position:relative;
 				height:100%;
-				.rotate{
+				/*.rotate{
 					-webkit-transform-origin: center;
 					-moz-transform-origin:center;
-				}
+				}*/
 				.contentWrap{
 					//overflow: hidden;
-					min-height:100%;
+					min-height:100vh;
 					padding-top:1em;
 					padding-bottom:1em;
 					height:100%;

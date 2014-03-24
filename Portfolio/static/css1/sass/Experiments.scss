@@ -1,20 +1,18 @@
-$bgTop:#ff4444;//#af0000;
-$bgBottom:#430008;//#ff6666;//#ff6666;
-
+$bgColor:#A4DB00;
 $titleColor:#fff;
-$descriptionFontColor:#696969;
+$descriptionFontColor:#455c00;
 $descriptionBG:#fff;
-$BorderRadius:0.3em;
+$BorderRadius:0.2em;
 $captionBG:#fff;
-$captionTag:#AD0000;
-$captionTitle:#AD0000;
+$captionTag:#6A8E00;
+$captionTitle:#455C00;
 $buttonFontColor:#fff;
 $projectWidth:14vw;
 #Experiments{
-	@include background-image(linear-gradient(top, $bgTop, $bgBottom));
+	//@include background-image(linear-gradient(top, $bgTop 15%, $bgBottom 15%));
+	background:$bgColor;//#B0DE28;//#78A632;
 	.row{
 		margin:auto;
-		
 		text-align: center;
 		h1{
 			font-size:2.5em;
@@ -34,7 +32,6 @@ $projectWidth:14vw;
 	margin-top:3%;
 	display:table;
 	min-height:700px;
-
 }
 .projects{
 	float:left;
@@ -45,7 +42,7 @@ $projectWidth:14vw;
 	margin:15% 0 2% 3%;
 	//if there are elements other than .projects, than the nth-child not working correctly.
 	&:nth-child(1){
-		margin-left:5%;
+		margin-left:4%;
 	}
 	&:nth-child(2n){
 		margin-top:11%;
@@ -60,7 +57,8 @@ $projectWidth:14vw;
 		position:relative;
 		width:$projectWidth;
 		height:$projectWidth;
-		max-width:228px;
+		max-width:235px;
+		max-height:235px;
 		min-width:160px;
 		min-height:160px;
 		background-size: 100%;
@@ -99,9 +97,9 @@ $projectWidth:14vw;
 			& p{
 				margin-left:0.5em;
 				margin-right:0.5em;
-				margin-top: 2em;
+				margin-top:1em;
 				line-height:1.2em;
-				font-size: 0.9em;
+				font-size: 0.7em;
 			}
 		}	
 		.top, .top img{
@@ -175,17 +173,30 @@ $projectWidth:14vw;
 			width:100%;
 			height:8vh;
 			min-width:160px;
-			max-width:228px;
+			max-width:235px;
 			min-height:45px;
 			max-height: 50px;
 			background:$captionBG;
 			text-align: center;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-			& h3{
-				color:$captionTitle;
-				font-size: 0.7em;
-				line-height: 2em;
+			&:before, &:after{
+				z-index: -1;
+				position: absolute;
+				content: "";
+				bottom: 15px;
+				left: 10px;
+				width: 50%;
+				top: 80%;
+				max-width:300px;
+				background: #777;
+				@include box-shadow(0 15px 10px #777);
+				@include transform(rotate(-5deg));
+			}
+			&:after{
+				@include transform(rotate(5deg));
+				right: 10px;
+				left: auto;
 			}
 			& p{
 				color:$captionTag;
@@ -212,7 +223,15 @@ $projectWidth:14vw;
 }
 
 @media screen and (max-width:80em){// 1280px / 16 = 
+	#Experiments .row h1{
+		font-size: 2em;
+	}
 	.projects{
+		.description{
+			.descrpt p{
+				font-size: 0.6em;
+			}
+		}
 		.caption{
 			& h3{
 				font-size: 0.6em;
@@ -227,6 +246,9 @@ $projectWidth:14vw;
 	}
 }
 @media screen and (max-width:1070px){ // 1070px /16 = 66.875
+	#Experiments .row h1{
+		font-size: 1.5em;
+	}
 	.projectWrapper{
 		margin-right: auto;
 		margin-left: auto;
@@ -252,6 +274,7 @@ $projectWidth:14vw;
 	}
 }
 @media screen and (max-width:41.25em){// 660px /16 = 41.875em
+	
 	.projects{
 		margin-left: 0;
 		&:nth-child(2n){
@@ -260,32 +283,31 @@ $projectWidth:14vw;
 		}
 	}
 	#Experiments .row h1{
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 }
 @media screen and (max-width:31.25em){// 500px /16 = 
-
-$projectWidth:45vw;
-	.projectWrapper{
-		//the height of parent will change based on children element;
-		display:table !important;
-	}
-	.projects{
-		width:$projectWidth;
-		&:nth-child(n){
-			display: block;
-			position:relative;
-			float:none;
-			margin-left:auto;
-			margin-right:auto;
+	$projectWidth:45vw;
+		.projectWrapper{
+			//the height of parent will change based on children element;
+			display:table !important;
 		}
-		.description{
+		.projects{
 			width:$projectWidth;
-			height:$projectWidth;
+			&:nth-child(n){
+				display: block;
+				position:relative;
+				float:none;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			.description{
+				width:$projectWidth;
+				height:$projectWidth;
+			}
+			.caption{
+				width:$projectWidth;
+			}
+			
 		}
-		.caption{
-			width:$projectWidth;
-		}
-		
-	}
 }

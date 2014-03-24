@@ -14,30 +14,28 @@ $cloudWidth:13.5vw;
 }
 #Contact{
 	//overflow:scroll;
-	display:table;
+	//display:table;
 	.row .contentWrap{
 		h1{
 			text-align: center;
 			font-size:2.5em;
 			color:#FFF;//#3F6399;//#629D30;
 		}
-		display:table;
-		min-height:800px;
+		min-height:100vh;
 		.clouds{
 			width:90vw;
-			height:0.2 * 90vw;
 			min-height:100px;
 			margin-left:auto;
 			margin-right:auto;
 			overflow:hidden;
-			height:0.13 * 90vw;
+			height:0.08 * 90vw;
 			background:inherit;
 			position:relative;
 			padding-bottom:2%;
 			.cloud{
 				margin-left:5%;
 				position:relative;
-				top:50%;
+				top:60%;
 				width:$cloudWidth;
 				min-width: $cloudMinWidth;
 				max-width: $cloudMaxWidth;
@@ -125,7 +123,7 @@ $cloudWidth:13.5vw;
 		}
 		@include box-sizing(border-box);
 		@include border-radius(0.3em);
-		padding:2% 2% 5% 2%;
+		padding:2% 2% 2% 2%;
 		background:#fff;
 		width:90%;
 		margin-left:auto;
@@ -188,7 +186,7 @@ $cloudWidth:13.5vw;
 }
 	.contactButton{
 		float:right;
-		width:45%;
+		width:49%;
 		font-size:1em;
 		color:#fff;
 		background:$Button;
@@ -260,10 +258,11 @@ $cloudWidth:13.5vw;
 				p{
 					font-size:0.6em;
 				}
+				.message .contactButton{
+					font-size: 0.8em;
+				}
 			}
-			.contactButton{
-				font-size: 0.8em;
-			}
+			
 		}
 	}
 }
@@ -285,14 +284,21 @@ $cloudWidth:13.5vw;
 				.input, .message{
 					font-size:0.8em;
 				}
+				
 			}
-			.contactButton{
+		}
+	}
+}
+@media screen and (max-width:59.375em){// 950 / 16
+	#Contact{
+		.row .contentWrap{
+			.message .contactButton{
 				font-size: 0.7em;
 			}
 		}
 	}
 }
-@media screen and (max-width:50em){//800 / 16
+@media screen and (max-width:53.125em){//850 / 16
 	#Contact{
 		.row .contentWrap{
 			h1{
@@ -310,10 +316,11 @@ $cloudWidth:13.5vw;
 				.input, .message{
 					font-size:0.7em;
 				}
+				.message .contactButton{
+					font-size: 0.6em;
+				}
 			}
-			.contactButton{
-				font-size: 0.6em;
-			}
+			
 		}
 	}
 }
@@ -338,12 +345,28 @@ $cloudWidth:13.5vw;
 				}
 				.message{
 					margin-top:2em;
+					.contactButton{
+						width:42%;
+						font-size: 0.8em;
+						margin-left:auto;
+						margin-right:auto;
+					}
 				}
 			}
-			.contactButton{
-				font-size: 0.8em;
-				margin-left:auto;
-				margin-right:auto;
+		}
+	}
+}
+
+@media screen and (max-width:28.125em){//700 / 16          
+	#Contact{
+		.row .contentWrap{
+			.form{
+				.message{
+					.contactButton{
+						width:54%;
+						font-size: 0.7em;
+					}
+				}
 			}
 		}
 	}

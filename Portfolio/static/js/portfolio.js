@@ -72,6 +72,7 @@ portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($s
 					// How to calculate how much to scroll in a scroll area
 					// Here the offset is changing.
 						var offset = $(idToScroll).offset().top;
+						console.log('off'+offset);
 						var contentScroll = $('.content').scrollTop();
 						var upToTop = contentScroll + offset;
 						$('.content').animate({

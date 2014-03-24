@@ -25,7 +25,6 @@ var cloudMove = function(){
 		clearInterval(intervalID[0]);
 		clearInterval(intervalID[1]);
 		$('.cloud').stop();
-		console.log('case1');
 		if(goBacktoLeft){
 			$('.cloud').css('left','0');
 		}
@@ -34,7 +33,6 @@ var cloudMove = function(){
 		}
 	};
 	this.sliding = function(){
-		console.log('case2');
 		$('.cloud').stop(true, true);
 		var pageHight = this.getPageHeight();
 		var vertical = $('#Contact').offset().top;
@@ -49,7 +47,6 @@ var cloudMove = function(){
 	};
 	this.float = function(){
 		var endPoint = this.getEndPoint();
-		console.log('case3');
 	// if use setTimeout(), then there is a waiting time at the first time it runs
 	// can use immediately execute function or 
 	// can call back current function when animation is done, like the day I do it here
@@ -88,14 +85,14 @@ var cloudMove = function(){
 	var upDown = function(obj){
 		// cloud move up and down
 		obj.animate({
-			'top': '40%'
+			'top': '50%'
 		}, 
 		{
 			queue:'vertical',
 			duration:1000,
 			complete:function(){
 				$(this).animate({
-					'top': '50%'
+					'top': '60%'
 				}, 
 				{	queue:'vertical',
 					duration:1000

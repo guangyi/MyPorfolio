@@ -21,7 +21,7 @@ $(document).ready(function(){
 	$(window).resize(function(){
 		// set blog ul width
 		if(blog.AnimId()){
-			$('.slider > ul').stop(false,true);
+			$('.slider > ul').stop(true);
 			blog.stop();
 			blog.reset();
 			blog.start();
