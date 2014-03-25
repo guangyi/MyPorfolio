@@ -1,13 +1,16 @@
 @import 'compass';
 $btnBlogShots:#f86c99;
 $btnBlogLink:#666;//#fcadc6;
+$slideBlue:#9ee0ff;
+$slideYellow:#ffad00;
+$slideGreen:#78A632;
+$slideBasic:#ff7575;
 #Blog{
 		//@include background-image(linear-gradient(top,  $bg_Contact 35%, #AD0000));//#300030 #430008 
 		background:#ff7575;
 		text-align: center;
 		h1{
 			font-size:2.5em;
-			margin-bottom: 1em;
 			color:#fff;
 		}
 		h2{
@@ -15,28 +18,31 @@ $btnBlogLink:#666;//#fcadc6;
 		}
 	}
 #Blog{
-	.row{
-		.contentWrap{
+	.contentWrap{
+		width:100%;
+		height:100%;
+		left:0;
+		position:relative;
+		overflow: hidden;
+		display: table;
+		background:#ff7575;
+		.sliderWrapper{
+			@include perspective(800px);
+			@include box-sizing(border-box);
 			width:100%;
-			left:0;
-			position:relative;
-			overflow: hidden;
-			.sliderWrapper{
-				@include perspective(800px);
-				@include box-sizing(border-box);
-				width:100%;
-				text-align: center;
-				//padding-bottom:2em;
-			}
+			text-align: center;
+			padding-top:2em;
+			max-height:700px;
+			min-height:450px;
 		}
 	}
 	.slider{
 		overflow: hidden;
-		background: #fff;
+		background:#ffbbbb;
 		width:70vw;
-
 		//height:75vh;
 		max-height: 500px;
+		min-height:500px;
 		//max-width: 1000px;
 		position:absolute;
 		@include box-shadow(0px 6px 3px #000);
@@ -46,10 +52,10 @@ $btnBlogLink:#666;//#fcadc6;
 			left:0;
 			position:relative;
 			height:100%;
-			display: table;
+			display:table;
 			& li{
-				background:#ad0000;//#774747;
-				color:#fff;
+				//#774747;
+				color:#462304;
 				width:60vw;
 				height:70vh;
 				min-height: 300px;
@@ -67,7 +73,7 @@ $btnBlogLink:#666;//#fcadc6;
 				}
 				& h3{
 					line-height:2em;
-					font-size:2vw;
+					font-size:1.7vw;
 					padding:5vw;
 
 				}
@@ -100,15 +106,13 @@ $btnBlogLink:#666;//#fcadc6;
 		}
 	}
 	#sliderLeft{
-		ul li{
-			$colorArray:#ffcc00, #fff, #9ee0ff, #A4DB00, #ffcc00, #fff;
-				@for $i from 1 through 6{
-					&:nth-child(#{$i}){
-						background:nth($colorArray,$i);
-					}
-				}
+		$colorList: $slideGreen,$slideBasic, $slideYellow,$slideBlue, $slideGreen,$slideBasic;
+		@for $i from 1 through 6{
+			ul li:nth-child(#{$i}){
+				background: nth($colorList, $i);
+			}
 		}
-		@include transform(translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%));
+		@include transform(translateX(-74%) rotateY(35deg) scale(0.9) translateY(0.5%));
 		//@include transform-origin(top right 0);
 		-webkit-transform-origin: top right;
  		-moz-transform-origin:top right;
@@ -118,13 +122,11 @@ $btnBlogLink:#666;//#fcadc6;
   		//opacity:0.7;
 	}
 	#sliderRight{
-		ul li{
-			$colorArray: #9ee0ff, #A4DB00, #ffcc00, #fff, #9ee0ff,#A4DB00;
-				@for $i from 1 through 6{
-					&:nth-child(#{$i}){
-						background:nth($colorArray,$i);
-					}
-				}
+		$colorList: $slideYellow, $slideBlue,$slideGreen,$slideBasic,$slideYellow,$slideBlue;
+		@for $i from 1 through 6{
+			ul li:nth-child(#{$i}){
+				background: nth($colorList, $i);
+			}
 		}
 		@include transform(translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%));
 		//@include transform-origin(top left 0);
@@ -136,13 +138,11 @@ $btnBlogLink:#666;//#fcadc6;
  		//opacity:0.7;
 	}
 	#slicesWrapper{
-		ul li{
-			$colorArray: #fff, #9ee0ff, #A4DB00, #ffcc00, #fff,#9ee0ff;
-				@for $i from 1 through 6{
-					&:nth-child(#{$i}){
-						background:nth($colorArray,$i);
-					}
-				}
+		$colorList: $slideBasic, $slideYellow, $slideBlue,$slideGreen,$slideBasic,$slideYellow;
+		@for $i from 1 through 6{
+			ul li:nth-child(#{$i}){
+				background: nth($colorList, $i);
+			}
 		}
 		-webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 80% , #fff);
 		@include transform(scale(0.9) translateX(23.5%) translateY(-5.4%));
@@ -167,22 +167,14 @@ $btnBlogLink:#666;//#fcadc6;
 				line-height:150%;
 			}
 		}
-		/*.left{
-			.dialogBox{
-				left:50%;
-			}
-		}
-		.right{
-			.dialogBox{
-				left:-50%;
-			}
-		}*/
 	}
 	.blogLink{
-		position:relative;
+		position:absolute;
 		float:right;
-		width:30%;
+		width:12em;
 		color:#fff;
+		right:1em;
+		bottom:1em;
 	}/*
 	.wrapper{
 		position:absolute;

@@ -7,9 +7,9 @@
 			color:#F2F2F2;
 			margin:0.5em 0em;
 		}
-		.row .contentWrap{
+		.contentWrap{
 			height:100vh;
-			min-height: 480px;
+			min-height:700px;
 		}
 	}
 #profile{
@@ -45,47 +45,6 @@
 		@include border-radius(50%);
 		// gradient but don't know where to import...
 		@include background-image(radial-gradient(50% 50%, rgba(255,255,255,0) 85%, rgba(255,255,255,1) 100%));
-	}
-}
-#speech_bubble{
-	// use before and after to create
-	// those arror on the left
-	// center an element: margin-left and margin-right both be auto;
-	margin-left: auto;
-	margin-right:auto;
-	position:relative;
-	width:70%;
-	height: 6em;
-	top: 2em;
-	border:5px solid $speech_bubble_border;
-	padding:1em;
-	@include box-sizing(border-box);
-	@include border-radius(0.8em);// 20px / 1.5 * 16 = 5 / 6
-	z-index:2;
-	&:before, &:after{
-		content: '';
-		position:absolute;
-		left:-46px;//-5.25%;
-		top:1.5em;
-		width:1.5em;
-		border-bottom-left-radius: 100%;
-		border-left: 5px solid $speech_bubble_border;
-		border-bottom:5px solid $speech_bubble_border;
-		background: transparent;
-		/* no rotate version
-		transform-origin: 0 0;
-		transform: rotate(-45deg);*/
-	}
-	&:before{
-		border-right:5px solid $speech_bubble_border;
-		height:1em;
-		z-index:3;
-	}
-	&:after{
-		// the bigger curve.
-		border-right:5px solid transparent;
-		height:2em;
-		z-index: 1;
 	}
 }
 #speech_bubble_arrowup{
@@ -178,6 +137,12 @@
 	}
 }
 @media screen and (max-width:28.125em){//450px / 16 = 51.875em
+	#About{
+		.contentWrap{
+			height:100vh;
+			min-height:640px;
+		}
+	}
 	#speech_bubble_arrowup{
 		top:42%;
 		h1{
@@ -195,6 +160,12 @@
 	}
 }
 @media screen and (max-width:21.875em){//350px / 16 = 18.75em
+	#About{
+		.contentWrap{
+			height:100vh;
+			min-height:480px;
+		}
+	}
 	#speech_bubble_arrowup{
 		top:38%;
 		h1{

@@ -1,6 +1,7 @@
 // setHightByWidth second parameter is the ratio: hight = ratio * width
 $(document).ready(function(){
 	/******************************************  animation when scroll to different page point onScroll.js ********************/
+	$('.content').scrollTop(0);
 	settings();
 	$('.projects').hide();
 	// want to only one slider but can start and stop under different condition

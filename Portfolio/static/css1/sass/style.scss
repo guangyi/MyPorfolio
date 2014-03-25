@@ -57,9 +57,9 @@ font-size:100%;
 	overflow:hidden;
 }
 #header{
-	height:100%;
+	display:table;
 	position:fixed;
-	width:7%;
+	width:6.6em;
 	/*text-align: center;*/
 	color: #fff;
 	//position: fixed;
@@ -72,7 +72,7 @@ font-size:100%;
 	@include box-sizing(border-box);
 	opacity:0.2;
 	&:hover{
-		opacity: 0.7;
+		opacity:0.8;
 	}
 	#nav{
 		a{
@@ -97,42 +97,44 @@ font-size:100%;
 		}
 	} 
 }
+@media screen and (max-width:50em){
+	#header{
+		left:-3.3em;
+		@include transition(left 0.5s linear);
+		&:hover{
+			left:0;
+		}
+	}
 
+
+}
 .content{
 	width: 100%;
 	overflow:scroll;
 	height:100%;
-	.scroll{
-		overflow: hidden;
-		height:auto;
-		.main{
-			font-size:1.5em;
-			//max-height: 900px;
-			//min-height:100vh;
-			//1em = 1 * 1.5 * 16 = 24px; 2424px/1338px = 5.38%
-			/*text-align: center;*/
-			//background: #600;//#EFFF96;//#FFF8EA;//#FFFD7F; //#F2E0E1;
-			//border-bottom: 1px solid gray;
-			@include box-sizing(border-box);
-			.row{	
-				position:relative;
+	.main{
+		font-size:1.5em;
+		//max-height: 900px;
+		//min-height:100vh;
+		//1em = 1 * 1.5 * 16 = 24px; 2424px/1338px = 5.38%
+		/*text-align: center;*/
+		//background: #600;//#EFFF96;//#FFF8EA;//#FFFD7F; //#F2E0E1;
+		//border-bottom: 1px solid gray;
+		@include box-sizing(border-box);
+		.row{	
+			position:relative;
+			height:100%;
+			.contentWrap{
+				//overflow: hidden;
+				min-height:100vh;
+				padding-top:1em;
+				//padding-bottom:1em;
 				height:100%;
-				/*.rotate{
-					-webkit-transform-origin: center;
-					-moz-transform-origin:center;
-				}*/
-				.contentWrap{
-					//overflow: hidden;
-					min-height:100vh;
-					padding-top:1em;
-					padding-bottom:1em;
-					height:100%;
-					width:90%;
-					position:relative;
-					margin-left:auto;
-					margin-right:auto;
-					@include box-sizing(border-box);
-				}
+				width:90%;
+				position:relative;
+				margin-left:auto;
+				margin-right:auto;
+				@include box-sizing(border-box);
 			}
 		}
 	}

@@ -1,20 +1,19 @@
-/* line 4, ../sass/Blog.scss */
+/* line 8, ../sass/Blog.scss */
 #Blog {
   background: #ff7575;
   text-align: center;
 }
-/* line 8, ../sass/Blog.scss */
+/* line 12, ../sass/Blog.scss */
 #Blog h1 {
   font-size: 2.5em;
-  margin-bottom: 1em;
   color: #fff;
 }
-/* line 13, ../sass/Blog.scss */
+/* line 16, ../sass/Blog.scss */
 #Blog h2 {
   font-size: 1.5em;
 }
 
-/* line 17, ../sass/Blog.scss */
+/* line 20, ../sass/Blog.scss */
 #Blog {
  /*
 .wrapper{
@@ -48,15 +47,18 @@
 	}
 }*/
 }
-/* line 19, ../sass/Blog.scss */
-#Blog .row .contentWrap {
+/* line 21, ../sass/Blog.scss */
+#Blog .contentWrap {
   width: 100%;
+  height: 100%;
   left: 0;
   position: relative;
   overflow: hidden;
+  display: table;
+  background: #ff7575;
 }
-/* line 24, ../sass/Blog.scss */
-#Blog .row .contentWrap .sliderWrapper {
+/* line 29, ../sass/Blog.scss */
+#Blog .contentWrap .sliderWrapper {
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   -ms-perspective: 800px;
@@ -67,13 +69,17 @@
   box-sizing: border-box;
   width: 100%;
   text-align: center;
+  padding-top: 2em;
+  max-height: 700px;
+  min-height: 450px;
 }
-/* line 33, ../sass/Blog.scss */
+/* line 39, ../sass/Blog.scss */
 #Blog .slider {
   overflow: hidden;
-  background: #fff;
+  background: #ffbbbb;
   width: 70vw;
   max-height: 500px;
+  min-height: 500px;
   position: absolute;
   -webkit-box-shadow: 0px 6px 3px black;
   -moz-box-shadow: 0px 6px 3px black;
@@ -85,17 +91,16 @@
   border-radius: 0.3em;
   -webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 80%, white);
 }
-/* line 45, ../sass/Blog.scss */
+/* line 51, ../sass/Blog.scss */
 #Blog .slider ul {
   left: 0;
   position: relative;
   height: 100%;
   display: table;
 }
-/* line 50, ../sass/Blog.scss */
+/* line 56, ../sass/Blog.scss */
 #Blog .slider ul li {
-  background: #ad0000;
-  color: #fff;
+  color: #462304;
   width: 60vw;
   height: 70vh;
   min-height: 300px;
@@ -106,18 +111,18 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 60, ../sass/Blog.scss */
+/* line 66, ../sass/Blog.scss */
 #Blog .slider ul li img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 68, ../sass/Blog.scss */
+/* line 74, ../sass/Blog.scss */
 #Blog .slider ul li h3 {
   line-height: 2em;
-  font-size: 2vw;
+  font-size: 1.7vw;
   padding: 5vw;
 }
-/* line 76, ../sass/Blog.scss */
+/* line 82, ../sass/Blog.scss */
 #Blog .slider .btnCtrl {
   background: transparent;
   position: absolute;
@@ -127,64 +132,64 @@
   overflow: hidden;
   border: none;
 }
-/* line 85, ../sass/Blog.scss */
+/* line 91, ../sass/Blog.scss */
 #Blog .slider #prev {
   background: url("/static/images/gray_prev.png") no-repeat;
   background-position: 0 100%;
   left: 0;
 }
-/* line 89, ../sass/Blog.scss */
+/* line 95, ../sass/Blog.scss */
 #Blog .slider #prev:hover {
   background-position: 0 0;
 }
-/* line 93, ../sass/Blog.scss */
+/* line 99, ../sass/Blog.scss */
 #Blog .slider #next {
   background: url("/static/images/gray_next.png") no-repeat;
   right: 0;
   background-position: 0 100%;
 }
-/* line 97, ../sass/Blog.scss */
+/* line 103, ../sass/Blog.scss */
 #Blog .slider #next:hover {
   background-position: 0 0;
 }
-/* line 102, ../sass/Blog.scss */
+/* line 108, ../sass/Blog.scss */
 #Blog #sliderLeft {
-  -webkit-transform: translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%);
-  -moz-transform: translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%);
-  -ms-transform: translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%);
-  -o-transform: translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%);
-  transform: translateX(-74%) rotateY(40deg) scale(0.9) translateY(0.5%);
+  -webkit-transform: translateX(-74%) rotateY(35deg) scale(0.9) translateY(0.5%);
+  -moz-transform: translateX(-74%) rotateY(35deg) scale(0.9) translateY(0.5%);
+  -ms-transform: translateX(-74%) rotateY(35deg) scale(0.9) translateY(0.5%);
+  -o-transform: translateX(-74%) rotateY(35deg) scale(0.9) translateY(0.5%);
+  transform: translateX(-74%) rotateY(35deg) scale(0.9) translateY(0.5%);
   -webkit-transform-origin: top right;
   -moz-transform-origin: top right;
   -ms-transform-origin: top right;
   -o-transform-origin: top right;
   transform-origin: top right;
 }
-/* line 106, ../sass/Blog.scss */
+/* line 111, ../sass/Blog.scss */
 #Blog #sliderLeft ul li:nth-child(1) {
-  background: #ffcc00;
+  background: #78a632;
 }
-/* line 106, ../sass/Blog.scss */
+/* line 111, ../sass/Blog.scss */
 #Blog #sliderLeft ul li:nth-child(2) {
-  background: white;
+  background: #ff7575;
 }
-/* line 106, ../sass/Blog.scss */
+/* line 111, ../sass/Blog.scss */
 #Blog #sliderLeft ul li:nth-child(3) {
+  background: #ffad00;
+}
+/* line 111, ../sass/Blog.scss */
+#Blog #sliderLeft ul li:nth-child(4) {
   background: #9ee0ff;
 }
-/* line 106, ../sass/Blog.scss */
-#Blog #sliderLeft ul li:nth-child(4) {
-  background: #a4db00;
-}
-/* line 106, ../sass/Blog.scss */
+/* line 111, ../sass/Blog.scss */
 #Blog #sliderLeft ul li:nth-child(5) {
-  background: #ffcc00;
+  background: #78a632;
 }
-/* line 106, ../sass/Blog.scss */
+/* line 111, ../sass/Blog.scss */
 #Blog #sliderLeft ul li:nth-child(6) {
-  background: white;
+  background: #ff7575;
 }
-/* line 120, ../sass/Blog.scss */
+/* line 124, ../sass/Blog.scss */
 #Blog #sliderRight {
   -webkit-transform: translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%);
   -moz-transform: translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%);
@@ -197,31 +202,31 @@
   -o-transform-origin: top left;
   transform-origin: top left;
 }
-/* line 124, ../sass/Blog.scss */
+/* line 127, ../sass/Blog.scss */
 #Blog #sliderRight ul li:nth-child(1) {
-  background: #9ee0ff;
+  background: #ffad00;
 }
-/* line 124, ../sass/Blog.scss */
+/* line 127, ../sass/Blog.scss */
 #Blog #sliderRight ul li:nth-child(2) {
-  background: #a4db00;
-}
-/* line 124, ../sass/Blog.scss */
-#Blog #sliderRight ul li:nth-child(3) {
-  background: #ffcc00;
-}
-/* line 124, ../sass/Blog.scss */
-#Blog #sliderRight ul li:nth-child(4) {
-  background: white;
-}
-/* line 124, ../sass/Blog.scss */
-#Blog #sliderRight ul li:nth-child(5) {
   background: #9ee0ff;
 }
-/* line 124, ../sass/Blog.scss */
-#Blog #sliderRight ul li:nth-child(6) {
-  background: #a4db00;
+/* line 127, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-child(3) {
+  background: #78a632;
 }
-/* line 138, ../sass/Blog.scss */
+/* line 127, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-child(4) {
+  background: #ff7575;
+}
+/* line 127, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-child(5) {
+  background: #ffad00;
+}
+/* line 127, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-child(6) {
+  background: #9ee0ff;
+}
+/* line 140, ../sass/Blog.scss */
 #Blog #slicesWrapper {
   -webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 80%, white);
   -webkit-transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
@@ -229,40 +234,30 @@
   -ms-transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
   -o-transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
   transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
-  /*.left{
-  	.dialogBox{
-  		left:50%;
-  	}
-  }
-  .right{
-  	.dialogBox{
-  		left:-50%;
-  	}
-  }*/
 }
-/* line 142, ../sass/Blog.scss */
+/* line 143, ../sass/Blog.scss */
 #Blog #slicesWrapper ul li:nth-child(1) {
-  background: white;
+  background: #ff7575;
 }
-/* line 142, ../sass/Blog.scss */
+/* line 143, ../sass/Blog.scss */
 #Blog #slicesWrapper ul li:nth-child(2) {
-  background: #9ee0ff;
+  background: #ffad00;
 }
-/* line 142, ../sass/Blog.scss */
+/* line 143, ../sass/Blog.scss */
 #Blog #slicesWrapper ul li:nth-child(3) {
-  background: #a4db00;
-}
-/* line 142, ../sass/Blog.scss */
-#Blog #slicesWrapper ul li:nth-child(4) {
-  background: #ffcc00;
-}
-/* line 142, ../sass/Blog.scss */
-#Blog #slicesWrapper ul li:nth-child(5) {
-  background: white;
-}
-/* line 142, ../sass/Blog.scss */
-#Blog #slicesWrapper ul li:nth-child(6) {
   background: #9ee0ff;
+}
+/* line 143, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(4) {
+  background: #78a632;
+}
+/* line 143, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(5) {
+  background: #ff7575;
+}
+/* line 143, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(6) {
+  background: #ffad00;
 }
 /* line 149, ../sass/Blog.scss */
 #Blog #slicesWrapper .slice {
@@ -291,12 +286,14 @@
   padding: 5% 8% 5% 8%;
   line-height: 150%;
 }
-/* line 181, ../sass/Blog.scss */
+/* line 171, ../sass/Blog.scss */
 #Blog .blogLink {
-  position: relative;
+  position: absolute;
   float: right;
-  width: 30%;
+  width: 12em;
   color: #fff;
+  right: 1em;
+  bottom: 1em;
 }
 
  /*
@@ -360,12 +357,12 @@
 	}
 }*/
 @media screen and (max-width: 78.125em) {
-  /* line 278, ../sass/Blog.scss */
+  /* line 270, ../sass/Blog.scss */
   #Blog h1 {
     font-size: 2em;
   }
 
-  /* line 281, ../sass/Blog.scss */
+  /* line 273, ../sass/Blog.scss */
   .slider ul li img {
     -webkit-transform: scale(1.2) translateY(8.4%);
     -moz-transform: scale(1.2) translateY(8.4%);
@@ -375,7 +372,7 @@
   }
 }
 @media screen and (max-width: 71.875em) {
-  /* line 286, ../sass/Blog.scss */
+  /* line 278, ../sass/Blog.scss */
   .slider ul li img {
     -webkit-transform: scale(1.3) translateY(11.6%);
     -moz-transform: scale(1.3) translateY(11.6%);
@@ -385,12 +382,12 @@
   }
 }
 @media screen and (max-width: 65.625em) {
-  /* line 291, ../sass/Blog.scss */
+  /* line 283, ../sass/Blog.scss */
   #Blog h1 {
     font-size: 1.5em;
   }
 
-  /* line 297, ../sass/Blog.scss */
+  /* line 289, ../sass/Blog.scss */
   .slider ul li img {
     -webkit-transform: scale(1.4) translateY(14.3%);
     -moz-transform: scale(1.4) translateY(14.3%);
@@ -400,7 +397,7 @@
   }
 }
 @media screen and (max-width: 53.125em) {
-  /* line 305, ../sass/Blog.scss */
+  /* line 297, ../sass/Blog.scss */
   .slider ul li img {
     -webkit-transform: scale(1.5) translateY(17.3%);
     -moz-transform: scale(1.5) translateY(17.3%);
@@ -410,7 +407,7 @@
   }
 }
 @media screen and (max-width: 46.875em) {
-  /* line 314, ../sass/Blog.scss */
+  /* line 306, ../sass/Blog.scss */
   #Blog .slider ul li img {
     -webkit-transform: scale(1.6) translateY(19.3%);
     -moz-transform: scale(1.6) translateY(19.3%);

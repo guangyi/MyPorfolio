@@ -4,24 +4,22 @@ $descriptionFontColor:#455c00;
 $descriptionBG:#fff;
 $BorderRadius:0.2em;
 $captionBG:#fff;
-$captionTag:#6A8E00;
-$captionTitle:#455C00;
+$captionTag:#462304;
+$captionTitle:#462304;
 $buttonFontColor:#fff;
 $projectWidth:14vw;
 #Experiments{
 	//@include background-image(linear-gradient(top, $bgTop 15%, $bgBottom 15%));
 	background:$bgColor;//#B0DE28;//#78A632;
-	.row{
-		margin:auto;
-		text-align: center;
-		h1{
-			font-size:2.5em;
-			color:$titleColor;
-			margin:0% 0 3% 5%;
-		}
-		h3{
-			color:$titleColor;
-		}
+	margin:auto;
+	text-align: center;
+	h1{
+		font-size:2.5em;
+		color:$titleColor;
+		margin:0% 0 3% 5%;
+	}
+	h3{
+		color:$titleColor;
 	}	
 }
 .projectWrapper{
@@ -29,9 +27,10 @@ $projectWidth:14vw;
 	width:100%;
 	margin:auto;
 	text-align:center;
-	margin-top:3%;
+	padding:2%;
 	display:table;
-	min-height:700px;
+	min-height:600px;
+	@include box-sizing(border-box);
 }
 .projects{
 	float:left;
@@ -39,17 +38,17 @@ $projectWidth:14vw;
 	min-width:160px;
 	max-width:228px;
 	width:$projectWidth;
-	margin:15% 0 2% 3%;
+	margin:10% 0 2% 3%;
 	//if there are elements other than .projects, than the nth-child not working correctly.
 	&:nth-child(1){
 		margin-left:4%;
 	}
-	&:nth-child(2n){
+	/*&:nth-child(2n){
 		margin-top:11%;
 	}
 	&:nth-child(3){
 		margin-top:4%;
-	}
+	}*/
 	.description{
 		// set the perspective on the parent element
 		// so its child element can have different perspective on 3d transform animation!
@@ -166,42 +165,42 @@ $projectWidth:14vw;
 		}
 	}
 	.caption{
-			@include box-sizing(border-box);
-			@include border-radius-part(bottom-left, 0.3em);
-			@include border-radius-part(bottom-right, 0.3em);
-			padding:5% 2% 0 2%;
-			width:100%;
-			height:8vh;
-			min-width:160px;
-			max-width:235px;
-			min-height:45px;
-			max-height: 50px;
-			background:$captionBG;
-			text-align: center;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-			&:before, &:after{
-				z-index: -1;
-				position: absolute;
-				content: "";
-				bottom: 15px;
-				left: 10px;
-				width: 50%;
-				top: 80%;
-				max-width:300px;
-				background: #777;
-				@include box-shadow(0 15px 10px #777);
-				@include transform(rotate(-5deg));
-			}
-			&:after{
-				@include transform(rotate(5deg));
-				right: 10px;
-				left: auto;
-			}
-			& p{
-				color:$captionTag;
-				font-size:0.6em;
-			}
+		@include box-sizing(border-box);
+		@include border-radius-part(bottom-left, 0.3em);
+		@include border-radius-part(bottom-right, 0.3em);
+		padding:5% 2% 0 2%;
+		width:100%;
+		height:8vh;
+		min-width:160px;
+		max-width:235px;
+		min-height:45px;
+		max-height: 50px;
+		background:$captionBG;
+		text-align: center;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		&:before, &:after{
+			z-index: -1;
+			position: absolute;
+			content: "";
+			bottom: 15px;
+			left: 10px;
+			width: 50%;
+			top: 80%;
+			max-width:300px;
+			background: #777;
+			@include box-shadow(0 15px 10px #777);
+			@include transform(rotate(-5deg));
+		}
+		&:after{
+			@include transform(rotate(5deg));
+			right: 10px;
+			left: auto;
+		}
+		& p{
+			color:$captionTag;
+			font-size:0.6em;
+		}
 	}
 }
 .buttonWrap{
@@ -223,7 +222,7 @@ $projectWidth:14vw;
 }
 
 @media screen and (max-width:80em){// 1280px / 16 = 
-	#Experiments .row h1{
+	#Experiments h1{
 		font-size: 2em;
 	}
 	.projects{
@@ -246,7 +245,7 @@ $projectWidth:14vw;
 	}
 }
 @media screen and (max-width:1070px){ // 1070px /16 = 66.875
-	#Experiments .row h1{
+	#Experiments h1{
 		font-size: 1.5em;
 	}
 	.projectWrapper{
@@ -282,7 +281,7 @@ $projectWidth:14vw;
 			margin-right:38px;
 		}
 	}
-	#Experiments .row h1{
+	#Experiments h1{
 		font-size: 1.5em;
 	}
 }

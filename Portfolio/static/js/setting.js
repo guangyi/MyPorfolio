@@ -171,9 +171,9 @@ var settings = function(){
 	//setHightByWidth($('.caption'),0.25);
 	//setHeightByReference($('.projectWrapper'), $('#Experiments >.row > h1'), $(window));
 	/******************************************* Blog Settings settings.js*************************************/
-	setHeightByReference( $('.sliderWrapper'), $('#Blog >.row > .contentWrap > h1'), $(window));// set slider's height by h1's height
+	//setHeightByReference( $('.sliderWrapper'), $('#Blog >.row > .contentWrap > h1'), $(window));// set slider's height by h1's height
 	$('.slider > ul > li').width( $('.slider').width());
-	var len = $('#sliderLeft > ul > li').length;
+	//var len = $('#sliderLeft > ul > li').length;
 	/******************************************* MoreAboutMe settings.js **************************************/
 	//$('.face').height($('.option').height());
 	//set$('.heart').

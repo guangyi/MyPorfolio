@@ -19,13 +19,13 @@ function handleResize(){
 portfolio.run(function($http, $cookies, $rootScope, $location){
 	$http.defaults.headers.common['X-CSRFToken'] = $cookies['csrftoken'];
 	$('.content').scroll(function(){
-		$('.scroll > section').each(function(){
+		$('.content > section').each(function(){
 			var top = $(this).offset().top;
 			if (0 <= top && top <= $(window).height() * 0.3){
 				var id  = $(this).attr('id');
 				$rootScope.$apply(function(){
 					//location.path doesn't update immediately
-					// call $
+					// call $apply
 					$location.path('/' + id);
 				});
 			};
@@ -65,16 +65,22 @@ portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($s
 		}, function(value){
 			angular.element(document).ready(function(){
 			// when the document is ready, call function below
+			console.log('scrollTop' + $('.content').scrollTop());
+			console.log('value'+value);
 				if(value && $scope.menuClicked){
+					console.log('here');
 					//console.log($scope.menuClicked);
 					// replace the '/' in the URL with '#' so it become the 'ID' of each page
 					var idToScroll = value.replace('/','#');
 					// How to calculate how much to scroll in a scroll area
 					// Here the offset is changing.
 						var offset = $(idToScroll).offset().top;
-						console.log('off'+offset);
+						//console.log('off'+offset);
 						var contentScroll = $('.content').scrollTop();
+						//console.log('contentScroll'+contentScroll);
 						var upToTop = contentScroll + offset;
+						//console.log('uptoTop'+upToTop);
+						
 						$('.content').animate({
 							scrollTop: upToTop
 						},"slow");

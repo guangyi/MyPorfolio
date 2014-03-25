@@ -1,72 +1,71 @@
 #MoreAboutMe{
-		background:#ededed;//$bg_like;
-		//@include background-image(linear-gradient(top, #ff7575, $bg_Contact));
-		h1{
-			font-size:2.5em;
-			margin-bottom: 0.5em;
-			color: #fff;
-		}
-		h2{
-			font-size: 1.5em;
-		}
-	.row {
-		.contentWrap{	
-			height:100%;
-			width:90%;
-			background:transparent;
+	background:#dfdfdf;//$bg_like;
+	//@include background-image(linear-gradient(top, #ff7575, $bg_Contact));
+	h1{
+		font-size:2.5em;
+		margin-bottom: 0.5em;
+		color: #fff;
+	}
+	h2{
+		font-size: 1.5em;
+	}
+
+	.contentWrap{	
+		height:100%;
+		width:90%;
+		background:transparent;
+		@include box-sizing(border-box);
+		text-align:center;
+		display: table;
+		.options{
+			@include perspective(500px);
 			@include box-sizing(border-box);
 			text-align:center;
-			display:table;
-			.options{
-				@include perspective(500px);
-				@include box-sizing(border-box);
-				text-align:center;
-				display: table;
-				width:100%;
-				margin:auto;
-				float:left;
-				height:100%;
-				overflow:scroll;
-				background:transparent;
-				h3{
-					font-size:1.1em;
-				}
-				.option{
-					display:inline-block;
-					height:auto;
-					background:inherit;
-					color:transparent;
-					margin:2% 0 3% 2%;
-					opacity:0.4;
-					text-shadow:0px 0px 30px #000;//$bg_like;
+			display: table;
+			width:100%;
+			margin:auto;
+			float:left;
+			height:100%;
+			overflow:scroll;
+			background:transparent;
+			h3{
+				font-size:1.1em;
+			}
+			.option{
+				display:inline-block;
+				height:auto;
+				background:inherit;
+				color:transparent;
+				margin:2% 0 3% 2%;
+				opacity:0.4;
+				text-shadow:0px 0px 30px #000;//$bg_like;
+				@include transition(text-shadow 1.5s 2s);
+				/*&:hover{
+					text-shadow:0px 0px 0px #000;
+					-moz-transition: none;
+    				-webkit-transition: none;
+   					 -o-transition: color 0 ease-in;
+    				transition: none;
+    				.opion{
+    					span{
+    					text-shadow:0px 0px 0px #ff0000;
+    					} 
+    				}
+				}*/
+				& span{
 					@include transition(text-shadow 1.5s 2s);
-					/*&:hover{
-						text-shadow:0px 0px 0px #000;
-						-moz-transition: none;
-	    				-webkit-transition: none;
-	   					 -o-transition: color 0 ease-in;
-	    				transition: none;
-	    				.opion{
-	    					span{
-	    					text-shadow:0px 0px 0px #ff0000;
-	    					} 
-	    				}
-					}*/
-					& span{
-						@include transition(text-shadow 1.5s 2s);
-						text-shadow:0px 0px 30px #ff0000;
-					}
-				}
-				.tada{
-					@include transform-origin(center center 0);
-					@include animation('tada 1.3s forwards');
-				}
-				.shake{
-					@include animation('shake 1s forwards');
+					text-shadow:0px 0px 30px #ff0000;
 				}
 			}
+			.tada{
+				@include transform-origin(center center 0);
+				@include animation('tada 1.3s forwards');
+			}
+			.shake{
+				@include animation('shake 1s forwards');
+			}
 		}
-		}
+	}
 
 }
 
@@ -75,7 +74,7 @@
 		h1{
 			font-size:2em;
 		}
-		.row .contentWrap{
+		.contentWrap{
 			.options{
 				h3{
 					font-size: 0.9em;
@@ -89,7 +88,7 @@
 		h1{
 			font-size:1.8em;
 		}
-		.row .contentWrap{
+		.contentWrap{
 			.options{
 				h3{
 					font-size: 0.8em;
@@ -103,16 +102,12 @@
 		h1{
 			font-size:1.5em;
 		}
-		.row .contentWrap{
+		.contentWrap{
 			.options{
 				h3{
 					font-size: 0.6em;
 				}
-				.option{
-					//display:block;
-				}
 			}
-		}
+		}	
 	}
 }
-

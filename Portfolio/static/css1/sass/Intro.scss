@@ -1,19 +1,13 @@
 /** Shelter background and font color **/
-$shelterBg:#fdd1e0;
 $shelterFontColor:#462304;
 /** Intro Main Part Title,font,background color **/
 $MainPartTitle:#fff;
 $MainPartFontColor:#fff;
-$MainPartBg:#EEE;
+$bgColor:#ffad00;
 
 /** Side Part, including each unit background, shelter and cube **/
 $sideFontColor:#462304;
-$sideBorder:1px solid #B2B2B2;
-$sideBorderLight:1px solid #FFF;
-
-$gradientStart:#EEE;
-$gradientMiddle:#ff6666;
-$gradientEnd:#ad0000;
+$sideBorder:1px dashed #ccc;
 
 /** cube each side color, size, font color **/
 $cubeWidth:140px;//140/ 1440 = 9.722%
@@ -43,12 +37,12 @@ $cubeBorder:#fff;//#ad0000;
 	}
 }
 #Intro{
-	//@include background-image(linear-gradient(top, #9ee0ff 15%, #fff 15%));//#ff4444
-	background:#ffad00;
+	background:$bgColor;
 	.contentWrap{
-		text-align: center;
+		min-height:100vh;
+		text-align:center;
 		background:transparent;
-		height:auto;
+		display: table;
 		h1{
 			font-size:2.5em;
 			color:$MainPartTitle;
@@ -56,31 +50,24 @@ $cubeBorder:#fff;//#ad0000;
 		& h2{
 			font-size: 1.5em;
 		}
-		.left{
-			float:left;
-			width:20%;
-			height:100%;
-		}
 	}
 }
 .introWrapper{
 	width:100%;
-	
-	//height:93%;
+	display:table;
+	@include box-sizing(border-box);
 }
 .topPart{
-	//height:40%;
 	height:30vh;
 	width:100%;
 	color:$MainPartFontColor;
 	max-height:250px;
 	min-height:220px;
-
 }
 .bottomPart{
 	//height:55%;
 	width:100%;
-	height:60vh;
+	height:50vh;
 	padding-top:1em;
 	max-height:calc(300px * 4);
 	//overflow:hidden;
@@ -99,7 +86,7 @@ $cubeBorder:#fff;//#ad0000;
 	max-height:330px;
 	min-height:260px;
 	float:left;
-	border-right:1px dashed #ccc;
+	border-right:$sideBorder;
 	.shelterWrapper{
 		position:absolute;
 		height:80%;
