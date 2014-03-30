@@ -1,23 +1,19 @@
 'use strict';
 var portfolio = angular.module('portfolio',["ngCookies"]);
-
-
 var portfolio = angular.module("portfolio",["ngCookies"], function($interpolateProvider){
 	$interpolateProvider.startSymbol("{$");
 	$interpolateProvider.endSymbol("$}");
 });
-var scroll = function(){
-		//var section = $('.scroll > section');
-		
-	};
-function getWinHeight(){
-		return window.innerHeight;
-	}
-function handleResize(){
-		return getWinHeight();
-	}
-portfolio.run(function($http, $cookies, $rootScope, $location){
-	$http.defaults.headers.common['X-CSRFToken'] = $cookies['csrftoken'];
+
+portfolio.run(function($http, $cookies){
+	var csrftoken = $.cookie('csrftoken');
+	console.log('now cookie' + csrftoken);
+	$http.defaults.headers.post['X-CSRFToken'] = $cookies['csrftoken'];
+	//$httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    //$httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+});
+portfolio.run(function($rootScope, $location){
+	//$http.defaults.headers.common['X-CSRFToken'] = $cookies['csrftoken'];
 	$('.content').scroll(function(){
 		$('.content > section').each(function(){
 			var top = $(this).offset().top;
@@ -44,14 +40,13 @@ portfolio.controller('frameworkCtrl',['$scope','$location', function($scope, $lo
 */
 
 portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($scope, $location, $window){
-	$scope.screenHeight = getWinHeight();//$(window).height(); //screen.availHeight;
+	//$scope.screenHeight = getWinHeight();//$(window).height(); //screen.availHeight;
 	$scope.navNames = ['About','Intro', 'Experiments','Blog','MoreAboutMe','Contact'];
 	$scope.menuClicked = true;
 	$scope.isActive = function(viewLocation){
 		var active = (viewLocation === $location.path());
 		return active;
 	};
-	$window.onresize = function(){ handleResize();}
 	// watch the change in URL?
 	// first element --value is current URL
 	$scope.menuClick = function(href){
@@ -65,10 +60,7 @@ portfolio.controller( 'contentCtrl',['$scope','$location','$window', function($s
 		}, function(value){
 			angular.element(document).ready(function(){
 			// when the document is ready, call function below
-			console.log('scrollTop' + $('.content').scrollTop());
-			console.log('value'+value);
 				if(value && $scope.menuClicked){
-					console.log('here');
 					//console.log($scope.menuClicked);
 					// replace the '/' in the URL with '#' so it become the 'ID' of each page
 					var idToScroll = value.replace('/','#');
@@ -98,31 +90,31 @@ portfolio.controller('projectsCtrl',['$scope',function($scope){
 							{'caption':     'My dream car',
 							 'tag':         'css3',
 							 'description': 'This is the dream car I created by CSSssssss3,This is the dream car I created by CSSsssss3,This is the dream car I created by CSSssssss3',
-							 'img_url':     '/static/images/profile.JPG'
+							 'img_url':     'images/profile.JPG'
 							},
 						'bouncing_ball_Y':{
 							'caption':     'Bouncing Ball on Y axis',
 							'tag':         'Canvas',
 							'description': 'This is the practice on Html5 Canvas. A bouncing ball on Y axis,This is the practice on Html5 Canvas. A bouncing ball on Y axis',
-							 'img_url':     '/static/images/bouncing_ball_Y.JPG'
+							 'img_url':     'images/bouncing_ball_Y.JPG'
 							},
 						'bouncing_ball_XY':{
 							'caption':     'Bouncing Ball on X & Y axis',
 							'tag':         'Canvas',
 							'description': 'This is the practice on Html5 Canvas. A bouncing ball on X and Y axis,This is the practice on Html5 Canvas. A bouncing ball on X and Y axis',
-							 'img_url':     '/static/images/profile.JPG'
+							 'img_url':     'images/profile.JPG'
 							},
 						'car2':
 							{'caption':     'My dream car2',
 							 'tag':         'css3',
 							 'description': 'This is the dream car I created by CSSssssss3,This is the dream car I created by CSSsssss3,This is the dream car I created by CSSssssss3',
-							 'img_url':     '/static/images/bouncing_ball_Y.JPG'
+							 'img_url':     'images/bouncing_ball_Y.JPG'
 							},
 						'image_slider':{
 							'caption':     'Image slider with pagers',
 							'tag':         'Javascript',
 							'description': 'Image slider with no plugin, only Javascript,Image slider with no plugin, only Javascript,Image slider with no plugin, only Javascript',
-							'img_url':     '/static/images/profile.JPG'
+							'img_url':     'images/profile.JPG'
 						}
 						
 						
@@ -149,9 +141,9 @@ portfolio.controller('contactCtrl',['$scope','emailService', function($scope, em
 	// if it's not clicked, than the validation message of input and textare won't show up
 	$scope.loading = false;//loding icon
 	$scope.clicked = false;
-	$scope.alert = false;
-	$scope.alertMsg = '';
-	$scope.base = false;// base layer show up after click submit button and form is valid
+	$scope.alert = true;
+	$scope.alertMsg = 'Thank you waaaa! Your message has been sent successfully!';
+	$scope.base = true;// base layer show up after click submit button and form is valid
 	//console.log(contactForm);
 	// reference angular form in JS, use $scope.formName
 	//$scope.errorName = contactForm.name.error.required && !contactForm.name.$pristine;

@@ -1,8 +1,8 @@
 portfolio.factory('emailService',function($http, $q){
-	var url = 'sendemail/';
+	var url = '/sendemail/';
 	return {
 		sendEmail: function(emailEntity){
-			console.log('here');
+			console.log($.cookie('test'));
 			var defer = $q.defer();
 			$http({
 				url: url,

@@ -183,7 +183,7 @@ $cloudWidth:13.5vw;
 		color:orange;
 		font-size:0.6em;
 		font-weight:light;
-}
+	}
 	.contactButton{
 		float:right;
 		width:49%;
@@ -209,21 +209,25 @@ $cloudWidth:13.5vw;
 		width:100%;
 		height:100%;
 		background:rgba(158, 224, 255,0.8);
-		h2{color:#fff;}
 		.loading{
 			margin:auto;
 			width:30%;
-			height:20%;
+			height:25%;
 			position:relative;
+			max-width:400px;
 			top:35%;
-			//border-bottom:1px solid #666;
+			h2{
+				font-size:2em;
+				color:#78A632;
+				text-align: center;
+			}
 			h1{
-				font-size: 3em;
+				font-size:3em;
 				position:absolute;
 				display: inline-block;
 				left:0;
 				top:0;
-				color:#ff6666;
+				color:#78A632;
 			}
 			.mailRotate{
 				@include animation('mailRotate 1.6s linear infinite');
@@ -234,7 +238,7 @@ $cloudWidth:13.5vw;
 			opacity:1;
 			top:25%;
 			width:90%;
-			height:70%;
+			height:55%;
 			padding:5% 3%;
 			background:white;
 			margin:auto;
@@ -242,12 +246,16 @@ $cloudWidth:13.5vw;
 			@include border-radius(0.625em);// 10 / 16px = 0.625
 			@include box-sizing(border-box);
 			text-align: center;
+			line-height: 2.8em;
 		}
 		.contactButton{
 			//background:orange;
 			//color:white;
 			width:15%;
-			//border-color:white;
+			min-width:100px;
+			position:absolute;
+			bottom:2em;
+			right:1em;
 		}
 	}
 }
@@ -261,8 +269,7 @@ $cloudWidth:13.5vw;
 				.message .contactButton{
 					font-size: 0.8em;
 				}
-			}
-			
+			}	
 		}
 	}
 }
@@ -283,8 +290,12 @@ $cloudWidth:13.5vw;
 				}
 				.input, .message{
 					font-size:0.8em;
+				}	
+			}
+			.alertBox{
+				.loading{
+					width:40%;
 				}
-				
 			}
 		}
 	}
@@ -294,6 +305,11 @@ $cloudWidth:13.5vw;
 		.contentWrap{
 			.message .contactButton{
 				font-size: 0.7em;
+			}
+			.alertBox{
+				.loading{
+					width:35%;
+				}
 			}
 		}
 	}
@@ -320,7 +336,11 @@ $cloudWidth:13.5vw;
 					font-size: 0.6em;
 				}
 			}
-			
+			.alertBox{
+				.loading{
+					width:50%;
+				}
+			}
 		}
 	}
 }
@@ -353,11 +373,22 @@ $cloudWidth:13.5vw;
 					}
 				}
 			}
+			.alertBox{
+				.loading{
+					width:65%;
+					h1{
+						font-size:2em;
+					}
+					h2{
+						font-size: 1.2em;
+					}
+				}
+			}
 		}
 	}
 }
 
-@media screen and (max-width:28.125em){//700 / 16          
+@media screen and (max-width:28.125em){//450 / 16          
 	#Contact{
 		.contentWrap{
 			.form{
@@ -367,6 +398,14 @@ $cloudWidth:13.5vw;
 						font-size: 0.7em;
 					}
 				}
+			}
+			.alertBox{
+				.loading{
+					width:80%;
+				}
+			}
+			.alert{
+				font-size:0.9em;
 			}
 		}
 	}

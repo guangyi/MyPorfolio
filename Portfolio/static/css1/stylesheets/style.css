@@ -3275,14 +3275,23 @@ html, body {
 
 /* line 60, ../sass/Intro.scss */
 .topPart {
-  height: 30vh;
+  height: 35vh;
   width: 100%;
   color: white;
   max-height: 250px;
   min-height: 220px;
+  line-height: 2em;
+}
+/* line 67, ../sass/Intro.scss */
+.topPart p {
+  font-size: 0.9em;
+}
+/* line 70, ../sass/Intro.scss */
+.topPart h3 {
+  font-size: 1.5em;
 }
 
-/* line 67, ../sass/Intro.scss */
+/* line 74, ../sass/Intro.scss */
 .bottomPart {
   width: 100%;
   height: 50vh;
@@ -3290,7 +3299,7 @@ html, body {
   max-height: calc(300px * 4);
 }
 
-/* line 75, ../sass/Intro.scss */
+/* line 82, ../sass/Intro.scss */
 .perspective {
   position: relative;
   text-align: center;
@@ -3307,7 +3316,7 @@ html, body {
   float: left;
   border-right: 1px dashed #cccccc;
 }
-/* line 90, ../sass/Intro.scss */
+/* line 97, ../sass/Intro.scss */
 .perspective .shelterWrapper {
   position: absolute;
   height: 80%;
@@ -3315,7 +3324,7 @@ html, body {
   bottom: 0;
   overflow: hidden;
 }
-/* line 96, ../sass/Intro.scss */
+/* line 103, ../sass/Intro.scss */
 .perspective .shelterWrapper.gra {
   -webkit-perspective-origin: 50% 250px;
   -moz-perspective-origin: 50% 250px;
@@ -3328,7 +3337,7 @@ html, body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 101, ../sass/Intro.scss */
+/* line 108, ../sass/Intro.scss */
 .perspective .shelterWrapper.free {
   -webkit-perspective-origin: 50% 250px;
   -moz-perspective-origin: 50% 250px;
@@ -3341,7 +3350,7 @@ html, body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 106, ../sass/Intro.scss */
+/* line 113, ../sass/Intro.scss */
 .perspective .shelterWrapper.bel {
   -webkit-perspective-origin: 50% 250px;
   -moz-perspective-origin: 50% 250px;
@@ -3354,7 +3363,7 @@ html, body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 111, ../sass/Intro.scss */
+/* line 118, ../sass/Intro.scss */
 .perspective .shelterWrapper.Ihope {
   -webkit-perspective-origin: 50% 250px;
   -moz-perspective-origin: 50% 250px;
@@ -3367,7 +3376,7 @@ html, body {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 117, ../sass/Intro.scss */
+/* line 124, ../sass/Intro.scss */
 .perspective .introShlter {
   font-size: 0.9em;
   position: absolute;
@@ -3381,17 +3390,17 @@ html, body {
   font-size: 0.8em;
   background: transparent;
 }
-/* line 130, ../sass/Intro.scss */
+/* line 137, ../sass/Intro.scss */
 .perspective .carve {
   padding-top: 5%;
   margin-bottom: 5%;
 }
-/* line 131, ../sass/Intro.scss */
+/* line 138, ../sass/Intro.scss */
 .perspective .carve h3 {
   font-size: 0.9em;
 }
 
-/* line 140, ../sass/Intro.scss */
+/* line 147, ../sass/Intro.scss */
 .cube {
   font-size: 0.65em;
   margin-left: 20%;
@@ -3407,7 +3416,7 @@ html, body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 150, ../sass/Intro.scss */
+/* line 157, ../sass/Intro.scss */
 .cube div {
   color: white;
   line-height: 1.5em;
@@ -3425,7 +3434,7 @@ html, body {
   border-radius: 0em;
   border: 2px dashed white;
 }
-/* line 161, ../sass/Intro.scss */
+/* line 168, ../sass/Intro.scss */
 .cube .cubeFront {
   -webkit-transform: translateZ(70px);
   -moz-transform: translateZ(70px);
@@ -3434,7 +3443,7 @@ html, body {
   transform: translateZ(70px);
   /* should be half width,but percentage doesn't work on translateZ */
 }
-/* line 164, ../sass/Intro.scss */
+/* line 171, ../sass/Intro.scss */
 .cube .cubeTop {
   border: none;
   -webkit-transform: rotateX(-90deg) translateY(-70px);
@@ -3448,7 +3457,7 @@ html, body {
   -o-transform-origin: top center;
   transform-origin: top center;
 }
-/* line 173, ../sass/Intro.scss */
+/* line 180, ../sass/Intro.scss */
 .cube .cubeRight {
   -webkit-transform: rotateY(-270deg) translateX(70px);
   -moz-transform: rotateY(-270deg) translateX(70px);
@@ -3461,7 +3470,7 @@ html, body {
   -o-transform-origin: top right;
   transform-origin: top right;
 }
-/* line 181, ../sass/Intro.scss */
+/* line 188, ../sass/Intro.scss */
 .cube .cubeLeft {
   -webkit-transform: rotateY(270deg) translateX(-70px);
   -moz-transform: rotateY(270deg) translateX(-70px);
@@ -3474,7 +3483,7 @@ html, body {
   -o-transform-origin: center left;
   transform-origin: center left;
 }
-/* line 189, ../sass/Intro.scss */
+/* line 196, ../sass/Intro.scss */
 .cube .cubeBottom {
   border: none;
   -webkit-transform: rotateX(90deg) translateY(70px);
@@ -3488,7 +3497,7 @@ html, body {
   -o-transform-origin: bottom center;
   transform-origin: bottom center;
 }
-/* line 198, ../sass/Intro.scss */
+/* line 205, ../sass/Intro.scss */
 .cube .cubeBack {
   -webkit-transform: translateZ(-70px) rotateY(180deg);
   -moz-transform: translateZ(-70px) rotateY(180deg);
@@ -3496,7 +3505,7 @@ html, body {
   -o-transform: translateZ(-70px) rotateY(180deg);
   transform: translateZ(-70px) rotateY(180deg);
 }
-/* line 201, ../sass/Intro.scss */
+/* line 208, ../sass/Intro.scss */
 .cube.graduated {
   margin-left: 26%;
   -webkit-animation: spin 40s infinite linear;
@@ -3504,7 +3513,7 @@ html, body {
   -moz-animation: spin 40s infinite linear;
   animation: spin 40s infinite linear;
 }
-/* line 202, ../sass/Intro.scss */
+/* line 209, ../sass/Intro.scss */
 .cube.graduated div {
   padding-top: 25%;
 }
@@ -3532,7 +3541,7 @@ html, body {
 .cube.graduated .cubeBottom {
   background: #ffad00;
 }
-/* line 209, ../sass/Intro.scss */
+/* line 216, ../sass/Intro.scss */
 .cube.frontEnd {
   margin-left: 26%;
   -webkit-animation: spin 40s 2s infinite linear;
@@ -3540,7 +3549,7 @@ html, body {
   -moz-animation: spin 40s 2s infinite linear;
   animation: spin 40s 2s infinite linear;
 }
-/* line 210, ../sass/Intro.scss */
+/* line 217, ../sass/Intro.scss */
 .cube.frontEnd div {
   padding-top: 20%;
 }
@@ -3568,7 +3577,7 @@ html, body {
 .cube.frontEnd .cubeBottom {
   background: #ffad00;
 }
-/* line 217, ../sass/Intro.scss */
+/* line 224, ../sass/Intro.scss */
 .cube.believe {
   margin-left: 26%;
   -webkit-animation: spin 40s 4s infinite linear;
@@ -3576,7 +3585,7 @@ html, body {
   -moz-animation: spin 40s 4s infinite linear;
   animation: spin 40s 4s infinite linear;
 }
-/* line 218, ../sass/Intro.scss */
+/* line 225, ../sass/Intro.scss */
 .cube.believe div {
   padding-top: 40%;
 }
@@ -3604,7 +3613,7 @@ html, body {
 .cube.believe .cubeBottom {
   background: #ffad00;
 }
-/* line 225, ../sass/Intro.scss */
+/* line 232, ../sass/Intro.scss */
 .cube.hope {
   margin-left: 27%;
   -webkit-animation: spin 40s 6s infinite linear;
@@ -3612,7 +3621,7 @@ html, body {
   -moz-animation: spin 40s 6s infinite linear;
   animation: spin 40s 6s infinite linear;
 }
-/* line 226, ../sass/Intro.scss */
+/* line 233, ../sass/Intro.scss */
 .cube.hope div {
   padding-top: 20%;
 }
@@ -3642,87 +3651,87 @@ html, body {
 }
 
 @-moz-document url-prefix() {
-  /* line 235, ../sass/Intro.scss */
+  /* line 242, ../sass/Intro.scss */
   .cube {
     width: 10vw;
     height: 10vw;
   }
-  /* line 238, ../sass/Intro.scss */
+  /* line 245, ../sass/Intro.scss */
   .cube .cubeFront {
     -moz-transform: translateZ(5vw);
   }
-  /* line 241, ../sass/Intro.scss */
+  /* line 248, ../sass/Intro.scss */
   .cube .cubeTop {
     -moz-transform: rotateX(-90deg) translateY(-5vw);
   }
-  /* line 244, ../sass/Intro.scss */
+  /* line 251, ../sass/Intro.scss */
   .cube .cubeRight {
     -moz-transform: rotateY(-270deg) translateX(5vw);
   }
-  /* line 247, ../sass/Intro.scss */
+  /* line 254, ../sass/Intro.scss */
   .cube .cubeLeft {
     -moz-transform: rotateY(270deg) translateX(-5vw);
   }
-  /* line 250, ../sass/Intro.scss */
+  /* line 257, ../sass/Intro.scss */
   .cube .cubeBottom {
     -moz-transform: rotateX(90deg) translateY(5vw);
   }
-  /* line 253, ../sass/Intro.scss */
+  /* line 260, ../sass/Intro.scss */
   .cube .cubeBack {
     -moz-transform: translateZ(-5vw) rotateY(180deg);
   }
 }
 
-/* line 260, ../sass/Intro.scss */
+/* line 267, ../sass/Intro.scss */
 .introShlter.in_top {
   -webkit-animation: intro_in_top 1s forwards;
   -o-animation: intro_in_top 1s forwards;
   -moz-animation: intro_in_top 1s forwards;
   animation: intro_in_top 1s forwards;
 }
-/* line 263, ../sass/Intro.scss */
+/* line 270, ../sass/Intro.scss */
 .introShlter.in_right {
   -webkit-animation: intro_in_right 1s forwards;
   -o-animation: intro_in_right 1s forwards;
   -moz-animation: intro_in_right 1s forwards;
   animation: intro_in_right 1s forwards;
 }
-/* line 266, ../sass/Intro.scss */
+/* line 273, ../sass/Intro.scss */
 .introShlter.in_bottom {
   -webkit-animation: intro_in_bottom 1s forwards;
   -o-animation: intro_in_bottom 1s forwards;
   -moz-animation: intro_in_bottom 1s forwards;
   animation: intro_in_bottom 1s forwards;
 }
-/* line 269, ../sass/Intro.scss */
+/* line 276, ../sass/Intro.scss */
 .introShlter.in_left {
   -webkit-animation: intro_in_left 1s forwards;
   -o-animation: intro_in_left 1s forwards;
   -moz-animation: intro_in_left 1s forwards;
   animation: intro_in_left 1s forwards;
 }
-/* line 272, ../sass/Intro.scss */
+/* line 279, ../sass/Intro.scss */
 .introShlter.out_top {
   -webkit-animation: intro_out_top 1s forwards;
   -o-animation: intro_out_top 1s forwards;
   -moz-animation: intro_out_top 1s forwards;
   animation: intro_out_top 1s forwards;
 }
-/* line 275, ../sass/Intro.scss */
+/* line 282, ../sass/Intro.scss */
 .introShlter.out_bottom {
   -webkit-animation: intro_out_bottom 1s forwards;
   -o-animation: intro_out_bottom 1s forwards;
   -moz-animation: intro_out_bottom 1s forwards;
   animation: intro_out_bottom 1s forwards;
 }
-/* line 278, ../sass/Intro.scss */
+/* line 285, ../sass/Intro.scss */
 .introShlter.out_left {
   -webkit-animation: intro_out_left 1s forwards;
   -o-animation: intro_out_left 1s forwards;
   -moz-animation: intro_out_left 1s forwards;
   animation: intro_out_left 1s forwards;
 }
-/* line 281, ../sass/Intro.scss */
+/* line 288, ../sass/Intro.scss */
 .introShlter.out_right {
   -webkit-animation: intro_out_right 1s forwards;
   -o-animation: intro_out_right 1s forwards;
@@ -3731,46 +3740,46 @@ html, body {
 }
 
 @media screen and (max-width: 68.75em) {
-  /* line 289, ../sass/Intro.scss */
+  /* line 296, ../sass/Intro.scss */
   .cube.believe {
     margin-left: 20%;
   }
-  /* line 292, ../sass/Intro.scss */
+  /* line 299, ../sass/Intro.scss */
   .cube.hope {
     margin-left: 22%;
     font-size: 0.6em;
   }
-  /* line 296, ../sass/Intro.scss */
+  /* line 303, ../sass/Intro.scss */
   .cube.frontEnd {
     margin-left: 16%;
   }
-  /* line 299, ../sass/Intro.scss */
+  /* line 306, ../sass/Intro.scss */
   .cube.graduated {
     margin-left: 10%;
   }
 
-  /* line 303, ../sass/Intro.scss */
+  /* line 310, ../sass/Intro.scss */
   .introShlter p {
     font-size: 0.8em;
   }
 
-  /* line 307, ../sass/Intro.scss */
+  /* line 314, ../sass/Intro.scss */
   .perspective .carve h3 {
     font-size: 0.8em;
   }
 }
 @media screen and (max-width: 59.375em) {
-  /* line 313, ../sass/Intro.scss */
+  /* line 320, ../sass/Intro.scss */
   .topPart {
     height: 25vh;
   }
 
-  /* line 317, ../sass/Intro.scss */
+  /* line 324, ../sass/Intro.scss */
   .cube {
     height: 130px;
     width: 130px;
   }
-  /* line 320, ../sass/Intro.scss */
+  /* line 327, ../sass/Intro.scss */
   .cube .cubeFront {
     -webkit-transform: translateZ(65px);
     -moz-transform: translateZ(65px);
@@ -3779,7 +3788,7 @@ html, body {
     transform: translateZ(65px);
     /* should be half width,but percentage doesn't work on translateZ */
   }
-  /* line 323, ../sass/Intro.scss */
+  /* line 330, ../sass/Intro.scss */
   .cube .cubeTop {
     -webkit-transform: rotateX(-90deg) translateY(-65px);
     -moz-transform: rotateX(-90deg) translateY(-65px);
@@ -3787,7 +3796,7 @@ html, body {
     -o-transform: rotateX(-90deg) translateY(-65px);
     transform: rotateX(-90deg) translateY(-65px);
   }
-  /* line 326, ../sass/Intro.scss */
+  /* line 333, ../sass/Intro.scss */
   .cube .cubeRight {
     -webkit-transform: rotateY(-270deg) translateX(65px);
     -moz-transform: rotateY(-270deg) translateX(65px);
@@ -3795,7 +3804,7 @@ html, body {
     -o-transform: rotateY(-270deg) translateX(65px);
     transform: rotateY(-270deg) translateX(65px);
   }
-  /* line 329, ../sass/Intro.scss */
+  /* line 336, ../sass/Intro.scss */
   .cube .cubeLeft {
     -webkit-transform: rotateY(270deg) translateX(-65px);
     -moz-transform: rotateY(270deg) translateX(-65px);
@@ -3803,7 +3812,7 @@ html, body {
     -o-transform: rotateY(270deg) translateX(-65px);
     transform: rotateY(270deg) translateX(-65px);
   }
-  /* line 332, ../sass/Intro.scss */
+  /* line 339, ../sass/Intro.scss */
   .cube .cubeBottom {
     -webkit-transform: rotateX(90deg) translateY(65px);
     -moz-transform: rotateX(90deg) translateY(65px);
@@ -3811,7 +3820,7 @@ html, body {
     -o-transform: rotateX(90deg) translateY(65px);
     transform: rotateX(90deg) translateY(65px);
   }
-  /* line 335, ../sass/Intro.scss */
+  /* line 342, ../sass/Intro.scss */
   .cube .cubeBack {
     -webkit-transform: translateZ(-65px) rotateY(180deg);
     -moz-transform: translateZ(-65px) rotateY(180deg);
@@ -3819,108 +3828,112 @@ html, body {
     -o-transform: translateZ(-65px) rotateY(180deg);
     transform: translateZ(-65px) rotateY(180deg);
   }
-  /* line 338, ../sass/Intro.scss */
+  /* line 345, ../sass/Intro.scss */
   .cube.believe {
     margin-left: 20%;
   }
-  /* line 341, ../sass/Intro.scss */
+  /* line 348, ../sass/Intro.scss */
   .cube.hope {
     margin-left: 22%;
   }
-  /* line 344, ../sass/Intro.scss */
+  /* line 351, ../sass/Intro.scss */
   .cube.frontEnd {
     margin-left: 16%;
   }
-  /* line 347, ../sass/Intro.scss */
+  /* line 354, ../sass/Intro.scss */
   .cube.graduated {
     margin-left: 10%;
   }
 
-  /* line 352, ../sass/Intro.scss */
+  /* line 359, ../sass/Intro.scss */
   .perspective .carve h3 {
     font-size: 0.7em;
   }
 
-  /* line 356, ../sass/Intro.scss */
+  /* line 363, ../sass/Intro.scss */
   .topPart p {
     font-size: 0.8em;
   }
 }
 @media screen and (max-width: 53.125em) {
-  /* line 362, ../sass/Intro.scss */
+  /* line 369, ../sass/Intro.scss */
   #Intro .contentWrap h1 {
     font-size: 2em;
   }
 
-  /* line 365, ../sass/Intro.scss */
+  /* line 372, ../sass/Intro.scss */
   .topPart {
     height: 25vh;
   }
 
-  /* line 368, ../sass/Intro.scss */
+  /* line 375, ../sass/Intro.scss */
   .bottomPart {
     height: 84vh;
   }
 
-  /* line 371, ../sass/Intro.scss */
+  /* line 378, ../sass/Intro.scss */
   .perspective {
     width: 48.5%;
     height: 42vh;
   }
-  /* line 374, ../sass/Intro.scss */
+  /* line 381, ../sass/Intro.scss */
   .perspective:nth-child(2n+1) {
     float: left;
   }
-  /* line 377, ../sass/Intro.scss */
+  /* line 384, ../sass/Intro.scss */
   .perspective:nth-child(2n+2) {
     border: none;
   }
-  /* line 380, ../sass/Intro.scss */
+  /* line 387, ../sass/Intro.scss */
   .perspective .carve h3 {
     font-size: 0.8em;
   }
 
-  /* line 385, ../sass/Intro.scss */
+  /* line 392, ../sass/Intro.scss */
   .cube.believe {
     margin-left: 30%;
   }
-  /* line 388, ../sass/Intro.scss */
+  /* line 395, ../sass/Intro.scss */
   .cube.hope {
     margin-left: 30%;
   }
-  /* line 391, ../sass/Intro.scss */
+  /* line 398, ../sass/Intro.scss */
   .cube.frontEnd {
     margin-left: 30%;
   }
-  /* line 394, ../sass/Intro.scss */
+  /* line 401, ../sass/Intro.scss */
   .cube.graduated {
     margin-left: 30%;
   }
 }
 @media screen and (max-width: 40.625em) {
-  /* line 401, ../sass/Intro.scss */
+  /* line 408, ../sass/Intro.scss */
   #Intro .contentWrap h1 {
     font-size: 1.5em;
   }
 
-  /* line 404, ../sass/Intro.scss */
+  /* line 412, ../sass/Intro.scss */
   .topPart p {
     font-size: 0.7em;
   }
+  /* line 415, ../sass/Intro.scss */
+  .topPart h3 {
+    font-size: 1.2em;
+  }
 
-  /* line 408, ../sass/Intro.scss */
+  /* line 421, ../sass/Intro.scss */
   .cube.believe {
     margin-left: 25%;
   }
-  /* line 411, ../sass/Intro.scss */
+  /* line 424, ../sass/Intro.scss */
   .cube.hope {
     margin-left: 25%;
   }
-  /* line 414, ../sass/Intro.scss */
+  /* line 427, ../sass/Intro.scss */
   .cube.frontEnd {
     margin-left: 25%;
   }
-  /* line 417, ../sass/Intro.scss */
+  /* line 430, ../sass/Intro.scss */
   .cube.graduated {
     margin-left: 25%;
   }
@@ -3941,84 +3954,98 @@ html, body {
 		}
 	}
 }*/
+@media screen and (max-width: 34.375em) {
+  /* line 452, ../sass/Intro.scss */
+  .topPart {
+    line-height: 1.3em;
+  }
+  /* line 454, ../sass/Intro.scss */
+  .topPart p {
+    font-size: 0.6em;
+  }
+  /* line 457, ../sass/Intro.scss */
+  .topPart h3 {
+    font-size: 1em;
+  }
+}
 @media screen and (max-width: 31.25em) {
-  /* line 440, ../sass/Intro.scss */
+  /* line 464, ../sass/Intro.scss */
   .topPart {
     height: 26vh;
   }
 
-  /* line 443, ../sass/Intro.scss */
+  /* line 467, ../sass/Intro.scss */
   .bottomPart {
     display: table;
   }
 
-  /* line 447, ../sass/Intro.scss */
+  /* line 471, ../sass/Intro.scss */
   .perspective {
     position: relative;
     width: 90vw;
     height: 34vh;
     border: none;
   }
-  /* line 452, ../sass/Intro.scss */
+  /* line 476, ../sass/Intro.scss */
   .perspective:nth-child(n) {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 456, ../sass/Intro.scss */
+  /* line 480, ../sass/Intro.scss */
   .perspective:nth-child(2n+2) {
     border: none;
   }
-  /* line 459, ../sass/Intro.scss */
+  /* line 483, ../sass/Intro.scss */
   .perspective .carve h3 {
     font-size: 0.8em;
   }
 
-  /* line 464, ../sass/Intro.scss */
+  /* line 488, ../sass/Intro.scss */
   .cube.believe {
     margin-left: 34.5%;
   }
-  /* line 467, ../sass/Intro.scss */
+  /* line 491, ../sass/Intro.scss */
   .cube.hope {
     margin-left: 34.5%;
   }
-  /* line 470, ../sass/Intro.scss */
+  /* line 494, ../sass/Intro.scss */
   .cube.frontEnd {
     margin-left: 34.5%;
   }
-  /* line 473, ../sass/Intro.scss */
+  /* line 497, ../sass/Intro.scss */
   .cube.graduated {
     margin-left: 34.5%;
   }
 }
 @media screen and (max-width: 22.5em) {
-  /* line 479, ../sass/Intro.scss */
+  /* line 503, ../sass/Intro.scss */
   .topPart {
     height: 40vh;
   }
 
-  /* line 482, ../sass/Intro.scss */
+  /* line 506, ../sass/Intro.scss */
   .perspective {
     height: 50vh;
   }
 
-  /* line 485, ../sass/Intro.scss */
+  /* line 509, ../sass/Intro.scss */
   .bottomPart {
     height: 200vh;
   }
 
-  /* line 489, ../sass/Intro.scss */
+  /* line 513, ../sass/Intro.scss */
   .cube.believe {
     margin-left: 28%;
   }
-  /* line 492, ../sass/Intro.scss */
+  /* line 516, ../sass/Intro.scss */
   .cube.hope {
     margin-left: 28%;
   }
-  /* line 495, ../sass/Intro.scss */
+  /* line 519, ../sass/Intro.scss */
   .cube.frontEnd {
     margin-left: 28%;
   }
-  /* line 498, ../sass/Intro.scss */
+  /* line 522, ../sass/Intro.scss */
   .cube.graduated {
     margin-left: 28%;
   }
@@ -4038,7 +4065,7 @@ html, body {
 #MoreAboutMe h2 {
   font-size: 1.5em;
 }
-/* line 13, ../sass/MoreAboutMe.scss */
+/* line 12, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .contentWrap {
   height: 100%;
   width: 90%;
@@ -4049,7 +4076,7 @@ html, body {
   text-align: center;
   display: table;
 }
-/* line 20, ../sass/MoreAboutMe.scss */
+/* line 19, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .contentWrap .options {
   -webkit-perspective: 500px;
   -moz-perspective: 500px;
@@ -4068,11 +4095,11 @@ html, body {
   overflow: scroll;
   background: transparent;
 }
-/* line 31, ../sass/MoreAboutMe.scss */
+/* line 30, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .contentWrap .options h3 {
   font-size: 1.1em;
 }
-/* line 34, ../sass/MoreAboutMe.scss */
+/* line 33, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .contentWrap .options .option {
   display: inline-block;
   height: auto;
@@ -4099,7 +4126,7 @@ html, body {
       				}
   				}*/
 }
-/* line 55, ../sass/MoreAboutMe.scss */
+/* line 54, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .contentWrap .options .option span {
   -webkit-transition: text-shadow 1.5s;
   -webkit-transition-delay: 2s;
@@ -4108,7 +4135,7 @@ html, body {
   transition: text-shadow 1.5s 2s;
   text-shadow: 0px 0px 30px #ff0000;
 }
-/* line 60, ../sass/MoreAboutMe.scss */
+/* line 59, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .contentWrap .options .tada {
   -webkit-transform-origin: center center 0 50%;
   -moz-transform-origin: center center 0 50%;
@@ -4120,7 +4147,7 @@ html, body {
   -moz-animation: tada 1.3s forwards;
   animation: tada 1.3s forwards;
 }
-/* line 64, ../sass/MoreAboutMe.scss */
+/* line 63, ../sass/MoreAboutMe.scss */
 #MoreAboutMe .contentWrap .options .shake {
   -webkit-animation: shake 1s forwards;
   -o-animation: shake 1s forwards;
@@ -4129,31 +4156,31 @@ html, body {
 }
 
 @media screen and (max-width: 65.625em) {
-  /* line 74, ../sass/MoreAboutMe.scss */
+  /* line 73, ../sass/MoreAboutMe.scss */
   #MoreAboutMe h1 {
     font-size: 2em;
   }
-  /* line 79, ../sass/MoreAboutMe.scss */
+  /* line 78, ../sass/MoreAboutMe.scss */
   #MoreAboutMe .contentWrap .options h3 {
     font-size: 0.9em;
   }
 }
 @media screen and (max-width: 56.25em) {
-  /* line 88, ../sass/MoreAboutMe.scss */
+  /* line 87, ../sass/MoreAboutMe.scss */
   #MoreAboutMe h1 {
     font-size: 1.8em;
   }
-  /* line 93, ../sass/MoreAboutMe.scss */
+  /* line 92, ../sass/MoreAboutMe.scss */
   #MoreAboutMe .contentWrap .options h3 {
     font-size: 0.8em;
   }
 }
 @media screen and (max-width: 31.25em) {
-  /* line 102, ../sass/MoreAboutMe.scss */
+  /* line 101, ../sass/MoreAboutMe.scss */
   #MoreAboutMe h1 {
     font-size: 1.5em;
   }
-  /* line 107, ../sass/MoreAboutMe.scss */
+  /* line 106, ../sass/MoreAboutMe.scss */
   #MoreAboutMe .contentWrap .options h3 {
     font-size: 0.6em;
   }
@@ -4902,7 +4929,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   left: 0;
   position: relative;
   overflow: hidden;
-  display: table;
+  height: 100%;
   background: #ff7575;
 }
 /* line 29, ../sass/Blog.scss */
@@ -4927,7 +4954,8 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   background: #ffbbbb;
   width: 70vw;
   max-height: 500px;
-  min-height: 500px;
+  min-height: 400px;
+  height: 100%;
   position: absolute;
   -webkit-box-shadow: 0px 6px 3px black;
   -moz-box-shadow: 0px 6px 3px black;
@@ -4939,19 +4967,19 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   border-radius: 0.3em;
   -webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 80%, white);
 }
-/* line 51, ../sass/Blog.scss */
+/* line 52, ../sass/Blog.scss */
 #Blog .slider ul {
   left: 0;
   position: relative;
   height: 100%;
   display: table;
 }
-/* line 56, ../sass/Blog.scss */
+/* line 57, ../sass/Blog.scss */
 #Blog .slider ul li {
-  color: #462304;
+  color: #fff;
   width: 60vw;
   height: 70vh;
-  min-height: 300px;
+  min-height: 400px;
   position: relative;
   float: left;
   overflow: hidden;
@@ -4959,18 +4987,29 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 66, ../sass/Blog.scss */
-#Blog .slider ul li img {
-  max-width: 100%;
-  max-height: 100%;
+/* line 67, ../sass/Blog.scss */
+#Blog .slider ul li h1 {
+  margin-top: 12%;
+}
+/* line 70, ../sass/Blog.scss */
+#Blog .slider ul li h1, #Blog .slider ul li h2, #Blog .slider ul li h3, #Blog .slider ul li p {
+  line-height: 2em;
+  padding: 0.5em 0.5em 0 1em;
 }
 /* line 74, ../sass/Blog.scss */
 #Blog .slider ul li h3 {
-  line-height: 2em;
-  font-size: 1.7vw;
-  padding: 5vw;
+  font-size: 1.2em;
 }
-/* line 82, ../sass/Blog.scss */
+/* line 77, ../sass/Blog.scss */
+#Blog .slider ul li h2 {
+  text-align: left;
+  font-size: 2em;
+}
+/* line 81, ../sass/Blog.scss */
+#Blog .slider ul li p {
+  font-size: 1em;
+}
+/* line 86, ../sass/Blog.scss */
 #Blog .slider .btnCtrl {
   background: transparent;
   position: absolute;
@@ -4980,27 +5019,27 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   overflow: hidden;
   border: none;
 }
-/* line 91, ../sass/Blog.scss */
+/* line 95, ../sass/Blog.scss */
 #Blog .slider #prev {
   background: url("/static/images/gray_prev.png") no-repeat;
   background-position: 0 100%;
   left: 0;
 }
-/* line 95, ../sass/Blog.scss */
+/* line 99, ../sass/Blog.scss */
 #Blog .slider #prev:hover {
   background-position: 0 0;
 }
-/* line 99, ../sass/Blog.scss */
+/* line 103, ../sass/Blog.scss */
 #Blog .slider #next {
   background: url("/static/images/gray_next.png") no-repeat;
   right: 0;
   background-position: 0 100%;
 }
-/* line 103, ../sass/Blog.scss */
+/* line 107, ../sass/Blog.scss */
 #Blog .slider #next:hover {
   background-position: 0 0;
 }
-/* line 108, ../sass/Blog.scss */
+/* line 112, ../sass/Blog.scss */
 #Blog #sliderLeft {
   -webkit-transform: translateX(-74%) rotateY(35deg) scale(0.9) translateY(0.5%);
   -moz-transform: translateX(-74%) rotateY(35deg) scale(0.9) translateY(0.5%);
@@ -5013,31 +5052,31 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -o-transform-origin: top right;
   transform-origin: top right;
 }
-/* line 111, ../sass/Blog.scss */
+/* line 115, ../sass/Blog.scss */
 #Blog #sliderLeft ul li:nth-child(1) {
-  background: #78a632;
+  background: #ffc924;
 }
-/* line 111, ../sass/Blog.scss */
+/* line 115, ../sass/Blog.scss */
 #Blog #sliderLeft ul li:nth-child(2) {
-  background: #ff7575;
-}
-/* line 111, ../sass/Blog.scss */
-#Blog #sliderLeft ul li:nth-child(3) {
-  background: #ffad00;
-}
-/* line 111, ../sass/Blog.scss */
-#Blog #sliderLeft ul li:nth-child(4) {
   background: #9ee0ff;
 }
-/* line 111, ../sass/Blog.scss */
+/* line 115, ../sass/Blog.scss */
+#Blog #sliderLeft ul li:nth-child(3) {
+  background: #a4db00;
+}
+/* line 115, ../sass/Blog.scss */
+#Blog #sliderLeft ul li:nth-child(4) {
+  background: #ffaaaa;
+}
+/* line 115, ../sass/Blog.scss */
 #Blog #sliderLeft ul li:nth-child(5) {
-  background: #78a632;
+  background: #ffc924;
 }
-/* line 111, ../sass/Blog.scss */
+/* line 115, ../sass/Blog.scss */
 #Blog #sliderLeft ul li:nth-child(6) {
-  background: #ff7575;
+  background: #9ee0ff;
 }
-/* line 124, ../sass/Blog.scss */
+/* line 128, ../sass/Blog.scss */
 #Blog #sliderRight {
   -webkit-transform: translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%);
   -moz-transform: translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%);
@@ -5050,31 +5089,31 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -o-transform-origin: top left;
   transform-origin: top left;
 }
-/* line 127, ../sass/Blog.scss */
-#Blog #sliderRight ul li:nth-child(1) {
-  background: #ffad00;
+/* line 131, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-of-type(1) {
+  background: #a4db00;
 }
-/* line 127, ../sass/Blog.scss */
-#Blog #sliderRight ul li:nth-child(2) {
+/* line 131, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-of-type(2) {
+  background: #ffaaaa;
+}
+/* line 131, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-of-type(3) {
+  background: #ffc924;
+}
+/* line 131, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-of-type(4) {
   background: #9ee0ff;
 }
-/* line 127, ../sass/Blog.scss */
-#Blog #sliderRight ul li:nth-child(3) {
-  background: #78a632;
+/* line 131, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-of-type(5) {
+  background: #a4db00;
 }
-/* line 127, ../sass/Blog.scss */
-#Blog #sliderRight ul li:nth-child(4) {
-  background: #ff7575;
+/* line 131, ../sass/Blog.scss */
+#Blog #sliderRight ul li:nth-of-type(6) {
+  background: #ffaaaa;
 }
-/* line 127, ../sass/Blog.scss */
-#Blog #sliderRight ul li:nth-child(5) {
-  background: #ffad00;
-}
-/* line 127, ../sass/Blog.scss */
-#Blog #sliderRight ul li:nth-child(6) {
-  background: #9ee0ff;
-}
-/* line 140, ../sass/Blog.scss */
+/* line 144, ../sass/Blog.scss */
 #Blog #slicesWrapper {
   -webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 80%, white);
   -webkit-transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
@@ -5083,31 +5122,31 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -o-transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
   transform: scale(0.9) translateX(23.5%) translateY(-5.4%);
 }
-/* line 143, ../sass/Blog.scss */
+/* line 148, ../sass/Blog.scss */
 #Blog #slicesWrapper ul li:nth-child(1) {
-  background: #ff7575;
-}
-/* line 143, ../sass/Blog.scss */
-#Blog #slicesWrapper ul li:nth-child(2) {
-  background: #ffad00;
-}
-/* line 143, ../sass/Blog.scss */
-#Blog #slicesWrapper ul li:nth-child(3) {
   background: #9ee0ff;
 }
-/* line 143, ../sass/Blog.scss */
+/* line 148, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(2) {
+  background: #a4db00;
+}
+/* line 148, ../sass/Blog.scss */
+#Blog #slicesWrapper ul li:nth-child(3) {
+  background: #ffaaaa;
+}
+/* line 148, ../sass/Blog.scss */
 #Blog #slicesWrapper ul li:nth-child(4) {
-  background: #78a632;
+  background: #ffc924;
 }
-/* line 143, ../sass/Blog.scss */
+/* line 148, ../sass/Blog.scss */
 #Blog #slicesWrapper ul li:nth-child(5) {
-  background: #ff7575;
+  background: #9ee0ff;
 }
-/* line 143, ../sass/Blog.scss */
+/* line 148, ../sass/Blog.scss */
 #Blog #slicesWrapper ul li:nth-child(6) {
-  background: #ffad00;
+  background: #a4db00;
 }
-/* line 149, ../sass/Blog.scss */
+/* line 155, ../sass/Blog.scss */
 #Blog #slicesWrapper .slice {
   position: relative;
   background: #9ee0ff;
@@ -5116,7 +5155,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   float: left;
   overflow: hidden;
 }
-/* line 156, ../sass/Blog.scss */
+/* line 162, ../sass/Blog.scss */
 #Blog #slicesWrapper .slice .dialogBox {
   position: relative;
   width: 100%;
@@ -5134,7 +5173,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   padding: 5% 8% 5% 8%;
   line-height: 150%;
 }
-/* line 171, ../sass/Blog.scss */
+/* line 177, ../sass/Blog.scss */
 #Blog .blogLink {
   position: absolute;
   float: right;
@@ -5142,6 +5181,7 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   color: #fff;
   right: 1em;
   bottom: 1em;
+  font-size: 0.8em;
 }
 
  /*
@@ -5204,64 +5244,102 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
 		right:0;
 	}
 }*/
-@media screen and (max-width: 78.125em) {
-  /* line 270, ../sass/Blog.scss */
+@media screen and (max-width: 68.75em) {
+  /* line 278, ../sass/Blog.scss */
   #Blog h1 {
     font-size: 2em;
   }
-
-  /* line 273, ../sass/Blog.scss */
-  .slider ul li img {
-    -webkit-transform: scale(1.2) translateY(8.4%);
-    -moz-transform: scale(1.2) translateY(8.4%);
-    -ms-transform: scale(1.2) translateY(8.4%);
-    -o-transform: scale(1.2) translateY(8.4%);
-    transform: scale(1.2) translateY(8.4%);
+  /* line 282, ../sass/Blog.scss */
+  #Blog .slider ul li h1 {
+    margin-top: 25%;
+    font-size: 2em;
+  }
+  /* line 286, ../sass/Blog.scss */
+  #Blog .slider ul li h2 {
+    font-size: 1.5em;
+  }
+  /* line 289, ../sass/Blog.scss */
+  #Blog .slider ul li h3 {
+    font-size: 1em;
   }
 }
-@media screen and (max-width: 71.875em) {
-  /* line 278, ../sass/Blog.scss */
-  .slider ul li img {
-    -webkit-transform: scale(1.3) translateY(11.6%);
-    -moz-transform: scale(1.3) translateY(11.6%);
-    -ms-transform: scale(1.3) translateY(11.6%);
-    -o-transform: scale(1.3) translateY(11.6%);
-    transform: scale(1.3) translateY(11.6%);
+@media screen and (max-width: 56.25em) {
+  /* line 298, ../sass/Blog.scss */
+  #Blog .slider ul li h1 {
+    font-size: 1.5em;
+    margin-top: 35%;
+  }
+  /* line 302, ../sass/Blog.scss */
+  #Blog .slider ul li h2 {
+    font-size: 1.2em;
+  }
+  /* line 305, ../sass/Blog.scss */
+  #Blog .slider ul li h3 {
+    line-height: 4em;
+    font-size: 0.7em;
   }
 }
-@media screen and (max-width: 65.625em) {
-  /* line 283, ../sass/Blog.scss */
+@media screen and (max-width: 40.625em) {
+  /* line 315, ../sass/Blog.scss */
+  #Blog .slider ul li h1 {
+    font-size: 1.2em;
+    margin-top: 45%;
+  }
+  /* line 319, ../sass/Blog.scss */
+  #Blog .slider ul li h2 {
+    font-size: 1.2em;
+  }
+  /* line 322, ../sass/Blog.scss */
+  #Blog .slider ul li h3 {
+    line-height: 4em;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 34.375em) {
+  /* line 331, ../sass/Blog.scss */
   #Blog h1 {
     font-size: 1.5em;
   }
-
-  /* line 289, ../sass/Blog.scss */
-  .slider ul li img {
-    -webkit-transform: scale(1.4) translateY(14.3%);
-    -moz-transform: scale(1.4) translateY(14.3%);
-    -ms-transform: scale(1.4) translateY(14.3%);
-    -o-transform: scale(1.4) translateY(14.3%);
-    transform: scale(1.4) translateY(14.3%);
+  /* line 335, ../sass/Blog.scss */
+  #Blog .slider ul li h1 {
+    font-size: 1.1em;
+    margin-top: 55%;
+  }
+  /* line 339, ../sass/Blog.scss */
+  #Blog .slider ul li h2 {
+    font-size: 1em;
+  }
+  /* line 342, ../sass/Blog.scss */
+  #Blog .slider ul li h3 {
+    line-height: 3em;
+    font-size: 0.8em;
   }
 }
-@media screen and (max-width: 53.125em) {
-  /* line 297, ../sass/Blog.scss */
-  .slider ul li img {
-    -webkit-transform: scale(1.5) translateY(17.3%);
-    -moz-transform: scale(1.5) translateY(17.3%);
-    -ms-transform: scale(1.5) translateY(17.3%);
-    -o-transform: scale(1.5) translateY(17.3%);
-    transform: scale(1.5) translateY(17.3%);
+@media screen and (max-width: 28.125em) {
+  /* line 351, ../sass/Blog.scss */
+  #Blog h1 {
+    font-size: 1.5em;
+  }
+  /* line 355, ../sass/Blog.scss */
+  #Blog .slider ul li h1 {
+    font-size: 1.1em;
+    margin-top: 55%;
+  }
+  /* line 359, ../sass/Blog.scss */
+  #Blog .slider ul li h2 {
+    font-size: 0.8em;
+  }
+  /* line 362, ../sass/Blog.scss */
+  #Blog .slider ul li h3 {
+    line-height: 2em;
+    font-size: 0.8em;
   }
 }
-@media screen and (max-width: 46.875em) {
-  /* line 306, ../sass/Blog.scss */
-  #Blog .slider ul li img {
-    -webkit-transform: scale(1.6) translateY(19.3%);
-    -moz-transform: scale(1.6) translateY(19.3%);
-    -ms-transform: scale(1.6) translateY(19.3%);
-    -o-transform: scale(1.6) translateY(19.3%);
-    transform: scale(1.6) translateY(19.3%);
+@media screen and (max-width: 25em) {
+  /* line 372, ../sass/Blog.scss */
+  #Blog .slider ul li h3 {
+    line-height: 2em;
+    font-size: 0.7em;
   }
 }
 /************************************************* Contact ********************************************/
@@ -5521,40 +5599,43 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   background: rgba(158, 224, 255, 0.8);
 }
 /* line 212, ../sass/Contact.scss */
-#Contact .alertBox h2 {
-  color: #fff;
-}
-/* line 213, ../sass/Contact.scss */
 #Contact .alertBox .loading {
   margin: auto;
   width: 30%;
-  height: 20%;
+  height: 25%;
   position: relative;
+  max-width: 400px;
   top: 35%;
 }
-/* line 220, ../sass/Contact.scss */
+/* line 219, ../sass/Contact.scss */
+#Contact .alertBox .loading h2 {
+  font-size: 2em;
+  color: #78A632;
+  text-align: center;
+}
+/* line 224, ../sass/Contact.scss */
 #Contact .alertBox .loading h1 {
   font-size: 3em;
   position: absolute;
   display: inline-block;
   left: 0;
   top: 0;
-  color: #ff6666;
+  color: #78A632;
 }
-/* line 228, ../sass/Contact.scss */
+/* line 232, ../sass/Contact.scss */
 #Contact .alertBox .loading .mailRotate {
   -webkit-animation: mailRotate 1.6s linear infinite;
   -o-animation: mailRotate 1.6s linear infinite;
   -moz-animation: mailRotate 1.6s linear infinite;
   animation: mailRotate 1.6s linear infinite;
 }
-/* line 232, ../sass/Contact.scss */
+/* line 236, ../sass/Contact.scss */
 #Contact .alertBox .alert {
   color: #78A632;
   opacity: 1;
   top: 25%;
   width: 90%;
-  height: 70%;
+  height: 55%;
   padding: 5% 3%;
   background: white;
   margin: auto;
@@ -5568,84 +5649,101 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
+  line-height: 2.8em;
 }
-/* line 246, ../sass/Contact.scss */
+/* line 251, ../sass/Contact.scss */
 #Contact .alertBox .contactButton {
   width: 15%;
+  min-width: 100px;
+  position: absolute;
+  bottom: 2em;
+  right: 1em;
 }
 
 @media screen and (max-width: 81.25em) {
-  /* line 258, ../sass/Contact.scss */
+  /* line 266, ../sass/Contact.scss */
   #Contact .contentWrap .form p {
     font-size: 0.6em;
   }
-  /* line 261, ../sass/Contact.scss */
+  /* line 269, ../sass/Contact.scss */
   #Contact .contentWrap .form .message .contactButton {
     font-size: 0.8em;
   }
 }
 @media screen and (max-width: 71.875em) {
-  /* line 272, ../sass/Contact.scss */
+  /* line 279, ../sass/Contact.scss */
   #Contact .contentWrap h1 {
     font-size: 2em;
   }
-  /* line 276, ../sass/Contact.scss */
+  /* line 283, ../sass/Contact.scss */
   #Contact .contentWrap .form h2 {
     font-size: 1em;
   }
-  /* line 279, ../sass/Contact.scss */
+  /* line 286, ../sass/Contact.scss */
   #Contact .contentWrap .form p {
     display: block;
     margin: 1em 0;
     font-size: 0.6em;
   }
-  /* line 284, ../sass/Contact.scss */
+  /* line 291, ../sass/Contact.scss */
   #Contact .contentWrap .form .input, #Contact .contentWrap .form .message {
     font-size: 0.8em;
   }
+  /* line 296, ../sass/Contact.scss */
+  #Contact .contentWrap .alertBox .loading {
+    width: 40%;
+  }
 }
 @media screen and (max-width: 59.375em) {
-  /* line 295, ../sass/Contact.scss */
+  /* line 306, ../sass/Contact.scss */
   #Contact .contentWrap .message .contactButton {
     font-size: 0.7em;
   }
+  /* line 310, ../sass/Contact.scss */
+  #Contact .contentWrap .alertBox .loading {
+    width: 35%;
+  }
 }
 @media screen and (max-width: 53.125em) {
-  /* line 304, ../sass/Contact.scss */
+  /* line 320, ../sass/Contact.scss */
   #Contact .contentWrap h1 {
     font-size: 1.5em;
   }
-  /* line 308, ../sass/Contact.scss */
+  /* line 324, ../sass/Contact.scss */
   #Contact .contentWrap .form h2 {
     font-size: 0.9em;
   }
-  /* line 311, ../sass/Contact.scss */
+  /* line 327, ../sass/Contact.scss */
   #Contact .contentWrap .form p {
     font-size: 0.5em;
     margin: 1em 0;
     display: block;
   }
-  /* line 316, ../sass/Contact.scss */
+  /* line 332, ../sass/Contact.scss */
   #Contact .contentWrap .form .input, #Contact .contentWrap .form .message {
     font-size: 0.7em;
   }
-  /* line 319, ../sass/Contact.scss */
+  /* line 335, ../sass/Contact.scss */
   #Contact .contentWrap .form .message .contactButton {
     font-size: 0.6em;
   }
+  /* line 340, ../sass/Contact.scss */
+  #Contact .contentWrap .alertBox .loading {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 43.75em) {
-  /* line 331, ../sass/Contact.scss */
+  /* line 351, ../sass/Contact.scss */
   #Contact .contentWrap .form h2 {
     font-size: 0.9em;
   }
-  /* line 334, ../sass/Contact.scss */
+  /* line 354, ../sass/Contact.scss */
   #Contact .contentWrap .form p {
     font-size: 0.5em;
     margin: 1em 0;
     display: block;
   }
-  /* line 339, ../sass/Contact.scss */
+  /* line 359, ../sass/Contact.scss */
   #Contact .contentWrap .form .input, #Contact .contentWrap .form .message {
     width: 95%;
     font-size: 0.7em;
@@ -5653,23 +5751,43 @@ example: @include animation('upsetEye 5s reverse forwards');-- not working
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 346, ../sass/Contact.scss */
+  /* line 366, ../sass/Contact.scss */
   #Contact .contentWrap .form .message {
     margin-top: 2em;
   }
-  /* line 348, ../sass/Contact.scss */
+  /* line 368, ../sass/Contact.scss */
   #Contact .contentWrap .form .message .contactButton {
     width: 42%;
     font-size: 0.8em;
     margin-left: auto;
     margin-right: auto;
   }
+  /* line 377, ../sass/Contact.scss */
+  #Contact .contentWrap .alertBox .loading {
+    width: 65%;
+  }
+  /* line 379, ../sass/Contact.scss */
+  #Contact .contentWrap .alertBox .loading h1 {
+    font-size: 2em;
+  }
+  /* line 382, ../sass/Contact.scss */
+  #Contact .contentWrap .alertBox .loading h2 {
+    font-size: 1.2em;
+  }
 }
 @media screen and (max-width: 28.125em) {
-  /* line 365, ../sass/Contact.scss */
+  /* line 396, ../sass/Contact.scss */
   #Contact .contentWrap .form .message .contactButton {
     width: 54%;
     font-size: 0.7em;
+  }
+  /* line 403, ../sass/Contact.scss */
+  #Contact .contentWrap .alertBox .loading {
+    width: 80%;
+  }
+  /* line 407, ../sass/Contact.scss */
+  #Contact .contentWrap .alert {
+    font-size: 0.9em;
   }
 }
 /*$inputLable:#78A632;

@@ -58,11 +58,18 @@ $cubeBorder:#fff;//#ad0000;
 	@include box-sizing(border-box);
 }
 .topPart{
-	height:30vh;
+	height:35vh;
 	width:100%;
 	color:$MainPartFontColor;
 	max-height:250px;
 	min-height:220px;
+	line-height:2em;
+	p{
+		font-size: 0.9em;
+	}
+	h3{
+		font-size: 1.5em;
+	}
 }
 .bottomPart{
 	//height:55%;
@@ -401,8 +408,14 @@ $cubeBorder:#fff;//#ad0000;
 	#Intro .contentWrap h1{
 		font-size: 1.5em;
 	}
-	.topPart p{
-		font-size: 0.7em;
+	.topPart{
+		p{
+			font-size: 0.7em;
+		}
+		h3{
+			font-size: 1.2em;
+		}
+		
 	}
 	.cube{
 		&.believe{
@@ -435,6 +448,17 @@ $cubeBorder:#fff;//#ad0000;
 		}
 	}
 }*/
+@media screen and (max-width:34.375em){// 550px / 16 = 550
+	.topPart{
+		line-height:1.3em;
+		p{
+			font-size:0.6em;
+		}
+		h3{
+			font-size:1em;
+		}
+	}
+}
 @media screen and (max-width:31.25em){// 500px / 16 = 40.625
 	//switch to single box each line
 	.topPart{

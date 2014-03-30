@@ -7,6 +7,7 @@
 	<link href="{{STATIC_URL}}css1/stylesheets/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="{{STATIC_URL}}css1/fontello-9660c119/css/fontello.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="{{STATIC_URL}}lib/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}lib/jquery.cookie.js"></script>
 	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular1-0-8.js"></script>
 	<!--<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular-animate.js"></script>-->
 	<script type="text/javascript" src="{{STATIC_URL}}lib/angular/angular-cookies.js"></script>
@@ -31,7 +32,7 @@
 				<section class="main" id="About" >
 					<div class="row effOnScroll">
 						<div class="contentWrap">
-							<div id="profile"><img src="/static/images/profile.JPG"></div>
+							<div id="profile"><img src="{{STATIC_URL}}images/profile.JPG"></div>
 							<div id="speech_bubble_arrowup">
 								<h1>Hey! I'm Guangyi</h1>
 							</div>
@@ -44,16 +45,12 @@
 							<h1><i class="icon-info-circled"></i>About Me</h1><br>
 							<div class="introWrapper">
 								<div class="topPart">
-									<p>	<br>
-										I'm Guangyi, a recently graduated student, a Front-End Engineer<br><br>
-										<i class="icon-search-1"></i>I'm looking for a Job<br><br>
-										My Skill Set: HTML5 + CSS3 + SASS + Bootstrap<br><br>
-										jQuery + AngularJS + Django + MongoDB<br><br>
-									<!--My name is Guangyi, a front-end engineer. I'm looking for a front-end position to work on exciting projects with awesome people. This portfolio, I hope, will help me find the right job for me.<br>
-									To keep up with the trand,this portfolio uses combination of HTML5, CSS3(Sass pre-processor), AngularJS, Django and MongoDB.fast-learning is a must-have skill.<br>
-									I have to admit, as an entry level engineer, this is not perfect, But "perfection" is not the point. I just want to use this portfolio to demostrate to you, my future employer, what I'm capable of doing and what potential I have.More importantly, prove to myself, I like what I'm doing and I'm good at what I'm doing.<br>
-									Check out each section to learn more detail! Thank you! -->
+									<p>
+										I'm Guangyi, a recently graduated student, a Front-End Engineer<br>
+										<i class="icon-cog-alt"></i> Skill Set: HTML/5 + CSS/3 + SASS + Bootstrap<br>
+										jQuery <i class="icon-plus"></i> AngularJS <i class="icon-plus"></i> Django <i class="icon-plus"></i> MongoDB<br>
 									</p>
+									<h3><i class="icon-search-1"></i>I'm looking for a Job!</h3>
 								</div>
 								<div class="bottomPart">
 									<div class="perspective ">
@@ -137,9 +134,9 @@
 							<div class="projectWrapper">
 								<div ng-repeat="project in projects" class='projects'>
 									<!--<-->
-									<div class="description" style="background-image:url({$ project.img_url $})">
-										<div class="proShelter top"><img ng-src='{$ project.img_url $}'></div>
-										<div class="proShelter down"><img ng-src="{$ project.img_url $}"></div>
+									<div class="description" style="background-image:url({{STATIC_URL}}{$ project.img_url $})">
+										<div class="proShelter top"><img ng-src='{{STATIC_URL}}{$ project.img_url $}'></div>
+										<div class="proShelter down"><img ng-src="{{STATIC_URL}}{$ project.img_url $}"></div>
 										<div class="descrpt top"><p><i class="icon-pencil"></i>{$project.description$}</p></div>
 										<div class="descrpt down"><p><i class="icon-pencil"></i>{$project.description$}</p></div>
 									</div>
@@ -176,55 +173,56 @@
 							<div class="sliderWrapper">
 									<div class="slider" id="sliderLeft">
 										<ul>
-											<li><img src="/static/images/Blog-Create.PNG"></li>
-											<li><h3>
-													I used AngularJS as the front-end framework and Django/REST framwork
-													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling.
+											<li><h1>CHECK OUT MY BLOG<i class="icon-link-ext"></i></h1></li>
+											<li><h2><i class="icon-help-circled"></i>How</h2>
+												<h3>
+													<i class="icon-cog-alt"></i>Css preprocessor: SASS<br><i class="icon-cog-alt"></i> Front-end: AngularJS  <br><i class="icon-cog-alt"></i> Back-end: Django/REST framwork
+													 <br><i class="icon-cog-alt"></i>Database: noSQL--MongoDB
 												</h3>
 											</li>
 											<li>
+												<h2><i class="icon-help-circled"></i>Why Blog</h2>
 												<h3>
-													I want to learn new things, new knowledge and new skills. As you know,
-													fron-end is a fast going field, self-learning is a must-have quality
-													for front-end software engineer. 
+													<i class="icon-ok-circled"></i>It's a good entry point<br>
+													<i class="icon-ok-circled"></i>Main ajax methods--GET,POST,UPDATE,DELETE<br>
+													<i class="icon-ok-circled"></i>To recored knowledges and mistakes<br>
 												</h3>
 											</li>
 											<li>
+												<h2><i class="icon-help-circled"></i>Why those tools</h2>
 												<h3>
-													While building this project,
-													I used AngularJS as the front-end framework and Django/REST framwork
-													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling. Screen Shots<i class="icon-right-hand"></i>
+													<i class="icon-star-filled"></i>Learn and play with latest technologies<br>
+													<i class="icon-star-filled"></i>Mix everything together is challanging, love it<br>
+													<i class="icon-star-filled"></i>Just think it's cool and fashion<br>
 												</h3>
 											</li>
-											
 										</ul>
 									</div>
 									<div class="slider" id="slicesWrapper">
 										<ul>
-											<li><h3>
-													I used AngularJS as the front-end framework and Django/REST framwork
-													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling.
+											<li><h2><i class="icon-help-circled"></i>How</h2>
+												<h3>
+													<i class="icon-cog-alt"></i>Css preprocessor: SASS<br><i class="icon-cog-alt"></i> Front-end: AngularJS  <br><i class="icon-cog-alt"></i> Back-end: Django/REST framwork
+													 <br><i class="icon-cog-alt"></i>Database: noSQL--MongoDB
 												</h3>
 											</li>
 											<li>
+												<h2><i class="icon-help-circled"></i>Why Blog</h2>
 												<h3>
-													I want to learn new things, new knowledge and new skills. As you know,
-													fron-end is a fast going field, self-learning is a must-have quality
-													for front-end software engineer. 
+													<i class="icon-ok-circled"></i>It's a good entry point<br>
+													<i class="icon-ok-circled"></i>Main ajax methods--GET,POST,UPDATE,DELETE<br>
+													<i class="icon-ok-circled"></i>To recored knowledges and mistakes<br>
 												</h3>
 											</li>
 											<li>
+												<h2><i class="icon-help-circled"></i>Why those tools</h2>
 												<h3>
-													While building this project,
-													I used AngularJS as the front-end framework and Django/REST framwork
-													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling. Screen Shots<i class="icon-right-hand"></i>
+													<i class="icon-star-filled"></i>Learn and play with latest technologies<br>
+													<i class="icon-star-filled"></i>Mix everything together is challanging, love it<br>
+													<i class="icon-star-filled"></i>Just think it's cool and fashion<br>
 												</h3>
 											</li>
-											<li><img src="/static/images/Blog-Create.PNG"></li>	
+											<li><h1>CHECK OUT MY BLOG<i class="icon-link-ext"></i></h1></li>	
 										</ul>
 										<button class="btnCtrl" id="prev"></button>
 										<button class="btnCtrl" id="next"></button>
@@ -232,28 +230,28 @@
 									<div class="slider" id="sliderRight">
 										<ul>
 											<li>
+												<h2><i class="icon-help-circled"></i>Why Blog</h2>
 												<h3>
-													I want to learn new things, new knowledge and new skills. As you know,
-													fron-end is a fast going field, self-learning is a must-have quality
-													for front-end software engineer. 
+													<i class="icon-ok-circled"></i>It's a good entry point<br>
+													<i class="icon-ok-circled"></i>Main ajax methods--GET,POST,UPDATE,DELETE<br>
+													<i class="icon-ok-circled"></i>To recored knowledges and mistakes<br>
 												</h3>
 											</li>
 											<li>
+												<h2><i class="icon-help-circled"></i>Why those tools</h2>
 												<h3>
-													While building this project,
-													I used AngularJS as the front-end framework and Django/REST framwork
-													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling. Screen Shots<i class="icon-right-hand"></i>
+													<i class="icon-star-filled"></i>Learn and play with latest technologies<br>
+													<i class="icon-star-filled"></i>Mix everything together is challanging, love it<br>
+													<i class="icon-star-filled"></i>Just think it's cool and fashion<br>
 												</h3>
 											</li>
-											<li><img src="/static/images/Blog-Create.PNG"></li>
-											<li><h3>
-													I used AngularJS as the front-end framework and Django/REST framwork
-													as the back-end. For the database, it's noSQL--MongoDB. Also, like
-													this portfolio, I use SASS for styling.
+											<li><h1>CHECK OUT MY BLOG<i class="icon-link-ext"></i></h1></li>
+											<li><h2><i class="icon-help-circled"></i>How</h2>
+												<h3>
+													<i class="icon-cog-alt"></i>Css preprocessor: SASS<br><i class="icon-cog-alt"></i> Front-end: AngularJS  <br><i class="icon-cog-alt"></i> Back-end: Django/REST framwork
+													 <br><i class="icon-cog-alt"></i>Database: noSQL--MongoDB
 												</h3>
 											</li>
-											
 										</ul>
 									</div>
 							</div>
@@ -264,7 +262,7 @@
 				<section class="main" id="MoreAboutMe">
 					<div class="row effOnScroll">
 						<section class="contentWrap">
-								<h1><i class="icon-star"></i> More About Me</h1>
+								<h1><i class="icon-star-filled"></i> More About Me</h1>
 								
 									<div class="options">
 										<!--
@@ -275,7 +273,8 @@
 											</div>-->
 											<!--<div class="heart"></div>-->
 										
-										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Pink, Red, Warm Color</i></h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Bright Color</i></h3>
+										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Warm smile<i class="icon-sun"></i></i></h3>
 										<h3 class="option like"><span><i class="icon-heart-filled"></i></span> Black coffee and Tea<i class="icon-coffee"></i></h3>
 										<br>
 										<h3 class="option dislike"> Being judged</h3>
@@ -377,8 +376,9 @@
 							<div class="alertBox" ng-show ='base'>
 								<div ng-show = "loading" class="loading">
 									<h1 class="mailRotate"><i class="icon-mail"></i></h1>
+									<h2>Sending...</h2>
 								</div>
-								<h2>Sending...</h2>
+								
 								<div ng-show='alert' class="alert">
 									<h3>{$alertMsg$}</h3>
 									<button class="contactButton" ng-click='alert=false; base=false; '>Ok</button>
